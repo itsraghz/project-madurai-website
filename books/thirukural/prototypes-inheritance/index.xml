@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Project Madurai School</title>
-    <link>/</link>
-    <description>Recent content on Project Madurai School</description>
+    <title>Prototypes, inheritance on Project Madurai School</title>
+    <link>/books/thirukural/prototypes-inheritance/</link>
+    <description>Recent content in Prototypes, inheritance on Project Madurai School</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/thirukural/prototypes-inheritance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title> Prototypal inheritance</title>
       <link>/books/thirukural/prototypes-inheritance/prototypeinheritance/</link>
@@ -19,15 +19,6 @@ Prototypal inheritance is a language feature that helps in that.</description>
     </item>
     
     <item>
-      <title>What are Arrays</title>
-      <link>/books/aathichoodi/array/what-are-array/</link>
-      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
-      
-      <guid>/books/aathichoodi/array/what-are-array/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>F.prototype</title>
       <link>/books/thirukural/prototypes-inheritance/function-prototype/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
@@ -36,15 +27,6 @@ Prototypal inheritance is a language feature that helps in that.</description>
       <description>F.prototype Remember, new objects can be created with a constructor function, like new F().
 If F.prototype is an object, then the new operator uses it to set [[Prototype]] for the new object.
 JavaScript had prototypal inheritance from the beginning. It was one of the core features of the language. But in the old times, there was no direct access to it. The only thing that worked reliably was a `&amp;quot;prototype&amp;quot;` property of the constructor function, described in this chapter.</description>
-    </item>
-    
-    <item>
-      <title>More on Arrays</title>
-      <link>/books/aathichoodi/array/more-on-array/</link>
-      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
-      
-      <guid>/books/aathichoodi/array/more-on-array/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -60,24 +42,6 @@ let obj = {}; alert( obj ); // &amp;#34;[object Object]&amp;#34; ? Where&amp;rsq
     </item>
     
     <item>
-      <title>Pointers and Arrays</title>
-      <link>/books/aathichoodi/array/pointers-and-arrays/</link>
-      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
-      
-      <guid>/books/aathichoodi/array/pointers-and-arrays/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Flexible Arrays</title>
-      <link>/books/aathichoodi/array/flexible-arrays/</link>
-      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
-      
-      <guid>/books/aathichoodi/array/flexible-arrays/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Prototype methods, objects without __proto__</title>
       <link>/books/thirukural/prototypes-inheritance/prototypemethods/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
@@ -87,51 +51,6 @@ let obj = {}; alert( obj ); // &amp;#34;[object Object]&amp;#34; ? Where&amp;rsq
 The __proto__ is considered outdated and somewhat deprecated (in browser-only part of the JavaScript standard).
 The modern methods are:
  Object.create(proto, [descriptors]) &amp;ndash; creates an empty object with given proto as [[Prototype]] and optional property descriptors. Object.getPrototypeOf(obj) &amp;ndash; returns the [[Prototype]] of obj. Object.setPrototypeOf(obj, proto) &amp;ndash; sets the [[Prototype]] of obj to proto.</description>
-    </item>
-    
-    <item>
-      <title>Exercise</title>
-      <link>/books/aathichoodi/array/exercise/</link>
-      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
-      
-      <guid>/books/aathichoodi/array/exercise/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>KanNotes</title>
-      <link>/books/aathichoodi/array/kannotes/</link>
-      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
-      
-      <guid>/books/aathichoodi/array/kannotes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>A1</title>
-      <link>/posts/articles/a1/</link>
-      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
-      
-      <guid>/posts/articles/a1/</guid>
-      <description>I am a1</description>
-    </item>
-    
-    <item>
-      <title>A2</title>
-      <link>/posts/articles/a2/</link>
-      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
-      
-      <guid>/posts/articles/a2/</guid>
-      <description>I am a2</description>
-    </item>
-    
-    <item>
-      <title>A3</title>
-      <link>/posts/articles/a3/</link>
-      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
-      
-      <guid>/posts/articles/a3/</guid>
-      <description>I am a3</description>
     </item>
     
   </channel>
