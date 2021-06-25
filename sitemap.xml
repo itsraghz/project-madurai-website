@@ -2,78 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/books/thirukural/prototypes-inheritance/prototypeinheritance/</loc>
+    <loc>/project-madurai-website/books/thirukural/prototypes-inheritance/prototypeinheritance/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/aathichoodi/array/what-are-array/</loc>
+    <loc>/project-madurai-website/books/aathichoodi/array/what-are-array/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/thirukural/prototypes-inheritance/function-prototype/</loc>
+    <loc>/project-madurai-website/books/thirukural/prototypes-inheritance/function-prototype/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/aathichoodi/array/more-on-array/</loc>
+    <loc>/project-madurai-website/books/aathichoodi/array/more-on-array/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/thirukural/prototypes-inheritance/nativeprototypes/</loc>
+    <loc>/project-madurai-website/books/thirukural/prototypes-inheritance/nativeprototypes/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/aathichoodi/array/pointers-and-arrays/</loc>
+    <loc>/project-madurai-website/books/aathichoodi/array/pointers-and-arrays/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/aathichoodi/array/flexible-arrays/</loc>
+    <loc>/project-madurai-website/books/aathichoodi/array/flexible-arrays/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/thirukural/prototypes-inheritance/prototypemethods/</loc>
+    <loc>/project-madurai-website/books/thirukural/prototypes-inheritance/prototypemethods/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/aathichoodi/array/exercise/</loc>
+    <loc>/project-madurai-website/books/aathichoodi/array/exercise/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/aathichoodi/array/kannotes/</loc>
+    <loc>/project-madurai-website/books/aathichoodi/array/kannotes/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/thirukural/prototypes-inheritance/</loc>
+    <loc>/project-madurai-website/books/thirukural/prototypes-inheritance/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/aathichoodi/array/</loc>
+    <loc>/project-madurai-website/books/aathichoodi/array/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/</loc>
-    <lastmod>2018-11-14T19:02:50-07:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>/posts/</loc>
+    <loc>/project-madurai-website/books/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>/posts/articles/a1/</loc>
+    <loc>/project-madurai-website/posts/</loc>
+    <lastmod>2018-11-14T19:02:50-07:00</lastmod>
+    <priority>0</priority>
+  </url><url>
+    <loc>/project-madurai-website/posts/articles/a1/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/posts/articles/a2/</loc>
+    <loc>/project-madurai-website/posts/articles/a2/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/posts/articles/a3/</loc>
+    <loc>/project-madurai-website/posts/articles/a3/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/posts/articles/</loc>
+    <loc>/project-madurai-website/posts/articles/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>/project-madurai-website/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/tags/t1/</loc>
+    <loc>/project-madurai-website/tags/t1/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/tags/t2/</loc>
+    <loc>/project-madurai-website/tags/t2/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>/project-madurai-website/tags/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/aathichoodi/</loc>
+    <loc>/project-madurai-website/books/aathichoodi/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url><url>
-    <loc>/books/thirukural/</loc>
+    <loc>/project-madurai-website/books/thirukural/</loc>
     <lastmod>2018-11-14T19:02:50-07:00</lastmod>
   </url>
 </urlset>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project Madurai School</title>
-    <link>/</link>
+    <link>/project-madurai-website/</link>
     <description>Recent content on Project Madurai School</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/project-madurai-website/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title> Prototypal inheritance</title>
-      <link>/books/thirukural/prototypes-inheritance/prototypeinheritance/</link>
+      <link>/project-madurai-website/books/thirukural/prototypes-inheritance/prototypeinheritance/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/books/thirukural/prototypes-inheritance/prototypeinheritance/</guid>
+      <guid>/project-madurai-website/books/thirukural/prototypes-inheritance/prototypeinheritance/</guid>
       <description>Prototypal inheritance In programming, we often want to take something and extend it.
 For instance, we have a user object with its properties and methods, and want to make admin and guest as slightly modified variants of it. We&amp;rsquo;d like to reuse what we have in user, not copy/reimplement its methods, just build a new object on top of it.
 Prototypal inheritance is a language feature that helps in that.</description>
@@ -20,19 +20,19 @@ Prototypal inheritance is a language feature that helps in that.</description>
     
     <item>
       <title>What are Arrays</title>
-      <link>/books/aathichoodi/array/what-are-array/</link>
+      <link>/project-madurai-website/books/aathichoodi/array/what-are-array/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/books/aathichoodi/array/what-are-array/</guid>
+      <guid>/project-madurai-website/books/aathichoodi/array/what-are-array/</guid>
       <description></description>
     </item>
     
     <item>
       <title>F.prototype</title>
-      <link>/books/thirukural/prototypes-inheritance/function-prototype/</link>
+      <link>/project-madurai-website/books/thirukural/prototypes-inheritance/function-prototype/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/books/thirukural/prototypes-inheritance/function-prototype/</guid>
+      <guid>/project-madurai-website/books/thirukural/prototypes-inheritance/function-prototype/</guid>
       <description>F.prototype Remember, new objects can be created with a constructor function, like new F().
 If F.prototype is an object, then the new operator uses it to set [[Prototype]] for the new object.
 JavaScript had prototypal inheritance from the beginning. It was one of the core features of the language. But in the old times, there was no direct access to it. The only thing that worked reliably was a `&amp;quot;prototype&amp;quot;` property of the constructor function, described in this chapter.</description>
@@ -40,19 +40,19 @@ JavaScript had prototypal inheritance from the beginning. It was one of the core
     
     <item>
       <title>More on Arrays</title>
-      <link>/books/aathichoodi/array/more-on-array/</link>
+      <link>/project-madurai-website/books/aathichoodi/array/more-on-array/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/books/aathichoodi/array/more-on-array/</guid>
+      <guid>/project-madurai-website/books/aathichoodi/array/more-on-array/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Native prototypes</title>
-      <link>/books/thirukural/prototypes-inheritance/nativeprototypes/</link>
+      <link>/project-madurai-website/books/thirukural/prototypes-inheritance/nativeprototypes/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/books/thirukural/prototypes-inheritance/nativeprototypes/</guid>
+      <guid>/project-madurai-website/books/thirukural/prototypes-inheritance/nativeprototypes/</guid>
       <description>Native prototypes The &amp;quot;prototype&amp;quot; property is widely used by the core of JavaScript itself. All built-in constructor functions use it.
 First we&amp;rsquo;ll see at the details, and then how to use it for adding new capabilities to built-in objects.
 Object.prototype Let&amp;rsquo;s say we output an empty object:
@@ -61,28 +61,28 @@ let obj = {}; alert( obj ); // &amp;#34;[object Object]&amp;#34; ? Where&amp;rsq
     
     <item>
       <title>Pointers and Arrays</title>
-      <link>/books/aathichoodi/array/pointers-and-arrays/</link>
+      <link>/project-madurai-website/books/aathichoodi/array/pointers-and-arrays/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/books/aathichoodi/array/pointers-and-arrays/</guid>
+      <guid>/project-madurai-website/books/aathichoodi/array/pointers-and-arrays/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Flexible Arrays</title>
-      <link>/books/aathichoodi/array/flexible-arrays/</link>
+      <link>/project-madurai-website/books/aathichoodi/array/flexible-arrays/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/books/aathichoodi/array/flexible-arrays/</guid>
+      <guid>/project-madurai-website/books/aathichoodi/array/flexible-arrays/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Prototype methods, objects without __proto__</title>
-      <link>/books/thirukural/prototypes-inheritance/prototypemethods/</link>
+      <link>/project-madurai-website/books/thirukural/prototypes-inheritance/prototypemethods/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/books/thirukural/prototypes-inheritance/prototypemethods/</guid>
+      <guid>/project-madurai-website/books/thirukural/prototypes-inheritance/prototypemethods/</guid>
       <description>Prototype methods, objects without proto In the first chapter of this section, we mentioned that there are modern methods to setup a prototype.
 The __proto__ is considered outdated and somewhat deprecated (in browser-only part of the JavaScript standard).
 The modern methods are:
@@ -91,46 +91,46 @@ The modern methods are:
     
     <item>
       <title>Exercise</title>
-      <link>/books/aathichoodi/array/exercise/</link>
+      <link>/project-madurai-website/books/aathichoodi/array/exercise/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/books/aathichoodi/array/exercise/</guid>
+      <guid>/project-madurai-website/books/aathichoodi/array/exercise/</guid>
       <description></description>
     </item>
     
     <item>
       <title>KanNotes</title>
-      <link>/books/aathichoodi/array/kannotes/</link>
+      <link>/project-madurai-website/books/aathichoodi/array/kannotes/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/books/aathichoodi/array/kannotes/</guid>
+      <guid>/project-madurai-website/books/aathichoodi/array/kannotes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A1</title>
-      <link>/posts/articles/a1/</link>
+      <link>/project-madurai-website/posts/articles/a1/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/posts/articles/a1/</guid>
+      <guid>/project-madurai-website/posts/articles/a1/</guid>
       <description>I am a1</description>
     </item>
     
     <item>
       <title>A2</title>
-      <link>/posts/articles/a2/</link>
+      <link>/project-madurai-website/posts/articles/a2/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/posts/articles/a2/</guid>
+      <guid>/project-madurai-website/posts/articles/a2/</guid>
       <description>I am a2</description>
     </item>
     
     <item>
       <title>A3</title>
-      <link>/posts/articles/a3/</link>
+      <link>/project-madurai-website/posts/articles/a3/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/posts/articles/a3/</guid>
+      <guid>/project-madurai-website/posts/articles/a3/</guid>
       <description>I am a3</description>
     </item>
     

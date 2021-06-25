@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>t1 on Project Madurai School</title>
-    <link>/tags/t1/</link>
+    <link>/project-madurai-website/tags/t1/</link>
     <description>Recent content in t1 on Project Madurai School</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/tags/t1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/project-madurai-website/tags/t1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A1</title>
-      <link>/posts/articles/a1/</link>
+      <link>/project-madurai-website/posts/articles/a1/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/posts/articles/a1/</guid>
+      <guid>/project-madurai-website/posts/articles/a1/</guid>
       <description>I am a1</description>
     </item>
     
     <item>
       <title>A3</title>
-      <link>/posts/articles/a3/</link>
+      <link>/project-madurai-website/posts/articles/a3/</link>
       <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
       
-      <guid>/posts/articles/a3/</guid>
+      <guid>/project-madurai-website/posts/articles/a3/</guid>
       <description>I am a3</description>
     </item>
     

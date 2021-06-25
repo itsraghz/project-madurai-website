@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>திருக்குறள் on Project Madurai School</title>
-    <link>/books/thirukural/</link>
+    <link>/project-madurai-website/books/thirukural/</link>
     <description>Recent content in திருக்குறள் on Project Madurai School</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/thirukural/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/project-madurai-website/books/thirukural/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
