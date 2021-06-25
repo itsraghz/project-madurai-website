@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/data-types/primitives-methods">Methods of primitives</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/data-types">Datatypes</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/data-types/string">Strings</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="numbers">Numbers</h1>
+<p>In modern JavaScript, there are two types of numbers:</p>
+<ol>
+<li>
+<p>Regular numbers in JavaScript are stored in 64-bit format <a href="https://en.wikipedia.org/wiki/IEEE_754-2008_revision">IEEE-754</a>, also known as &ldquo;double precision floating point numbers&rdquo;. These are numbers that we&rsquo;re using most of the time, and we&rsquo;ll talk about them in this chapter.</p>
+</li>
+<li>
+<p>BigInt numbers, to represent integers of arbitrary length. They are sometimes needed, because a regular number can&rsquo;t exceed <code>2<sup>53</sup></code> or be less than <code>-2<sup>53</sup></code>. As bigints are used in few special areas, we devote them a special chapter <a href="info:bigint">info:bigint</a>.</p>
+</li>
+</ol>
+<p>So here we&rsquo;ll talk about regular numbers. Let&rsquo;s expand our knowledge of them.</p>
+<h2 id="more-ways-to-write-a-number">More ways to write a number</h2>
+<p>Imagine we need to write 1 billion. The obvious way is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">billion</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000000000</span>;
+</code></pre></div><p>We also can use underscore <code>_</code> as the separator:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">billion</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1_000_000_000</span>;
+</code></pre></div><p>Here the underscore <code>_</code> plays the role of the &ldquo;syntactic sugar&rdquo;, it makes the number more readable. The JavaScript engine simply ignores <code>_</code> between digits, so it&rsquo;s exactly the same one billion as above.</p>
+<p>In real life though, we try to avoid writing long sequences of zeroes. We&rsquo;re too lazy for that. We&rsquo;ll try to write something like <code>&quot;1bn&quot;</code> for a billion or <code>&quot;7.3bn&quot;</code> for 7 billion 300 million. The same is true for most large numbers.</p>
+<p>In JavaScript, we can shorten a number by appending the letter <code>&quot;e&quot;</code> to it and specifying the zeroes count:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">billion</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span>;  <span style="color:#75715e">// 1 billion, literally: 1 and 9 zeroes
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#ae81ff">7.3</span><span style="color:#a6e22e">e9</span> );  <span style="color:#75715e">// 7.3 billions (same as 7300000000 or 7_300_000_000)
+</span></code></pre></div><p>In other words, <code>e</code> multiplies the number by <code>1</code> with the given zeroes count.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ae81ff">1e3</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span> <span style="color:#75715e">// e3 means *1000
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">1.23</span><span style="color:#a6e22e">e6</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.23</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000000</span> <span style="color:#75715e">// e6 means *1000000
+</span></code></pre></div><p>Now let&rsquo;s write something very small. Say, 1 microsecond (one millionth of a second):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ms</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.000001</span>;
+</code></pre></div><p>Just like before, using <code>&quot;e&quot;</code> can help. If we&rsquo;d like to avoid writing the zeroes explicitly, we could say the same as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ms</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-6</span>; <span style="color:#75715e">// six zeroes to the left from 1
+</span></code></pre></div><p>If we count the zeroes in <code>0.000001</code>, there are 6 of them. So naturally it&rsquo;s <code>1e-6</code>.</p>
+<p>In other words, a negative number after <code>&quot;e&quot;</code> means a division by 1 with the given number of zeroes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// -3 divides by 1 with 3 zeroes
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">1e-3</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span> (<span style="color:#f92672">=</span><span style="color:#ae81ff">0.001</span>)
+
+<span style="color:#75715e">// -6 divides by 1 with 6 zeroes
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">1.23</span><span style="color:#a6e22e">e</span><span style="color:#f92672">-</span><span style="color:#ae81ff">6</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.23</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000000</span> (<span style="color:#f92672">=</span><span style="color:#ae81ff">0.00000123</span>)
+</code></pre></div><h3 id="hex-binary-and-octal-numbers">Hex, binary and octal numbers</h3>
+<p><a href="https://en.wikipedia.org/wiki/Hexadecimal">Hexadecimal</a> numbers are widely used in JavaScript to represent colors, encode characters, and for many other things. So naturally, there exists a shorter way to write them: <code>0x</code> and then the number.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#ae81ff">0xff</span> ); <span style="color:#75715e">// 255
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#ae81ff">0xFF</span> ); <span style="color:#75715e">// 255 (the same, case doesn&#39;t matter)
+</span></code></pre></div><p>Binary and octal numeral systems are rarely used, but also supported using the <code>0b</code> and <code>0o</code> prefixes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0b11111111</span>; <span style="color:#75715e">// binary form of 255
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0o377</span>; <span style="color:#75715e">// octal form of 255
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">b</span> ); <span style="color:#75715e">// true, the same number 255 at both sides
+</span></code></pre></div><p>There are only 3 numeral systems with such support. For other numeral systems, we should use the function <code>parseInt</code> (which we will see later in this chapter).</p>
+<h2 id="tostringbase">toString(base)</h2>
+<p>The method <code>num.toString(base)</code> returns a string representation of <code>num</code> in the numeral system with the given <code>base</code>.</p>
+<p>For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">255</span>;
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">num</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">16</span>) );  <span style="color:#75715e">// ff
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">num</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">2</span>) );   <span style="color:#75715e">// 11111111
+</span></code></pre></div><p>The <code>base</code> can vary from <code>2</code> to <code>36</code>. By default it&rsquo;s <code>10</code>.</p>
+<p>Common use cases for this are:</p>
+<ul>
+<li>
+<p><strong>base=16</strong> is used for hex colors, character encodings etc, digits can be <code>0..9</code> or <code>A..F</code>.</p>
+</li>
+<li>
+<p><strong>base=2</strong> is mostly for debugging bitwise operations, digits can be <code>0</code> or <code>1</code>.</p>
+</li>
+<li>
+<p><strong>base=36</strong> is the maximum, digits can be <code>0..9</code> or <code>A..Z</code>. The whole latin alphabet is used to represent a number. A funny, but useful case for <code>36</code> is when we need to turn a long numeric identifier into something shorter, for example to make a short url. Can simply represent it in the numeral system with base <code>36</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#ae81ff">123456.</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">36</span>) ); <span style="color:#75715e">// 2n9c
+</span></code></pre></div></li>
+</ul>
+<pre><code class="language-warn" data-lang="warn">Please note that two dots in `123456..toString(36)` is not a typo. If we want to call a method directly on a number, like `toString` in the example above, then we need to place two dots `..` after it.
+
+If we placed a single dot: `123456.toString(36)`, then there would be an error, because JavaScript syntax implies the decimal part after the first dot. And if we place one more dot, then JavaScript knows that the decimal part is empty and now goes the method.
+
+Also could write `(123456).toString(36)`.
+</code></pre><h2 id="rounding">Rounding</h2>
+<p>One of the most used operations when working with numbers is rounding.</p>
+<p>There are several built-in functions for rounding:</p>
+<dl>
+<dt><code>Math.floor</code></dt>
+<dd>Rounds down: <code>3.1</code> becomes <code>3</code>, and <code>-1.1</code> becomes <code>-2</code>.</dd>
+<dt><code>Math.ceil</code></dt>
+<dd>Rounds up: <code>3.1</code> becomes <code>4</code>, and <code>-1.1</code> becomes <code>-1</code>.</dd>
+<dt><code>Math.round</code></dt>
+<dd>Rounds to the nearest integer: <code>3.1</code> becomes <code>3</code>, <code>3.6</code> becomes <code>4</code>, the middle case: <code>3.5</code> rounds up to <code>4</code> too.</dd>
+<dt><code>Math.trunc</code> (not supported by Internet Explorer)</dt>
+<dd>Removes anything after the decimal point without rounding: <code>3.1</code> becomes <code>3</code>, <code>-1.1</code> becomes <code>-1</code>.</dd>
+</dl>
+<p>Here&rsquo;s the table to summarize the differences between them:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>Math.floor</code></th>
+<th><code>Math.ceil</code></th>
+<th><code>Math.round</code></th>
+<th><code>Math.trunc</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>3.1</code></td>
+<td><code>3</code></td>
+<td><code>4</code></td>
+<td><code>3</code></td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>3.6</code></td>
+<td><code>3</code></td>
+<td><code>4</code></td>
+<td><code>4</code></td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>-1.1</code></td>
+<td><code>-2</code></td>
+<td><code>-1</code></td>
+<td><code>-1</code></td>
+<td><code>-1</code></td>
+</tr>
+<tr>
+<td><code>-1.6</code></td>
+<td><code>-2</code></td>
+<td><code>-1</code></td>
+<td><code>-2</code></td>
+<td><code>-1</code></td>
+</tr>
+</tbody>
+</table>
+<p>These functions cover all of the possible ways to deal with the decimal part of a number. But what if we&rsquo;d like to round the number to <code>n-th</code> digit after the decimal?</p>
+<p>For instance, we have <code>1.2345</code> and want to round it to 2 digits, getting only <code>1.23</code>.</p>
+<p>There are two ways to do so:</p>
+<ol>
+<li>
+<p>Multiply-and-divide.</p>
+<p>For example, to round the number to the 2nd digit after the decimal, we can multiply the number by <code>100</code> (or a bigger power of 10), call the rounding function and then divide it back.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.23456</span>;
+
+<span style="color:#a6e22e">alert</span>( Math.<span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">num</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span> ); <span style="color:#75715e">// 1.23456 -&gt; 123.456 -&gt; 123 -&gt; 1.23
+</span></code></pre></div></li>
+<li>
+<p>The method <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">toFixed(n)</a> rounds the number to <code>n</code> digits after the point and returns a string representation of the result.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.34</span>;
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">num</span>.<span style="color:#a6e22e">toFixed</span>(<span style="color:#ae81ff">1</span>) ); <span style="color:#75715e">// &#34;12.3&#34;
+</span></code></pre></div><p>This rounds up or down to the nearest value, similar to <code>Math.round</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.36</span>;
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">num</span>.<span style="color:#a6e22e">toFixed</span>(<span style="color:#ae81ff">1</span>) ); <span style="color:#75715e">// &#34;12.4&#34;
+</span></code></pre></div><p>Please note that result of <code>toFixed</code> is a string. If the decimal part is shorter than required, zeroes are appended to the end:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.34</span>;
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">num</span>.<span style="color:#a6e22e">toFixed</span>(<span style="color:#ae81ff">5</span>) ); <span style="color:#75715e">// &#34;12.34000&#34;, added zeroes to make exactly 5 digits
+</span></code></pre></div><p>We can convert it to a number using the unary plus or a <code>Number()</code> call: <code>+num.toFixed(5)</code>.</p>
+</li>
+</ol>
+<h2 id="imprecise-calculations">Imprecise calculations</h2>
+<p>Internally, a number is represented in 64-bit format <a href="https://en.wikipedia.org/wiki/IEEE_754-2008_revision">IEEE-754</a>, so there are exactly 64 bits to store a number: 52 of them are used to store the digits, 11 of them store the position of the decimal point (they are zero for integer numbers), and 1 bit is for the sign.</p>
+<p>If a number is too big, it would overflow the 64-bit storage, potentially giving an infinity:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#ae81ff">1e500</span> ); <span style="color:#75715e">// Infinity
+</span></code></pre></div><p>What may be a little less obvious, but happens quite often, is the loss of precision.</p>
+<p>Consider this (falsy!) test:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#ae81ff">0.1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0.3</span> ); <span style="color:#75715e">// *!*false*/!*
+</span></code></pre></div><p>That&rsquo;s right, if we check whether the sum of <code>0.1</code> and <code>0.2</code> is <code>0.3</code>, we get <code>false</code>.</p>
+<p>Strange! What is it then if not <code>0.3</code>?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#ae81ff">0.1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span> ); <span style="color:#75715e">// 0.30000000000000004
+</span></code></pre></div><p>Ouch! There are more consequences than an incorrect comparison here. Imagine you&rsquo;re making an e-shopping site and the visitor puts <code>$0.10</code> and <code>$0.20</code> goods into their cart. The order total will be <code>$0.30000000000000004</code>. That would surprise anyone.</p>
+<p>But why does this happen?</p>
+<p>A number is stored in memory in its binary form, a sequence of bits - ones and zeroes. But fractions like <code>0.1</code>, <code>0.2</code> that look simple in the decimal numeric system are actually unending fractions in their binary form.</p>
+<p>In other words, what is <code>0.1</code>? It is one divided by ten <code>1/10</code>, one-tenth. In decimal numeral system such numbers are easily representable. Compare it to one-third: <code>1/3</code>. It becomes an endless fraction <code>0.33333(3)</code>.</p>
+<p>So, division by powers <code>10</code> is guaranteed to work well in the decimal system, but division by <code>3</code> is not. For the same reason, in the binary numeral system, the division by powers of <code>2</code> is guaranteed to work, but <code>1/10</code> becomes an endless binary fraction.</p>
+<p>There&rsquo;s just no way to store <em>exactly 0.1</em> or <em>exactly 0.2</em> using the binary system, just like there is no way to store one-third as a decimal fraction.</p>
+<p>The numeric format IEEE-754 solves this by rounding to the nearest possible number. These rounding rules normally don&rsquo;t allow us to see that &ldquo;tiny precision loss&rdquo;, but it exists.</p>
+<p>We can see this in action:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#ae81ff">0.1</span>.<span style="color:#a6e22e">toFixed</span>(<span style="color:#ae81ff">20</span>) ); <span style="color:#75715e">// 0.10000000000000000555
+</span></code></pre></div><p>And when we sum two numbers, their &ldquo;precision losses&rdquo; add up.</p>
+<p>That&rsquo;s why <code>0.1 + 0.2</code> is not exactly <code>0.3</code>.</p>
+<pre><code class="language-smart" data-lang="smart">The same issue exists in many other programming languages.
+
+PHP, Java, C, Perl, Ruby give exactly the same result, because they are based on the same numeric format.
+</code></pre><p>Can we work around the problem? Sure, the most reliable method is to round the result with the help of a method <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">toFixed(n)</a>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span>;
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">sum</span>.<span style="color:#a6e22e">toFixed</span>(<span style="color:#ae81ff">2</span>) ); <span style="color:#75715e">// 0.30
+</span></code></pre></div><p>Please note that <code>toFixed</code> always returns a string. It ensures that it has 2 digits after the decimal point. That&rsquo;s actually convenient if we have an e-shopping and need to show <code>$0.30</code>. For other cases, we can use the unary plus to coerce it into a number:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span>;
+<span style="color:#a6e22e">alert</span>( <span style="color:#f92672">+</span><span style="color:#a6e22e">sum</span>.<span style="color:#a6e22e">toFixed</span>(<span style="color:#ae81ff">2</span>) ); <span style="color:#75715e">// 0.3
+</span></code></pre></div><p>We also can temporarily multiply the numbers by 100 (or a bigger number) to turn them into integers, do the maths, and then divide back. Then, as we&rsquo;re doing maths with integers, the error somewhat decreases, but we still get it on division:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( (<span style="color:#ae81ff">0.1</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span> ); <span style="color:#75715e">// 0.3
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( (<span style="color:#ae81ff">0.28</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.14</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>); <span style="color:#75715e">// 0.4200000000000001
+</span></code></pre></div><p>So, multiply/divide approach reduces the error, but doesn&rsquo;t remove it totally.</p>
+<p>Sometimes we could try to evade fractions at all. Like if we&rsquo;re dealing with a shop, then we can store prices in cents instead of dollars. But what if we apply a discount of 30%? In practice, totally evading fractions is rarely possible. Just round them to cut &ldquo;tails&rdquo; when needed.</p>
+<pre><code class="language-smart" data-lang="smart">Try running this:
+
+```js run
+// Hello! I'm a self-increasing number!
+alert( 9999999999999999 ); // shows 10000000000000000
+```
+
+This suffers from the same issue: a loss of precision. There are 64 bits for the number, 52 of them can be used to store digits, but that's not enough. So the least significant digits disappear.
+
+JavaScript doesn't trigger an error in such events. It does its best to fit the number into the desired format, but unfortunately, this format is not big enough.
+</code></pre><pre><code class="language-smart" data-lang="smart">Another funny consequence of the internal representation of numbers is the existence of two zeroes: `0` and `-0`.
+
+That's because a sign is represented by a single bit, so it can be set or not set for any number including a zero.
+
+In most cases the distinction is unnoticeable, because operators are suited to treat them as the same.
+</code></pre><h2 id="tests-isfinite-and-isnan">Tests: isFinite and isNaN</h2>
+<p>Remember these two special numeric values?</p>
+<ul>
+<li><code>Infinity</code> (and <code>-Infinity</code>) is a special numeric value that is greater (less) than anything.</li>
+<li><code>NaN</code> represents an error.</li>
+</ul>
+<p>They belong to the type <code>number</code>, but are not &ldquo;normal&rdquo; numbers, so there are special functions to check for them:</p>
+<ul>
+<li>
+<p><code>isNaN(value)</code> converts its argument to a number and then tests it for being <code>NaN</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( isNaN(<span style="color:#66d9ef">NaN</span>) ); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( isNaN(<span style="color:#e6db74">&#34;str&#34;</span>) ); <span style="color:#75715e">// true
+</span></code></pre></div><p>But do we need this function? Can&rsquo;t we just use the comparison <code>=== NaN</code>? Sorry, but the answer is no. The value <code>NaN</code> is unique in that it does not equal anything, including itself:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#66d9ef">NaN</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">NaN</span> ); <span style="color:#75715e">// false
+</span></code></pre></div></li>
+<li>
+<p><code>isFinite(value)</code> converts its argument to a number and returns <code>true</code> if it&rsquo;s a regular number, not <code>NaN/Infinity/-Infinity</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( isFinite(<span style="color:#e6db74">&#34;15&#34;</span>) ); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( isFinite(<span style="color:#e6db74">&#34;str&#34;</span>) ); <span style="color:#75715e">// false, because a special value: NaN
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( isFinite(<span style="color:#66d9ef">Infinity</span>) ); <span style="color:#75715e">// false, because a special value: Infinity
+</span></code></pre></div></li>
+</ul>
+<p>Sometimes <code>isFinite</code> is used to validate whether a string value is a regular number:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#f92672">+</span><span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;Enter a number&#34;</span>, <span style="color:#e6db74">&#39;&#39;</span>);
+
+<span style="color:#75715e">// will be true unless you enter Infinity, -Infinity or not a number
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( isFinite(<span style="color:#a6e22e">num</span>) );
+</code></pre></div><p>Please note that an empty or a space-only string is treated as <code>0</code> in all numeric functions including <code>isFinite</code>.</p>
+<p>```smart header=&ldquo;Compare with <code>Object.is</code>&rdquo;</p>
+<p>There is a special built-in method <a href="mdn:js/Object/is"><code>Object.is</code></a> that compares values like <code>===</code>, but is more reliable for two edge cases:</p>
+<ol>
+<li>It works with <code>NaN</code>: <code>Object.is(NaN, NaN) === true</code>, that&rsquo;s a good thing.</li>
+<li>Values <code>0</code> and <code>-0</code> are different: <code>Object.is(0, -0) === false</code>, technically that&rsquo;s true, because internally the number has a sign bit that may be different even if all other bits are zeroes.</li>
+</ol>
+<p>In all other cases, <code>Object.is(a, b)</code> is the same as <code>a === b</code>.</p>
+<p>This way of comparison is often used in JavaScript specification. When an internal algorithm needs to compare two values for being exactly the same, it uses <code>Object.is</code> (internally called <a href="https://tc39.github.io/ecma262/#sec-samevalue">SameValue</a>).</p>
+<pre><code>
+
+## parseInt and parseFloat
+
+Numeric conversion using a plus `+` or `Number()` is strict. If a value is not exactly a number, it fails:
+
+```js run
+alert( +&quot;100px&quot; ); // NaN
+</code></pre><p>The sole exception is spaces at the beginning or at the end of the string, as they are ignored.</p>
+<p>But in real life we often have values in units, like <code>&quot;100px&quot;</code> or <code>&quot;12pt&quot;</code> in CSS. Also in many countries the currency symbol goes after the amount, so we have <code>&quot;19€&quot;</code> and would like to extract a numeric value out of that.</p>
+<p>That&rsquo;s what <code>parseInt</code> and <code>parseFloat</code> are for.</p>
+<p>They &ldquo;read&rdquo; a number from a string until they can&rsquo;t. In case of an error, the gathered number is returned. The function <code>parseInt</code> returns an integer, whilst <code>parseFloat</code> will return a floating-point number:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( parseInt(<span style="color:#e6db74">&#39;100px&#39;</span>) ); <span style="color:#75715e">// 100
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( parseFloat(<span style="color:#e6db74">&#39;12.5em&#39;</span>) ); <span style="color:#75715e">// 12.5
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( parseInt(<span style="color:#e6db74">&#39;12.3&#39;</span>) ); <span style="color:#75715e">// 12, only the integer part is returned
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( parseFloat(<span style="color:#e6db74">&#39;12.3.4&#39;</span>) ); <span style="color:#75715e">// 12.3, the second point stops the reading
+</span></code></pre></div><p>There are situations when <code>parseInt/parseFloat</code> will return <code>NaN</code>. It happens when no digits could be read:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( parseInt(<span style="color:#e6db74">&#39;a123&#39;</span>) ); <span style="color:#75715e">// NaN, the first symbol stops the process
+</span></code></pre></div><p>````smart header=&ldquo;The second argument of <code>parseInt(str, radix)</code>&rdquo;
+The <code>parseInt()</code> function has an optional second parameter. It specifies the base of the numeral system, so <code>parseInt</code> can also parse strings of hex numbers, binary numbers and so on:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( parseInt(<span style="color:#e6db74">&#39;0xff&#39;</span>, <span style="color:#ae81ff">16</span>) ); <span style="color:#75715e">// 255
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( parseInt(<span style="color:#e6db74">&#39;ff&#39;</span>, <span style="color:#ae81ff">16</span>) ); <span style="color:#75715e">// 255, without 0x also works
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( parseInt(<span style="color:#e6db74">&#39;2n9c&#39;</span>, <span style="color:#ae81ff">36</span>) ); <span style="color:#75715e">// 123456
+</span></code></pre></div><pre><code>
+## Other math functions
+
+JavaScript has a built-in [Math](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Math) object which contains a small library of mathematical functions and constants.
+
+A few examples:
+
+`Math.random()`
+: Returns a random number from 0 to 1 (not including 1).
+
+    ```js run
+    alert( Math.random() ); // 0.1234567894322
+    alert( Math.random() ); // 0.5435252343232
+    alert( Math.random() ); // ... (any random numbers)
+    ```
+
+`Math.max(a, b, c...)` / `Math.min(a, b, c...)`
+: Returns the greatest/smallest from the arbitrary number of arguments.
+
+    ```js run
+    alert( Math.max(3, 5, -10, 0, 1) ); // 5
+    alert( Math.min(1, 2) ); // 1
+    ```
+
+`Math.pow(n, power)`
+: Returns `n` raised to the given power.
+
+    ```js run
+    alert( Math.pow(2, 10) ); // 2 in power 10 = 1024
+    ```
+
+There are more functions and constants in `Math` object, including trigonometry, which you can find in the [docs for the Math object](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Math).
+
+## Summary
+
+To write numbers with many zeroes:
+
+- Append `&quot;e&quot;` with the zeroes count to the number. Like: `123e6` is the same as `123` with 6 zeroes `123000000`.
+- A negative number after `&quot;e&quot;` causes the number to be divided by 1 with given zeroes. E.g. `123e-6` means `0.000123` (`123` millionths).
+
+For different numeral systems:
+
+- Can write numbers directly in hex (`0x`), octal (`0o`) and binary (`0b`) systems.
+- `parseInt(str, base)` parses the string `str` into an integer in numeral system with given `base`, `2 ≤ base ≤ 36`.
+- `num.toString(base)` converts a number to a string in the numeral system with the given `base`.
+
+For converting values like `12pt` and `100px` to a number:
+
+- Use `parseInt/parseFloat` for the &quot;soft&quot; conversion, which reads a number from a string and then returns the value they could read before the error.
+
+For fractions:
+
+- Round using `Math.floor`, `Math.ceil`, `Math.trunc`, `Math.round` or `num.toFixed(precision)`.
+- Make sure to remember there's a loss of precision when working with fractions.
+
+More mathematical functions:
+
+- See the [Math](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Math) object when you need them. The library is very small, but can cover basic needs.
+</code></pre></main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

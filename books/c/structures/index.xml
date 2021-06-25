@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Structures on Project Madurai School</title>
+    <link>/books/c/structures/</link>
+    <description>Recent content in Structures on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/c/structures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What are Strings</title>
+      <link>/books/c/structures/why-use-structures/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/why-use-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Array of Structures</title>
+      <link>/books/c/structures/array-of-structures/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/array-of-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intricacies of Structures</title>
+      <link>/books/c/structures/intricacies-of-structures/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/intricacies-of-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/structures/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uses of Structure</title>
+      <link>/books/c/structures/uses-of-structure/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/uses-of-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/structures/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/kannotes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

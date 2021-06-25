@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miscellaneous on Project Madurai School</title>
+    <link>/books/javascript/miscellaneous/</link>
+    <description>Recent content in Miscellaneous on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/javascript/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxy and Reflect</title>
+      <link>/books/javascript/miscellaneous/proxy-and-reflect/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/miscellaneous/proxy-and-reflect/</guid>
+      <description>Proxy and Reflect A Proxy object wraps another object and intercepts operations, like reading/writing properties and others, optionally handling them on its own, or transparently allowing the object to handle them.
+Proxies are used in many libraries and some browser frameworks. We&amp;rsquo;ll see many practical applications in this article.
+Proxy The syntax:
+let proxy = new Proxy(target, handler)  target &amp;ndash; is an object to wrap, can be anything, including functions.</description>
+    </item>
+    
+    <item>
+      <title>Eval: run a code string</title>
+      <link>/books/javascript/miscellaneous/eval-run-code-string/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/miscellaneous/eval-run-code-string/</guid>
+      <description>Eval: run a code string The built-in eval function allows to execute a string of code.
+The syntax is:
+let result = eval(code); For example:
+let code = &amp;#39;alert(&amp;#34;Hello&amp;#34;)&amp;#39;; eval(code); // Hello A string of code may be long, contain line breaks, function declarations, variables and so on.
+The result of eval is the result of the last statement.
+For example:
+let value = eval(&amp;#39;1+1&amp;#39;); alert(value); // 2 let value = eval(&amp;#39;let i = 0; ++i&amp;#39;); alert(value); // 1 The eval&amp;rsquo;ed code is executed in the current lexical environment, so it can see outer variables:</description>
+    </item>
+    
+    <item>
+      <title>Currying</title>
+      <link>/books/javascript/miscellaneous/currying/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/miscellaneous/currying/</guid>
+      <description>Currying Currying is an advanced technique of working with functions. It&amp;rsquo;s used not only in JavaScript, but in other languages as well.
+Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
+Currying doesn&amp;rsquo;t call a function. It just transforms it.
+Let&amp;rsquo;s see an example first, to better understand what we&amp;rsquo;re talking about, and then practical applications.
+We&amp;rsquo;ll create a helper function curry(f) that performs currying for a two-argument f.</description>
+    </item>
+    
+    <item>
+      <title>Reference Type</title>
+      <link>/books/javascript/miscellaneous/reference-type/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/miscellaneous/reference-type/</guid>
+      <description>Reference Type This article covers an advanced topic, to understand certain edge-cases better. It&#39;s not important. Many experienced developers live fine without knowing it. Read on if you want to know how things work under the hood. A dynamically evaluated method call can lose this.
+For instance:
+let user = { name: &amp;#34;John&amp;#34;, hi() { alert(this.name); }, bye() { alert(&amp;#34;Bye&amp;#34;); } }; user.hi(); // works  // now let&amp;#39;s call user.</description>
+    </item>
+    
+    <item>
+      <title>BigInt</title>
+      <link>/books/javascript/miscellaneous/bigint/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/miscellaneous/bigint/</guid>
+      <description>BigInt [recent caniuse=&amp;ldquo;bigint&amp;rdquo;]
+BigInt is a special numeric type that provides support for integers of arbitrary length.
+A bigint is created by appending n to the end of an integer literal or by calling the function BigInt that creates bigints from strings, numbers etc.
+const bigint = 1234567890123456789012345678901234567890n; const sameBigint = BigInt(&amp;#34;1234567890123456789012345678901234567890&amp;#34;); const bigintFromNumber = BigInt(10); // same as 10n Math operators BigInt can mostly be used like a regular number, for example:</description>
+    </item>
+    
+  </channel>
+</rss>

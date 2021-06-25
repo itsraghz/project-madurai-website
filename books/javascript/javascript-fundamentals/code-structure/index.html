@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/javascript-fundamentals/hello-world">Hello, world!</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/javascript-fundamentals">JavaScript Fundamentals</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/javascript-fundamentals/the-modern-mode">The modern mode, &#34;use strict&#34;</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="code-structure">Code structure</h1>
+<p>The first thing we&rsquo;ll study is the building blocks of code.</p>
+<h2 id="statements">Statements</h2>
+<p>Statements are syntax constructs and commands that perform actions.</p>
+<p>We&rsquo;ve already seen a statement, <code>alert('Hello, world!')</code>, which shows the message &ldquo;Hello, world!&rdquo;.</p>
+<p>We can have as many statements in our code as we want. Statements can be separated with a semicolon.</p>
+<p>For example, here we split &ldquo;Hello World&rdquo; into two alerts:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Hello&#39;</span>); <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;World&#39;</span>);
+</code></pre></div><p>Usually, statements are written on separate lines to make the code more readable:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Hello&#39;</span>);
+<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;World&#39;</span>);
+</code></pre></div><h2 id="semicolons-semicolon">Semicolons [#semicolon]</h2>
+<p>A semicolon may be omitted in most cases when a line break exists.</p>
+<p>This would also work:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Hello&#39;</span>)
+<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;World&#39;</span>)
+</code></pre></div><p>Here, JavaScript interprets the line break as an &ldquo;implicit&rdquo; semicolon. This is called an <a href="https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion">automatic semicolon insertion</a>.</p>
+<p><strong>In most cases, a newline implies a semicolon. But &ldquo;in most cases&rdquo; does not mean &ldquo;always&rdquo;!</strong></p>
+<p>There are cases when a newline does not mean a semicolon. For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span>
+<span style="color:#ae81ff">1</span>
+<span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>);
+</code></pre></div><p>The code outputs <code>6</code> because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus <code>&quot;+&quot;</code>, then it is an &ldquo;incomplete expression&rdquo;, so the semicolon is not required. And in this case that works as intended.</p>
+<p><strong>But there are situations where JavaScript &ldquo;fails&rdquo; to assume a semicolon where it is really needed.</strong></p>
+<p>Errors which occur in such cases are quite hard to find and fix.</p>
+<pre><code class="language-smart" data-lang="smart">If you're curious to see a concrete example of such an error, check this code out:
+
+```js run
+alert(&quot;Hello&quot;);
+
+[1, 2].forEach(alert);
+```
+
+No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of running the code: it shows `Hello`, then `1`, then `2`.
+
+Now let's remove the semicolon after the `alert`:
+
+```js run no-beautify
+alert(&quot;Hello&quot;)
+
+[1, 2].forEach(alert);
+```
+
+The difference compared to the code above is only one character: the semicolon at the end of the first line is gone.
+
+If we run this code, only the first `Hello` shows (and there's an error, you may need to open the console to see it). There are no numbers any more.
+
+That's because JavaScript does not assume a semicolon before square brackets `[...]`. So, the code in the last example is treated as a single statement.
+
+Here's how the engine sees it:
+
+```js run no-beautify
+alert(&quot;Hello&quot;)[1, 2].forEach(alert);
+```
+
+Looks weird, right? Such merging in this case is just wrong. We need to put a semicolon after `alert` for the code to work correctly.
+
+This can happen in other situations also.
+</code></pre><p>We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let&rsquo;s note once again &ndash; <em>it is possible</em> to leave out semicolons most of the time. But it&rsquo;s safer &ndash; especially for a beginner &ndash; to use them.</p>
+<h2 id="comments-code-comments">Comments [#code-comments]</h2>
+<p>As time goes on, programs become more and more complex. It becomes necessary to add <em>comments</em> which describe what the code does and why.</p>
+<p>Comments can be put into any place of a script. They don&rsquo;t affect its execution because the engine simply ignores them.</p>
+<p><strong>One-line comments start with two forward slash characters <code>//</code>.</strong></p>
+<p>The rest of the line is a comment. It may occupy a full line of its own or follow a statement.</p>
+<p>Like here:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// This comment occupies a line of its own
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Hello&#39;</span>);
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;World&#39;</span>); <span style="color:#75715e">// This comment follows the statement
+</span></code></pre></div><p><strong>Multiline comments start with a forward slash and an asterisk <code>/*</code> and end with an asterisk and a forward slash <code>*/</code>.</strong></p>
+<p>Like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">/* An example with two messages.
+</span><span style="color:#75715e">This is a multiline comment.
+</span><span style="color:#75715e">*/</span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Hello&#39;</span>);
+<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;World&#39;</span>);
+</code></pre></div><p>The content of comments is ignored, so if we put code inside <code>/* &hellip; */</code>, it won&rsquo;t execute.</p>
+<p>Sometimes it can be handy to temporarily disable a part of code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">/* Commenting out the code
+</span><span style="color:#75715e">alert(&#39;Hello&#39;);
+</span><span style="color:#75715e">*/</span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;World&#39;</span>);
+</code></pre></div><pre><code class="language-smart" data-lang="smart">In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl` and `key:Option` instead of `key:Shift`.
+</code></pre><pre><code class="language-warn" data-lang="warn">There may not be `/*...*/` inside another `/*...*/`.
+
+Such code will die with an error:
+
+```js run no-beautify
+/*
+  /* nested comment ?!? */
+*/
+alert( 'World' );
+```
+</code></pre><p>Please, don&rsquo;t hesitate to comment your code.</p>
+<p>Comments increase the overall code footprint, but that&rsquo;s not a problem at all. There are many tools which minify code before publishing to a production server. They remove comments, so they don&rsquo;t appear in the working scripts. Therefore, comments do not have negative effects on production at all.</p>
+<p>Later in the tutorial there will be a chapter <a href="info:code-quality">info:code-quality</a> that also explains how to write better comments.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

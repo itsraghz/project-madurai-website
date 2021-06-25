@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on Project Madurai School</title>
+    <link>/books/c/introduction/</link>
+    <description>Recent content in Getting Started on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/c/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is C ?</title>
+      <link>/books/c/introduction/what-is-c/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/what-is-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Getting Started Width C</title>
+      <link>/books/c/introduction/getting-started-width-c/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/getting-started-width-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The First C Program</title>
+      <link>/books/c/introduction/the-first-c-program/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/the-first-c-program/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Receving Input</title>
+      <link>/books/c/introduction/receiving-input/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/receiving-input/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/introduction/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/introduction/kan-notes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/kan-notes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

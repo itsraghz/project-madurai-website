@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/promises-async-await/promise-basics">Promise</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/promises-async-await">Promises, async/await</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/promises-async-await/promise-error-handling">Error handling with promises</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="promises-chaining">Promises chaining</h1>
+<p>Let&rsquo;s return to the problem mentioned in the chapter <a href="info:callbacks">info:callbacks</a>: we have a sequence of asynchronous tasks to be performed one after another — for instance, loading scripts. How can we code it well?</p>
+<p>Promises provide a couple of recipes to do that.</p>
+<p>In this chapter we cover promise chaining.</p>
+<p>It looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
+
+  <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">1000</span>); <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span>
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">result</span>) { <span style="color:#75715e">// (**)
+</span><span style="color:#75715e"></span>
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">result</span>) { <span style="color:#75715e">// (***)
+</span><span style="color:#75715e"></span>
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">result</span>) {
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// 4
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+
+});
+</code></pre></div><p>The idea is that the result is passed through the chain of <code>.then</code> handlers.</p>
+<p>Here the flow is:</p>
+<ol>
+<li>The initial promise resolves in 1 second <code>(*)</code>,</li>
+<li>Then the <code>.then</code> handler is called <code>(**)</code>.</li>
+<li>The value that it returns is passed to the next <code>.then</code> handler <code>(***)</code></li>
+<li>&hellip;and so on.</li>
+</ol>
+<p>As the result is passed along the chain of handlers, we can see a sequence of <code>alert</code> calls: <code>1</code> -&gt; <code>2</code> -&gt; <code>4</code>.</p>
+<hr>
+<p>flow chart</p>
+<hr>
+<p>The whole thing works, because a call to <code>promise.then</code> returns a promise, so that we can call the next <code>.then</code> on it.</p>
+<p>When a handler returns a value, it becomes the result of that promise, so the next <code>.then</code> is called with it.</p>
+<p><strong>A classic newbie error: technically we can also add many <code>.then</code> to a single promise. This is not chaining.</strong></p>
+<p>For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
+  <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">1000</span>);
+});
+
+<span style="color:#a6e22e">promise</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">result</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+});
+
+<span style="color:#a6e22e">promise</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">result</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+});
+
+<span style="color:#a6e22e">promise</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">result</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+});
+</code></pre></div><p>What we did here is just several handlers to one promise. They don&rsquo;t pass the result to each other; instead they process it independently.</p>
+<p>Here&rsquo;s the picture (compare it with the chaining above):</p>
+<hr>
+<p>flow chart</p>
+<hr>
+<p>All <code>.then</code> on the same promise get the same result &ndash; the result of that promise. So in the code above all <code>alert</code> show the same: <code>1</code>.</p>
+<p>In practice we rarely need multiple handlers for one promise. Chaining is used much more often.</p>
+<h2 id="returning-promises">Returning promises</h2>
+<p>A handler, used in <code>.then(handler)</code> may create and return a promise.</p>
+<p>In that case further handlers wait until it settles, and then get its result.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
+
+  <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">1000</span>);
+
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">result</span>) {
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">*!*</span>
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; { <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">result</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">1000</span>);
+  });
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">result</span>) { <span style="color:#75715e">// (**)
+</span><span style="color:#75715e"></span>
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+    <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">result</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">1000</span>);
+  });
+
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">result</span>) {
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// 4
+</span><span style="color:#75715e"></span>
+});
+</code></pre></div><p>Here the first <code>.then</code> shows <code>1</code> and returns <code>new Promise(…)</code> in the line <code>(*)</code>. After one second it resolves, and the result (the argument of <code>resolve</code>, here it&rsquo;s <code>result * 2</code>) is passed on to handler of the second <code>.then</code>. That handler is in the line <code>(**)</code>, it shows <code>2</code> and does the same thing.</p>
+<p>So the output is the same as in the previous example: 1 -&gt; 2 -&gt; 4, but now with 1 second delay between <code>alert</code> calls.</p>
+<p>Returning promises allows us to build chains of asynchronous actions.</p>
+<h2 id="example-loadscript">Example: loadScript</h2>
+<p>Let&rsquo;s use this feature with the promisified <code>loadScript</code>, defined in the <a href="info:promise-basics#loadscript">previous chapter</a>, to load scripts one by one, in sequence:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#34;/article/promise-chaining/one.js&#34;</span>)
+  .<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">script</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#34;/article/promise-chaining/two.js&#34;</span>);
+  })
+  .<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">script</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#34;/article/promise-chaining/three.js&#34;</span>);
+  })
+  .<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">script</span>) {
+    <span style="color:#75715e">// use functions declared in scripts
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// to show that they indeed loaded
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">one</span>();
+    <span style="color:#a6e22e">two</span>();
+    <span style="color:#a6e22e">three</span>();
+  });
+</code></pre></div><p>This code can be made bit shorter with arrow functions:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#34;/article/promise-chaining/one.js&#34;</span>)
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">script</span> =&gt; <span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#34;/article/promise-chaining/two.js&#34;</span>))
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">script</span> =&gt; <span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#34;/article/promise-chaining/three.js&#34;</span>))
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">script</span> =&gt; {
+    <span style="color:#75715e">// scripts are loaded, we can use functions declared there
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">one</span>();
+    <span style="color:#a6e22e">two</span>();
+    <span style="color:#a6e22e">three</span>();
+  });
+</code></pre></div><p>Here each <code>loadScript</code> call returns a promise, and the next <code>.then</code> runs when it resolves. Then it initiates the loading of the next script. So scripts are loaded one after another.</p>
+<p>We can add more asynchronous actions to the chain. Please note that the code is still &ldquo;flat&rdquo; — it grows down, not to the right. There are no signs of the &ldquo;pyramid of doom&rdquo;.</p>
+<p>Technically, we could add <code>.then</code> directly to each <code>loadScript</code>, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#34;/article/promise-chaining/one.js&#34;</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">script1</span> =&gt; {
+  <span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#34;/article/promise-chaining/two.js&#34;</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">script2</span> =&gt; {
+    <span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#34;/article/promise-chaining/three.js&#34;</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">script3</span> =&gt; {
+      <span style="color:#75715e">// this function has access to variables script1, script2 and script3
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">one</span>();
+      <span style="color:#a6e22e">two</span>();
+      <span style="color:#a6e22e">three</span>();
+    });
+  });
+});
+</code></pre></div><p>This code does the same: loads 3 scripts in sequence. But it &ldquo;grows to the right&rdquo;. So we have the same problem as with callbacks.</p>
+<p>People who start to use promises sometimes don&rsquo;t know about chaining, so they write it this way. Generally, chaining is preferred.</p>
+<p>Sometimes it&rsquo;s ok to write <code>.then</code> directly, because the nested function has access to the outer scope. In the example above the most nested callback has access to all variables <code>script1</code>, <code>script2</code>, <code>script3</code>. But that&rsquo;s an exception rather than a rule.</p>
+<blockquote>
+<h3 id="ℹ-thenables">ℹ️ <strong>Thenables</strong></h3>
+<p>To be precise, a handler may return not exactly a promise, but a so-called &ldquo;thenable&rdquo; object - an arbitrary object that has a method <code>.then</code>. It will be treated the same way as a promise.</p>
+<p>The idea is that 3rd-party libraries may implement &ldquo;promise-compatible&rdquo; objects of their own. They can have an extended set of methods, but also be compatible with native promises, because they implement <code>.then</code>.</p>
+<p>Here&rsquo;s an example of a thenable object:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Thenable</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">num</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">num</span>;
+  }
+  <span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">resolve</span>); <span style="color:#75715e">// function() { native code }
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// resolve with this.num*2 after the 1 second
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">num</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">1000</span>); <span style="color:#75715e">// (**)
+</span><span style="color:#75715e"></span>  }
+}
+
+<span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>))
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">result</span> =&gt; {
+<span style="color:#f92672">*!*</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Thenable</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+  })
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">alert</span>); <span style="color:#75715e">// shows 2 after 1000ms
+</span></code></pre></div><blockquote>
+<p>JavaScript checks the object returned by the <code>.then</code> handler in line <code>(*)</code>: if it has a callable method named <code>then</code>, then it calls that method providing native functions <code>resolve</code>, <code>reject</code> as arguments (similar to an executor) and waits until one of them is called. In the example above <code>resolve(2)</code> is called after 1 second <code>(**)</code>. Then the result is passed further down the chain.</p>
+<p>This feature allows us to integrate custom objects with promise chains without having to inherit from <code>Promise</code>.</p>
+</blockquote>
+<h2 id="bigger-example-fetch">Bigger example: fetch</h2>
+<p>In frontend programming promises are often used for network requests. So let&rsquo;s see an extended example of that.</p>
+<p>We&rsquo;ll use the <a href="info:fetch">fetch</a> method to load the information about the user from the remote server. It has a lot of optional parameters covered in <a href="info:fetch">separate chapters</a>, but the basic syntax is quite simple:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>);
+</code></pre></div><p>This makes a network request to the <code>url</code> and returns a promise. The promise resolves with a <code>response</code> object when the remote server responds with headers, but <em>before the full response is downloaded</em>.</p>
+<p>To read the full response, we should call the method <code>response.text()</code>: it returns a promise that resolves when the full text is downloaded from the remote server, with that text as a result.</p>
+<p>The code below makes a request to <code>user.json</code> and loads its text from the server:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/article/promise-chaining/user.json&#39;</span>)
+  <span style="color:#75715e">// .then below runs when the remote server responds
+</span><span style="color:#75715e"></span>  .<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">response</span>) {
+    <span style="color:#75715e">// response.text() returns a new promise that resolves with the full response text
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// when it loads
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">text</span>();
+  })
+  .<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">text</span>) {
+    <span style="color:#75715e">// ...and here&#39;s the content of the remote file
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">text</span>); <span style="color:#75715e">// {&#34;name&#34;: &#34;iliakan&#34;, &#34;isAdmin&#34;: true}
+</span><span style="color:#75715e"></span>  });
+</code></pre></div><p>The <code>response</code> object returned from <code>fetch</code> also includes the method <code>response.json()</code> that reads the remote data and parses it as JSON. In our case that&rsquo;s even more convenient, so let&rsquo;s switch to it.</p>
+<p>We&rsquo;ll also use arrow functions for brevity:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// same as above, but response.json() parses the remote content as JSON
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/article/promise-chaining/user.json&#39;</span>)
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>)); <span style="color:#75715e">// iliakan, got user name
+</span></code></pre></div><p>Now let&rsquo;s do something with the loaded user.</p>
+<p>For instance, we can make one more request to GitHub, load the user profile and show the avatar:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Make a request for user.json
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/article/promise-chaining/user.json&#39;</span>)
+  <span style="color:#75715e">// Load it as json
+</span><span style="color:#75715e"></span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+  <span style="color:#75715e">// Make a request to GitHub
+</span><span style="color:#75715e"></span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">`https://api.github.com/users/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>))
+  <span style="color:#75715e">// Load the response as json
+</span><span style="color:#75715e"></span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+  <span style="color:#75715e">// Show the avatar image (githubUser.avatar_url) for 3 seconds (maybe animate it)
+</span><span style="color:#75715e"></span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">githubUser</span> =&gt; {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;img&#39;</span>);
+    <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">githubUser</span>.<span style="color:#a6e22e">avatar_url</span>;
+    <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;promise-avatar-example&#34;</span>;
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">append</span>(<span style="color:#a6e22e">img</span>);
+
+    <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">remove</span>(), <span style="color:#ae81ff">3000</span>); <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span>  });
+</code></pre></div><p>The code works; see comments about the details. However, there&rsquo;s a potential problem in it, a typical error for those who begin to use promises.</p>
+<p>Look at the line <code>(*)</code>: how can we do something <em>after</em> the avatar has finished showing and gets removed? For instance, we&rsquo;d like to show a form for editing that user or something else. As of now, there&rsquo;s no way.</p>
+<p>To make the chain extendable, we need to return a promise that resolves when the avatar finishes showing.</p>
+<p>Like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/article/promise-chaining/user.json&#39;</span>)
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">`https://api.github.com/users/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>))
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+<span style="color:#f92672">*!*</span>
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">githubUser</span> =&gt; <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) { <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;img&#39;</span>);
+    <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">githubUser</span>.<span style="color:#a6e22e">avatar_url</span>;
+    <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;promise-avatar-example&#34;</span>;
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">append</span>(<span style="color:#a6e22e">img</span>);
+
+    <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+      <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">remove</span>();
+<span style="color:#f92672">*!*</span>
+      <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">githubUser</span>); <span style="color:#75715e">// (**)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    }, <span style="color:#ae81ff">3000</span>);
+  }))
+  <span style="color:#75715e">// triggers after 3 seconds
+</span><span style="color:#75715e"></span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">githubUser</span> =&gt; <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Finished showing </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">githubUser</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>));
+</code></pre></div><p>That is, the <code>.then</code> handler in line <code>(*)</code> now returns <code>new Promise</code>, that becomes settled only after the call of <code>resolve(githubUser)</code> in <code>setTimeout</code> <code>(**)</code>. The next <code>.then</code> in the chain will wait for that.</p>
+<p>As a good practice, an asynchronous action should always return a promise. That makes it possible to plan actions after it; even if we don&rsquo;t plan to extend the chain now, we may need it later.</p>
+<p>Finally, we can split the code into reusable functions:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadJson</span>(<span style="color:#a6e22e">url</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>());
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadGithubUser</span>(<span style="color:#a6e22e">name</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">`https://api.github.com/users/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>());
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">showAvatar</span>(<span style="color:#a6e22e">githubUser</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;img&#39;</span>);
+    <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">githubUser</span>.<span style="color:#a6e22e">avatar_url</span>;
+    <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;promise-avatar-example&#34;</span>;
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">append</span>(<span style="color:#a6e22e">img</span>);
+
+    <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+      <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">remove</span>();
+      <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">githubUser</span>);
+    }, <span style="color:#ae81ff">3000</span>);
+  });
+}
+
+<span style="color:#75715e">// Use them:
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">loadJson</span>(<span style="color:#e6db74">&#39;/article/promise-chaining/user.json&#39;</span>)
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">loadGithubUser</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>))
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">showAvatar</span>)
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">githubUser</span> =&gt; <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Finished showing </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">githubUser</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>));
+  <span style="color:#75715e">// ...
+</span></code></pre></div><h2 id="summary">Summary</h2>
+<p>If a <code>.then</code> (or <code>catch/finally</code>, doesn&rsquo;t matter) handler returns a promise, the rest of the chain waits until it settles. When it does, its result (or error) is passed further.</p>
+<p>Here&rsquo;s a full picture:</p>
+<hr>
+<p>flow chart</p>
+<hr>
+<p>✅ <strong><a href="">Tasks</a></strong></p>
+<hr>
+<p><strong><a href="">Promise: then versus catch</a></strong> <a href="">↗️</a></p>
+<p>Are these code fragments equal? In other words, do they behave the same way in any circumstances, for any handler functions?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">promise</span>.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">f1</span>).<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">f2</span>);
+</code></pre></div><p>Versus:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+<span style="color:#a6e22e">promise</span>.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">f1</span>, <span style="color:#a6e22e">f2</span>);
+
+</code></pre></div><h3 id="solution"><strong><a href="">solution</a></strong></h3>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

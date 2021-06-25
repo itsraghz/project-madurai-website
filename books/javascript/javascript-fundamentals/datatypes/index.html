@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/javascript-fundamentals/var">The old &#34;var&#34;</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/javascript-fundamentals">JavaScript Fundamentals</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/javascript-fundamentals/interaction-alert-prompt-confirm">Interaction: alert, prompt, confirm</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="data-types">Data types</h1>
+<p>A value in JavaScript is always of a certain type. For example, a string or a number.</p>
+<p>There are eight basic data types in JavaScript. Here, we&rsquo;ll cover them in general and in the next chapters we&rsquo;ll talk about each of them in detail.</p>
+<p>We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// no error
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>;
+<span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123456</span>;
+</code></pre></div><p>Programming languages that allow such things, such as JavaScript, are called &ldquo;dynamically typed&rdquo;, meaning that there exist data types, but variables are not bound to any of them.</p>
+<h2 id="number">Number</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>;
+<span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.345</span>;
+</code></pre></div><p>The <em>number</em> type represents both integer and floating point numbers.</p>
+<p>There are many operations for numbers, e.g. multiplication <code>*</code>, division <code>/</code>, addition <code>+</code>, subtraction <code>-</code>, and so on.</p>
+<p>Besides regular numbers, there are so-called &ldquo;special numeric values&rdquo; which also belong to this data type: <code>Infinity</code>, <code>-Infinity</code> and <code>NaN</code>.</p>
+<ul>
+<li>
+<p><code>Infinity</code> represents the mathematical <a href="https://en.wikipedia.org/wiki/Infinity">Infinity</a> ∞. It is a special value that&rsquo;s greater than any number.</p>
+<p>We can get it as a result of division by zero:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">0</span> ); <span style="color:#75715e">// Infinity
+</span></code></pre></div><p>Or just reference it directly:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#66d9ef">Infinity</span> ); <span style="color:#75715e">// Infinity
+</span></code></pre></div></li>
+<li>
+<p><code>NaN</code> represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">&#34;not a number&#34;</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> ); <span style="color:#75715e">// NaN, such division is erroneous
+</span></code></pre></div><p><code>NaN</code> is sticky. Any further operation on <code>NaN</code> returns <code>NaN</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">&#34;not a number&#34;</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span> ); <span style="color:#75715e">// NaN
+</span></code></pre></div><p>So, if there&rsquo;s a <code>NaN</code> somewhere in a mathematical expression, it propagates to the whole result.</p>
+</li>
+</ul>
+<pre><code class="language-smart" data-lang="smart">Doing maths is &quot;safe&quot; in JavaScript. We can do anything: divide by zero, treat non-numeric strings as numbers, etc.
+
+The script will never stop with a fatal error (&quot;die&quot;). At worst, we'll get `NaN` as the result.
+</code></pre><p>Special numeric values formally belong to the &ldquo;number&rdquo; type. Of course they are not numbers in the common sense of this word.</p>
+<p>We&rsquo;ll see more about working with numbers in the chapter <a href="info:number">info:number</a>.</p>
+<h2 id="bigint">BigInt</h2>
+<p>In JavaScript, the &ldquo;number&rdquo; type cannot represent integer values larger than <code>(2<sup>53</sup>-1)</code> (that&rsquo;s <code>9007199254740991</code>), or less than <code>-(2<sup>53</sup>-1)</code> for negatives. It&rsquo;s a technical limitation caused by their internal representation.</p>
+<p>For most purposes that&rsquo;s quite enough, but sometimes we need really big numbers, e.g. for cryptography or microsecond-precision timestamps.</p>
+<p><code>BigInt</code> type was recently added to the language to represent integers of arbitrary length.</p>
+<p>A <code>BigInt</code> value is created by appending <code>n</code> to the end of an integer:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// the &#34;n&#34; at the end means it&#39;s a BigInt
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bigInt</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1234567890123456789012345678901234567890</span><span style="color:#a6e22e">n</span>;
+</code></pre></div><p>As <code>BigInt</code> numbers are rarely needed, we don&rsquo;t cover them here, but devoted them a separate chapter <a href="info:bigint">info:bigint</a>. Read it when you need such big numbers.</p>
+<pre><code class="language-smart" data-lang="smart">Right now, `BigInt` is supported in Firefox/Chrome/Edge/Safari, but not in IE.
+</code></pre><p>You can check <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#Browser_compatibility"><em>MDN</em> BigInt compatibility table</a> to know which versions of a browser are supported.</p>
+<h2 id="string">String</h2>
+<p>A string in JavaScript must be surrounded by quotes.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Single quotes are ok too&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">phrase</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`can embed another </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">str</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</code></pre></div><p>In JavaScript, there are 3 types of quotes.</p>
+<ol>
+<li>Double quotes: <code>&quot;Hello&quot;</code>.</li>
+<li>Single quotes: <code>'Hello'</code>.</li>
+<li>Backticks: <code>`Hello`</code>.</li>
+</ol>
+<p>Double and single quotes are &ldquo;simple&rdquo; quotes. There&rsquo;s practically no difference between them in JavaScript.</p>
+<p>Backticks are &ldquo;extended functionality&rdquo; quotes. They allow us to embed variables and expressions into a string by wrapping them in <code>${…}</code>, for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+
+<span style="color:#75715e">// embed a variable
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">`Hello, *!*</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">*/!*!`</span> ); <span style="color:#75715e">// Hello, John!
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// embed an expression
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">`the result is *!*</span><span style="color:#e6db74">${</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#e6db74">}</span><span style="color:#e6db74">*/!*`</span> ); <span style="color:#75715e">// the result is 3
+</span></code></pre></div><p>The expression inside <code>${…}</code> is evaluated and the result becomes a part of the string. We can put anything in there: a variable like <code>name</code> or an arithmetical expression like <code>1 + 2</code> or something more complex.</p>
+<p>Please note that this can only be done in backticks. Other quotes don&rsquo;t have this embedding functionality!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">&#34;the result is ${1 + 2}&#34;</span> ); <span style="color:#75715e">// the result is ${1 + 2} (double quotes do nothing)
+</span></code></pre></div><p>We&rsquo;ll cover strings more thoroughly in the chapter <a href="info:string">info:string</a>.</p>
+<pre><code class="language-smart" data-lang="smart">In some languages, there is a special &quot;character&quot; type for a single character. For example, in the C language and in Java it is called &quot;char&quot;.
+
+In JavaScript, there is no such type. There's only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
+</code></pre><h2 id="boolean-logical-type">Boolean (logical type)</h2>
+<p>The boolean type has only two values: <code>true</code> and <code>false</code>.</p>
+<p>This type is commonly used to store yes/no values: <code>true</code> means &ldquo;yes, correct&rdquo;, and <code>false</code> means &ldquo;no, incorrect&rdquo;.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">nameFieldChecked</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>; <span style="color:#75715e">// yes, name field is checked
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ageFieldChecked</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>; <span style="color:#75715e">// no, age field is not checked
+</span></code></pre></div><p>Boolean values also come as a result of comparisons:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isGreater</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>;
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">isGreater</span> ); <span style="color:#75715e">// true (the comparison result is &#34;yes&#34;)
+</span></code></pre></div><p>We&rsquo;ll cover booleans more deeply in the chapter <a href="info:logical-operators">info:logical-operators</a>.</p>
+<h2 id="the-null-value">The &ldquo;null&rdquo; value</h2>
+<p>The special <code>null</code> value does not belong to any of the types described above.</p>
+<p>It forms a separate type of its own which contains only the <code>null</code> value:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</code></pre></div><p>In JavaScript, <code>null</code> is not a &ldquo;reference to a non-existing object&rdquo; or a &ldquo;null pointer&rdquo; like in some other languages.</p>
+<p>It&rsquo;s just a special value which represents &ldquo;nothing&rdquo;, &ldquo;empty&rdquo; or &ldquo;value unknown&rdquo;.</p>
+<p>The code above states that <code>age</code> is unknown.</p>
+<h2 id="the-undefined-value">The &ldquo;undefined&rdquo; value</h2>
+<p>The special value <code>undefined</code> also stands apart. It makes a type of its own, just like <code>null</code>.</p>
+<p>The meaning of <code>undefined</code> is &ldquo;value is not assigned&rdquo;.</p>
+<p>If a variable is declared, but not assigned, then its value is <code>undefined</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span>;
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">age</span>); <span style="color:#75715e">// shows &#34;undefined&#34;
+</span></code></pre></div><p>Technically, it is possible to explicitly assign <code>undefined</code> to a variable:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+
+<span style="color:#75715e">// change the value to undefined
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>;
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">age</span>); <span style="color:#75715e">// &#34;undefined&#34;
+</span></code></pre></div><p>&hellip;But we don&rsquo;t recommend doing that. Normally, one uses <code>null</code> to assign an &ldquo;empty&rdquo; or &ldquo;unknown&rdquo; value to a variable, while <code>undefined</code> is reserved as a default initial value for unassigned things.</p>
+<h2 id="objects-and-symbols">Objects and Symbols</h2>
+<p>The <code>object</code> type is special.</p>
+<p>All other types are called &ldquo;primitive&rdquo; because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.</p>
+<p>Being that important, objects deserve a special treatment. We&rsquo;ll deal with them later in the chapter <a href="info:object">info:object</a>, after we learn more about primitives.</p>
+<p>The <code>symbol</code> type is used to create unique identifiers for objects. We have to mention it here for the sake of completeness, but also postpone the details till we know objects.</p>
+<h2 id="the-typeof-operator-type-typeof">The typeof operator [#type-typeof]</h2>
+<p>The <code>typeof</code> operator returns the type of the argument. It&rsquo;s useful when we want to process values of different types differently or just want to do a quick check.</p>
+<p>It supports two forms of syntax:</p>
+<ol>
+<li>As an operator: <code>typeof x</code>.</li>
+<li>As a function: <code>typeof(x)</code>.</li>
+</ol>
+<p>In other words, it works with parentheses or without them. The result is the same.</p>
+<p>The call to <code>typeof x</code> returns a string with the type name:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">typeof</span> <span style="color:#66d9ef">undefined</span> <span style="color:#75715e">// &#34;undefined&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">typeof</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e">// &#34;number&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">typeof</span> <span style="color:#ae81ff">10</span><span style="color:#a6e22e">n</span> <span style="color:#75715e">// &#34;bigint&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">typeof</span> <span style="color:#66d9ef">true</span> <span style="color:#75715e">// &#34;boolean&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">typeof</span> <span style="color:#e6db74">&#34;foo&#34;</span> <span style="color:#75715e">// &#34;string&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">Symbol</span>(<span style="color:#e6db74">&#34;id&#34;</span>) <span style="color:#75715e">// &#34;symbol&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">typeof</span> Math <span style="color:#75715e">// &#34;object&#34;  (1)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">typeof</span> <span style="color:#66d9ef">null</span> <span style="color:#75715e">// &#34;object&#34;  (2)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">alert</span> <span style="color:#75715e">// &#34;function&#34;  (3)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>The last three lines may need additional explanation:</p>
+<ol>
+<li><code>Math</code> is a built-in object that provides mathematical operations. We will learn it in the chapter <a href="info:number">info:number</a>. Here, it serves just as an example of an object.</li>
+<li>The result of <code>typeof null</code> is <code>&quot;object&quot;</code>. That&rsquo;s an officially recognized error in <code>typeof</code> behavior, coming from the early days of JavaScript and kept for compatibility. Definitely, <code>null</code> is not an object. It is a special value with a separate type of its own.</li>
+<li>The result of <code>typeof alert</code> is <code>&quot;function&quot;</code>, because <code>alert</code> is a function. We&rsquo;ll study functions in the next chapters where we&rsquo;ll also see that there&rsquo;s no special &ldquo;function&rdquo; type in JavaScript. Functions belong to the object type. But <code>typeof</code> treats them differently, returning <code>&quot;function&quot;</code>. That also comes from the early days of JavaScript. Technically, such behavior isn&rsquo;t correct, but can be convenient in practice.</li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>There are 8 basic data types in JavaScript.</p>
+<ul>
+<li><code>number</code> for numbers of any kind: integer or floating-point, integers are limited by <code>±(2<sup>53</sup>-1)</code>.</li>
+<li><code>bigint</code> is for integer numbers of arbitrary length.</li>
+<li><code>string</code> for strings. A string may have zero or more characters, there&rsquo;s no separate single-character type.</li>
+<li><code>boolean</code> for <code>true</code>/<code>false</code>.</li>
+<li><code>null</code> for unknown values &ndash; a standalone type that has a single value <code>null</code>.</li>
+<li><code>undefined</code> for unassigned values &ndash; a standalone type that has a single value <code>undefined</code>.</li>
+<li><code>object</code> for more complex data structures.</li>
+<li><code>symbol</code> for unique identifiers.</li>
+</ul>
+<p>The <code>typeof</code> operator allows us to see which type is stored in a variable.</p>
+<ul>
+<li>Two forms: <code>typeof x</code> or <code>typeof(x)</code>.</li>
+<li>Returns a string with the name of the type, like <code>&quot;string&quot;</code>.</li>
+<li>For <code>null</code> returns <code>&quot;object&quot;</code> &ndash; this is an error in the language, it&rsquo;s not actually an object.</li>
+</ul>
+<p>In the next chapters, we&rsquo;ll concentrate on primitive values and once we&rsquo;re familiar with them, we&rsquo;ll move on to objects.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

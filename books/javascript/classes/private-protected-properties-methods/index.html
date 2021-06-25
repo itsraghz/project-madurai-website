@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/classes/static-properties-methods">Static properties and methods</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/classes">Classes</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/classes/extend-natives">Extending built-in classes</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h2 id="private-and-protected-properties-and-methods"><strong>Private and protected properties and methods</strong></h2>
+<p>One of the most important principles of object oriented programming – delimiting internal interface from the external one.</p>
+<p>That is “a must” practice in developing anything more complex than a “hello world” app.</p>
+<p>To understand this, let’s break away from development and turn our eyes into the real world.</p>
+<p>Usually, devices that we’re using are quite complex. But delimiting the internal interface from the external one allows to use them without problems.</p>
+<h3 id="a-real-life-example"><strong><a href="">A real-life example</a></strong></h3>
+<p>For instance, a coffee machine. Simple from outside: a button, a display, a few holes…And, surely, the result – great coffee! :)</p>
+<p><img src="/images/coffee.jpg" alt="coffee!" title="coffee"></p>
+<p>But inside… (a picture from the repair manual)</p>
+<p><img src="/images/coffee-inside.jpg" alt="coffee!" title="coffee"></p>
+<p>A lot of details. But we can use it without knowing anything.</p>
+<p>Coffee machines are quite reliable, aren’t they? We can use one for years, and only if something goes wrong – bring it for repairs.</p>
+<p>The secret of reliability and simplicity of a coffee machine – all details are well-tuned and hidden inside.</p>
+<p>If we remove the protective cover from the coffee machine, then using it will be much more complex (where to press?), and dangerous (it can electrocute).</p>
+<p>As we’ll see, in programming objects are like coffee machines.</p>
+<p>But in order to hide inner details, we’ll use not a protective cover, but rather special syntax of the language and conventions.</p>
+<h3 id="internal-and-external-interface"><strong><a href="">Internal and external interface</a></strong></h3>
+<h3 id="in-object-oriented-programming-properties-and-methods-are-split-into-two-groups">In object-oriented programming, properties and methods are split into two groups:</h3>
+<ul>
+<li><em>Internalinterface</em> – methods and properties, accessible from other methods of the class, but not from the outside.</li>
+<li><em>External interface</em> – methods and properties, accessible also from outside the class.</li>
+</ul>
+<p>If we continue the analogy with the coffee machine – what’s hidden inside: a boiler tube, heating element, and so on – is its internal interface.</p>
+<p>An internal interface is used for the object to work, its details use each other. For instance, a boiler tube is attached to the heating element.</p>
+<p>But from the outside a coffee machine is closed by the protective cover, so that no one can reach those. Details are hidden and inaccessible. We can use its features via the external interface.</p>
+<p>So, all we need to use an object is to know its external interface. We may be completely unaware how it works inside, and that’s great.</p>
+<p>That was a general introduction.</p>
+<h3 id="in-javascript-there-are-two-types-of-object-fields-properties-and-methods">In JavaScript, there are two types of object fields (properties and methods):</h3>
+<ul>
+<li>Public: accessible from anywhere. They comprise the external interface. Until now we were only using public properties and methods.</li>
+<li>Private: accessible only from inside the class. These are for the internal interface.</li>
+</ul>
+<p>In many other languages there also exist “protected” fields: accessible only from inside the class and those extending it (like private, but plus access from inheriting classes). They are also useful for the internal interface. They are in a sense more widespread than private ones, because we usually want inheriting classes to gain access to them.</p>
+<p>Protected fields are not implemented in JavaScript on the language level, but in practice they are very convenient, so they are emulated.</p>
+<p>Now we’ll make a coffee machine in JavaScript with all these types of properties. A coffee machine has a lot of details, we won’t model them to stay simple (though we could).</p>
+<h2 id="protecting-wateramount"><strong><a href="">Protecting “waterAmount”</a></strong></h2>
+<p>Let’s make a simple coffee machine class first:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+   <span style="color:#a6e22e">lass</span> <span style="color:#a6e22e">CoffeeMachine</span> {
+   <span style="color:#a6e22e">waterAmount</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// the amount of water inside
+</span><span style="color:#75715e"></span>
+   <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">power</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">power</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">power</span>;
+      <span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">`Created a coffee-machine, power: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">power</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span> );
+   }
+
+   }
+
+   <span style="color:#75715e">// create the coffee machine
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">coffeeMachine</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CoffeeMachine</span>(<span style="color:#ae81ff">100</span>);
+
+   <span style="color:#75715e">// add water
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">coffeeMachine</span>.<span style="color:#a6e22e">waterAmount</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+
+</code></pre></div><p>Right now the properties <code>waterAmount</code> and <code>power</code> are public. We can easily get/set them from the outside to any value.</p>
+<p>Let’s change <code>waterAmount</code> property to protected to have more control over it. For instance, we don’t want anyone to set it below zero.</p>
+<h3 id="protected-properties-are-usually-prefixed-with-an-underscore-_"><strong>Protected properties are usually prefixed with an underscore <code>_</code>.</strong></h3>
+<p>That is not enforced on the language level, but there’s a well-known convention between programmers that such properties and methods should not be accessed from the outside.</p>
+<p>So our property will be called <code>_waterAmount</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoffeeMachine</span> {
+   <span style="color:#ae81ff">_</span><span style="color:#a6e22e">waterAmount</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+   <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">waterAmount</span>(<span style="color:#a6e22e">value</span>) {
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">value</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+         <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+      }
+      <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">waterAmount</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>;
+   }
+
+   <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">waterAmount</span>() {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">waterAmount</span>;
+   }
+
+   <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">power</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">power</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">power</span>;
+   }
+
+   }
+
+   <span style="color:#75715e">// create the coffee machine
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">coffeeMachine</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CoffeeMachine</span>(<span style="color:#ae81ff">100</span>);
+
+   <span style="color:#75715e">// add water
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">coffeeMachine</span>.<span style="color:#a6e22e">waterAmount</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>; <span style="color:#75715e">// Error: Negative water
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>Now the access is under control, so setting the water amount below zero becomes impossible.</p>
+<h3 id="read-only-power"><strong><a href="">Read-only “power”</a></strong></h3>
+<p>For <code>power</code> property, let’s make it read-only. It sometimes happens that a property must be set at creation time only, and then never modified.</p>
+<p>That’s exactly the case for a coffee machine: power never changes.</p>
+<p>To do so, we only need to make getter, but not the setter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoffeeMachine</span> {
+   <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>
+   <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">power</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">power</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">power</span>;
+   }
+
+   <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">power</span>() {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">power</span>;
+   }
+
+   }
+
+   <span style="color:#75715e">// create the coffee machine
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">coffeeMachine</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CoffeeMachine</span>(<span style="color:#ae81ff">100</span>);
+
+   <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Power is: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">coffeeMachine</span>.<span style="color:#a6e22e">power</span><span style="color:#e6db74">}</span><span style="color:#e6db74">W`</span>); <span style="color:#75715e">// Power is: 100W
+</span><span style="color:#75715e"></span>
+   <span style="color:#a6e22e">coffeeMachine</span>.<span style="color:#a6e22e">power</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>; <span style="color:#75715e">// Error (no setter)
+</span><span style="color:#75715e"></span>
+</code></pre></div><blockquote>
+<p><strong>ℹ️ Getter/setter functions</strong></p>
+<p>Here we used getter/setter syntax.</p>
+<p>But most of the time <code>get.../set...</code> functions are preferred, like this:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoffeeMachine</span> {
+   <span style="color:#ae81ff">_</span><span style="color:#a6e22e">waterAmount</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+   <span style="color:#a6e22e">setWaterAmount</span>(<span style="color:#a6e22e">value</span>) {
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">value</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+      <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">waterAmount</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>;
+   }
+
+   <span style="color:#a6e22e">getWaterAmount</span>() {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">waterAmount</span>;
+   }
+   }
+
+   <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CoffeeMachine</span>().<span style="color:#a6e22e">setWaterAmount</span>(<span style="color:#ae81ff">100</span>);
+
+</code></pre></div><p>That looks a bit longer, but functions are more flexible. They can accept multiple arguments (even if we don’t need them right now).</p>
+<p>On the other hand, get/set syntax is shorter, so ultimately there’s no strict rule, it’s up to you to decide.</p>
+<blockquote>
+<p>ℹ️ <strong>Protected fields are inherited</strong></p>
+<p>If we inherit <code>class MegaMachine extends CoffeeMachine</code>, then nothing prevents us from accessing <code>this._waterAmount</code> or <code>this._power</code> from the methods of the new class.</p>
+<p>So protected fields are naturally inheritable. Unlike private ones that we’ll see below.</p>
+</blockquote>
+<h3 id="private-waterlimit"><strong><a href="">Private “#waterLimit”</a></strong></h3>
+<blockquote>
+<p>⚠️ <strong>A recent addition</strong></p>
+<p>This is a recent addition to the language. Not supported in JavaScript engines, or supported partially yet, requires polyfilling.</p>
+</blockquote>
+<p>There’s a finished JavaScript proposal, almost in the standard, that provides language-level support for private properties and methods.</p>
+<p>Privates should start with <code>#</code>. They are only accessible from inside the class.</p>
+<p>For instance, here’s a private <code>#waterLimit</code> property and the water-checking private method <code>#checkWater</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoffeeMachine</span> {
+   <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">waterLimit</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+
+   <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">fixWaterAmount</span>(<span style="color:#a6e22e">value</span>) {
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">value</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">value</span> <span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">waterLimit</span>) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">waterLimit</span>;
+   }
+
+   <span style="color:#a6e22e">setWaterAmount</span>(<span style="color:#a6e22e">value</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">waterLimit</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">fixWaterAmount</span>(<span style="color:#a6e22e">value</span>);
+   }
+
+   }
+
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">coffeeMachine</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CoffeeMachine</span>();
+
+   <span style="color:#75715e">// can&#39;t access privates from outside of the class
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">coffeeMachine</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">fixWaterAmount</span>(<span style="color:#ae81ff">123</span>); <span style="color:#75715e">// Error
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">coffeeMachine</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">waterLimit</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>; <span style="color:#75715e">// Error
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>On the language level,<code> #</code> is a special sign that the field is private. We can’t access it from outside or from inheriting classes.</p>
+<p>Private fields do not conflict with public ones. We can have both private <code>#waterAmount</code> and public<code>waterAmount</code>fields at the same time.</p>
+<p>For instance, let’s make <code>waterAmount </code>an accessor for <code>#waterAmount</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoffeeMachine</span> {
+
+   <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">waterAmount</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+   <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">waterAmount</span>() {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">waterAmount</span>;
+   }
+
+   <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">waterAmount</span>(<span style="color:#a6e22e">value</span>) {
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">value</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+      <span style="color:#66d9ef">this</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">waterAmount</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>;
+   }
+   }
+
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">machine</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CoffeeMachine</span>();
+
+   <span style="color:#a6e22e">machine</span>.<span style="color:#a6e22e">waterAmount</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+   <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">machine</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">waterAmount</span>); <span style="color:#75715e">// Error
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>Unlike protected ones, private fields are enforced by the language itself. That’s a good thing.</p>
+<p>But if we inherit from <code>CoffeeMachine</code>, then we’ll have no direct access to<code> #waterAmount</code>. We’ll need to rely on<code>waterAmount</code>getter/setter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MegaCoffeeMachine</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">CoffeeMachine</span> {
+   <span style="color:#a6e22e">method</span>() {
+      <span style="color:#a6e22e">alert</span>( <span style="color:#66d9ef">this</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">waterAmount</span> ); <span style="color:#75715e">// Error: can only access from CoffeeMachine
+</span><span style="color:#75715e"></span>   }
+   }
+
+</code></pre></div><p>In many scenarios such limitation is too severe. If we extend a <code>CoffeeMachine</code>, we may have legitimate reasons to access its internals. That’s why protected fields are used more often, even though they are not supported by the language syntax.</p>
+<blockquote>
+<h3 id="-private-fields-are-not-available-as-thisname"><strong>⚠️ Private fields are not available as this[name]</strong></h3>
+</blockquote>
+<p>Private fields are special.</p>
+<p>As we know, usually we can access fields using <code>this[name]</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> {
+   ...
+   <span style="color:#a6e22e">sayHi</span>() {
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fieldName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;name&#34;</span>;
+      <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>[<span style="color:#a6e22e">fieldName</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+   }
+   }
+
+</code></pre></div><p>With private fields that’s impossible: <code>this['#name']</code> doesn’t work. That’s a syntax limitation to ensure privacy.</p>
+<h3 id="summary"><strong><a href="">Summary</a></strong></h3>
+<p>In terms of OOP, delimiting of the internal interface from the external one is called <a href="">encapsulation</a>.</p>
+<p>It gives the following benefits:</p>
+<p><strong>Protection for users, so that they don’t shoot themselves in the foot</strong></p>
+<p>Imagine, there’s a team of developers using a coffee machine. It was made by the “Best CoffeeMachine” company, and works fine, but a protective cover was removed. So the internal interface is exposed.</p>
+<p>All developers are civilized – they use the coffee machine as intended. But one of them, John, decided that he’s the smartest one, and made some tweaks in the coffee machine internals. So the coffee machine failed two days later.</p>
+<p>That’s surely not John’s fault, but rather the person who removed the protective cover and let John do his manipulations.</p>
+<p>The same in programming. If a user of a class will change things not intended to be changed from the outside – the consequences are unpredictable.
+consequences are unpredictable.</p>
+<p><strong>Supportable</strong></p>
+<p>The situation in programming is more complex than with a real-life coffee machine, because we don’t just buy it once. The code constantly undergoes development and improvement.</p>
+<p><strong>If we strictly delimit the internal interface, then the developer of the class can freely change its internal properties and methods, even without informing the users.</strong></p>
+<p>If you’re a developer of such class, it’s great to know that private methods can be safely renamed, their parameters can be changed, and even removed, because no external code depends on them.</p>
+<p>For users, when a new version comes out, it may be a total overhaul internally, but still simple to upgrade if the external interface is the same.</p>
+<p><strong>Hiding complexity</strong></p>
+<p>People adore using things that are simple. At least from outside. What’s inside is a different thing.</p>
+<p>Programmers are not an exception.</p>
+<p><strong>It’s always convenient when implementation details are hidden, and a simple, well-documented external interface is available.</strong></p>
+<p>To hide an internal interface we use either protected or private properties:</p>
+<ul>
+<li>
+<p>Protected fields start with <code>_</code>. That’s a well-known convention, not enforced at the language level. Programmers should only access a field starting with <code>_ </code>from its class and classes inheriting from it.</p>
+</li>
+<li>
+<p>Private fields start with<code>  </code>. JavaScript makes sure we can only access those from inside the class.</p>
+</li>
+</ul>
+<p>Right now, private fields are not well-supported among browsers, but can be polyfilled.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

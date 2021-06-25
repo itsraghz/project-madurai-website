@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/object-properties-configuration">Object properties configuration</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/object-properties-configuration/property-accessors">Property getters and setters</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="property-flags-and-descriptors">Property flags and descriptors</h1>
+<p>As we know, objects can store properties.</p>
+<p>Until now, a property was a simple &ldquo;key-value&rdquo; pair to us. But an object property is actually a more flexible and powerful thing.</p>
+<p>In this chapter we&rsquo;ll study additional configuration options, and in the next we&rsquo;ll see how to invisibly turn them into getter/setter functions.</p>
+<h2 id="property-flags">Property flags</h2>
+<p>Object properties, besides a <strong><code>value</code></strong>, have three special attributes (so-called &ldquo;flags&rdquo;):</p>
+<ul>
+<li><strong><code>writable</code></strong> &ndash; if <code>true</code>, the value can be changed, otherwise it&rsquo;s read-only.</li>
+<li><strong><code>enumerable</code></strong> &ndash; if <code>true</code>, then listed in loops, otherwise not listed.</li>
+<li><strong><code>configurable</code></strong> &ndash; if <code>true</code>, the property can be deleted and these attributes can be modified, otherwise not.</li>
+</ul>
+<p>We didn&rsquo;t see them yet, because generally they do not show up. When we create a property &ldquo;the usual way&rdquo;, all of them are <code>true</code>. But we also can change them anytime.</p>
+<p>First, let&rsquo;s see how to get those flags.</p>
+<p>The method <a href="mdn:js/Object/getOwnPropertyDescriptor">Object.getOwnPropertyDescriptor</a> allows to query the <em>full</em> information about a property.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">descriptor</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">getOwnPropertyDescriptor</span>(<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">propertyName</span>);
+</code></pre></div><dl>
+<dt><code>obj</code></dt>
+<dd>The object to get information from.</dd>
+<dt><code>propertyName</code></dt>
+<dd>The name of the property.</dd>
+</dl>
+<p>The returned value is a so-called &ldquo;property descriptor&rdquo; object: it contains the value and all the flags.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+};
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">descriptor</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">getOwnPropertyDescriptor</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#39;name&#39;</span>);
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">descriptor</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span> ) );
+<span style="color:#75715e">/* property descriptor:
+</span><span style="color:#75715e">{
+</span><span style="color:#75715e">  &#34;value&#34;: &#34;John&#34;,
+</span><span style="color:#75715e">  &#34;writable&#34;: true,
+</span><span style="color:#75715e">  &#34;enumerable&#34;: true,
+</span><span style="color:#75715e">  &#34;configurable&#34;: true
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">*/</span>
+</code></pre></div><p>To change the flags, we can use <a href="mdn:js/Object/defineProperty">Object.defineProperty</a>.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">propertyName</span>, <span style="color:#a6e22e">descriptor</span>)
+</code></pre></div><dl>
+<dt><code>obj</code>, <code>propertyName</code></dt>
+<dd>The object and its property to apply the descriptor.</dd>
+<dt><code>descriptor</code></dt>
+<dd>Property descriptor object to apply.</dd>
+</dl>
+<p>If the property exists, <code>defineProperty</code> updates its flags. Otherwise, it creates the property with the given value and flags; in that case, if a flag is not supplied, it is assumed <code>false</code>.</p>
+<p>For instance, here a property <code>name</code> is created with all falsy flags:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {};
+
+<span style="color:#f92672">*!*</span>
+Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#34;name&#34;</span>, {
+  <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+});
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">descriptor</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">getOwnPropertyDescriptor</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#39;name&#39;</span>);
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">descriptor</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span> ) );
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">{
+</span><span style="color:#75715e">  &#34;value&#34;: &#34;John&#34;,
+</span><span style="color:#75715e">*!*
+</span><span style="color:#75715e">  &#34;writable&#34;: false,
+</span><span style="color:#75715e">  &#34;enumerable&#34;: false,
+</span><span style="color:#75715e">  &#34;configurable&#34;: false
+</span><span style="color:#75715e">*/</span><span style="color:#f92672">!*</span>
+}
+ <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/</span>
+</code></pre></div><p>Compare it with &ldquo;normally created&rdquo; <code>user.name</code> above: now all flags are falsy. If that&rsquo;s not what we want then we&rsquo;d better set them to <code>true</code> in <code>descriptor</code>.</p>
+<p>Now let&rsquo;s see effects of the flags by example.</p>
+<h2 id="non-writable">Non-writable</h2>
+<p>Let&rsquo;s make <code>user.name</code> non-writable (can&rsquo;t be reassigned) by changing <code>writable</code> flag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+};
+
+Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#34;name&#34;</span>, {
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">writable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+});
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Pete&#34;</span>; <span style="color:#75715e">// Error: Cannot assign to read only property &#39;name&#39;
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>Now no one can change the name of our user, unless they apply their own <code>defineProperty</code> to override ours.</p>
+<pre><code class="language-smart" data-lang="smart">In the non-strict mode, no errors occur when writing to non-writable properties and such. But the operation still won't succeed. Flag-violating actions are just silently ignored in non-strict.
+</code></pre><p>Here&rsquo;s the same example, but the property is created from scratch:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { };
+
+Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#34;name&#34;</span>, {
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#75715e">// for new properties we need to explicitly list what&#39;s true
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">enumerable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+  <span style="color:#a6e22e">configurable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+});
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// John
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Pete&#34;</span>; <span style="color:#75715e">// Error
+</span></code></pre></div><h2 id="non-enumerable">Non-enumerable</h2>
+<p>Now let&rsquo;s add a custom <code>toString</code> to <code>user</code>.</p>
+<p>Normally, a built-in <code>toString</code> for objects is non-enumerable, it does not show up in <code>for..in</code>. But if we add a <code>toString</code> of our own, then by default it shows up in <code>for..in</code>, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#a6e22e">toString</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>;
+  }
+};
+
+<span style="color:#75715e">// By default, both our properties are listed:
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">user</span>) <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">key</span>); <span style="color:#75715e">// name, toString
+</span></code></pre></div><p>If we don&rsquo;t like it, then we can set <code>enumerable:false</code>. Then it won&rsquo;t appear in a <code>for..in</code> loop, just like the built-in one:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#a6e22e">toString</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>;
+  }
+};
+
+Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#34;toString&#34;</span>, {
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">enumerable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+});
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// Now our toString disappears:
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">user</span>) <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">key</span>); <span style="color:#75715e">// name
+</span></code></pre></div><p>Non-enumerable properties are also excluded from <code>Object.keys</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">user</span>)); <span style="color:#75715e">// name
+</span></code></pre></div><h2 id="non-configurable">Non-configurable</h2>
+<p>The non-configurable flag (<code>configurable:false</code>) is sometimes preset for built-in objects and properties.</p>
+<p>A non-configurable property can not be deleted.</p>
+<p>For instance, <code>Math.PI</code> is non-writable, non-enumerable and non-configurable:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">descriptor</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">getOwnPropertyDescriptor</span>(Math, <span style="color:#e6db74">&#39;PI&#39;</span>);
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">descriptor</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span> ) );
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">{
+</span><span style="color:#75715e">  &#34;value&#34;: 3.141592653589793,
+</span><span style="color:#75715e">  &#34;writable&#34;: false,
+</span><span style="color:#75715e">  &#34;enumerable&#34;: false,
+</span><span style="color:#75715e">  &#34;configurable&#34;: false
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">*/</span>
+</code></pre></div><p>So, a programmer is unable to change the value of <code>Math.PI</code> or overwrite it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>; <span style="color:#75715e">// Error
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// delete Math.PI won&#39;t work either
+</span></code></pre></div><p>Making a property non-configurable is a one-way road. We cannot change it back with <code>defineProperty</code>.</p>
+<p>To be precise, non-configurability imposes several restrictions on <code>defineProperty</code>:</p>
+<ol>
+<li>Can&rsquo;t change <code>configurable</code> flag.</li>
+<li>Can&rsquo;t change <code>enumerable</code> flag.</li>
+<li>Can&rsquo;t change <code>writable: false</code> to <code>true</code> (the other way round works).</li>
+<li>Can&rsquo;t change <code>get/set</code> for an accessor property (but can assign them if absent).</li>
+</ol>
+<p><strong>The idea of &ldquo;configurable: false&rdquo; is to prevent changes of property flags and its deletion, while allowing to change its value.</strong></p>
+<p>Here <code>user.name</code> is non-configurable, but we can still change it (as it&rsquo;s writable):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+};
+
+Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#34;name&#34;</span>, {
+  <span style="color:#a6e22e">configurable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+});
+
+<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Pete&#34;</span>; <span style="color:#75715e">// works fine
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>; <span style="color:#75715e">// Error
+</span></code></pre></div><p>And here we make <code>user.name</code> a &ldquo;forever sealed&rdquo; constant:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+};
+
+Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#34;name&#34;</span>, {
+  <span style="color:#a6e22e">writable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+  <span style="color:#a6e22e">configurable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+});
+
+<span style="color:#75715e">// won&#39;t be able to change user.name or its flags
+</span><span style="color:#75715e">// all this won&#39;t work:
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Pete&#34;</span>;
+<span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>;
+Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#34;name&#34;</span>, { <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Pete&#34;</span> });
+</code></pre></div><h2 id="objectdefineproperties">Object.defineProperties</h2>
+<p>There&rsquo;s a method <a href="mdn:js/Object/defineProperties">Object.defineProperties(obj, descriptors)</a> that allows to define many properties at once.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Object.<span style="color:#a6e22e">defineProperties</span>(<span style="color:#a6e22e">obj</span>, {
+  <span style="color:#a6e22e">prop1</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">descriptor1</span>,
+  <span style="color:#a6e22e">prop2</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">descriptor2</span>
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>});
+</code></pre></div><p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Object.<span style="color:#a6e22e">defineProperties</span>(<span style="color:#a6e22e">user</span>, {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#a6e22e">writable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> },
+  <span style="color:#a6e22e">surname</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Smith&#34;</span>, <span style="color:#a6e22e">writable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> },
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>});
+</code></pre></div><p>So, we can set many properties at once.</p>
+<h2 id="objectgetownpropertydescriptors">Object.getOwnPropertyDescriptors</h2>
+<p>To get all property descriptors at once, we can use the method <a href="mdn:js/Object/getOwnPropertyDescriptors">Object.getOwnPropertyDescriptors(obj)</a>.</p>
+<p>Together with <code>Object.defineProperties</code> it can be used as a &ldquo;flags-aware&rdquo; way of cloning an object:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">clone</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">defineProperties</span>({}, Object.<span style="color:#a6e22e">getOwnPropertyDescriptors</span>(<span style="color:#a6e22e">obj</span>));
+</code></pre></div><p>Normally when we clone an object, we use an assignment to copy properties, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">clone</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>[<span style="color:#a6e22e">key</span>]
+}
+</code></pre></div><p>&hellip;But that does not copy flags. So if we want a &ldquo;better&rdquo; clone then <code>Object.defineProperties</code> is preferred.</p>
+<p>Another difference is that <code>for..in</code> ignores symbolic properties, but <code>Object.getOwnPropertyDescriptors</code> returns <em>all</em> property descriptors including symbolic ones.</p>
+<h2 id="sealing-an-object-globally">Sealing an object globally</h2>
+<p>Property descriptors work at the level of individual properties.</p>
+<p>There are also methods that limit access to the <em>whole</em> object:</p>
+<dl>
+<dt><a href="mdn:js/Object/preventExtensions">Object.preventExtensions(obj)</a></dt>
+<dd>Forbids the addition of new properties to the object.</dd>
+<dt><a href="mdn:js/Object/seal">Object.seal(obj)</a></dt>
+<dd>Forbids adding/removing of properties. Sets <code>configurable: false</code> for all existing properties.</dd>
+<dt><a href="mdn:js/Object/freeze">Object.freeze(obj)</a></dt>
+<dd>Forbids adding/removing/changing of properties. Sets <code>configurable: false, writable: false</code> for all existing properties.</dd>
+</dl>
+<p>And also there are tests for them:</p>
+<dl>
+<dt><a href="mdn:js/Object/isExtensible">Object.isExtensible(obj)</a></dt>
+<dd>Returns <code>false</code> if adding properties is forbidden, otherwise <code>true</code>.</dd>
+<dt><a href="mdn:js/Object/isSealed">Object.isSealed(obj)</a></dt>
+<dd>Returns <code>true</code> if adding/removing properties is forbidden, and all existing properties have <code>configurable: false</code>.</dd>
+<dt><a href="mdn:js/Object/isFrozen">Object.isFrozen(obj)</a></dt>
+<dd>Returns <code>true</code> if adding/removing/changing properties is forbidden, and all current properties are <code>configurable: false, writable: false</code>.</dd>
+</dl>
+<p>These methods are rarely used in practice.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

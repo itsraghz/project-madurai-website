@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/error-handling/try-catch">Error handling, &#34;try...catch&#34;</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/error-handling">Error Handling</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h2 id="custom-errors-extending-error"><strong>Custom errors, extending Error</strong></h2>
+<p>When we develop something, we often need our own error classes to reflect specific things that may go wrong in our tasks. For errors in network operations we may need <code>HttpError</code>, for database operations<code> DbError</code>, for searching operations <code>NotFoundError</code> and so on.</p>
+<p>Our errors should support basic error properties like <code>message</code>, <code>name</code> and, preferably, <code>stack</code>. But they also may have other properties of their own, e.g. <code>HttpError</code> objects may have a <code>statusCode</code> property with a value like<code>404</code>or <code>403 </code>or <code>500</code>.</p>
+<p>JavaScript allows to use <code>throw </code>with any argument, so technically our custom <code>error </code>classes don’t need to inherit from Error. But if we inherit, then it becomes possible to use <code>obj instanceof Error</code> to identify error objects. So it’s better to inherit from it.</p>
+<p>As the application grows, our own errors naturally form a hierarchy. For instance, <code>HttpTimeoutError</code> may inherit from <code>HttpError</code>, and so on.</p>
+<h3 id="extending-error"><strong><a href="">Extending Error</a></strong></h3>
+<p>As an example, let’s consider a function <code>readUser(json)</code> that should read<code> JSON</code> with user data.</p>
+<p>Here’s an example of how a valid json may look:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">json</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`{ &#34;name&#34;: &#34;John&#34;, &#34;age&#34;: 30 }`</span>;
+
+</code></pre></div><p>Internally, we’ll use <code>JSON.parse</code>. If it receives malformed <code>json</code>, then it throws <code>SyntaxError</code>. But even if<code>json</code>is syntactically correct, that doesn’t mean that it’s a valid user, right? It may miss the necessary data. For instance, it may not have name and age properties that are essential for our users.</p>
+<p>Our function <code>readUser(json)</code> will not only read JSON, but check (“validate”) the data. If there are no required fields, or the format is wrong, then that’s an error. And that’s not a <code>SyntaxError</code>, because the data is syntactically correct, but another kind of error. We’ll call it <code>ValidationError</code> and create a class for it. An error of that kind should also carry the information about the offending field.</p>
+<p>Our <code>ValidationError</code> class should inherit from the built-in <code>Error</code> class.</p>
+<p>That class is built-in, but here’s its approximate code so we can understand what we’re extending:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#75715e">// The &#34;pseudocode&#34; for the built-in Error class defined by JavaScript itself
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">class</span> Error {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">message</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">message</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Error&#34;</span>; <span style="color:#75715e">// (different names for different built-in error classes)
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">stack</span> <span style="color:#f92672">=</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">call</span> <span style="color:#a6e22e">stack</span><span style="color:#f92672">&gt;</span>; <span style="color:#75715e">// non-standard, but most environments support it
+</span><span style="color:#75715e"></span>    }
+    }
+
+</code></pre></div><p>Now let’s inherit <code>ValidationError</code> from it and try it in action:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ValidationError</span> <span style="color:#66d9ef">extends</span> Error {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">message</span>) {
+        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">message</span>); <span style="color:#75715e">// (1)
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ValidationError&#34;</span>; <span style="color:#75715e">// (2)
+</span><span style="color:#75715e"></span>    }
+    }
+
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>() {
+    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ValidationError</span>(<span style="color:#e6db74">&#34;Whoops!&#34;</span>);
+    }
+
+    <span style="color:#66d9ef">try</span> {
+    <span style="color:#a6e22e">test</span>();
+    } <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span>) {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span>); <span style="color:#75715e">// Whoops!
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// ValidationError
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">stack</span>); <span style="color:#75715e">// a list of nested calls with line numbers for each
+</span><span style="color:#75715e"></span>    }
+
+</code></pre></div><p>Please note: in the line <code>(1)</code> we call the parent constructor. JavaScript requires us to call <code>super</code> in the child constructor, so that’s obligatory. The parent constructor sets the <code>message</code> property.</p>
+<p>The parent constructor also sets the <code>name</code> property to <code>&quot;Error&quot;</code>, so in the line <code>(2)</code> we reset it to the right value.</p>
+<p>Let’s try to use it in <code>readUser(json)</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ValidationError</span> <span style="color:#66d9ef">extends</span> Error {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">message</span>) {
+        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">message</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ValidationError&#34;</span>;
+    }
+    }
+
+    <span style="color:#75715e">// Usage
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">readUser</span>(<span style="color:#a6e22e">json</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">json</span>);
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">age</span>) {
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ValidationError</span>(<span style="color:#e6db74">&#34;No field: age&#34;</span>);
+    }
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>) {
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ValidationError</span>(<span style="color:#e6db74">&#34;No field: name&#34;</span>);
+    }
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">user</span>;
+    }
+
+    <span style="color:#75715e">// Working example with try..catch
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">try</span> {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readUser</span>(<span style="color:#e6db74">&#39;{ &#34;age&#34;: 25 }&#39;</span>);
+    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">ValidationError</span>) {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Invalid data: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span>); <span style="color:#75715e">// Invalid data: No field: name
+</span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">SyntaxError</span>) { <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;JSON Syntax Error: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span>);
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">err</span>; <span style="color:#75715e">// unknown error, rethrow it (**)
+</span><span style="color:#75715e"></span>    }
+    }
+
+</code></pre></div><p>The <code>try..catch</code> block in the code above handles both our <code>ValidationError</code> and the built-in <code>SyntaxError</code> from <code>JSON.parse</code>.</p>
+<p>Please take a look at how we use <code>instanceof</code> to check for the specific error type in the line <code>(*)</code>.</p>
+<p>We could also look at <code>err.name</code>, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#75715e">// ...
+</span><span style="color:#75715e">// instead of (err instanceof SyntaxError)
+</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;SyntaxError&#34;</span>) { <span style="color:#75715e">// (*)
+</span><span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>The <code>instanceof </code>version is much better, because in the future we are going to extend<code> ValidationError</code>, make subtypes of it, like <code>PropertyRequiredError</code>. And <code>instanceof</code> check will continue to work for new inheriting classes. So that’s future-proof.</p>
+<p>Also it’s important that if <code>catch </code>meets an unknown error, then it rethrows it in the line<code> (**)</code>. The catch block only knows how to handle validation and syntax errors, other kinds (due to a typo in the code or other unknown ones) should fall through.</p>
+<h3 id="further-inheritance"><strong><a href="">Further inheritance</a></strong></h3>
+<p>The <code>ValidationError</code> class is very generic. Many things may go wrong. The property may be absent or it may be in a wrong format (like a string value for<code> age</code>). Let’s make a more concrete class <code>PropertyRequiredError</code>, exactly for absent properties. It will carry additional information about the property that’s missing.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ValidationError</span> <span style="color:#66d9ef">extends</span> Error {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">message</span>) {
+        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">message</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ValidationError&#34;</span>;
+    }
+    }
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyRequiredError</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">ValidationError</span> {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">property</span>) {
+        <span style="color:#66d9ef">super</span>(<span style="color:#e6db74">&#34;No property: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">property</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;PropertyRequiredError&#34;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">property</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">property</span>;
+    }
+    }
+
+    <span style="color:#75715e">// Usage
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">readUser</span>(<span style="color:#a6e22e">json</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">json</span>);
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">age</span>) {
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PropertyRequiredError</span>(<span style="color:#e6db74">&#34;age&#34;</span>);
+    }
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>) {
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PropertyRequiredError</span>(<span style="color:#e6db74">&#34;name&#34;</span>);
+    }
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">user</span>;
+    }
+
+    <span style="color:#75715e">// Working example with try..catch
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">try</span> {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readUser</span>(<span style="color:#e6db74">&#39;{ &#34;age&#34;: 25 }&#39;</span>);
+    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">ValidationError</span>) {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Invalid data: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span>); <span style="color:#75715e">// Invalid data: No property: name
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// PropertyRequiredError
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">property</span>); <span style="color:#75715e">// name
+</span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">SyntaxError</span>) {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;JSON Syntax Error: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span>);
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">err</span>; <span style="color:#75715e">// unknown error, rethrow it
+</span><span style="color:#75715e"></span>    }
+    }
+
+</code></pre></div><p>The new class <code>PropertyRequiredError</code> is easy to use: we only need to pass the property name:<code> new PropertyRequiredError(property)</code>. The human-readable <code>message</code> is generated by the constructor.</p>
+<p>Please note that <code>this.name</code> in <code>PropertyRequiredError</code> constructor is again assigned manually. That may become a bit tedious – to assign <code>this.name = &lt;class name&gt;</code> in every custom error class. We can avoid it by making our own “basic error” class that assigns <code>this.name = this.constructor.name</code>. And then inherit all our custom errors from it.</p>
+<p>Let’s call it <code>MyError</code>.</p>
+<p>Here’s the code with MyError and other custom error classes, simplified:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyError</span> <span style="color:#66d9ef">extends</span> Error {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">message</span>) {
+        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">message</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">constructor</span>.<span style="color:#a6e22e">name</span>;
+    }
+    }
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ValidationError</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">MyError</span> { }
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyRequiredError</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">ValidationError</span> {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">property</span>) {
+        <span style="color:#66d9ef">super</span>(<span style="color:#e6db74">&#34;No property: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">property</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">property</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">property</span>;
+    }
+    }
+
+    <span style="color:#75715e">// name is correct
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>( <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PropertyRequiredError</span>(<span style="color:#e6db74">&#34;field&#34;</span>).<span style="color:#a6e22e">name</span> ); <span style="color:#75715e">// PropertyRequiredError
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>Now custom errors are much shorter, especially<code> ValidationError</code>, as we got rid of the <code>&quot;this.name = ...&quot; </code>line in the constructor.</p>
+<h3 id="wrapping-exceptions"><strong><a href="">Wrapping exceptions</a></strong></h3>
+<p>The purpose of the function <code>readUser</code> in the code above is “to read the user data”. There may occur different kinds of errors in the process. Right now we have <code>SyntaxError</code> and <code>ValidationError</code>, but in the future <code>readUser</code> function may grow and probably generate other kinds of errors.</p>
+<p>The code which calls <code>readUser </code>should handle these errors. Right now it uses multiple <code>if</code>s in the <code>catch</code> block, that check the class and handle known errors and rethrow the unknown ones.</p>
+<p>The scheme is like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">try</span> {
+    ...
+    <span style="color:#a6e22e">readUser</span>()  <span style="color:#75715e">// the potential error source
+</span><span style="color:#75715e"></span>    ...
+    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">ValidationError</span>) {
+        <span style="color:#75715e">// handle validation errors
+</span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">SyntaxError</span>) {
+        <span style="color:#75715e">// handle syntax errors
+</span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">err</span>; <span style="color:#75715e">// unknown error, rethrow it
+</span><span style="color:#75715e"></span>    }
+    }
+
+</code></pre></div><p>In the code above we can see two types of errors, but there can be more.</p>
+<p>If the <code>readUser</code> function generates several kinds of errors, then we should ask ourselves: do we really want to check for all error types one-by-one every time?</p>
+<p>Often the answer is “No”: we’d like to be “one level above all that”. We just want to know if there was a “data reading error” – why exactly it happened is often irrelevant (the error message describes it). Or, even better, we’d like to have a way to get the error details, but only if we need to.</p>
+<p>The technique that we describe here is called “wrapping exceptions”.</p>
+<ol>
+<li>
+<p>We’ll make a new class <code>ReadError</code> to represent a generic “data reading” error.</p>
+</li>
+<li>
+<p>The function <code>readUser</code> will catch data reading errors that occur inside it, such as <code>ValidationError</code> and <code>SyntaxError</code>, and generate a <code>ReadError</code> instead.</p>
+</li>
+<li>
+<p>The <code>ReadError</code> object will keep the reference to the original error in its <code>cause </code>property.</p>
+</li>
+</ol>
+<p>Then the code that calls <code>readUser </code>will only have to check for<code> ReadError</code>, not for every kind of data reading errors. And if it needs more details of an error, it can check its <code>cause</code> property.</p>
+<p>Here’s the code that defines <code>ReadError</code> and demonstrates its use in <code>readUser</code> and <code>try..catch</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReadError</span> <span style="color:#66d9ef">extends</span> Error {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">cause</span>) {
+        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">message</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cause</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cause</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ReadError&#39;</span>;
+    }
+    }
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ValidationError</span> <span style="color:#66d9ef">extends</span> Error { <span style="color:#75715e">/*...*/</span> }
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyRequiredError</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">ValidationError</span> { <span style="color:#75715e">/* ... */</span> }
+
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">validateUser</span>(<span style="color:#a6e22e">user</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">age</span>) {
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PropertyRequiredError</span>(<span style="color:#e6db74">&#34;age&#34;</span>);
+    }
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>) {
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PropertyRequiredError</span>(<span style="color:#e6db74">&#34;name&#34;</span>);
+    }
+    }
+
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">readUser</span>(<span style="color:#a6e22e">json</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span>;
+
+    <span style="color:#66d9ef">try</span> {
+        <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">json</span>);
+    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">SyntaxError</span>) {
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ReadError</span>(<span style="color:#e6db74">&#34;Syntax Error&#34;</span>, <span style="color:#a6e22e">err</span>);
+        } <span style="color:#66d9ef">else</span> {
+        <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">err</span>;
+        }
+    }
+
+    <span style="color:#66d9ef">try</span> {
+        <span style="color:#a6e22e">validateUser</span>(<span style="color:#a6e22e">user</span>);
+    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">ValidationError</span>) {
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ReadError</span>(<span style="color:#e6db74">&#34;Validation Error&#34;</span>, <span style="color:#a6e22e">err</span>);
+        } <span style="color:#66d9ef">else</span> {
+        <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">err</span>;
+        }
+    }
+
+    }
+
+    <span style="color:#66d9ef">try</span> {
+    <span style="color:#a6e22e">readUser</span>(<span style="color:#e6db74">&#39;{bad json}&#39;</span>);
+    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">ReadError</span>) {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">e</span>);
+        <span style="color:#75715e">// Original error: SyntaxError: Unexpected token b in JSON at position 1
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Original error: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">cause</span>);
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">e</span>;
+    }
+    }
+
+</code></pre></div><p>In the code above, <code>readUser</code> works exactly as described – catches syntax and validation errors and throws <code>ReadError</code> errors instead (unknown errors are rethrown as usual).</p>
+<p>So the outer code checks <code>instanceof ReadError</code> and that’s it. No need to list all possible error types.</p>
+<p>The approach is called “wrapping exceptions”, because we take “low level” exceptions and “wrap” them into <code>ReadError</code> that is more abstract. It is widely used in object-oriented programming.</p>
+<h3 id="summary"><strong><a href="">Summary</a></strong></h3>
+<ul>
+<li>We can inherit from Error and other built-in error classes normally. We just need to take care of the name property and don’t forget to call super.</li>
+<li>We can use instanceof to check for particular errors. It also works with inheritance. But sometimes we have an error object coming from a 3rd-party library and there’s no easy way to get its class. Then name property can be used for such checks.</li>
+<li>Wrapping exceptions is a widespread technique: a function handles low-level exceptions and creates higher-level errors instead of various low-level ones. Low-level exceptions sometimes become properties of that object like err.cause in the examples above, but that’s not strictly required.</li>
+</ul>
+<p>☑️ <strong><a href="">Tasks</a></strong></p>
+<hr>
+<h3 id="inherit-from-syntaxerror--"><strong><a href="">Inherit from SyntaxError</a></strong>  ↗️</h3>
+<p><code>importance: 5</code></p>
+<p>Create a class<code> FormatError</code> that inherits from the built-in <code>SyntaxError</code> class.</p>
+<p>It should support<code> message</code>, <code>name</code> and <code>stack</code> properties.</p>
+<p>Usage example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FormatError</span>(<span style="color:#e6db74">&#34;formatting error&#34;</span>);
+
+    <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span> ); <span style="color:#75715e">// formatting error
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">name</span> ); <span style="color:#75715e">// FormatError
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">stack</span> ); <span style="color:#75715e">// stack
+</span><span style="color:#75715e"></span>
+    <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">FormatError</span> ); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">SyntaxError</span> ); <span style="color:#75715e">// true (because inherits from SyntaxError)
+</span><span style="color:#75715e"></span>
+</code></pre></div><h2 id="solution"><strong><a href="">solution</a></strong></h2>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

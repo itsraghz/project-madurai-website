@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/objects/object-references-and-copying">Object references and copying</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/objects">Objects: the basics</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/objects/object-methods">Object methods, &#34;this&#34;</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="garbage-collection">Garbage collection</h1>
+<p>Memory management in JavaScript is performed automatically and invisibly to us. We create primitives, objects, functions&hellip; All that takes memory.</p>
+<p>What happens when something is not needed any more? How does the JavaScript engine discover it and clean it up?</p>
+<h2 id="reachability">Reachability</h2>
+<p>The main concept of memory management in JavaScript is <em>reachability</em>.</p>
+<p>Simply put, &ldquo;reachable&rdquo; values are those that are accessible or usable somehow. They are guaranteed to be stored in memory.</p>
+<ol>
+<li>
+<p>There&rsquo;s a base set of inherently reachable values, that cannot be deleted for obvious reasons.</p>
+<p>For instance:</p>
+<ul>
+<li>The currently executing function, its local variables and parameters.</li>
+<li>Other functions on the current chain of nested calls, their local variables and parameters.</li>
+<li>Global variables.</li>
+<li>(there are some other, internal ones as well)</li>
+</ul>
+<p>These values are called <em>roots</em>.</p>
+</li>
+<li>
+<p>Any other value is considered reachable if it&rsquo;s reachable from a root by a reference or by a chain of references.</p>
+<p>For instance, if there&rsquo;s an object in a global variable, and that object has a property referencing another object, <em>that</em> object is considered reachable. And those that it references are also reachable. Detailed examples to follow.</p>
+</li>
+</ol>
+<p>There&rsquo;s a background process in the JavaScript engine that is called <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">garbage collector</a>. It monitors all objects and removes those that have become unreachable.</p>
+<h2 id="a-simple-example">A simple example</h2>
+<p>Here&rsquo;s the simplest example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// user has a reference to the object
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+};
+</code></pre></div><p><img src="memory-user-john.svg" alt=""></p>
+<p>Here the arrow depicts an object reference. The global variable <code>&quot;user&quot;</code> references the object <code>{name: &quot;John&quot;}</code> (we&rsquo;ll call it John for brevity). The <code>&quot;name&quot;</code> property of John stores a primitive, so it&rsquo;s painted inside the object.</p>
+<p>If the value of <code>user</code> is overwritten, the reference is lost:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</code></pre></div><p><img src="memory-user-john-lost.svg" alt=""></p>
+<p>Now John becomes unreachable. There&rsquo;s no way to access it, no references to it. Garbage collector will junk the data and free the memory.</p>
+<h2 id="two-references">Two references</h2>
+<p>Now let&rsquo;s imagine we copied the reference from <code>user</code> to <code>admin</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// user has a reference to the object
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">admin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p><img src="memory-user-john-admin.svg" alt=""></p>
+<p>Now if we do the same:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</code></pre></div><p>&hellip;Then the object is still reachable via <code>admin</code> global variable, so it&rsquo;s in memory. If we overwrite <code>admin</code> too, then it can be removed.</p>
+<h2 id="interlinked-objects">Interlinked objects</h2>
+<p>Now a more complex example. The family:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">marry</span>(<span style="color:#a6e22e">man</span>, <span style="color:#a6e22e">woman</span>) {
+  <span style="color:#a6e22e">woman</span>.<span style="color:#a6e22e">husband</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">man</span>;
+  <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">wife</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">woman</span>;
+
+  <span style="color:#66d9ef">return</span> {
+    <span style="color:#a6e22e">father</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">man</span>,
+    <span style="color:#a6e22e">mother</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">woman</span>
+  }
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">family</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">marry</span>({
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+}, {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ann&#34;</span>
+});
+</code></pre></div><p>Function <code>marry</code> &ldquo;marries&rdquo; two objects by giving them references to each other and returns a new object that contains them both.</p>
+<p>The resulting memory structure:</p>
+<p><img src="family.svg" alt=""></p>
+<p>As of now, all objects are reachable.</p>
+<p>Now let&rsquo;s remove two references:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">family</span>.<span style="color:#a6e22e">father</span>;
+<span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">family</span>.<span style="color:#a6e22e">mother</span>.<span style="color:#a6e22e">husband</span>;
+</code></pre></div><p><img src="family-delete-refs.svg" alt=""></p>
+<p>It&rsquo;s not enough to delete only one of these two references, because all objects would still be reachable.</p>
+<p>But if we delete both, then we can see that John has no incoming reference any more:</p>
+<p><img src="family-no-father.svg" alt=""></p>
+<p>Outgoing references do not matter. Only incoming ones can make an object reachable. So, John is now unreachable and will be removed from the memory with all its data that also became unaccessible.</p>
+<p>After garbage collection:</p>
+<p><img src="family-no-father-2.svg" alt=""></p>
+<h2 id="unreachable-island">Unreachable island</h2>
+<p>It is possible that the whole island of interlinked objects becomes unreachable and is removed from the memory.</p>
+<p>The source object is the same as above. Then:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">family</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</code></pre></div><p>The in-memory picture becomes:</p>
+<p><img src="family-no-family.svg" alt=""></p>
+<p>This example demonstrates how important the concept of reachability is.</p>
+<p>It&rsquo;s obvious that John and Ann are still linked, both have incoming references. But that&rsquo;s not enough.</p>
+<p>The former <code>&quot;family&quot;</code> object has been unlinked from the root, there&rsquo;s no reference to it any more, so the whole island becomes unreachable and will be removed.</p>
+<h2 id="internal-algorithms">Internal algorithms</h2>
+<p>The basic garbage collection algorithm is called &ldquo;mark-and-sweep&rdquo;.</p>
+<p>The following &ldquo;garbage collection&rdquo; steps are regularly performed:</p>
+<ul>
+<li>The garbage collector takes roots and &ldquo;marks&rdquo; (remembers) them.</li>
+<li>Then it visits and &ldquo;marks&rdquo; all references from them.</li>
+<li>Then it visits marked objects and marks <em>their</em> references. All visited objects are remembered, so as not to visit the same object twice in the future.</li>
+<li>&hellip;And so on until every reachable (from the roots) references are visited.</li>
+<li>All objects except marked ones are removed.</li>
+</ul>
+<p>For instance, let our object structure look like this:</p>
+<p><img src="garbage-collection-1.svg" alt=""></p>
+<p>We can clearly see an &ldquo;unreachable island&rdquo; to the right side. Now let&rsquo;s see how &ldquo;mark-and-sweep&rdquo; garbage collector deals with it.</p>
+<p>The first step marks the roots:</p>
+<p><img src="garbage-collection-2.svg" alt=""></p>
+<p>Then their references are marked:</p>
+<p><img src="garbage-collection-3.svg" alt=""></p>
+<p>&hellip;And their references, while possible:</p>
+<p><img src="garbage-collection-4.svg" alt=""></p>
+<p>Now the objects that could not be visited in the process are considered unreachable and will be removed:</p>
+<p><img src="garbage-collection-5.svg" alt=""></p>
+<p>We can also imagine the process as spilling a huge bucket of paint from the roots, that flows through all references and marks all reachable objects. The unmarked ones are then removed.</p>
+<p>That&rsquo;s the concept of how garbage collection works. JavaScript engines apply many optimizations to make it run faster and not affect the execution.</p>
+<p>Some of the optimizations:</p>
+<ul>
+<li><strong>Generational collection</strong> &ndash; objects are split into two sets: &ldquo;new ones&rdquo; and &ldquo;old ones&rdquo;. Many  objects appear, do their job and die fast, they can be cleaned up aggressively. Those that survive for long enough, become &ldquo;old&rdquo; and are examined less often.</li>
+<li><strong>Incremental collection</strong> &ndash; if there are many objects, and we try to walk and mark the whole object set at once, it may take some time and introduce visible delays in the execution. So the engine tries to split the garbage collection into pieces. Then the pieces are executed one by one, separately. That requires some extra bookkeeping between them to track changes, but we have many tiny delays instead of a big one.</li>
+<li><strong>Idle-time collection</strong> &ndash; the garbage collector tries to run only while the CPU is idle, to reduce the possible effect on the execution.</li>
+</ul>
+<p>There exist other optimizations and flavours of garbage collection algorithms. As much as I&rsquo;d like to describe them here, I have to hold off, because different engines implement different tweaks and techniques. And, what&rsquo;s even more important, things change as engines develop, so studying deeper &ldquo;in advance&rdquo;, without a real need is probably not worth that. Unless, of course, it is a matter of pure interest, then there will be some links for you below.</p>
+<h2 id="summary">Summary</h2>
+<p>The main things to know:</p>
+<ul>
+<li>Garbage collection is performed automatically. We cannot force or prevent it.</li>
+<li>Objects are retained in memory while they are reachable.</li>
+<li>Being referenced is not the same as being reachable (from a root): a pack of interlinked objects can become unreachable as a whole.</li>
+</ul>
+<p>Modern engines implement advanced algorithms of garbage collection.</p>
+<p>A general book &ldquo;The Garbage Collection Handbook: The Art of Automatic Memory Management&rdquo; (R. Jones et al) covers some of them.</p>
+<p>If you are familiar with low-level programming, the more detailed information about V8 garbage collector is in the article <a href="http://jayconrod.com/posts/55/a-tour-of-v8-garbage-collection">A tour of V8: Garbage Collection</a>.</p>
+<p><a href="https://v8.dev/">V8 blog</a> also publishes articles about changes in memory management from time to time. Naturally, to learn the garbage collection, you&rsquo;d better prepare by learning about V8 internals in general and read the blog of <a href="http://mrale.ph">Vyacheslav Egorov</a> who worked as one of V8 engineers. I&rsquo;m saying: &ldquo;V8&rdquo;, because it is best covered with articles in the internet. For other engines, many approaches are similar, but garbage collection differs in many aspects.</p>
+<p>In-depth knowledge of engines is good when you need low-level optimizations. It would be wise to plan that as the next step after you&rsquo;re familiar with the language.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

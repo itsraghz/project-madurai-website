@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/objects/symbol-type">Symbol type</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/objects">Objects: the basics</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="object-to-primitive-conversion">Object to primitive conversion</h1>
+<p>What happens when objects are added <code>obj1 + obj2</code>, subtracted <code>obj1 - obj2</code> or printed using <code>alert(obj)</code>?</p>
+<p>In that case, objects are auto-converted to primitives, and then the operation is carried out.</p>
+<p>In the chapter <a href="info:type-conversions">info:type-conversions</a> we&rsquo;ve seen the rules for numeric, string and boolean conversions of primitives. But we left a gap for objects. Now, as we know about methods and symbols it becomes possible to fill it.</p>
+<ol>
+<li>All objects are <code>true</code> in a boolean context. There are only numeric and string conversions.</li>
+<li>The numeric conversion happens when we subtract objects or apply mathematical functions. For instance, <code>Date</code> objects (to be covered in the chapter <a href="info:date">info:date</a>) can be subtracted, and the result of <code>date1 - date2</code> is the time difference between two dates.</li>
+<li>As for the string conversion &ndash; it usually happens when we output an object like <code>alert(obj)</code> and in similar contexts.</li>
+</ol>
+<h2 id="toprimitive">ToPrimitive</h2>
+<p>We can fine-tune string and numeric conversion, using special object methods.</p>
+<p>There are three variants of type conversion, so-called &ldquo;hints&rdquo;, described in the <a href="https://tc39.github.io/ecma262/#sec-toprimitive">specification</a>:</p>
+<dl>
+<dt><code>&quot;string&quot;</code></dt>
+<dd>For an object-to-string conversion, when we&rsquo;re doing an operation on an object that expects a string, like <code>alert</code>:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// output
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">obj</span>);
+
+<span style="color:#75715e">// using object as a property key
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">anotherObj</span>[<span style="color:#a6e22e">obj</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>;
+</code></pre></div></dd>
+<dt><code>&quot;number&quot;</code></dt>
+<dd>For an object-to-number conversion, like when we&rsquo;re doing maths:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// explicit conversion
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">obj</span>);
+
+<span style="color:#75715e">// maths (except binary plus)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#f92672">+</span><span style="color:#a6e22e">obj</span>; <span style="color:#75715e">// unary plus
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">delta</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">date1</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">date2</span>;
+
+<span style="color:#75715e">// less/greater comparison
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">greater</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user1</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">user2</span>;
+</code></pre></div></dd>
+<dt><code>&quot;default&quot;</code></dt>
+<dd>Occurs in rare cases when the operator is &ldquo;not sure&rdquo; what type to expect.
+<p>For instance, binary plus <code>+</code> can work both with strings (concatenates them) and numbers (adds them), so both strings and numbers would do. So if a binary plus gets an object as an argument, it uses the <code>&quot;default&quot;</code> hint to convert it.</p>
+<p>Also, if an object is compared using <code>==</code> with a string, number or a symbol, it&rsquo;s also unclear which conversion should be done, so the <code>&quot;default&quot;</code> hint is used.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// binary plus uses the &#34;default&#34; hint
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">total</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">obj1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">obj2</span>;
+
+<span style="color:#75715e">// obj == number uses the &#34;default&#34; hint
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">user</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) { ... };
+</code></pre></div><p>The greater and less comparison operators, such as <code>&lt;</code> <code>&gt;</code>, can work with both strings and numbers too. Still, they use the <code>&quot;number&quot;</code> hint, not <code>&quot;default&quot;</code>. That&rsquo;s for historical reasons.</p>
+<p>In practice though, we don&rsquo;t need to remember these peculiar details, because all built-in objects except for one case (<code>Date</code> object, we&rsquo;ll learn it later) implement <code>&quot;default&quot;</code> conversion the same way as <code>&quot;number&quot;</code>. And we can do the same.</p>
+</dd>
+</dl>
+<p>```smart header=&ldquo;No <code>\&quot;boolean\&quot;</code> hint&rdquo;
+Please note &ndash; there are only three hints. It&rsquo;s that simple.</p>
+<p>There is no &ldquo;boolean&rdquo; hint (all objects are <code>true</code> in boolean context) or anything else. And if we treat <code>&quot;default&quot;</code> and <code>&quot;number&quot;</code> the same, like most built-ins do, then there are only two conversions.</p>
+<pre><code>
+**To do the conversion, JavaScript tries to find and call three object methods:**
+
+1. Call `obj[Symbol.toPrimitive](hint)` - the method with the symbolic key `Symbol.toPrimitive` (system symbol), if such method exists,
+2. Otherwise if hint is `&quot;string&quot;`
+    - try `obj.toString()` and `obj.valueOf()`, whatever exists.
+3. Otherwise if hint is `&quot;number&quot;` or `&quot;default&quot;`
+    - try `obj.valueOf()` and `obj.toString()`, whatever exists.
+
+## Symbol.toPrimitive
+
+Let's start from the first method. There's a built-in symbol named `Symbol.toPrimitive` that should be used to name the conversion method, like this:
+
+```js
+obj[Symbol.toPrimitive] = function(hint) {
+  // must return a primitive value
+  // hint = one of &quot;string&quot;, &quot;number&quot;, &quot;default&quot;
+};
+</code></pre><p>For instance, here <code>user</code> object implements it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#a6e22e">money</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1000</span>,
+
+  [<span style="color:#a6e22e">Symbol</span>.<span style="color:#a6e22e">toPrimitive</span>](<span style="color:#a6e22e">hint</span>) {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`hint: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">hint</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">hint</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;string&#34;</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">`{name: &#34;</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;}`</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">money</span>;
+  }
+};
+
+<span style="color:#75715e">// conversions demo:
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>); <span style="color:#75715e">// hint: string -&gt; {name: &#34;John&#34;}
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#f92672">+</span><span style="color:#a6e22e">user</span>); <span style="color:#75715e">// hint: number -&gt; 1000
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">500</span>); <span style="color:#75715e">// hint: default -&gt; 1500
+</span></code></pre></div><p>As we can see from the code, <code>user</code> becomes a self-descriptive string or a money amount depending on the conversion. The single method <code>user[Symbol.toPrimitive]</code> handles all conversion cases.</p>
+<h2 id="tostringvalueof">toString/valueOf</h2>
+<p>Methods <code>toString</code> and <code>valueOf</code> come from ancient times. They are not symbols (symbols did not exist that long ago), but rather &ldquo;regular&rdquo; string-named methods. They provide an alternative &ldquo;old-style&rdquo; way to implement the conversion.</p>
+<p>If there&rsquo;s no <code>Symbol.toPrimitive</code> then JavaScript tries to find them and try in the order:</p>
+<ul>
+<li><code>toString -&gt; valueOf</code> for &ldquo;string&rdquo; hint.</li>
+<li><code>valueOf -&gt; toString</code> otherwise.</li>
+</ul>
+<p>These methods must return a primitive value. If <code>toString</code> or <code>valueOf</code> returns an object, then it&rsquo;s ignored (same as if there were no method).</p>
+<p>By default, a plain object has following <code>toString</code> and <code>valueOf</code> methods:</p>
+<ul>
+<li>The <code>toString</code> method returns a string <code>&quot;[object Object]&quot;</code>.</li>
+<li>The <code>valueOf</code> method returns the object itself.</li>
+</ul>
+<p>Here&rsquo;s the demo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>};
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>); <span style="color:#75715e">// [object Object]
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">valueOf</span>() <span style="color:#f92672">===</span> <span style="color:#a6e22e">user</span>); <span style="color:#75715e">// true
+</span></code></pre></div><p>So if we try to use an object as a string, like in an <code>alert</code> or so, then by default we see <code>[object Object]</code>.</p>
+<p>And the default <code>valueOf</code> is mentioned here only for the sake of completeness, to avoid any confusion. As you can see, it returns the object itself, and so is ignored. Don&rsquo;t ask me why, that&rsquo;s for historical reasons. So we can assume it doesn&rsquo;t exist.</p>
+<p>Let&rsquo;s implement these methods.</p>
+<p>For instance, here <code>user</code> does the same as above using a combination of <code>toString</code> and <code>valueOf</code> instead of <code>Symbol.toPrimitive</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#a6e22e">money</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1000</span>,
+
+  <span style="color:#75715e">// for hint=&#34;string&#34;
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">toString</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`{name: &#34;</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;}`</span>;
+  },
+
+  <span style="color:#75715e">// for hint=&#34;number&#34; or &#34;default&#34;
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">valueOf</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">money</span>;
+  }
+
+};
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>); <span style="color:#75715e">// toString -&gt; {name: &#34;John&#34;}
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#f92672">+</span><span style="color:#a6e22e">user</span>); <span style="color:#75715e">// valueOf -&gt; 1000
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">500</span>); <span style="color:#75715e">// valueOf -&gt; 1500
+</span></code></pre></div><p>As we can see, the behavior is the same as the previous example with <code>Symbol.toPrimitive</code>.</p>
+<p>Often we want a single &ldquo;catch-all&rdquo; place to handle all primitive conversions. In this case, we can implement <code>toString</code> only, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+
+  <span style="color:#a6e22e">toString</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>;
+  }
+};
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>); <span style="color:#75715e">// toString -&gt; John
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">500</span>); <span style="color:#75715e">// toString -&gt; John500
+</span></code></pre></div><p>In the absence of <code>Symbol.toPrimitive</code> and <code>valueOf</code>, <code>toString</code> will handle all primitive conversions.</p>
+<h2 id="return-types">Return types</h2>
+<p>The important thing to know about all primitive-conversion methods is that they do not necessarily return the &ldquo;hinted&rdquo; primitive.</p>
+<p>There is no control whether <code>toString</code> returns exactly a string, or whether <code>Symbol.toPrimitive</code> method returns a number for a hint <code>&quot;number&quot;</code>.</p>
+<p>The only mandatory thing: these methods must return a primitive, not an object.</p>
+<pre><code class="language-smart" data-lang="smart">For historical reasons, if `toString` or `valueOf` returns an object, there's no error, but such value is ignored (like if the method didn't exist). That's because in ancient times there was no good &quot;error&quot; concept in JavaScript.
+
+In contrast, `Symbol.toPrimitive` *must* return a primitive, otherwise there will be an error.
+</code></pre><h2 id="further-conversions">Further conversions</h2>
+<p>As we know already, many operators and functions perform type conversions, e.g. multiplication <code>*</code> converts operands to numbers.</p>
+<p>If we pass an object as an argument, then there are two stages:</p>
+<ol>
+<li>The object is converted to a primitive (using the rules described above).</li>
+<li>If the resulting primitive isn&rsquo;t of the right type, it&rsquo;s converted.</li>
+</ol>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+  <span style="color:#75715e">// toString handles all conversions in the absence of other methods
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">toString</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;2&#34;</span>;
+  }
+};
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">obj</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>); <span style="color:#75715e">// 4, object converted to primitive &#34;2&#34;, then multiplication made it a number
+</span></code></pre></div><ol>
+<li>The multiplication <code>obj * 2</code> first converts the object to primitive (that&rsquo;s a string <code>&quot;2&quot;</code>).</li>
+<li>Then <code>&quot;2&quot; * 2</code> becomes <code>2 * 2</code> (the string is converted to number).</li>
+</ol>
+<p>Binary plus will concatenate strings in the same situation, as it gladly accepts a string:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">toString</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;2&#34;</span>;
+  }
+};
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">obj</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>); <span style="color:#75715e">// 22 (&#34;2&#34; + 2), conversion to primitive returned a string =&gt; concatenation
+</span></code></pre></div><h2 id="summary">Summary</h2>
+<p>The object-to-primitive conversion is called automatically by many built-in functions and operators that expect a primitive as a value.</p>
+<p>There are 3 types (hints) of it:</p>
+<ul>
+<li><code>&quot;string&quot;</code> (for <code>alert</code> and other operations that need a string)</li>
+<li><code>&quot;number&quot;</code> (for maths)</li>
+<li><code>&quot;default&quot;</code> (few operators)</li>
+</ul>
+<p>The specification describes explicitly which operator uses which hint. There are very few operators that &ldquo;don&rsquo;t know what to expect&rdquo; and use the <code>&quot;default&quot;</code> hint. Usually for built-in objects <code>&quot;default&quot;</code> hint is handled the same way as <code>&quot;number&quot;</code>, so in practice the last two are often merged together.</p>
+<p>The conversion algorithm is:</p>
+<ol>
+<li>Call <code>obj[Symbol.toPrimitive](hint)</code> if the method exists,</li>
+<li>Otherwise if hint is <code>&quot;string&quot;</code>
+<ul>
+<li>try <code>obj.toString()</code> and <code>obj.valueOf()</code>, whatever exists.</li>
+</ul>
+</li>
+<li>Otherwise if hint is <code>&quot;number&quot;</code> or <code>&quot;default&quot;</code>
+<ul>
+<li>try <code>obj.valueOf()</code> and <code>obj.toString()</code>, whatever exists.</li>
+</ul>
+</li>
+</ol>
+<p>In practice, it&rsquo;s often enough to implement only <code>obj.toString()</code> as a &ldquo;catch-all&rdquo; method for all conversions that return a &ldquo;human-readable&rdquo; representation of an object, for logging or debugging purposes.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

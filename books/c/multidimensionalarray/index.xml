@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multi Dimensional Arrays on Project Madurai School</title>
+    <link>/books/c/multidimensionalarray/</link>
+    <description>Recent content in Multi Dimensional Arrays on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/c/multidimensionalarray/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Two Dimensional Arrays</title>
+      <link>/books/c/multidimensionalarray/two-dimensional-arrays/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multidimensionalarray/two-dimensional-arrays/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Array of pointers</title>
+      <link>/books/c/multidimensionalarray/array-of-pointers/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multidimensionalarray/array-of-pointers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3-D Array</title>
+      <link>/books/c/multidimensionalarray/3-d-array/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multidimensionalarray/3-d-array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/multidimensionalarray/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multidimensionalarray/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/multidimensionalarray/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multidimensionalarray/kannotes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

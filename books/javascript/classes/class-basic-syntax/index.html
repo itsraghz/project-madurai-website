@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/classes">Classes</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/classes/class-inheritance">Class inheritance</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h2 id="class-basic-syntax">Class basic syntax</h2>
+<blockquote>
+<p><em>In object-oriented programming, a class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or</em></p>
+</blockquote>
+<p>In practice, we often need to create many objects of the same kind, like users, or goods or whatever.</p>
+<p>As we already know from the <a href="">chapter Constructor, operator &ldquo;new&rdquo;</a>, <code>new function</code> can help with that.</p>
+<p>But in the modern JavaScript, there’s a more advanced “class” construct, that introduces great new features which are useful for object-oriented programming.</p>
+<h2 id="the-class-syntax"><a href="">The “class” syntax</a></h2>
+<h5 id="the-basic-syntax-is">The basic syntax is:</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span> <span style="color:#f92672">{</span>
+2   <span style="color:#75715e">// class methods
+</span><span style="color:#75715e"></span>3   <span style="color:#a6e22e">constructor</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+4   <span style="color:#a6e22e">method1</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+5   <span style="color:#a6e22e">method2</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+6   <span style="color:#a6e22e">method3</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+7   <span style="color:#f92672">...</span>
+8   <span style="color:#f92672">}</span>
+</code></pre></div><p>Then use  <code>new MyClass()</code> to create a new object with all the listed methods.</p>
+<p>The <code>constructor</code>() method is called automatically by  <code>new</code>, so we can initialize the object there.</p>
+<h4 id="for-example">For example:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+2
+3  <span style="color:#a6e22e">constructor</span><span style="color:#f92672">(</span>name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+4    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+5  <span style="color:#f92672">}</span>
+6
+7   <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+8     <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span>
+9  <span style="color:#f92672">}</span>
+10
+11  <span style="color:#f92672">}</span>
+12
+13  <span style="color:#75715e">// Usage:
+</span><span style="color:#75715e"></span>14  let user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;John&#34;</span><span style="color:#f92672">);</span>
+15  user<span style="color:#f92672">.</span><span style="color:#a6e22e">sayHi</span><span style="color:#f92672">();</span>
+
+</code></pre></div><p>A new object is created.
+The <code>constructor</code> runs with the given argument and assigns it to <code>this.name.</code></p>
+<p>…Then we can call object methods, such as <code>user.sayHi()</code>.</p>
+<blockquote>
+<p>⚠️  No comma between class methods
+A common pitfall for novice developers is to put a comma between class methods, which would result in a syntax error.
+The notation here is not to be confused with object literals. Within the class, no commas are required.</p>
+</blockquote>
+<h2 id="what-is-a-class"><a href="">What is a class?</a></h2>
+<p>So, what exactly is a <code>class?</code> That’s not an entirely new language-level entity, as one might think.</p>
+<p>Let’s unveil any magic and see what a class really is. That’ll help in understanding many complex aspects.</p>
+<p>In JavaScript, a class is a kind of function.</p>
+<p>Here, take a look:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+2  <span style="color:#a6e22e">constructor</span><span style="color:#f92672">(</span>name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+3  <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> alert<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span> <span style="color:#f92672">}</span>
+4 <span style="color:#f92672">}</span>
+5 
+6 <span style="color:#75715e">// proof: User is a function
+</span><span style="color:#75715e"></span>7 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>typeof User<span style="color:#f92672">);</span> <span style="color:#75715e">// function
+</span></code></pre></div><h4 id="what-class-user--construct-really-does-is">What class User {&hellip;} construct really does is:</h4>
+<p>1.Creates a function named User, that becomes the result of the class declaration. The function code is taken from the constructor method (assumed empty if we don’t write such method).</p>
+<p>2.Stores class methods, such as <code>sayHi</code>, <code>in User.prototype</code>.</p>
+<p>After <code>new User</code> object is created, when we call its method, it’s taken from the prototype, just as described in the chapter <a href="">F.prototype.</a> So the object has access to class methods.</p>
+<h3 id="we-can-illustrate-the-result-of-class-user-declaration-as">We can illustrate the result of class User declaration as:</h3>
+<h2 id="user">user</h2>
+<pre><code>constructor(name) {
+   thish.name=name;
+}
+</code></pre><p>⬇️</p>
+<h2 id="userprototype">User.prototype</h2>
+<pre><code>sayHi: function
+constructor: User
+</code></pre><h4 id="heres-the-code-to-introspect-it">Here’s the code to introspect it:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+2   <span style="color:#a6e22e">constructor</span><span style="color:#f92672">(</span>name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+3   <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> alert<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span> <span style="color:#f92672">}</span>
+4 <span style="color:#f92672">}</span>
+5 
+6 <span style="color:#75715e">// class is a function
+</span><span style="color:#75715e"></span>7 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>typeof User<span style="color:#f92672">);</span> <span style="color:#75715e">// function
+</span><span style="color:#75715e"></span>8 
+9 <span style="color:#75715e">// ...or, more precisely, the constructor method
+</span><span style="color:#75715e"></span>10 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>User <span style="color:#f92672">===</span> User<span style="color:#f92672">.</span><span style="color:#a6e22e">prototype</span><span style="color:#f92672">.</span><span style="color:#a6e22e">constructor</span><span style="color:#f92672">);</span> <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>11 
+12 <span style="color:#75715e">// The methods are in User.prototype, e.g:
+</span><span style="color:#75715e"></span>13 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>User<span style="color:#f92672">.</span><span style="color:#a6e22e">prototype</span><span style="color:#f92672">.</span><span style="color:#a6e22e">sayHi</span><span style="color:#f92672">);</span> <span style="color:#75715e">// the code of the sayHi method
+</span><span style="color:#75715e"></span>14 
+15 <span style="color:#75715e">// there are exactly two methods in the prototype
+</span><span style="color:#75715e"></span>16 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>Object<span style="color:#f92672">.</span><span style="color:#a6e22e">getOwnPropertyNames</span><span style="color:#f92672">(</span>User<span style="color:#f92672">.</span><span style="color:#a6e22e">prototype</span><span style="color:#f92672">));</span> <span style="color:#75715e">// constructor, sayHi
+</span></code></pre></div><h2 id="not-just-a-syntactic-sugar"><a href="">Not just a syntactic sugar</a></h2>
+<p>Sometimes people say that <code>class</code> is a “syntactic sugar” (syntax that is designed to make things easier to read, but doesn’t introduce anything new), because we could actually declare the same without <code>class</code> keyword at all:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#75715e">// rewriting class User in pure functions
+</span><span style="color:#75715e"></span>2 
+3 <span style="color:#75715e">// 1. Create constructor function
+</span><span style="color:#75715e"></span>4 function <span style="color:#a6e22e">User</span><span style="color:#f92672">(</span>name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+5   <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+6 <span style="color:#f92672">}</span>
+7 <span style="color:#75715e">// a function prototype has &#34;constructor&#34; property by default,
+</span><span style="color:#75715e"></span>8 <span style="color:#75715e">// so we don&#39;t need to create it
+</span><span style="color:#75715e"></span>9 
+10<span style="color:#75715e">// 2. Add the method to prototype
+</span><span style="color:#75715e"></span>11 User<span style="color:#f92672">.</span><span style="color:#a6e22e">prototype</span><span style="color:#f92672">.</span><span style="color:#a6e22e">sayHi</span> <span style="color:#f92672">=</span> function<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+12   <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span>
+13 <span style="color:#f92672">};</span>
+14 
+15 <span style="color:#75715e">// Usage:
+</span><span style="color:#75715e"></span>16 let user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;John&#34;</span><span style="color:#f92672">);</span>
+17 user<span style="color:#f92672">.</span><span style="color:#a6e22e">sayHi</span><span style="color:#f92672">();</span>
+
+</code></pre></div><p>The result of this definition is about the same. So, there are indeed reasons why <code>class</code> can be considered a syntactic sugar to define a constructor together with its prototype methods.</p>
+<p>Still, there are important differences.</p>
+<p>1.First, a function created by <code>class</code> is labelled by a special internal <code>property [[IsClassConstructor]]: true</code>. So it’s not entirely the same as creating it manually.</p>
+<p>The language checks for that property in a variety of places. For example, unlike a regular function, it must be called with <code>new</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+2   <span style="color:#a6e22e">constructor</span><span style="color:#f92672">()</span> <span style="color:#f92672">{}</span>
+3 <span style="color:#f92672">}</span>
+4 
+5 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>typeof User<span style="color:#f92672">);</span> <span style="color:#75715e">// function
+</span><span style="color:#75715e"></span>6 <span style="color:#a6e22e">User</span><span style="color:#f92672">();</span> <span style="color:#75715e">// Error: Class constructor User cannot be invoked without &#39;new&#39;
+</span></code></pre></div><p>Also, a string representation of a class constructor in most JavaScript engines starts with the “class…”</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+2   <span style="color:#a6e22e">constructor</span><span style="color:#f92672">()</span> <span style="color:#f92672">{}</span>
+3 <span style="color:#f92672">}</span>
+4 
+5 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>User<span style="color:#f92672">);</span> <span style="color:#75715e">// class User { ... }
+</span></code></pre></div><p>There are other differences, we’ll see them soon.
+2.Class methods are non-enumerable. A class definition sets <code>enumerable </code>flag to <code>false </code>for all methods in the <code>&quot;prototype&quot;</code>.</p>
+<p>That’s good, because if we for..in over an object, we usually don’t want its class methods.</p>
+<p>3.Classes always <code>use strict</code>. All code inside the class construct is automatically in strict mode.</p>
+<p>Besides, <code>class</code> syntax brings many other features that we’ll explore later.</p>
+<h2 id="class-expression"><a href="">Class Expression</a></h2>
+<p>Just like functions, classes can be defined inside another expression, passed around, returned, assigned, etc.</p>
+<h4 id="heres-an-example-of-a-class-expression">Here’s an example of a class expression:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 let User <span style="color:#f92672">=</span> <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">{</span>
+2   <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+3     <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">);</span>
+4   <span style="color:#f92672">}</span>
+5 <span style="color:#f92672">};</span>
+
+</code></pre></div><p>Similar to Named Function Expressions, class expressions may have a name.</p>
+<h4 id="if-a-class-expression-has-a-name-its-visible-inside-the-class-only">If a class expression has a name, it’s visible inside the class only:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#75715e">// &#34;Named Class Expression&#34;
+</span><span style="color:#75715e"></span>2 <span style="color:#75715e">// (no such term in the spec, but that&#39;s similar to Named Function Expression)
+</span><span style="color:#75715e"></span>3 let User <span style="color:#f92672">=</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span> <span style="color:#f92672">{</span>
+4   <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+5     <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>MyClass<span style="color:#f92672">);</span> <span style="color:#75715e">// MyClass name is visible only inside the class
+</span><span style="color:#75715e"></span>6   <span style="color:#f92672">}</span>
+7 <span style="color:#f92672">};</span>
+8 
+9 <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sayHi</span><span style="color:#f92672">();</span> <span style="color:#75715e">// works, shows MyClass definition
+</span><span style="color:#75715e"></span>10
+11 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>MyClass<span style="color:#f92672">);</span> <span style="color:#75715e">// error, MyClass name isn&#39;t visible outside of the class
+</span><span style="color:#75715e"></span>
+</code></pre></div><h4 id="we-can-even-make-classes-dynamically-on-demand-like-this">We can even make classes dynamically “on-demand”, like this:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 function <span style="color:#a6e22e">makeClass</span><span style="color:#f92672">(</span>phrase<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+2  <span style="color:#75715e">// declare a class and return it
+</span><span style="color:#75715e"></span>3   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">{</span>
+4     <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+5      <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>phrase<span style="color:#f92672">);</span>
+6     <span style="color:#f92672">}</span>
+7   <span style="color:#f92672">};</span>
+8 <span style="color:#f92672">}</span>
+9
+10 <span style="color:#75715e">// Create a new class
+</span><span style="color:#75715e"></span>11 let User <span style="color:#f92672">=</span> makeClass<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">);</span>
+12
+13 <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sayHi</span><span style="color:#f92672">();</span> <span style="color:#75715e">// Hello
+</span></code></pre></div><h2 id="getterssetters"><a href="">Getters/setters</a></h2>
+<p>Just like literal objects, classes may include getters/setters, computed properties etc.</p>
+<h4 id="heres-an-example-for-username-implemented-using-getset">Here’s an example for user.name implemented using get/set:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+2 
+3   <span style="color:#a6e22e">constructor</span><span style="color:#f92672">(</span>name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+4     <span style="color:#75715e">// invokes the setter
+</span><span style="color:#75715e"></span>5     <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+6  <span style="color:#f92672">}</span>
+7
+8  get <span style="color:#a6e22e">name</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+9    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_name</span><span style="color:#f92672">;</span>
+10   <span style="color:#f92672">}</span>
+11
+12   set <span style="color:#a6e22e">name</span><span style="color:#f92672">(</span>value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+13     <span style="color:#a6e22e">if</span> <span style="color:#f92672">(</span>value<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> 4<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+14       <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Name is too short.&#34;</span><span style="color:#f92672">);</span>
+15       <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+16     <span style="color:#f92672">}</span>
+17     <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_name</span> <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
+18   <span style="color:#f92672">}</span>
+19 
+20 <span style="color:#f92672">}</span>
+21
+22 let user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;John&#34;</span><span style="color:#f92672">);</span>
+23 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>user<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span> <span style="color:#75715e">// John
+</span><span style="color:#75715e"></span>24
+25 user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span> <span style="color:#75715e">// Name is too short.
+</span></code></pre></div><p>Technically, such class declaration works by creating getters and setters in <code>User.prototype</code>.</p>
+<h2 id="computed-names-"><a href="">Computed names […]</a></h2>
+<p>Here’s an example with a computed method name using brackets [&hellip;]:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+2 
+3   <span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">&#39;</span>say<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">+</span> <span style="color:#960050;background-color:#1e0010">&#39;</span>Hi<span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#f92672">]()</span> <span style="color:#f92672">{</span>
+4     <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">);</span>
+5   <span style="color:#f92672">}</span>
+6 
+7 <span style="color:#f92672">}</span>
+8 
+9 <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sayHi</span><span style="color:#f92672">();</span>
+</code></pre></div><p>Such features are easy to remember, as they resemble that of literal objects.</p>
+<h2 id="class-fields"><a href="">Class fields</a></h2>
+<blockquote>
+<p>⚠️   Old browsers may need a polyfill:
+Class fields are a recent addition to the language.</p>
+</blockquote>
+<p>Previously, our classes only had methods.</p>
+<p>“Class fields” is a syntax that allows to add any properties.</p>
+<p>For instance, let’s add <code>name</code> property to <code>class User</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+2   name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span><span style="color:#f92672">;</span>
+3 
+4   <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+5     <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">`</span>Hello<span style="color:#f92672">,</span> $<span style="color:#f92672">{</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">}!</span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#f92672">);</span>
+6   <span style="color:#f92672">}</span>
+7 <span style="color:#f92672">}</span>
+8 
+9 <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sayHi</span><span style="color:#f92672">();</span> <span style="color:#75715e">// Hello, John!
+</span></code></pre></div><p>So, we just write &quot; = &quot; in the declaration, and that’s it.</p>
+<p>The important difference of class fields is that they are set on individual objects, not <code>User.prototype</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+2   name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span><span style="color:#f92672">;</span>
+3 <span style="color:#f92672">}</span>
+4 
+5 let user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">();</span>
+6 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>user<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span> <span style="color:#75715e">// John
+</span><span style="color:#75715e"></span>7 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>User<span style="color:#f92672">.</span><span style="color:#a6e22e">prototype</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span> <span style="color:#75715e">// undefined
+</span></code></pre></div><p>We can also assign values using more complex expressions and function calls:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+2   name <span style="color:#f92672">=</span> prompt<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Name, please?&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;John&#34;</span><span style="color:#f92672">);</span>
+3 <span style="color:#f92672">}</span>
+4 
+5 let user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">();</span>
+6 <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>user<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span> <span style="color:#75715e">// John
+</span></code></pre></div><h2 id="making-bound-methods-with-class-fields"><a href="">Making bound methods with class fields</a></h2>
+<p>As demonstrated in the chapter Function binding functions in JavaScript have a dynamic <code>this</code>. It depends on the context of the call.</p>
+<p>So if an object method is passed around and called in another context, <code>this</code> won’t be a reference to its object any more.</p>
+<p>For instance, this code will show <code>undefined</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Button</span> <span style="color:#f92672">{</span>
+2   <span style="color:#a6e22e">constructor</span><span style="color:#f92672">(</span>value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+3     <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
+4    <span style="color:#f92672">}</span>
+5 
+6   <span style="color:#a6e22e">click</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+7     <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">);</span>
+8   <span style="color:#f92672">}</span>
+9  <span style="color:#f92672">}</span>
+10
+11 let button <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Button<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">);</span>
+12 
+13 <span style="color:#a6e22e">setTimeout</span><span style="color:#f92672">(</span>button<span style="color:#f92672">.</span><span style="color:#a6e22e">click</span><span style="color:#f92672">,</span> 1000<span style="color:#f92672">);</span> <span style="color:#75715e">// undefined
+</span></code></pre></div><p>The problem is called &ldquo;losing this&rdquo;.</p>
+<p>There are two approaches to fixing it, as discussed in the chapter
+<a href="">Function binding:</a></p>
+<p>1.Pass a wrapper-function, <code>such as setTimeout(() =&gt; button.click(), 1000)</code>.</p>
+<p>2.Bind the method to object, e.g. in the constructor.</p>
+<h4 id="class-fields-provide-another-quite-elegant-syntax">Class fields provide another, quite elegant syntax:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Button</span> <span style="color:#f92672">{</span>
+2   <span style="color:#a6e22e">constructor</span><span style="color:#f92672">(</span>value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+3     <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
+4   <span style="color:#f92672">}</span>
+5   click <span style="color:#f92672">=</span> <span style="color:#f92672">()</span> <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">{</span>
+6     <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">);</span>
+7   <span style="color:#f92672">}</span>
+8 <span style="color:#f92672">}</span>
+9 
+10 let button <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Button<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">);</span>
+11 
+12 <span style="color:#a6e22e">setTimeout</span><span style="color:#f92672">(</span>button<span style="color:#f92672">.</span><span style="color:#a6e22e">click</span><span style="color:#f92672">,</span> 1000<span style="color:#f92672">);</span> <span style="color:#75715e">// hello
+</span></code></pre></div><p>The class field <code>click = () =&gt; {...} </code>is created on a per-object basis, there’s a separate function for each Button object, with this inside it referencing that object. We can pass <code>button.click</code> around anywhere, and the value of <code>this</code> will always be correct.</p>
+<h4 id="thats-especially-useful-in-browser-environment-for-event-listeners">That’s especially useful in browser environment, for event listeners.</h4>
+<h2 id="summary"><a href="">Summary</a></h2>
+<p>The basic class syntax looks like this</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span> <span style="color:#f92672">{</span>
+2   prop <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span> <span style="color:#75715e">// property
+</span><span style="color:#75715e"></span>3 
+4   <span style="color:#a6e22e">constructor</span><span style="color:#f92672">(...)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// constructor
+</span><span style="color:#75715e"></span>5     <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>6   <span style="color:#f92672">}</span>
+7 
+8   <span style="color:#a6e22e">method</span><span style="color:#f92672">(...)</span> <span style="color:#f92672">{}</span> <span style="color:#75715e">// method
+</span><span style="color:#75715e"></span>9 
+10   get <span style="color:#a6e22e">something</span><span style="color:#f92672">(...)</span> <span style="color:#f92672">{}</span> <span style="color:#75715e">// getter method
+</span><span style="color:#75715e"></span>11   set <span style="color:#a6e22e">something</span><span style="color:#f92672">(...)</span> <span style="color:#f92672">{}</span> <span style="color:#75715e">// setter method
+</span><span style="color:#75715e"></span>12 
+13   <span style="color:#f92672">[</span>Symbol<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">]()</span> <span style="color:#f92672">{}</span> <span style="color:#75715e">// method with computed name (symbol here)
+</span><span style="color:#75715e"></span>14   <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>15 <span style="color:#f92672">}</span>
+</code></pre></div><p><code>MyClass</code> is technically a function (the one that we provide as <code>constructor</code>), while methods, getters and setters are written to  <code>MyClass.prototype</code>.</p>
+<p>In the next chapters we’ll learn more about classes, including inheritance and other features.</p>
+<h2 id="-tasks"><a href="">☑️ Tasks</a></h2>
+<p><code>importance: 5</code></p>
+<p>The <code>Clock class</code> (see the sandbox) is written in functional style. Rewrite it in the “class” syntax.</p>
+<p>P.S. The clock ticks in the console, open it to see.</p>
+<p><a href="">Open a sandbox for the task.</a></p>
+<p><a href="">solution</a></p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

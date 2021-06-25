@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/data-types/array">Arrays</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/data-types">Datatypes</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/data-types/iterable">Iterables</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="array-methods">Array methods</h1>
+<p>Arrays provide a lot of methods. To make things easier, in this chapter they are split into groups.</p>
+<h2 id="addremove-items">Add/remove items</h2>
+<p>We already know methods that add and remove items from the beginning or the end:</p>
+<ul>
+<li><code>arr.push(...items)</code> &ndash; adds items to the end,</li>
+<li><code>arr.pop()</code> &ndash; extracts an item from the end,</li>
+<li><code>arr.shift()</code> &ndash; extracts an item from the beginning,</li>
+<li><code>arr.unshift(...items)</code> &ndash; adds items to the beginning.</li>
+</ul>
+<p>Here are a few others.</p>
+<h3 id="splice">splice</h3>
+<p>How to delete an element from the array?</p>
+<p>The arrays are objects, so we can try to use <code>delete</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;I&#34;</span>, <span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;home&#34;</span>];
+
+<span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">arr</span>[<span style="color:#ae81ff">1</span>]; <span style="color:#75715e">// remove &#34;go&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>[<span style="color:#ae81ff">1</span>] ); <span style="color:#75715e">// undefined
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// now arr = [&#34;I&#34;,  , &#34;home&#34;];
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span> ); <span style="color:#75715e">// 3
+</span></code></pre></div><p>The element was removed, but the array still has 3 elements, we can see that <code>arr.length == 3</code>.</p>
+<p>That&rsquo;s natural, because <code>delete obj.key</code> removes a value by the <code>key</code>. It&rsquo;s all it does. Fine for objects. But for arrays we usually want the rest of elements to shift and occupy the freed place. We expect to have a shorter array now.</p>
+<p>So, special methods should be used.</p>
+<p>The <a href="mdn:js/Array/splice">arr.splice</a> method is a swiss army knife for arrays. It can do everything: insert, remove and replace elements.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">start</span>[, <span style="color:#a6e22e">deleteCount</span>, <span style="color:#a6e22e">elem1</span>, ..., <span style="color:#a6e22e">elemN</span>])
+</code></pre></div><p>It modifies <code>arr</code> starting from the index <code>start</code>: removes <code>deleteCount</code> elements and then inserts <code>elem1, ..., elemN</code> at their place. Returns the array of removed elements.</p>
+<p>This method is easy to grasp by examples.</p>
+<p>Let&rsquo;s start with the deletion:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;I&#34;</span>, <span style="color:#e6db74">&#34;study&#34;</span>, <span style="color:#e6db74">&#34;JavaScript&#34;</span>];
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>); <span style="color:#75715e">// from index 1 remove 1 element
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span> ); <span style="color:#75715e">// [&#34;I&#34;, &#34;JavaScript&#34;]
+</span></code></pre></div><p>Easy, right? Starting from the index <code>1</code> it removed <code>1</code> element.</p>
+<p>In the next example we remove 3 elements and replace them with the other two:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#f92672">*!*</span><span style="color:#e6db74">&#34;I&#34;</span>, <span style="color:#e6db74">&#34;study&#34;</span>, <span style="color:#e6db74">&#34;JavaScript&#34;</span>,<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!* &#34;right&#34;, &#34;now&#34;];</span>
+
+<span style="color:#75715e">// remove 3 first elements and replace them with another
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;Let&#39;s&#34;</span>, <span style="color:#e6db74">&#34;dance&#34;</span>);
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span> ) <span style="color:#75715e">// now [*!*&#34;Let&#39;s&#34;, &#34;dance&#34;*/!*, &#34;right&#34;, &#34;now&#34;]
+</span></code></pre></div><p>Here we can see that <code>splice</code> returns the array of removed elements:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#f92672">*!*</span><span style="color:#e6db74">&#34;I&#34;</span>, <span style="color:#e6db74">&#34;study&#34;</span>,<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!* &#34;JavaScript&#34;, &#34;right&#34;, &#34;now&#34;];</span>
+
+<span style="color:#75715e">// remove 2 first elements
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">removed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>);
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">removed</span> ); <span style="color:#75715e">// &#34;I&#34;, &#34;study&#34; &lt;-- array of removed elements
+</span></code></pre></div><p>The <code>splice</code> method is also able to insert the elements without any removals. For that we need to set <code>deleteCount</code> to <code>0</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;I&#34;</span>, <span style="color:#e6db74">&#34;study&#34;</span>, <span style="color:#e6db74">&#34;JavaScript&#34;</span>];
+
+<span style="color:#75715e">// from index 2
+</span><span style="color:#75715e">// delete 0
+</span><span style="color:#75715e">// then insert &#34;complex&#34; and &#34;language&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;complex&#34;</span>, <span style="color:#e6db74">&#34;language&#34;</span>);
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span> ); <span style="color:#75715e">// &#34;I&#34;, &#34;study&#34;, &#34;complex&#34;, &#34;language&#34;, &#34;JavaScript&#34;
+</span></code></pre></div><pre><code class="language-smart" data-lang="smart">Here and in other array methods, negative indexes are allowed. They specify the position from the end of the array, like here:
+
+```js run
+let arr = [1, 2, 5];
+
+// from index -1 (one step from the end)
+// delete 0 elements,
+// then insert 3 and 4
+arr.splice(-1, 0, 3, 4);
+
+alert( arr ); // 1,2,3,4,5
+```
+</code></pre><h3 id="slice">slice</h3>
+<p>The method <a href="mdn:js/Array/slice">arr.slice</a> is much simpler than similar-looking <code>arr.splice</code>.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">slice</span>([<span style="color:#a6e22e">start</span>], [<span style="color:#a6e22e">end</span>])
+</code></pre></div><p>It returns a new array copying to it all items from index <code>start</code> to <code>end</code> (not including <code>end</code>). Both <code>start</code> and <code>end</code> can be negative, in that case position from array end is assumed.</p>
+<p>It&rsquo;s similar to a string method <code>str.slice</code>, but instead of substrings it makes subarrays.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;t&#34;</span>, <span style="color:#e6db74">&#34;e&#34;</span>, <span style="color:#e6db74">&#34;s&#34;</span>, <span style="color:#e6db74">&#34;t&#34;</span>];
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>) ); <span style="color:#75715e">// e,s (copy from 1 to 3)
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) ); <span style="color:#75715e">// s,t (copy from -2 till the end)
+</span></code></pre></div><p>We can also call it without arguments: <code>arr.slice()</code> creates a copy of <code>arr</code>. That&rsquo;s often used to obtain a copy for further transformations that should not affect the original array.</p>
+<h3 id="concat">concat</h3>
+<p>The method <a href="mdn:js/Array/concat">arr.concat</a> creates a new array that includes values from other arrays and additional items.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">arg1</span>, <span style="color:#a6e22e">arg2</span>...)
+</code></pre></div><p>It accepts any number of arguments &ndash; either arrays or values.</p>
+<p>The result is a new array containing items from <code>arr</code>, then <code>arg1</code>, <code>arg2</code> etc.</p>
+<p>If an argument <code>argN</code> is an array, then all its elements are copied. Otherwise, the argument itself is copied.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
+
+<span style="color:#75715e">// create an array from: arr and [3,4]
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">concat</span>([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]) ); <span style="color:#75715e">// 1,2,3,4
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// create an array from: arr and [3,4] and [5,6]
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">concat</span>([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>], [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]) ); <span style="color:#75715e">// 1,2,3,4,5,6
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// create an array from: arr and [3,4], then add values 5 and 6
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">concat</span>([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>], <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>) ); <span style="color:#75715e">// 1,2,3,4,5,6
+</span></code></pre></div><p>Normally, it only copies elements from arrays. Other objects, even if they look like arrays, are added as a whole:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arrayLike</span> <span style="color:#f92672">=</span> {
+  <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;something&#34;</span>,
+  <span style="color:#a6e22e">length</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
+};
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">arrayLike</span>) ); <span style="color:#75715e">// 1,2,[object Object]
+</span></code></pre></div><p>&hellip;But if an array-like object has a special <code>Symbol.isConcatSpreadable</code> property, then it&rsquo;s treated as an array by <code>concat</code>: its elements are added instead:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arrayLike</span> <span style="color:#f92672">=</span> {
+  <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;something&#34;</span>,
+  <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;else&#34;</span>,
+<span style="color:#f92672">*!*</span>
+  [<span style="color:#a6e22e">Symbol</span>.<span style="color:#a6e22e">isConcatSpreadable</span>]<span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+  <span style="color:#a6e22e">length</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>
+};
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">arrayLike</span>) ); <span style="color:#75715e">// 1,2,something,else
+</span></code></pre></div><h2 id="iterate-foreach">Iterate: forEach</h2>
+<p>The <a href="mdn:js/Array/forEach">arr.forEach</a> method allows to run a function for every element of the array.</p>
+<p>The syntax:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">array</span>) {
+  <span style="color:#75715e">// ... do something with item
+</span><span style="color:#75715e"></span>});
+</code></pre></div><p>For instance, this shows each element of the array:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// for each element call alert
+</span><span style="color:#75715e"></span>[<span style="color:#e6db74">&#34;Bilbo&#34;</span>, <span style="color:#e6db74">&#34;Gandalf&#34;</span>, <span style="color:#e6db74">&#34;Nazgul&#34;</span>].<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">alert</span>);
+</code></pre></div><p>And this code is more elaborate about their positions in the target array:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#e6db74">&#34;Bilbo&#34;</span>, <span style="color:#e6db74">&#34;Gandalf&#34;</span>, <span style="color:#e6db74">&#34;Nazgul&#34;</span>].<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">array</span>) =&gt; {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> is at index </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">index</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> in </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">array</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+});
+</code></pre></div><p>The result of the function (if it returns any) is thrown away and ignored.</p>
+<h2 id="searching-in-array">Searching in array</h2>
+<p>Now let&rsquo;s cover methods that search in an array.</p>
+<h3 id="indexoflastindexof-and-includes">indexOf/lastIndexOf and includes</h3>
+<p>The methods <a href="mdn:js/Array/indexOf">arr.indexOf</a>, <a href="mdn:js/Array/lastIndexOf">arr.lastIndexOf</a> and <a href="mdn:js/Array/includes">arr.includes</a> have the same syntax and do essentially the same as their string counterparts, but operate on items instead of characters:</p>
+<ul>
+<li><code>arr.indexOf(item, from)</code> &ndash; looks for <code>item</code> starting from index <code>from</code>, and returns the index where it was found, otherwise <code>-1</code>.</li>
+<li><code>arr.lastIndexOf(item, from)</code> &ndash; same, but looks for from right to left.</li>
+<li><code>arr.includes(item, from)</code> &ndash; looks for <code>item</code> starting from index <code>from</code>, returns <code>true</code> if found.</li>
+</ul>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">false</span>];
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#ae81ff">0</span>) ); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#66d9ef">false</span>) ); <span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#66d9ef">null</span>) ); <span style="color:#75715e">// -1
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#ae81ff">1</span>) ); <span style="color:#75715e">// true
+</span></code></pre></div><p>Note that the methods use <code>===</code> comparison. So, if we look for <code>false</code>, it finds exactly <code>false</code> and not the zero.</p>
+<p>If we want to check for inclusion, and don&rsquo;t want to know the exact index, then <code>arr.includes</code> is preferred.</p>
+<p>Also, a very minor difference of <code>includes</code> is that it correctly handles <code>NaN</code>, unlike <code>indexOf/lastIndexOf</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#66d9ef">NaN</span>];
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#66d9ef">NaN</span>) ); <span style="color:#75715e">// -1 (should be 0, but === equality doesn&#39;t work for NaN)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#66d9ef">NaN</span>) );<span style="color:#75715e">// true (correct)
+</span></code></pre></div><h3 id="find-and-findindex">find and findIndex</h3>
+<p>Imagine we have an array of objects. How do we find an object with the specific condition?</p>
+<p>Here the <a href="mdn:js/Array/find">arr.find(fn)</a> method comes in handy.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">find</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">array</span>) {
+  <span style="color:#75715e">// if true is returned, item is returned and iteration is stopped
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for falsy scenario returns undefined
+</span><span style="color:#75715e"></span>});
+</code></pre></div><p>The function is called for elements of the array, one after another:</p>
+<ul>
+<li><code>item</code> is the element.</li>
+<li><code>index</code> is its index.</li>
+<li><code>array</code> is the array itself.</li>
+</ul>
+<p>If it returns <code>true</code>, the search is stopped, the <code>item</code> is returned. If nothing found, <code>undefined</code> is returned.</p>
+<p>For example, we have an array of users, each with the fields <code>id</code> and <code>name</code>. Let&rsquo;s find the one with <code>id == 1</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> [
+  {<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>},
+  {<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Pete&#34;</span>},
+  {<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Mary&#34;</span>}
+];
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">find</span>(<span style="color:#a6e22e">item</span> =&gt; <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// John
+</span></code></pre></div><p>In real life arrays of objects is a common thing, so the <code>find</code> method is very useful.</p>
+<p>Note that in the example we provide to <code>find</code> the function <code>item =&gt; item.id == 1</code> with one argument. That&rsquo;s typical, other arguments of this function are rarely used.</p>
+<p>The <a href="mdn:js/Array/findIndex">arr.findIndex</a> method is essentially the same, but it returns the index where the element was found instead of the element itself and <code>-1</code> is returned when nothing is found.</p>
+<h3 id="filter">filter</h3>
+<p>The <code>find</code> method looks for a single (first) element that makes the function return <code>true</code>.</p>
+<p>If there may be many, we can use <a href="mdn:js/Array/filter">arr.filter(fn)</a>.</p>
+<p>The syntax is similar to <code>find</code>, but <code>filter</code> returns an array of all matching elements:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">results</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">array</span>) {
+  <span style="color:#75715e">// if true item is pushed to results and the iteration continues
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// returns empty array if nothing found
+</span><span style="color:#75715e"></span>});
+</code></pre></div><p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> [
+  {<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>},
+  {<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Pete&#34;</span>},
+  {<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Mary&#34;</span>}
+];
+
+<span style="color:#75715e">// returns array of the first two users
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">someUsers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">item</span> =&gt; <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>);
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">someUsers</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 2
+</span></code></pre></div><h2 id="transform-an-array">Transform an array</h2>
+<p>Let&rsquo;s move on to methods that transform and reorder an array.</p>
+<h3 id="map">map</h3>
+<p>The <a href="mdn:js/Array/map">arr.map</a> method is one of the most useful and often used.</p>
+<p>It calls the function for each element of the array and returns the array of results.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">array</span>) {
+  <span style="color:#75715e">// returns the new value instead of item
+</span><span style="color:#75715e"></span>});
+</code></pre></div><p>For instance, here we transform each element into its length:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">lengths</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Bilbo&#34;</span>, <span style="color:#e6db74">&#34;Gandalf&#34;</span>, <span style="color:#e6db74">&#34;Nazgul&#34;</span>].<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">item</span> =&gt; <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">length</span>);
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">lengths</span>); <span style="color:#75715e">// 5,7,6
+</span></code></pre></div><h3 id="sortfn">sort(fn)</h3>
+<p>The call to <a href="mdn:js/Array/sort">arr.sort()</a> sorts the array <em>in place</em>, changing its element order.</p>
+<p>It also returns the sorted array, but the returned value is usually ignored, as <code>arr</code> itself is modified.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [ <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">15</span> ];
+
+<span style="color:#75715e">// the method reorders the content of arr
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">sort</span>();
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arr</span> );  <span style="color:#75715e">// *!*1, 15, 2*/!*
+</span></code></pre></div><p>Did you notice anything strange in the outcome?</p>
+<p>The order became <code>1, 15, 2</code>. Incorrect. But why?</p>
+<p><strong>The items are sorted as strings by default.</strong></p>
+<p>Literally, all elements are converted to strings for comparisons. For strings, lexicographic ordering is applied and indeed <code>&quot;2&quot; &gt; &quot;15&quot;</code>.</p>
+<p>To use our own sorting order, we need to supply a function as the argument of <code>arr.sort()</code>.</p>
+<p>The function should compare two arbitrary values and return:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">compare</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span>) <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// if the first value is greater than the second
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">b</span>) <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// if values are equal
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span>) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">// if the first value is less than the second
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>For instance, to sort as numbers:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">compareNumeric</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span>) <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">b</span>) <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span>) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [ <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">15</span> ];
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">compareNumeric</span>);
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">arr</span>);  <span style="color:#75715e">// *!*1, 2, 15*/!*
+</span></code></pre></div><p>Now it works as intended.</p>
+<p>Let&rsquo;s step aside and think what&rsquo;s happening. The <code>arr</code> can be array of anything, right? It may contain numbers or strings or objects or whatever. We have a set of <em>some items</em>. To sort it, we need an <em>ordering function</em> that knows how to compare its elements. The default is a string order.</p>
+<p>The <code>arr.sort(fn)</code> method implements a generic sorting algorithm. We don&rsquo;t need to care how it internally works (an optimized <a href="https://en.wikipedia.org/wiki/Quicksort">quicksort</a> or <a href="https://en.wikipedia.org/wiki/Timsort">Timsort</a> most of the time). It will walk the array, compare its elements using the provided function and reorder them, all we need is to provide the <code>fn</code> which does the comparison.</p>
+<p>By the way, if we ever want to know which elements are compared &ndash; nothing prevents from alerting them:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">8</span>].<span style="color:#a6e22e">sort</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+  <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &lt;&gt; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> );
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">b</span>;
+});
+</code></pre></div><p>The algorithm may compare an element with multiple others in the process, but it tries to make as few comparisons as possible.</p>
+<pre><code class="language-smart" data-lang="smart">Actually, a comparison function is only required to return a positive number to say &quot;greater&quot; and a negative number to say &quot;less&quot;.
+
+That allows to write shorter functions:
+
+```js run
+let arr = [ 1, 2, 15 ];
+
+arr.sort(function(a, b) { return a - b; });
+
+alert(arr);  // *!*1, 2, 15*/!*
+```
+</code></pre><pre><code class="language-smart" data-lang="smart">Remember [arrow functions](info:arrow-functions-basics)? We can use them here for neater sorting:
+
+```js
+arr.sort( (a, b) =&gt; a - b );
+```
+
+This works exactly the same as the longer version above.
+</code></pre><p>````smart header=&ldquo;Use <code>localeCompare</code> for strings&rdquo;
+Remember <a href="info:string#correct-comparisons">strings</a> comparison algorithm? It compares letters by their codes by default.</p>
+<p>For many alphabets, it&rsquo;s better to use <code>str.localeCompare</code> method to correctly sort letters, such as <code>Ö</code>.</p>
+<p>For example, let&rsquo;s sort a few countries in German:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">countries</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Österreich&#39;</span>, <span style="color:#e6db74">&#39;Andorra&#39;</span>, <span style="color:#e6db74">&#39;Vietnam&#39;</span>];
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">countries</span>.<span style="color:#a6e22e">sort</span>( (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) ); <span style="color:#75715e">// Andorra, Vietnam, Österreich (wrong)
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">countries</span>.<span style="color:#a6e22e">sort</span>( (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">localeCompare</span>(<span style="color:#a6e22e">b</span>) ) ); <span style="color:#75715e">// Andorra,Österreich,Vietnam (correct!)
+</span></code></pre></div><pre><code>
+### reverse
+
+The method [arr.reverse](mdn:js/Array/reverse) reverses the order of elements in `arr`.
+
+For instance:
+
+```js run
+let arr = [1, 2, 3, 4, 5];
+arr.reverse();
+
+alert( arr ); // 5,4,3,2,1
+```
+
+It also returns the array `arr` after the reversal.
+
+### split and join
+
+Here's the situation from real life. We are writing a messaging app, and the person enters the comma-delimited list of receivers: `John, Pete, Mary`. But for us an array of names would be much more comfortable than a single string. How to get it?
+
+The [str.split(delim)](mdn:js/String/split) method does exactly that. It splits the string into an array by the given delimiter `delim`.
+
+In the example below, we split by a comma followed by space:
+
+```js run
+let names = 'Bilbo, Gandalf, Nazgul';
+
+let arr = names.split(', ');
+
+for (let name of arr) {
+  alert( `A message to ${name}.` ); // A message to Bilbo  (and other names)
+}
+```
+
+The `split` method has an optional second numeric argument -- a limit on the array length. If it is provided, then the extra elements are ignored. In practice it is rarely used though:
+
+```js run
+let arr = 'Bilbo, Gandalf, Nazgul, Saruman'.split(', ', 2);
+
+alert(arr); // Bilbo, Gandalf
+```
+
+````smart header=&quot;Split into letters&quot;
+The call to `split(s)` with an empty `s` would split the string into an array of letters:
+
+```js run
+let str = &quot;test&quot;;
+
+alert( str.split('') ); // t,e,s,t
+```
+</code></pre><p>The call <a href="mdn:js/Array/join">arr.join(glue)</a> does the reverse to <code>split</code>. It creates a string of <code>arr</code> items joined by <code>glue</code> between them.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Bilbo&#39;</span>, <span style="color:#e6db74">&#39;Gandalf&#39;</span>, <span style="color:#e6db74">&#39;Nazgul&#39;</span>];
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;;&#39;</span>); <span style="color:#75715e">// glue the array into a string using ;
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">str</span> ); <span style="color:#75715e">// Bilbo;Gandalf;Nazgul
+</span></code></pre></div><h3 id="reducereduceright">reduce/reduceRight</h3>
+<p>When we need to iterate over an array &ndash; we can use <code>forEach</code>, <code>for</code> or <code>for..of</code>.</p>
+<p>When we need to iterate and return the data for each element &ndash; we can use <code>map</code>.</p>
+<p>The methods <a href="mdn:js/Array/reduce">arr.reduce</a> and <a href="mdn:js/Array/reduceRight">arr.reduceRight</a> also belong to that breed, but are a little bit more intricate. They are used to calculate a single value based on the array.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">accumulator</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">array</span>) {
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}, [<span style="color:#a6e22e">initial</span>]);
+</code></pre></div><p>The function is applied to all array elements one after another and &ldquo;carries on&rdquo; its result to the next call.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>accumulator</code> &ndash; is the result of the previous function call, equals <code>initial</code> the first time (if <code>initial</code> is provided).</li>
+<li><code>item</code> &ndash; is the current array item.</li>
+<li><code>index</code> &ndash; is its position.</li>
+<li><code>array</code> &ndash; is the array.</li>
+</ul>
+<p>As function is applied, the result of the previous function call is passed to the next one as the first argument.</p>
+<p>So, the first argument is essentially the accumulator that stores the combined result of all previous executions. And at the end it becomes the result of <code>reduce</code>.</p>
+<p>Sounds complicated?</p>
+<p>The easiest way to grasp that is by example.</p>
+<p>Here we get a sum of an array in one line:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">sum</span>, <span style="color:#a6e22e">current</span>) =&gt; <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">current</span>, <span style="color:#ae81ff">0</span>);
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>); <span style="color:#75715e">// 15
+</span></code></pre></div><p>The function passed to <code>reduce</code> uses only 2 arguments, that&rsquo;s typically enough.</p>
+<p>Let&rsquo;s see the details of what&rsquo;s going on.</p>
+<ol>
+<li>On the first run, <code>sum</code> is the <code>initial</code> value (the last argument of <code>reduce</code>), equals <code>0</code>, and <code>current</code> is the first array element, equals <code>1</code>. So the function result is <code>1</code>.</li>
+<li>On the second run, <code>sum = 1</code>, we add the second array element (<code>2</code>) to it and return.</li>
+<li>On the 3rd run, <code>sum = 3</code> and we add one more element to it, and so on&hellip;</li>
+</ol>
+<p>The calculation flow:</p>
+<p><img src="https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/05-data-types/05-array-methods/reduce.svg" alt=""></p>
+<p>Or in the form of a table, where each row represents a function call on the next array element:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>sum</code></th>
+<th><code>current</code></th>
+<th>result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>the first call</td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>the second call</td>
+<td><code>1</code></td>
+<td><code>2</code></td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td>the third call</td>
+<td><code>3</code></td>
+<td><code>3</code></td>
+<td><code>6</code></td>
+</tr>
+<tr>
+<td>the fourth call</td>
+<td><code>6</code></td>
+<td><code>4</code></td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td>the fifth call</td>
+<td><code>10</code></td>
+<td><code>5</code></td>
+<td><code>15</code></td>
+</tr>
+</tbody>
+</table>
+<p>Here we can clearly see how the result of the previous call becomes the first argument of the next one.</p>
+<p>We also can omit the initial value:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+
+<span style="color:#75715e">// removed initial value from reduce (no 0)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">sum</span>, <span style="color:#a6e22e">current</span>) =&gt; <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">current</span>);
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">result</span> ); <span style="color:#75715e">// 15
+</span></code></pre></div><p>The result is the same. That&rsquo;s because if there&rsquo;s no initial, then <code>reduce</code> takes the first element of the array as the initial value and starts the iteration from the 2nd element.</p>
+<p>The calculation table is the same as above, minus the first row.</p>
+<p>But such use requires an extreme care. If the array is empty, then <code>reduce</code> call without initial value gives an error.</p>
+<p>Here&rsquo;s an example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [];
+
+<span style="color:#75715e">// Error: Reduce of empty array with no initial value
+</span><span style="color:#75715e">// if the initial value existed, reduce would return it for the empty arr.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">sum</span>, <span style="color:#a6e22e">current</span>) =&gt; <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">current</span>);
+</code></pre></div><p>So it&rsquo;s advised to always specify the initial value.</p>
+<p>The method <a href="mdn:js/Array/reduceRight">arr.reduceRight</a> does the same, but goes from right to left.</p>
+<h2 id="arrayisarray">Array.isArray</h2>
+<p>Arrays do not form a separate language type. They are based on objects.</p>
+<p>So <code>typeof</code> does not help to distinguish a plain object from an array:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(<span style="color:#66d9ef">typeof</span> {}); <span style="color:#75715e">// object
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#66d9ef">typeof</span> []); <span style="color:#75715e">// same
+</span></code></pre></div><p>&hellip;But arrays are used so often that there&rsquo;s a special method for that: <a href="mdn:js/Array/isArray">Array.isArray(value)</a>. It returns <code>true</code> if the <code>value</code> is an array, and <code>false</code> otherwise.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(Array.<span style="color:#a6e22e">isArray</span>({})); <span style="color:#75715e">// false
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>(Array.<span style="color:#a6e22e">isArray</span>([])); <span style="color:#75715e">// true
+</span></code></pre></div><h2 id="most-methods-support-thisarg">Most methods support &ldquo;thisArg&rdquo;</h2>
+<p>Almost all array methods that call functions &ndash; like <code>find</code>, <code>filter</code>, <code>map</code>, with a notable exception of <code>sort</code>, accept an optional additional parameter <code>thisArg</code>.</p>
+<p>That parameter is not explained in the sections above, because it&rsquo;s rarely used. But for completeness we have to cover it.</p>
+<p>Here&rsquo;s the full syntax of these methods:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">find</span>(<span style="color:#a6e22e">func</span>, <span style="color:#a6e22e">thisArg</span>);
+<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">func</span>, <span style="color:#a6e22e">thisArg</span>);
+<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">func</span>, <span style="color:#a6e22e">thisArg</span>);
+<span style="color:#75715e">// ...
+</span><span style="color:#75715e">// thisArg is the optional last argument
+</span></code></pre></div><p>The value of <code>thisArg</code> parameter becomes <code>this</code> for <code>func</code>.</p>
+<p>For example, here we use a method of <code>army</code> object as a filter, and <code>thisArg</code> passes the context:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">army</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">minAge</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18</span>,
+  <span style="color:#a6e22e">maxAge</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">27</span>,
+  <span style="color:#a6e22e">canJoin</span>(<span style="color:#a6e22e">user</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">minAge</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">maxAge</span>;
+  }
+};
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> [
+  {<span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">16</span>},
+  {<span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>},
+  {<span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">23</span>},
+  {<span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>}
+];
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// find users, for who army.canJoin returns true
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">soldiers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">army</span>.<span style="color:#a6e22e">canJoin</span>, <span style="color:#a6e22e">army</span>);
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">soldiers</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">soldiers</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">age</span>); <span style="color:#75715e">// 20
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">soldiers</span>[<span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">age</span>); <span style="color:#75715e">// 23
+</span></code></pre></div><p>If in the example above we used <code>users.filter(army.canJoin)</code>, then <code>army.canJoin</code> would be called as a standalone function, with <code>this=undefined</code>, thus leading to an instant error.</p>
+<p>A call to <code>users.filter(army.canJoin, army)</code> can be replaced with <code>users.filter(user =&gt; army.canJoin(user))</code>, that does the same. The latter is used more often, as it&rsquo;s a bit easier to understand for most people.</p>
+<h2 id="summary">Summary</h2>
+<p>A cheat sheet of array methods:</p>
+<ul>
+<li>
+<p>To add/remove elements:</p>
+<ul>
+<li><code>push(...items)</code> &ndash; adds items to the end,</li>
+<li><code>pop()</code> &ndash; extracts an item from the end,</li>
+<li><code>shift()</code> &ndash; extracts an item from the beginning,</li>
+<li><code>unshift(...items)</code> &ndash; adds items to the beginning.</li>
+<li><code>splice(pos, deleteCount, ...items)</code> &ndash; at index <code>pos</code> deletes <code>deleteCount</code> elements and inserts <code>items</code>.</li>
+<li><code>slice(start, end)</code> &ndash; creates a new array, copies elements from index <code>start</code> till <code>end</code> (not inclusive) into it.</li>
+<li><code>concat(...items)</code> &ndash; returns a new array: copies all members of the current one and adds <code>items</code> to it. If any of <code>items</code> is an array, then its elements are taken.</li>
+</ul>
+</li>
+<li>
+<p>To search among elements:</p>
+<ul>
+<li><code>indexOf/lastIndexOf(item, pos)</code> &ndash; look for <code>item</code> starting from position <code>pos</code>, return the index or <code>-1</code> if not found.</li>
+<li><code>includes(value)</code> &ndash; returns <code>true</code> if the array has <code>value</code>, otherwise <code>false</code>.</li>
+<li><code>find/filter(func)</code> &ndash; filter elements through the function, return first/all values that make it return <code>true</code>.</li>
+<li><code>findIndex</code> is like <code>find</code>, but returns the index instead of a value.</li>
+</ul>
+</li>
+<li>
+<p>To iterate over elements:</p>
+<ul>
+<li><code>forEach(func)</code> &ndash; calls <code>func</code> for every element, does not return anything.</li>
+</ul>
+</li>
+<li>
+<p>To transform the array:</p>
+<ul>
+<li><code>map(func)</code> &ndash; creates a new array from results of calling <code>func</code> for every element.</li>
+<li><code>sort(func)</code> &ndash; sorts the array in-place, then returns it.</li>
+<li><code>reverse()</code> &ndash; reverses the array in-place, then returns it.</li>
+<li><code>split/join</code> &ndash; convert a string to array and back.</li>
+<li><code>reduce/reduceRight(func, initial)</code> &ndash; calculate a single value over the array by calling <code>func</code> for each element and passing an intermediate result between the calls.</li>
+</ul>
+</li>
+<li>
+<p>Additionally:</p>
+<ul>
+<li><code>Array.isArray(arr)</code> checks <code>arr</code> for being an array.</li>
+</ul>
+</li>
+</ul>
+<p>Please note that methods <code>sort</code>, <code>reverse</code> and <code>splice</code> modify the array itself.</p>
+<p>These methods are the most used ones, they cover 99% of use cases. But there are few others:</p>
+<ul>
+<li>
+<p><a href="mdn:js/Array/some">arr.some(fn)</a>/<a href="mdn:js/Array/every">arr.every(fn)</a> check the array.</p>
+<p>The function <code>fn</code> is called on each element of the array similar to <code>map</code>. If any/all results are <code>true</code>, returns <code>true</code>, otherwise <code>false</code>.</p>
+<p>These methods behave sort of like <code>||</code> and <code>&amp;&amp;</code> operators: if <code>fn</code> returns a truthy value, <code>arr.some()</code> immediately returns <code>true</code> and stops iterating over the rest of items; if <code>fn</code> returns a falsy value, <code>arr.every()</code> immediately returns <code>false</code> and stops iterating over the rest of items as well.</p>
+<p>We can use <code>every</code> to compare arrays:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">arraysEqual</span>(<span style="color:#a6e22e">arr1</span>, <span style="color:#a6e22e">arr2</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr1</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">arr2</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">arr1</span>.<span style="color:#a6e22e">every</span>((<span style="color:#a6e22e">value</span>, <span style="color:#a6e22e">index</span>) =&gt; <span style="color:#a6e22e">value</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">arr2</span>[<span style="color:#a6e22e">index</span>]);
+}
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">arraysEqual</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>])); <span style="color:#75715e">// true
+</span></code></pre></div></li>
+<li>
+<p><a href="mdn:js/Array/fill">arr.fill(value, start, end)</a> &ndash; fills the array with repeating <code>value</code> from index <code>start</code> to <code>end</code>.</p>
+</li>
+<li>
+<p><a href="mdn:js/Array/copyWithin">arr.copyWithin(target, start, end)</a> &ndash; copies its elements from position <code>start</code> till position <code>end</code> into <em>itself</em>, at position <code>target</code> (overwrites existing).</p>
+</li>
+<li>
+<p><a href="mdn:js/Array/flat">arr.flat(depth)</a>/<a href="mdn:js/Array/flatMap">arr.flatMap(fn)</a> create a new flat array from a multidimensional array.</p>
+</li>
+</ul>
+<p>For the full list, see the <a href="mdn:js/Array">manual</a>.</p>
+<p>From the first sight it may seem that there are so many methods, quite difficult to remember. But actually that&rsquo;s much easier.</p>
+<p>Look through the cheat sheet just to be aware of them. Then solve the tasks of this chapter to practice, so that you have experience with array methods.</p>
+<p>Afterwards whenever you need to do something with an array, and you don&rsquo;t know how &ndash; come here, look at the cheat sheet and find the right method. Examples will help you to write it correctly. Soon you&rsquo;ll automatically remember the methods, without specific efforts from your side.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

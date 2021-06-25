@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The C Processor on Project Madurai School</title>
+    <link>/books/c/the-c-preprocessor/</link>
+    <description>Recent content in The C Processor on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/c/the-c-preprocessor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feature of c Preprocessor</title>
+      <link>/books/c/the-c-preprocessor/feature-of-c-preprocessor/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/feature-of-c-preprocessor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Macro Expansion</title>
+      <link>/books/c/the-c-preprocessor/macro-expansion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/macro-expansion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>File Inclusion</title>
+      <link>/books/c/the-c-preprocessor/file-inclusion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/file-inclusion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conditioal Compilation</title>
+      <link>/books/c/the-c-preprocessor/conditional-compilation/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/conditional-compilation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Miscellaneous Directives</title>
+      <link>/books/c/the-c-preprocessor/miscellaneous-directives/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/miscellaneous-directives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Build Process</title>
+      <link>/books/c/the-c-preprocessor/the-build-process/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/the-build-process/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/the-c-preprocessor/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/the-c-preprocessor/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/kannotes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

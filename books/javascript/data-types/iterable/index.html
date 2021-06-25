@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/data-types/array-methods">Array methods</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/data-types">Datatypes</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/data-types/map-set">Map and Set</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="iterables">Iterables</h1>
+<p><em>Iterable</em> objects are a generalization of arrays. That&rsquo;s a concept that allows us to make any object useable in a <code>for..of</code> loop.</p>
+<p>Of course, Arrays are iterable. But there are many other built-in objects, that are iterable as well. For instance, strings are also iterable.</p>
+<p>If an object isn&rsquo;t technically an array, but represents a collection (list, set) of something, then <code>for..of</code> is a great syntax to loop over it, so let&rsquo;s see how to make it work.</p>
+<h2 id="symboliterator">Symbol.iterator</h2>
+<p>We can easily grasp the concept of iterables by making one of our own.</p>
+<p>For instance, we have an object that is not an array, but looks suitable for <code>for..of</code>.</p>
+<p>Like a <code>range</code> object that represents an interval of numbers:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">range</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+  <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>
+};
+
+<span style="color:#75715e">// We want the for..of to work:
+</span><span style="color:#75715e">// for(let num of range) ... num=1,2,3,4,5
+</span></code></pre></div><p>To make the <code>range</code> object iterable (and thus let <code>for..of</code> work) we need to add a method to the object named <code>Symbol.iterator</code> (a special built-in symbol just for that).</p>
+<ol>
+<li>When <code>for..of</code> starts, it calls that method once (or errors if not found). The method must return an <em>iterator</em> &ndash; an object with the method <code>next</code>.</li>
+<li>Onward, <code>for..of</code> works <em>only with that returned object</em>.</li>
+<li>When <code>for..of</code> wants the next value, it calls <code>next()</code> on that object.</li>
+<li>The result of <code>next()</code> must have the form <code>{done: Boolean, value: any}</code>, where <code>done=true</code>  means that the iteration is finished, otherwise <code>value</code> is the next value.</li>
+</ol>
+<p>Here&rsquo;s the full implementation for <code>range</code> with remarks:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">range</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+  <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>
+};
+
+<span style="color:#75715e">// 1. call to for..of initially calls this
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">range</span>[<span style="color:#a6e22e">Symbol</span>.<span style="color:#a6e22e">iterator</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+
+  <span style="color:#75715e">// ...it returns the iterator object:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 2. Onward, for..of works only with this iterator, asking it for next values
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> {
+    <span style="color:#a6e22e">current</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">from</span>,
+    <span style="color:#a6e22e">last</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">to</span>,      
+
+    <span style="color:#75715e">// 3. next() is called on each iteration by the for..of loop
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">next</span>() {
+      <span style="color:#75715e">// 4. it should return the value as an object {done:.., value :...}
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">current</span> <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">last</span>) {
+        <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">done</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">current</span><span style="color:#f92672">++</span> };
+      } <span style="color:#66d9ef">else</span> {
+        <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">done</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+      }
+    }
+  };
+};
+
+<span style="color:#75715e">// now it works!
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">range</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">num</span>); <span style="color:#75715e">// 1, then 2, 3, 4, 5
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>Please note the core feature of iterables: separation of concerns.</p>
+<ul>
+<li>The <code>range</code> itself does not have the <code>next()</code> method.</li>
+<li>Instead, another object, a so-called &ldquo;iterator&rdquo; is created by the call to <code>range[Symbol.iterator]()</code>, and its <code>next()</code> generates values for the iteration.</li>
+</ul>
+<p>So, the iterator object is separate from the object it iterates over.</p>
+<p>Technically, we may merge them and use <code>range</code> itself as the iterator to make the code simpler.</p>
+<p>Like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">range</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+  <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+
+  [<span style="color:#a6e22e">Symbol</span>.<span style="color:#a6e22e">iterator</span>]() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">current</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">from</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>;
+  },
+
+  <span style="color:#a6e22e">next</span>() {
+    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">current</span> <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">to</span>) {
+      <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">done</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">current</span><span style="color:#f92672">++</span> };
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">done</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+    }
+  }
+};
+
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">range</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">num</span>); <span style="color:#75715e">// 1, then 2, 3, 4, 5
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>Now <code>range[Symbol.iterator]()</code> returns the <code>range</code> object itself:  it has the necessary <code>next()</code> method and remembers the current iteration progress in <code>this.current</code>. Shorter? Yes. And sometimes that&rsquo;s fine too.</p>
+<p>The downside is that now it&rsquo;s impossible to have two <code>for..of</code> loops running over the object simultaneously: they&rsquo;ll share the iteration state, because there&rsquo;s only one iterator &ndash; the object itself. But two parallel for-ofs is a rare thing, even in async scenarios.</p>
+<pre><code class="language-smart" data-lang="smart">Infinite iterators are also possible. For instance, the `range` becomes infinite for `range.to = Infinity`. Or we can make an iterable object that generates an infinite sequence of pseudorandom numbers. Also can be useful.
+
+There are no limitations on `next`, it can return more and more values, that's normal.
+
+Of course, the `for..of` loop over such an iterable would be endless. But we can always stop it using `break`.
+</code></pre><h2 id="string-is-iterable">String is iterable</h2>
+<p>Arrays and strings are most widely used built-in iterables.</p>
+<p>For a string, <code>for..of</code> loops over its characters:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#66d9ef">char</span> <span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;test&#34;</span>) {
+  <span style="color:#75715e">// triggers 4 times: once for each character
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">alert</span>( <span style="color:#66d9ef">char</span> ); <span style="color:#75715e">// t, then e, then s, then t
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>And it works correctly with surrogate pairs!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;𝒳😂&#39;</span>;
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#66d9ef">char</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">str</span>) {
+    <span style="color:#a6e22e">alert</span>( <span style="color:#66d9ef">char</span> ); <span style="color:#75715e">// 𝒳, and then 😂
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h2 id="calling-an-iterator-explicitly">Calling an iterator explicitly</h2>
+<p>For deeper understanding, let&rsquo;s see how to use an iterator explicitly.</p>
+<p>We&rsquo;ll iterate over a string in exactly the same way as <code>for..of</code>, but with direct calls. This code creates a string iterator and gets values from it &ldquo;manually&rdquo;:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+
+<span style="color:#75715e">// does the same as
+</span><span style="color:#75715e">// for (let char of str) alert(char);
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">iterator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">str</span>[<span style="color:#a6e22e">Symbol</span>.<span style="color:#a6e22e">iterator</span>]();
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">iterator</span>.<span style="color:#a6e22e">next</span>();
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">done</span>) <span style="color:#66d9ef">break</span>;
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">value</span>); <span style="color:#75715e">// outputs characters one by one
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>That is rarely needed, but gives us more control over the process than <code>for..of</code>. For instance, we can split the iteration process: iterate a bit, then stop, do something else, and then resume later.</p>
+<h2 id="iterables-and-array-likes-array-like">Iterables and array-likes [#array-like]</h2>
+<p>Two official terms look similar, but are very different. Please make sure you understand them well to avoid the confusion.</p>
+<ul>
+<li><em>Iterables</em> are objects that implement the <code>Symbol.iterator</code> method, as described above.</li>
+<li><em>Array-likes</em> are objects that have indexes and <code>length</code>, so they look like arrays.</li>
+</ul>
+<p>When we use JavaScript for practical tasks in a browser or any other environment, we may meet objects that are iterables or array-likes, or both.</p>
+<p>For instance, strings are both iterable (<code>for..of</code> works on them) and array-like (they have numeric indexes and <code>length</code>).</p>
+<p>But an iterable may be not array-like. And vice versa an array-like may be not iterable.</p>
+<p>For example, the <code>range</code> in the example above is iterable, but not array-like, because it does not have indexed properties and <code>length</code>.</p>
+<p>And here&rsquo;s the object that is array-like, but not iterable:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arrayLike</span> <span style="color:#f92672">=</span> { <span style="color:#75715e">// has indexes and length =&gt; array-like
+</span><span style="color:#75715e"></span>  <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Hello&#34;</span>,
+  <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;World&#34;</span>,
+  <span style="color:#a6e22e">length</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// Error (no Symbol.iterator)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">item</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">arrayLike</span>) {}
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>Both iterables and array-likes are usually <em>not arrays</em>, they don&rsquo;t have <code>push</code>, <code>pop</code> etc. That&rsquo;s rather inconvenient if we have such an object and want to work with it as with an array. E.g. we would like to work with <code>range</code> using array methods. How to achieve that?</p>
+<h2 id="arrayfrom">Array.from</h2>
+<p>There&rsquo;s a universal method <a href="mdn:js/Array/from">Array.from</a> that takes an iterable or array-like value and makes a &ldquo;real&rdquo; <code>Array</code> from it. Then we can call array methods on it.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arrayLike</span> <span style="color:#f92672">=</span> {
+  <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Hello&#34;</span>,
+  <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;World&#34;</span>,
+  <span style="color:#a6e22e">length</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">arrayLike</span>); <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">pop</span>()); <span style="color:#75715e">// World (method works)
+</span></code></pre></div><p><code>Array.from</code> at the line <code>(*)</code> takes the object, examines it for being an iterable or array-like, then makes a new array and copies all items to it.</p>
+<p>The same happens for an iterable:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// assuming that range is taken from the example above
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">range</span>);
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">arr</span>); <span style="color:#75715e">// 1,2,3,4,5 (array toString conversion works)
+</span></code></pre></div><p>The full syntax for <code>Array.from</code> also allows us to provide an optional &ldquo;mapping&rdquo; function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">obj</span>[, <span style="color:#a6e22e">mapFn</span>, <span style="color:#a6e22e">thisArg</span>])
+</code></pre></div><p>The optional second argument <code>mapFn</code> can be a function that will be applied to each element before adding it to the array, and <code>thisArg</code> allows us to set <code>this</code> for it.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// assuming that range is taken from the example above
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// square each number
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">range</span>, <span style="color:#a6e22e">num</span> =&gt; <span style="color:#a6e22e">num</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">num</span>);
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">arr</span>); <span style="color:#75715e">// 1,4,9,16,25
+</span></code></pre></div><p>Here we use <code>Array.from</code> to turn a string into an array of characters:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;𝒳😂&#39;</span>;
+
+<span style="color:#75715e">// splits str into array of characters
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">chars</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">str</span>);
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">chars</span>[<span style="color:#ae81ff">0</span>]); <span style="color:#75715e">// 𝒳
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">chars</span>[<span style="color:#ae81ff">1</span>]); <span style="color:#75715e">// 😂
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">chars</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 2
+</span></code></pre></div><p>Unlike <code>str.split</code>, it relies on the iterable nature of the string and so, just like <code>for..of</code>, correctly works with surrogate pairs.</p>
+<p>Technically here it does the same as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;𝒳😂&#39;</span>;
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">chars</span> <span style="color:#f92672">=</span> []; <span style="color:#75715e">// Array.from internally does the same loop
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#66d9ef">char</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">str</span>) {
+  <span style="color:#a6e22e">chars</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">char</span>);
+}
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">chars</span>);
+</code></pre></div><p>&hellip;But it is shorter.</p>
+<p>We can even build surrogate-aware <code>slice</code> on it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">slice</span>(<span style="color:#a6e22e">str</span>, <span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span>) {
+  <span style="color:#66d9ef">return</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">str</span>).<span style="color:#a6e22e">slice</span>(<span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;𝒳😂𩷶&#39;</span>;
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">slice</span>(<span style="color:#a6e22e">str</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>) ); <span style="color:#75715e">// 😂𩷶
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// the native method does not support surrogate pairs
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>) ); <span style="color:#75715e">// garbage (two pieces from different surrogate pairs)
+</span></code></pre></div><h2 id="summary">Summary</h2>
+<p>Objects that can be used in <code>for..of</code> are called <em>iterable</em>.</p>
+<ul>
+<li>Technically, iterables must implement the method named <code>Symbol.iterator</code>.
+<ul>
+<li>The result of <code>obj[Symbol.iterator]()</code> is called an <em>iterator</em>. It handles further iteration process.</li>
+<li>An iterator must have the method named <code>next()</code> that returns an object <code>{done: Boolean, value: any}</code>, here <code>done:true</code> denotes the end of the iteration process, otherwise the <code>value</code> is the next value.</li>
+</ul>
+</li>
+<li>The <code>Symbol.iterator</code> method is called automatically by <code>for..of</code>, but we also can do it directly.</li>
+<li>Built-in iterables like strings or arrays, also implement <code>Symbol.iterator</code>.</li>
+<li>String iterator knows about surrogate pairs.</li>
+</ul>
+<p>Objects that have indexed properties and <code>length</code> are called <em>array-like</em>. Such objects may also have other properties and methods, but lack the built-in methods of arrays.</p>
+<p>If we look inside the specification &ndash; we&rsquo;ll see that most built-in methods assume that they work with iterables or array-likes instead of &ldquo;real&rdquo; arrays, because that&rsquo;s more abstract.</p>
+<p><code>Array.from(obj[, mapFn, thisArg])</code> makes a real <code>Array</code> from an iterable or array-like <code>obj</code>, and we can then use array methods on it. The optional arguments <code>mapFn</code> and <code>thisArg</code> allow us to apply a function to each item.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

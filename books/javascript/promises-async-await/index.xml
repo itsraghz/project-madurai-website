@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Promises, async/await on Project Madurai School</title>
+    <link>/books/javascript/promises-async-await/</link>
+    <description>Recent content in Promises, async/await on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/javascript/promises-async-await/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction: callbacks</title>
+      <link>/books/javascript/promises-async-await/callbacks/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/callbacks/</guid>
+      <description>Introduction: callbacks  ⚠️ We use browser methods in examples here
+To demonstrate the use of callbacks, promises and other abstract concepts, we’ll be using some browser methods: specifically, loading scripts and performing simple document manipulations.
+If you’re not familiar with these methods, and their usage in the examples is confusing, you may want to read a few chapters from the next part of the tutorial.
+Although, we’ll try to make things clear anyway.</description>
+    </item>
+    
+    <item>
+      <title>Promise</title>
+      <link>/books/javascript/promises-async-await/promise-basics/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/promise-basics/</guid>
+      <description>Promise Imagine that you&amp;rsquo;re a top singer, and fans ask day and night for your upcoming song.
+To get some relief, you promise to send it to them when it&amp;rsquo;s published. You give your fans a list. They can fill in their email addresses, so that when the song becomes available, all subscribed parties instantly receive it. And even if something goes very wrong, say, a fire in the studio, so that you can&amp;rsquo;t publish the song, they will still be notified.</description>
+    </item>
+    
+    <item>
+      <title>Promises chaining</title>
+      <link>/books/javascript/promises-async-await/promises-chaining/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/promises-chaining/</guid>
+      <description>Promises chaining Let&amp;rsquo;s return to the problem mentioned in the chapter info:callbacks: we have a sequence of asynchronous tasks to be performed one after another — for instance, loading scripts. How can we code it well?
+Promises provide a couple of recipes to do that.
+In this chapter we cover promise chaining.
+It looks like this:
+new Promise(function(resolve, reject) { setTimeout(() =&amp;gt; resolve(1), 1000); // (*)  }).then(function(result) { // (**)  alert(result); // 1  return result * 2; }).</description>
+    </item>
+    
+    <item>
+      <title>Error handling with promises</title>
+      <link>/books/javascript/promises-async-await/promise-error-handling/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/promise-error-handling/</guid>
+      <description>Error handling with promises Promise chains are great at error handling. When a promise rejects, the control jumps to the closest rejection handler. That&amp;rsquo;s very convenient in practice.
+For instance, in the code below the URL to fetch is wrong (no such site) and .catch handles the error:
+*!* fetch(&amp;#39;https://no-such-server.blabla&amp;#39;) // rejects */!* .then(response =&amp;gt; response.json()) .catch(err =&amp;gt; alert(err)) // TypeError: failed to fetch (the text may vary) As you can see, the .</description>
+    </item>
+    
+    <item>
+      <title>Promise API</title>
+      <link>/books/javascript/promises-async-await/promise-api/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/promise-api/</guid>
+      <description>Promise API There are 6 static methods in the Promise class. We&amp;rsquo;ll quickly cover their use cases here.
+Promise.all Let&amp;rsquo;s say we want many promises to execute in parallel and wait until all of them are ready.
+For instance, download several URLs in parallel and process the content once they are all done.
+That&amp;rsquo;s what Promise.all is for.
+The syntax is:
+let promise = Promise.all([...promises...]); Promise.all takes an array of promises (it technically can be any iterable, but is usually an array) and returns a new promise.</description>
+    </item>
+    
+    <item>
+      <title>Promisification</title>
+      <link>/books/javascript/promises-async-await/promisify/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/promisify/</guid>
+      <description>Promisification &amp;ldquo;Promisification&amp;rdquo; is a long word for a simple transformation. It&amp;rsquo;s the conversion of a function that accepts a callback into a function that returns a promise.
+Such transformations are often required in real-life, as many functions and libraries are callback-based. But promises are more convenient, so it makes sense to promisify them.
+For better understanding, let&amp;rsquo;s see an example.
+For instance, we have loadScript(src, callback) from the chapter info:callbacks.</description>
+    </item>
+    
+    <item>
+      <title>Microtasks</title>
+      <link>/books/javascript/promises-async-await/micro-task-queue/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/micro-task-queue/</guid>
+      <description>Microtasks Promise handlers .then/.catch/.finally are always asynchronous.
+Even when a Promise is immediately resolved, the code on the lines below .then/.catch/.finally will still execute before these handlers.
+Here&amp;rsquo;s a demo:
+let promise = Promise.resolve(); promise.then(() =&amp;gt; alert(&amp;#34;promise done!&amp;#34;)); alert(&amp;#34;code finished&amp;#34;); // this alert shows first  If you run it, you see code finished first, and then promise done!.
+That&amp;rsquo;s strange, because the promise is definitely done from the beginning.</description>
+    </item>
+    
+    <item>
+      <title>Async/await</title>
+      <link>/books/javascript/promises-async-await/async-await/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/async-await/</guid>
+      <description>Async/await There&amp;rsquo;s a special syntax to work with promises in a more comfortable fashion, called &amp;ldquo;async/await&amp;rdquo;. It&amp;rsquo;s surprisingly easy to understand and use.
+Async functions Let&amp;rsquo;s start with the async keyword. It can be placed before a function, like this:
+async function f() { return 1; } The word &amp;ldquo;async&amp;rdquo; before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically.</description>
+    </item>
+    
+  </channel>
+</rss>

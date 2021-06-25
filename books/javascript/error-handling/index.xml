@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Error Handling on Project Madurai School</title>
+    <link>/books/javascript/error-handling/</link>
+    <description>Recent content in Error Handling on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/javascript/error-handling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error handling, &#34;try...catch&#34;</title>
+      <link>/books/javascript/error-handling/try-catch/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/error-handling/try-catch/</guid>
+      <description>Error handling, &amp;ldquo;try&amp;hellip;catch&amp;rdquo; No matter how great we are at programming, sometimes our scripts have errors. They may occur because of our mistakes, an unexpected user input, an erroneous server response, and for a thousand other reasons.
+Usually, a script &amp;ldquo;dies&amp;rdquo; (immediately stops) in case of an error, printing it to console.
+But there&amp;rsquo;s a syntax construct try...catch that allows us to &amp;ldquo;catch&amp;rdquo; errors so the script can, instead of dying, do something more reasonable.</description>
+    </item>
+    
+    <item>
+      <title>Custom errors, extending Error</title>
+      <link>/books/javascript/error-handling/custom-errors/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/error-handling/custom-errors/</guid>
+      <description>Custom errors, extending Error When we develop something, we often need our own error classes to reflect specific things that may go wrong in our tasks. For errors in network operations we may need HttpError, for database operations DbError, for searching operations NotFoundError and so on.
+Our errors should support basic error properties like message, name and, preferably, stack. But they also may have other properties of their own, e.g. HttpError objects may have a statusCode property with a value like404or 403 or 500.</description>
+    </item>
+    
+  </channel>
+</rss>

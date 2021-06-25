@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/code-quality/comments">Comments</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/code-quality">Code Quality</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/code-quality/automatted-testing-with-mocha">Automated testing with Mocha</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="ninja-code">Ninja code</h1>
+<pre><code class="language-quote" data-lang="quote">Learning without thought is labor lost; thought without learning is perilous.
+</code></pre><p>Programmer ninjas of the past used these tricks to sharpen the mind of code maintainers.</p>
+<p>Code review gurus look for them in test tasks.</p>
+<p>Novice developers sometimes use them even better than programmer ninjas.</p>
+<p>Read them carefully and find out who you are &ndash; a ninja, a novice, or maybe a code reviewer?</p>
+<pre><code class="language-warn" data-lang="warn">Many try to follow ninja paths. Few succeed.
+</code></pre><h2 id="brevity-is-the-soul-of-wit">Brevity is the soul of wit</h2>
+<p>Make the code as short as possible. Show how smart you are.</p>
+<p>Let subtle language features guide you.</p>
+<p>For instance, take a look at this ternary operator <code>'?'</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// taken from a well-known javascript library
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> Math.<span style="color:#a6e22e">max</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">len</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">i</span>) <span style="color:#f92672">:</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
+</code></pre></div><p>Cool, right? If you write like that, a developer who comes across this line and tries to understand what is the value of <code>i</code> is going to have a merry time. Then come to you, seeking for an answer.</p>
+<p>Tell them that shorter is always better. Initiate them into the paths of ninja.</p>
+<h2 id="one-letter-variables">One-letter variables</h2>
+<pre><code class="language-quote" data-lang="quote">The Dao hides in wordlessness. Only the Dao is well begun and well
+completed.
+</code></pre><p>Another way to code shorter is to use single-letter variable names everywhere. Like <code>a</code>, <code>b</code> or <code>c</code>.</p>
+<p>A short variable disappears in the code like a real ninja in the forest. No one will be able to find it using &ldquo;search&rdquo; of the editor. And even if someone does, they won&rsquo;t be able to &ldquo;decipher&rdquo; what the name <code>a</code> or <code>b</code> means.</p>
+<p>&hellip;But there&rsquo;s an exception. A real ninja will never use <code>i</code> as the counter in a <code>&quot;for&quot;</code> loop. Anywhere, but not here. Look around, there are many more exotic letters. For instance, <code>x</code> or <code>y</code>.</p>
+<p>An exotic variable as a loop counter is especially cool if the loop body takes 1-2 pages (make it longer if you can). Then if someone looks deep inside the loop, they won&rsquo;t be able to quickly figure out that the variable named <code>x</code> is the loop counter.</p>
+<h2 id="use-abbreviations">Use abbreviations</h2>
+<p>If the team rules forbid the use of one-letter and vague names &ndash; shorten them, make abbreviations.</p>
+<p>Like this:</p>
+<ul>
+<li><code>list</code> -&gt; <code>lst</code>.</li>
+<li><code>userAgent</code> -&gt; <code>ua</code>.</li>
+<li><code>browser</code> -&gt; <code>brsr</code>.</li>
+<li>&hellip;etc</li>
+</ul>
+<p>Only the one with truly good intuition will be able to understand such names. Try to shorten everything. Only a worthy person should be able to uphold the development of your code.</p>
+<h2 id="soar-high-be-abstract">Soar high. Be abstract.</h2>
+<pre><code class="language-quote" data-lang="quote">The great square is cornerless&lt;br&gt;
+The great vessel is last complete,&lt;br&gt;
+The great note is rarified sound,&lt;br&gt;
+The great image has no form.
+</code></pre><p>While choosing a name try to use the most abstract word. Like <code>obj</code>, <code>data</code>, <code>value</code>, <code>item</code>, <code>elem</code> and so on.</p>
+<ul>
+<li>
+<p><strong>The ideal name for a variable is <code>data</code>.</strong> Use it everywhere you can. Indeed, every variable holds <em>data</em>, right?</p>
+<p>&hellip;But what to do if <code>data</code> is already taken? Try <code>value</code>, it&rsquo;s also universal. After all, a variable eventually gets a <em>value</em>.</p>
+</li>
+<li>
+<p><strong>Name a variable by its type: <code>str</code>, <code>num</code>&hellip;</strong></p>
+<p>Give them a try. A young initiate may wonder &ndash; are such names really useful for a ninja? Indeed, they are!</p>
+<p>Sure, the variable name still means something. It says what&rsquo;s inside the variable: a string, a number or something else. But when an outsider tries to understand the code, they&rsquo;ll be surprised to see that there&rsquo;s actually no information at all! And will ultimately fail to alter your well-thought code.</p>
+<p>The value type is easy to find out by debugging. But what&rsquo;s the meaning of the variable? Which string/number does it store?</p>
+<p>There&rsquo;s just no way to figure out without a good meditation!</p>
+</li>
+<li>
+<p><strong>&hellip;But what if there are no more such names?</strong> Just add a number: <code>data1, item2, elem5</code>&hellip;</p>
+</li>
+</ul>
+<h2 id="attention-test">Attention test</h2>
+<p>Only a truly attentive programmer should be able to understand your code. But how to check that?</p>
+<p><strong>One of the ways &ndash; use similar variable names, like <code>date</code> and <code>data</code>.</strong></p>
+<p>Mix them where you can.</p>
+<p>A quick read of such code becomes impossible. And when there&rsquo;s a typo&hellip; Ummm&hellip; We&rsquo;re stuck for long, time to drink tea.</p>
+<h2 id="smart-synonyms">Smart synonyms</h2>
+<pre><code class="language-quote" data-lang="quote">The Tao that can be told is not the eternal Tao. The name that can be named is not the eternal name.
+</code></pre><p>Using <em>similar</em> names for <em>same</em> things makes life more interesting and shows your creativity to the public.</p>
+<p>For instance, consider function prefixes. If a function shows a message on the screen &ndash; start it with <code>display…</code>, like <code>displayMessage</code>. And then if another function shows on the screen something else, like a user name, start it with <code>show…</code> (like <code>showName</code>).</p>
+<p>Insinuate that there&rsquo;s a subtle difference between such functions, while there is none.</p>
+<p>Make a pact with fellow ninjas of the team: if John starts &ldquo;showing&rdquo; functions with <code>display...</code> in his code, then Peter could use <code>render..</code>, and Ann &ndash; <code>paint...</code>. Note how much more interesting and diverse the code became.</p>
+<p>&hellip;And now the hat trick!</p>
+<p>For two functions with important differences &ndash; use the same prefix!</p>
+<p>For instance, the function <code>printPage(page)</code> will use a printer. And the function <code>printText(text)</code> will put the text on-screen. Let an unfamiliar reader think well over similarly named function <code>printMessage</code>: &ldquo;Where does it put the message? To a printer or on the screen?&rdquo;. To make it really shine, <code>printMessage(message)</code> should output it in the new window!</p>
+<h2 id="reuse-names">Reuse names</h2>
+<pre><code class="language-quote" data-lang="quote">Once the whole is divided, the parts&lt;br&gt;
+need names.&lt;br&gt;
+There are already enough names.&lt;br&gt;
+One must know when to stop.
+</code></pre><p>Add a new variable only when absolutely necessary.</p>
+<p>Instead, reuse existing names. Just write new values into them.</p>
+<p>In a function try to use only variables passed as parameters.</p>
+<p>That would make it really hard to identify what&rsquo;s exactly in the variable <em>now</em>. And also where it comes from. The purpose is to develop the intuition and memory of a person reading the code. A person with weak intuition would have to analyze the code line-by-line and track the changes through every code branch.</p>
+<p><strong>An advanced variant of the approach is to covertly (!) replace the value with something alike in the middle of a loop or a function.</strong></p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ninjaFunction</span>(<span style="color:#a6e22e">elem</span>) {
+  <span style="color:#75715e">// 20 lines of code working with elem
+</span><span style="color:#75715e"></span>
+  <span style="color:#a6e22e">elem</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">clone</span>(<span style="color:#a6e22e">elem</span>);
+
+  <span style="color:#75715e">// 20 more lines, now working with the clone of the elem!
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>A fellow programmer who wants to work with <code>elem</code> in the second half of the function will be surprised&hellip; Only during the debugging, after examining the code they will find out that they&rsquo;re working with a clone!</p>
+<p>Seen in code regularly. Deadly effective even against an experienced ninja.</p>
+<h2 id="underscores-for-fun">Underscores for fun</h2>
+<p>Put underscores <code>_</code> and <code>__</code> before variable names. Like <code>_name</code> or <code>__value</code>. It would be great if only you knew their meaning. Or, better, add them just for fun, without particular meaning at all. Or different meanings in different places.</p>
+<p>You kill two rabbits with one shot. First, the code becomes longer and less readable, and the second, a fellow developer may spend a long time trying to figure out what the underscores mean.</p>
+<p>A smart ninja puts underscores at one spot of code and evades them at other places. That makes the code even more fragile and increases the probability of future errors.</p>
+<h2 id="show-your-love">Show your love</h2>
+<p>Let everyone see how magnificent your entities are! Names like <code>superElement</code>, <code>megaFrame</code> and <code>niceItem</code> will definitely enlighten a reader.</p>
+<p>Indeed, from one hand, something is written: <code>super..</code>, <code>mega..</code>, <code>nice..</code> But from the other hand &ndash; that brings no details. A reader may decide to look for a hidden meaning and meditate for an hour or two of their paid working time.</p>
+<h2 id="overlap-outer-variables">Overlap outer variables</h2>
+<pre><code class="language-quote" data-lang="quote">When in the light, can't see anything in the darkness.&lt;br&gt;
+When in the darkness, can see everything in the light.
+</code></pre><p>Use same names for variables inside and outside a function. As simple. No efforts to invent new names.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#f92672">*!*</span><span style="color:#a6e22e">user</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!* = authenticateUser();</span>
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">render</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#f92672">*!*</span><span style="color:#a6e22e">user</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!* = anotherValue();</span>
+  ...
+  ...<span style="color:#a6e22e">many</span> <span style="color:#a6e22e">lines</span>...
+  ...
+  ... <span style="color:#75715e">// &lt;-- a programmer wants to work with user here and...
+</span><span style="color:#75715e"></span>  ...
+}
+</code></pre></div><p>A programmer who jumps inside the <code>render</code> will probably fail to notice that there&rsquo;s a local <code>user</code> shadowing the outer one.</p>
+<p>Then they&rsquo;ll try to work with <code>user</code> assuming that it&rsquo;s the external variable, the result of <code>authenticateUser()</code>&hellip; The trap is sprung! Hello, debugger&hellip;</p>
+<h2 id="side-effects-everywhere">Side-effects everywhere!</h2>
+<p>There are functions that look like they don&rsquo;t change anything. Like <code>isReady()</code>, <code>checkPermission()</code>, <code>findTags()</code>&hellip; They are assumed to carry out calculations, find and return the data, without changing anything outside of them. In other words, without &ldquo;side-effects&rdquo;.</p>
+<p><strong>A really beautiful trick is to add a &ldquo;useful&rdquo; action to them, besides the main task.</strong></p>
+<p>An expression of dazed surprise on the face of your colleague when they see a function named <code>is..</code>, <code>check..</code> or <code>find...</code> changing something &ndash; will definitely broaden your boundaries of reason.</p>
+<p><strong>Another way to surprise is to return a non-standard result.</strong></p>
+<p>Show your original thinking! Let the call of <code>checkPermission</code> return not <code>true/false</code>, but a complex object with the results of the check.</p>
+<p>Those developers who try to write <code>if (checkPermission(..))</code>, will wonder why it doesn&rsquo;t work. Tell them: &ldquo;Read the docs!&rdquo;. And give this article.</p>
+<h2 id="powerful-functions">Powerful functions!</h2>
+<pre><code class="language-quote" data-lang="quote">The great Tao flows everywhere,&lt;br&gt;
+both to the left and to the right.
+</code></pre><p>Don&rsquo;t limit the function by what&rsquo;s written in its name. Be broader.</p>
+<p>For instance, a function <code>validateEmail(email)</code> could (besides checking the email for correctness) show an error message and ask to re-enter the email.</p>
+<p>Additional actions should not be obvious from the function name. A true ninja coder will make them not obvious from the code as well.</p>
+<p><strong>Joining several actions into one protects your code from reuse.</strong></p>
+<p>Imagine, another developer wants only to check the email, and not output any message. Your function  <code>validateEmail(email)</code> that does both will not suit them. So they won&rsquo;t break your meditation by asking anything about it.</p>
+<h2 id="summary">Summary</h2>
+<p>All &ldquo;pieces of advice&rdquo; above are from the real code&hellip; Sometimes, written by experienced developers. Maybe even more experienced than you are ;)</p>
+<ul>
+<li>Follow some of them, and your code will become full of surprises.</li>
+<li>Follow many of them, and your code will become truly yours, no one would want to change it.</li>
+<li>Follow all, and your code will become a valuable lesson for young developers looking for enlightenment.</li>
+</ul>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

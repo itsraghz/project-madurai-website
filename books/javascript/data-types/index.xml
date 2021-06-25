@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datatypes on Project Madurai School</title>
+    <link>/books/javascript/data-types/</link>
+    <description>Recent content in Datatypes on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/javascript/data-types/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Methods of primitives</title>
+      <link>/books/javascript/data-types/primitives-methods/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/primitives-methods/</guid>
+      <description>Methods of primitives JavaScript allows us to work with primitives (strings, numbers, etc.) as if they were objects. They also provide methods to call as such. We will study those soon, but first we&amp;rsquo;ll see how it works because, of course, primitives are not objects (and here we will make it even clearer).
+Let&amp;rsquo;s look at the key distinctions between primitives and objects.
+A primitive
+ Is a value of a primitive type.</description>
+    </item>
+    
+    <item>
+      <title>Numbers</title>
+      <link>/books/javascript/data-types/number/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/number/</guid>
+      <description>Numbers In modern JavaScript, there are two types of numbers:
+  Regular numbers in JavaScript are stored in 64-bit format IEEE-754, also known as &amp;ldquo;double precision floating point numbers&amp;rdquo;. These are numbers that we&amp;rsquo;re using most of the time, and we&amp;rsquo;ll talk about them in this chapter.
+  BigInt numbers, to represent integers of arbitrary length. They are sometimes needed, because a regular number can&amp;rsquo;t exceed 253 or be less than -253.</description>
+    </item>
+    
+    <item>
+      <title>Strings</title>
+      <link>/books/javascript/data-types/string/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/string/</guid>
+      <description>Strings In JavaScript, the textual data is stored as strings. There is no separate type for a single character.
+The internal format for strings is always UTF-16, it is not tied to the page encoding.
+Quotes Let&amp;rsquo;s recall the kinds of quotes.
+Strings can be enclosed within either single quotes, double quotes or backticks:
+let single = &amp;#39;single-quoted&amp;#39;; let double = &amp;#34;double-quoted&amp;#34;; let backticks = `backticks`; Single and double quotes are essentially the same.</description>
+    </item>
+    
+    <item>
+      <title>Arrays</title>
+      <link>/books/javascript/data-types/array/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/array/</guid>
+      <description>Arrays Objects allow you to store keyed collections of values. That&amp;rsquo;s fine.
+But quite often we find that we need an ordered collection, where we have a 1st, a 2nd, a 3rd element and so on. For example, we need that to store a list of something: users, goods, HTML elements etc.
+It is not convenient to use an object here, because it provides no methods to manage the order of elements.</description>
+    </item>
+    
+    <item>
+      <title>Array methods</title>
+      <link>/books/javascript/data-types/array-methods/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/array-methods/</guid>
+      <description>Array methods Arrays provide a lot of methods. To make things easier, in this chapter they are split into groups.
+Add/remove items We already know methods that add and remove items from the beginning or the end:
+ arr.push(...items) &amp;ndash; adds items to the end, arr.pop() &amp;ndash; extracts an item from the end, arr.shift() &amp;ndash; extracts an item from the beginning, arr.unshift(...items) &amp;ndash; adds items to the beginning.  Here are a few others.</description>
+    </item>
+    
+    <item>
+      <title>Iterables</title>
+      <link>/books/javascript/data-types/iterable/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/iterable/</guid>
+      <description>Iterables Iterable objects are a generalization of arrays. That&amp;rsquo;s a concept that allows us to make any object useable in a for..of loop.
+Of course, Arrays are iterable. But there are many other built-in objects, that are iterable as well. For instance, strings are also iterable.
+If an object isn&amp;rsquo;t technically an array, but represents a collection (list, set) of something, then for..of is a great syntax to loop over it, so let&amp;rsquo;s see how to make it work.</description>
+    </item>
+    
+    <item>
+      <title>Map and Set</title>
+      <link>/books/javascript/data-types/map-set/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/map-set/</guid>
+      <description>Map and Set Till now, we&amp;rsquo;ve learned about the following complex data structures:
+ Objects are used for storing keyed collections. Arrays are used for storing ordered collections.  But that&amp;rsquo;s not enough for real life. That&amp;rsquo;s why Map and Set also exist.
+Map Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
+Methods and properties are:</description>
+    </item>
+    
+    <item>
+      <title>WeakMap and WeakSet</title>
+      <link>/books/javascript/data-types/weakmap-weakset/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/weakmap-weakset/</guid>
+      <description>WeakMap and WeakSet As we know from the chapter info:garbage-collection, JavaScript engine keeps a value in memory while it is &amp;ldquo;reachable&amp;rdquo; and can potentially be used.
+For instance:
+let john = { name: &amp;#34;John&amp;#34; }; // the object can be accessed, john is the reference to it  // overwrite the reference john = null; *!* // the object will be removed from memory */!* Usually, properties of an object or elements of an array or another data structure are considered reachable and kept in memory while that data structure is in memory.</description>
+    </item>
+    
+    <item>
+      <title>Object.keys, values, entries</title>
+      <link>/books/javascript/data-types/keys-values-entries/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/keys-values-entries/</guid>
+      <description>Object.keys, values, entries Let&amp;rsquo;s step away from the individual data structures and talk about the iterations over them.
+In the previous chapter we saw methods map.keys(), map.values(), map.entries().
+These methods are generic, there is a common agreement to use them for data structures. If we ever create a data structure of our own, we should implement them too.
+They are supported for:
+ Map Set Array  Plain objects also support similar methods, but the syntax is a bit different.</description>
+    </item>
+    
+    <item>
+      <title>Destructuring assignment</title>
+      <link>/books/javascript/data-types/destructuring-assignment/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/destructuring-assignment/</guid>
+      <description>Destructuring assignment The two most used data structures in JavaScript are Object and Array.
+ Objects allow us to create a single entity that stores data items by key. Arrays allow us to gather data items into an ordered list.  Although, when we pass those to a function, it may need not an object/array as a whole. It may need individual pieces.
+Destructuring assignment is a special syntax that allows us to &amp;ldquo;unpack&amp;rdquo; arrays or objects into a bunch of variables, as sometimes that&amp;rsquo;s more convenient.</description>
+    </item>
+    
+    <item>
+      <title>Date and time</title>
+      <link>/books/javascript/data-types/date/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/date/</guid>
+      <description>Date and time Let&amp;rsquo;s meet a new built-in object: Date. It stores the date, time and provides methods for date/time management.
+For instance, we can use it to store creation/modification times, to measure time, or just to print out the current date.
+Creation To create a new Date object call new Date() with one of the following arguments:
+ new Date() Without arguments &amp;ndash; create a Date object for the current date and time: let now = new Date(); alert( now ); // shows current date/time  new Date(milliseconds) Create a Date object with the time equal to number of milliseconds (1/1000 of a second) passed after the Jan 1st of 1970 UTC+0.</description>
+    </item>
+    
+    <item>
+      <title>JSON methods, toJSON</title>
+      <link>/books/javascript/data-types/json/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/json/</guid>
+      <description>JSON methods, toJSON Let&amp;rsquo;s say we have a complex object, and we&amp;rsquo;d like to convert it into a string, to send it over a network, or just to output it for logging purposes.
+Naturally, such a string should include all important properties.
+We could implement the conversion like this:
+let user = { name: &amp;#34;John&amp;#34;, age: 30, *!* toString() { return `{name: &amp;#34;${this.name}&amp;#34;, age: ${this.age}}`; } */!* }; alert(user); // {name: &amp;#34;John&amp;#34;, age: 30} &amp;hellip;But in the process of development, new properties are added, old properties are renamed and removed.</description>
+    </item>
+    
+  </channel>
+</rss>

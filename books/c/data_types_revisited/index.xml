@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Types Revisited on Project Madurai School</title>
+    <link>/books/c/data_types_revisited/</link>
+    <description>Recent content in Data Types Revisited on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/c/data_types_revisited/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>integer-long,short,signed,unsigned</title>
+      <link>/books/c/data_types_revisited/integer-long-short-signed-unsigned/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/integer-long-short-signed-unsigned/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Char-signed,unsigned</title>
+      <link>/books/c/data_types_revisited/char-signed-unsigned/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/char-signed-unsigned/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reals-float,double,long double</title>
+      <link>/books/c/data_types_revisited/reals-float-double-long-double/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/reals-float-double-long-double/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Few More Issue</title>
+      <link>/books/c/data_types_revisited/a-few-more-issue/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/a-few-more-issue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Storage Classes in C</title>
+      <link>/books/c/data_types_revisited/storage-classes-in-c/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/storage-classes-in-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/data_types_revisited/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/data_types_revisited/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/kannotes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

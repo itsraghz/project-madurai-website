@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/javascript-fundamentals/code-structure">Code structure</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/javascript-fundamentals">JavaScript Fundamentals</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/javascript-fundamentals/var">The old &#34;var&#34;</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="the-modern-mode-use-strict">The modern mode, &ldquo;use strict&rdquo;</h1>
+<p>For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn&rsquo;t change.</p>
+<p>That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript&rsquo;s creators got stuck in the language forever.</p>
+<p>This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most such modifications are off by default. You need to explicitly enable them with a special directive: <code>&quot;use strict&quot;</code>.</p>
+<h2 id="use-strict">&ldquo;use strict&rdquo;</h2>
+<p>The directive looks like a string: <code>&quot;use strict&quot;</code> or <code>'use strict'</code>. When it is located at the top of a script, the whole script works the &ldquo;modern&rdquo; way.</p>
+<p>For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#34;use strict&#34;</span>;
+
+<span style="color:#75715e">// this code works the modern way
+</span><span style="color:#75715e"></span>...
+</code></pre></div><p>Quite soon we&rsquo;re going to learn functions (a way to group commands), so let&rsquo;s note in advance that <code>&quot;use strict&quot;</code> can be put at the beginning of a function. Doing that enables strict mode in that function only. But usually people use it for the whole script.</p>
+<pre><code class="language-warn" data-lang="warn">Please make sure that `&quot;use strict&quot;` is at the top of your scripts, otherwise strict mode may not be enabled.
+
+Strict mode isn't enabled here:
+
+```js no-strict
+alert(&quot;some code&quot;);
+// &quot;use strict&quot; below is ignored--it must be at the top
+
+&quot;use strict&quot;;
+
+// strict mode is not activated
+```
+
+Only comments may appear above `&quot;use strict&quot;`.
+</code></pre><p>```warn header=&ldquo;There&rsquo;s no way to cancel <code>use strict</code>&rdquo;
+There is no directive like <code>&quot;no use strict&quot;</code> that reverts the engine to old behavior.</p>
+<p>Once we enter strict mode, there&rsquo;s no going back.</p>
+<pre><code>
+## Browser console
+
+When you use a [developer console](info:devtools) to run code, please note that it doesn't `use strict` by default.
+
+Sometimes, when `use strict` makes a difference, you'll get incorrect results.
+
+So, how to actually `use strict` in the console?
+
+First, you can try to press `key:Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
+
+```js
+'use strict'; &lt;Shift+Enter for a newline&gt;
+//  ...your code
+&lt;Enter to run&gt;
+</code></pre><p>It works in most browsers, namely Firefox and Chrome.</p>
+<p>If it doesn&rsquo;t, e.g. in an old browser, there&rsquo;s an ugly, but reliable way to ensure <code>use strict</code>. Put it inside this kind of wrapper:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">(<span style="color:#66d9ef">function</span>() {
+  <span style="color:#e6db74">&#39;use strict&#39;</span>;
+
+  <span style="color:#75715e">// ...your code here...
+</span><span style="color:#75715e"></span>})()
+</code></pre></div><h2 id="should-we-use-strict">Should we &ldquo;use strict&rdquo;?</h2>
+<p>The question may sound obvious, but it&rsquo;s not so.</p>
+<p>One could recommend to start scripts with <code>&quot;use strict&quot;</code>&hellip; But you know what&rsquo;s cool?</p>
+<p>Modern JavaScript supports &ldquo;classes&rdquo; and &ldquo;modules&rdquo; - advanced language structures (we&rsquo;ll surely get to them), that enable <code>use strict</code> automatically. So we don&rsquo;t need to add the <code>&quot;use strict&quot;</code> directive, if we use them.</p>
+<p><strong>So, for now <code>&quot;use strict&quot;;</code> is a welcome guest at the top of your scripts. Later, when your code is all in classes and modules, you may omit it.</strong></p>
+<p>As of now, we&rsquo;ve got to know about <code>use strict</code> in general.</p>
+<p>In the next chapters, as we learn language features, we&rsquo;ll see the differences between the strict and old modes. Luckily, there aren&rsquo;t many and they actually make our lives better.</p>
+<p>All examples in this tutorial assume strict mode unless (very rarely) specified otherwise.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

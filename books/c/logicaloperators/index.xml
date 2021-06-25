@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Operations On Bits on Project Madurai School</title>
+    <link>/books/c/logicaloperators/</link>
+    <description>Recent content in Operations On Bits on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/c/logicaloperators/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bit Numbering and Conversion</title>
+      <link>/books/c/logicaloperators/bit-numbering-and-conversion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/bit-numbering-and-conversion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bit Operations</title>
+      <link>/books/c/logicaloperators/bit-operations/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/bit-operations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ones Complement Operator</title>
+      <link>/books/c/logicaloperators/ones-complement-operator/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/ones-complement-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Right Shift and Left Shift Operators</title>
+      <link>/books/c/logicaloperators/right-shift-and-left-shift-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/right-shift-and-left-shift-operators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bitwise AND, OR and XOR Operators</title>
+      <link>/books/c/logicaloperators/bitwise-and-or-and-xor-operator/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/bitwise-and-or-and-xor-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The showbits() Function</title>
+      <link>/books/c/logicaloperators/the-showbits-function/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/the-showbits-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bitwise Compound Assignment Operators</title>
+      <link>/books/c/logicaloperators/bitwise-compound-assignment-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/bitwise-compound-assignment-operators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/logicaloperators/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/logicaloperators/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/kannotes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/modules/modules-intro">Modules, introduction</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/modules">Modules</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/modules/modules-dynamic-import">Dynamic imports</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="export-and-import">Export and Import</h1>
+<p>Export and import directives have several syntax variants.</p>
+<p>In the previous article we saw a simple use, now let&rsquo;s explore more examples.</p>
+<h2 id="export-before-declarations">Export before declarations</h2>
+<p>We can label any declaration as exported by placing <code>export</code> before it, be it a variable, function or a class.</p>
+<p>For instance, here all exports are valid:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// export an array
+</span><span style="color:#75715e"></span><span style="color:#f92672">*!*</span><span style="color:#66d9ef">export</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!* let months = [&#39;Jan&#39;, &#39;Feb&#39;, &#39;Mar&#39;,&#39;Apr&#39;, &#39;Aug&#39;, &#39;Sep&#39;, &#39;Oct&#39;, &#39;Nov&#39;, &#39;Dec&#39;];</span>
+
+<span style="color:#75715e">// export a constant
+</span><span style="color:#75715e"></span><span style="color:#f92672">*!*</span><span style="color:#66d9ef">export</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!* const MODULES_BECAME_STANDARD_YEAR = 2015;</span>
+
+<span style="color:#75715e">// export a class
+</span><span style="color:#75715e"></span><span style="color:#f92672">*!*</span><span style="color:#66d9ef">export</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!* class User {</span>
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+}
+</code></pre></div><pre><code class="language-smart" data-lang="smart">Please note that `export` before a class or a function does not make it a [function expression](info:function-expressions). It's still a function declaration, albeit exported.
+
+Most JavaScript style guides don't recommend semicolons after function and class declarations.
+
+That's why there's no need for a semicolon at the end of `export class` and `export function`:
+
+```js
+export function sayHi(user) {
+  alert(`Hello, ${user}!`);
+} *!* // no ; at the end */!*
+```
+
+</code></pre><h2 id="export-apart-from-declarations">Export apart from declarations</h2>
+<p>Also, we can put <code>export</code> separately.</p>
+<p>Here we first declare, and then export:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 say.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayBye</span>(<span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Bye, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+}
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">export</span> {<span style="color:#a6e22e">sayHi</span>, <span style="color:#a6e22e">sayBye</span>}; <span style="color:#75715e">// a list of exported variables
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>&hellip;Or, technically we could put <code>export</code> above functions as well.</p>
+<h2 id="import-">Import *</h2>
+<p>Usually, we put a list of what to import in curly braces <code>import {...}</code>, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 main.js
+</span><span style="color:#75715e"></span><span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">sayHi</span>, <span style="color:#a6e22e">sayBye</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./say.js&#39;</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">sayHi</span>(<span style="color:#e6db74">&#39;John&#39;</span>); <span style="color:#75715e">// Hello, John!
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sayBye</span>(<span style="color:#e6db74">&#39;John&#39;</span>); <span style="color:#75715e">// Bye, John!
+</span></code></pre></div><p>But if there&rsquo;s a lot to import, we can import everything as an object using <code>import * as &lt;obj&gt;</code>, for instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 main.js
+</span><span style="color:#75715e"></span><span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">say</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./say.js&#39;</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">say</span>.<span style="color:#a6e22e">sayHi</span>(<span style="color:#e6db74">&#39;John&#39;</span>);
+<span style="color:#a6e22e">say</span>.<span style="color:#a6e22e">sayBye</span>(<span style="color:#e6db74">&#39;John&#39;</span>);
+</code></pre></div><p>At first sight, &ldquo;import everything&rdquo; seems such a cool thing, short to write, why should we ever explicitly list what we need to import?</p>
+<p>Well, there are few reasons.</p>
+<ol>
+<li>
+<p>Modern build tools (<a href="http://webpack.github.io">webpack</a> and others) bundle modules together and optimize them to speedup loading and remove unused stuff.</p>
+<p>Let&rsquo;s say, we added a 3rd-party library <code>say.js</code> to our project with many functions:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 say.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>() { ... }
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayBye</span>() { ... }
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">becomeSilent</span>() { ... }
+</code></pre></div><p>Now if we only use one of <code>say.js</code> functions in our project:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 main.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">sayHi</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./say.js&#39;</span>;
+</code></pre></div><p>&hellip;Then the optimizer will see that and remove the other functions from the bundled code, thus making the build smaller. That is called &ldquo;tree-shaking&rdquo;.</p>
+</li>
+<li>
+<p>Explicitly listing what to import gives shorter names: <code>sayHi()</code> instead of <code>say.sayHi()</code>.</p>
+</li>
+<li>
+<p>Explicit list of imports gives better overview of the code structure: what is used and where. It makes code support and refactoring easier.</p>
+</li>
+</ol>
+<h2 id="import-as">Import &ldquo;as&rdquo;</h2>
+<p>We can also use <code>as</code> to import under different names.</p>
+<p>For instance, let&rsquo;s import <code>sayHi</code> into the local variable <code>hi</code> for brevity, and import <code>sayBye</code> as <code>bye</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 main.js
+</span><span style="color:#75715e"></span><span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">sayHi</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">hi</span>, <span style="color:#a6e22e">sayBye</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">bye</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./say.js&#39;</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">hi</span>(<span style="color:#e6db74">&#39;John&#39;</span>); <span style="color:#75715e">// Hello, John!
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">bye</span>(<span style="color:#e6db74">&#39;John&#39;</span>); <span style="color:#75715e">// Bye, John!
+</span></code></pre></div><h2 id="export-as">Export &ldquo;as&rdquo;</h2>
+<p>The similar syntax exists for <code>export</code>.</p>
+<p>Let&rsquo;s export functions as <code>hi</code> and <code>bye</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 say.js
+</span><span style="color:#75715e"></span>...
+<span style="color:#66d9ef">export</span> {<span style="color:#a6e22e">sayHi</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">hi</span>, <span style="color:#a6e22e">sayBye</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">bye</span>};
+</code></pre></div><p>Now <code>hi</code> and <code>bye</code> are official names for outsiders, to be used in imports:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 main.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">say</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./say.js&#39;</span>;
+
+<span style="color:#a6e22e">say</span>.<span style="color:#f92672">*!*</span><span style="color:#a6e22e">hi</span><span style="color:#f92672">*</span><span style="color:#e6db74">/!*(&#39;John&#39;); /</span><span style="color:#f92672">/</span> <span style="color:#a6e22e">Hello</span>, <span style="color:#a6e22e">John</span><span style="color:#f92672">!</span>
+<span style="color:#a6e22e">say</span>.<span style="color:#f92672">*!*</span><span style="color:#a6e22e">bye</span><span style="color:#f92672">*</span><span style="color:#e6db74">/!*(&#39;John&#39;); /</span><span style="color:#f92672">/</span> <span style="color:#a6e22e">Bye</span>, <span style="color:#a6e22e">John</span><span style="color:#f92672">!</span>
+</code></pre></div><h2 id="export-default">Export default</h2>
+<p>In practice, there are mainly two kinds of modules.</p>
+<ol>
+<li>Modules that contain a library, pack of functions, like <code>say.js</code> above.</li>
+<li>Modules that declare a single entity, e.g. a module <code>user.js</code> exports only <code>class User</code>.</li>
+</ol>
+<p>Mostly, the second approach is preferred, so that every &ldquo;thing&rdquo; resides in its own module.</p>
+<p>Naturally, that requires a lot of files, as everything wants its own module, but that&rsquo;s not a problem at all. Actually, code navigation becomes easier if files are well-named and structured into folders.</p>
+<p>Modules provide a special <code>export default</code> (&ldquo;the default export&rdquo;) syntax to make the &ldquo;one thing per module&rdquo; way look better.</p>
+<p>Put <code>export default</code> before the entity to export:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 user.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#f92672">*!*</span><span style="color:#66d9ef">default</span><span style="color:#f92672">*</span><span style="color:#e6db74">/!* class User { /</span><span style="color:#f92672">/</span> <span style="color:#a6e22e">just</span> <span style="color:#a6e22e">add</span> <span style="color:#e6db74">&#34;default&#34;</span>
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+}
+</code></pre></div><p>There may be only one <code>export default</code> per file.</p>
+<p>&hellip;And then import it without curly braces:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 main.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*!*</span><span style="color:#a6e22e">User</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!* from &#39;./user.js&#39;; // not {User}, just User</span>
+
+<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span>(<span style="color:#e6db74">&#39;John&#39;</span>);
+</code></pre></div><p>Imports without curly braces look nicer. A common mistake when starting to use modules is to forget curly braces at all. So, remember, <code>import</code> needs curly braces for named exports and doesn&rsquo;t need them for the default one.</p>
+<table>
+<thead>
+<tr>
+<th>Named export</th>
+<th>Default export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>export class User {...}</code></td>
+<td><code>export default class User {...}</code></td>
+</tr>
+<tr>
+<td><code>import {User} from ...</code></td>
+<td><code>import User from ...</code></td>
+</tr>
+</tbody>
+</table>
+<p>Technically, we may have both default and named exports in a single module, but in practice people usually don&rsquo;t mix them. A module has either named exports or the default one.</p>
+<p>As there may be at most one default export per file, the exported entity may have no name.</p>
+<p>For instance, these are all perfectly valid default exports:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">class</span> { <span style="color:#75715e">// no class name
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">constructor</span>() { ... }
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">user</span>) { <span style="color:#75715e">// no function name
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// export a single value, without making a variable
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> [<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Feb&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>,<span style="color:#e6db74">&#39;Apr&#39;</span>, <span style="color:#e6db74">&#39;Aug&#39;</span>, <span style="color:#e6db74">&#39;Sep&#39;</span>, <span style="color:#e6db74">&#39;Oct&#39;</span>, <span style="color:#e6db74">&#39;Nov&#39;</span>, <span style="color:#e6db74">&#39;Dec&#39;</span>];
+</code></pre></div><p>Not giving a name is fine, because there is only one <code>export default</code> per file, so <code>import</code> without curly braces knows what to import.</p>
+<p>Without <code>default</code>, such an export would give an error:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> { <span style="color:#75715e">// Error! (non-default export needs a name)
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">constructor</span>() {}
+}
+</code></pre></div><h3 id="the-default-name">The &ldquo;default&rdquo; name</h3>
+<p>In some situations the <code>default</code> keyword is used to reference the default export.</p>
+<p>For example, to export a function separately from its definition:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+}
+
+<span style="color:#75715e">// same as if we added &#34;export default&#34; before the function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> {<span style="color:#a6e22e">sayHi</span> <span style="color:#a6e22e">as</span> <span style="color:#66d9ef">default</span>};
+</code></pre></div><p>Or, another situation, let&rsquo;s say a module <code>user.js</code> exports one main &ldquo;default&rdquo; thing, and a few named ones (rarely the case, but it happens):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 user.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+}
+</code></pre></div><p>Here&rsquo;s how to import the default export along with a named one:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 main.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#f92672">*!*</span><span style="color:#66d9ef">default</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">User</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*, sayHi} from &#39;./user.js&#39;;</span>
+
+<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span>(<span style="color:#e6db74">&#39;John&#39;</span>);
+</code></pre></div><p>And, finally, if importing everything <code>*</code> as an object, then the <code>default</code> property is exactly the default export:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 main.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">user</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./user.js&#39;</span>;
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>.<span style="color:#66d9ef">default</span>; <span style="color:#75715e">// the default export
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span>(<span style="color:#e6db74">&#39;John&#39;</span>);
+</code></pre></div><h3 id="a-word-against-default-exports">A word against default exports</h3>
+<p>Named exports are explicit. They exactly name what they import, so we have that information from them; that&rsquo;s a good thing.</p>
+<p>Named exports force us to use exactly the right name to import:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">User</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./user.js&#39;</span>;
+<span style="color:#75715e">// import {MyUser} won&#39;t work, the name must be {User}
+</span></code></pre></div><p>&hellip;While for a default export, we always choose the name when importing:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">User</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./user.js&#39;</span>; <span style="color:#75715e">// works
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MyUser</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./user.js&#39;</span>; <span style="color:#75715e">// works too
+</span><span style="color:#75715e">// could be import Anything... and it&#39;ll still work
+</span></code></pre></div><p>So team members may use different names to import the same thing, and that&rsquo;s not good.</p>
+<p>Usually, to avoid that and keep the code consistent, there&rsquo;s a rule that imported variables should correspond to file names, e.g:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">User</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./user.js&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">LoginForm</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./loginForm.js&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">func</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;/path/to/func.js&#39;</span>;
+...
+</code></pre></div><p>Still, some teams consider it a serious drawback of default exports. So they prefer to always use named exports. Even if only a single thing is exported, it&rsquo;s still exported under a name, without <code>default</code>.</p>
+<p>That also makes re-export (see below) a little bit easier.</p>
+<h2 id="re-export">Re-export</h2>
+<p>&ldquo;Re-export&rdquo; syntax <code>export ... from ...</code> allows to import things and immediately export them (possibly under another name), like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> {<span style="color:#a6e22e">sayHi</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./say.js&#39;</span>; <span style="color:#75715e">// re-export sayHi
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">export</span> {<span style="color:#66d9ef">default</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">User</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./user.js&#39;</span>; <span style="color:#75715e">// re-export default
+</span></code></pre></div><p>Why would that be needed? Let&rsquo;s see a practical use case.</p>
+<p>Imagine, we&rsquo;re writing a &ldquo;package&rdquo;: a folder with a lot of modules, with some of the functionality exported outside (tools like NPM allow us to publish and distribute such packages, but we don&rsquo;t have to use them), and many modules are just &ldquo;helpers&rdquo;, for internal use in other package modules.</p>
+<p>The file structure could be like this:</p>
+<pre><code>auth/
+    index.js  
+    user.js
+    helpers.js
+    tests/
+        login.js
+    providers/
+        github.js
+        facebook.js
+        ...
+</code></pre><p>We&rsquo;d like to expose the package functionality via a single entry point.</p>
+<p>In other words, a person who would like to use our package, should import only from the &ldquo;main file&rdquo; <code>auth/index.js</code>.</p>
+<p>Like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">login</span>, <span style="color:#a6e22e">logout</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;auth/index.js&#39;</span>
+</code></pre></div><p>The &ldquo;main file&rdquo;, <code>auth/index.js</code> exports all the functionality that we&rsquo;d like to provide in our package.</p>
+<p>The idea is that outsiders, other programmers who use our package, should not meddle with its internal structure, search for files inside our package folder. We export only what&rsquo;s necessary in <code>auth/index.js</code> and keep the rest hidden from prying eyes.</p>
+<p>As the actual exported functionality is scattered among the package, we can import it into <code>auth/index.js</code> and export from it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 auth/index.js
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// import login/logout and immediately export them
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">login</span>, <span style="color:#a6e22e">logout</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./helpers.js&#39;</span>;
+<span style="color:#66d9ef">export</span> {<span style="color:#a6e22e">login</span>, <span style="color:#a6e22e">logout</span>};
+
+<span style="color:#75715e">// import default as User and export it
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">User</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./user.js&#39;</span>;
+<span style="color:#66d9ef">export</span> {<span style="color:#a6e22e">User</span>};
+...
+</code></pre></div><p>Now users of our package can <code>import {login} from &quot;auth/index.js&quot;</code>.</p>
+<p>The syntax <code>export ... from ...</code> is just a shorter notation for such import-export:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 auth/index.js
+</span><span style="color:#75715e">// re-export login/logout 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> {<span style="color:#a6e22e">login</span>, <span style="color:#a6e22e">logout</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./helpers.js&#39;</span>;
+
+<span style="color:#75715e">// re-export the default export as User
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> {<span style="color:#66d9ef">default</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">User</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./user.js&#39;</span>;
+...
+</code></pre></div><p>The notable difference of <code>export ... from</code> compared to <code>import/export</code> is that re-exported modules aren&rsquo;t available in the current file. So inside the above example of <code>auth/index.js</code> we can&rsquo;t use re-exported <code>login/logout</code> functions.</p>
+<h3 id="re-exporting-the-default-export">Re-exporting the default export</h3>
+<p>The default export needs separate handling when re-exporting.</p>
+<p>Let&rsquo;s say we have <code>user.js</code> with the <code>export default class User</code> and would like to re-export it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 user.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> {
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>We can come across two problems with it:</p>
+<ol>
+<li>
+<p><code>export User from './user.js'</code> won&rsquo;t work. That would lead to a syntax error.</p>
+<p>To re-export the default export, we have to write <code>export {default as User}</code>, as in the example above.</p>
+</li>
+<li>
+<p><code>export * from './user.js'</code> re-exports only named exports, but ignores the default one.</p>
+<p>If we&rsquo;d like to re-export both named and the default export, then two statements are needed:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./user.js&#39;</span>; <span style="color:#75715e">// to re-export named exports
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> {<span style="color:#66d9ef">default</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./user.js&#39;</span>; <span style="color:#75715e">// to re-export the default export
+</span></code></pre></div></li>
+</ol>
+<p>Such oddities of re-exporting a default export are one of the reasons why some developers don&rsquo;t like default exports and prefer named ones.</p>
+<h2 id="summary">Summary</h2>
+<p>Here are all types of <code>export</code> that we covered in this and previous articles.</p>
+<p>You can check yourself by reading them and recalling what they mean:</p>
+<ul>
+<li>Before declaration of a class/function/..:
+<ul>
+<li><code>export [default] class/function/variable ...</code></li>
+</ul>
+</li>
+<li>Standalone export:
+<ul>
+<li><code>export {x [as y], ...}</code>.</li>
+</ul>
+</li>
+<li>Re-export:
+<ul>
+<li><code>export {x [as y], ...} from &quot;module&quot;</code></li>
+<li><code>export * from &quot;module&quot;</code> (doesn&rsquo;t re-export default).</li>
+<li><code>export {default [as y]} from &quot;module&quot;</code> (re-export default).</li>
+</ul>
+</li>
+</ul>
+<p>Import:</p>
+<ul>
+<li>Importing named exports:
+<ul>
+<li><code>import {x [as y], ...} from &quot;module&quot;</code></li>
+</ul>
+</li>
+<li>Importing the default export:
+<ul>
+<li><code>import x from &quot;module&quot;</code></li>
+<li><code>import {default as x} from &quot;module&quot;</code></li>
+</ul>
+</li>
+<li>Import all:
+<ul>
+<li><code>import * as obj from &quot;module&quot;</code></li>
+</ul>
+</li>
+<li>Import the module (its code runs), but do not assign any of its exports to variables:
+<ul>
+<li><code>import &quot;module&quot;</code></li>
+</ul>
+</li>
+</ul>
+<p>We can put <code>import/export</code> statements at the top or at the bottom of a script, that doesn&rsquo;t matter.</p>
+<p>So, technically this code is fine:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">sayHi</span>();
+
+<span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">sayHi</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./say.js&#39;</span>; <span style="color:#75715e">// import at the end of the file
+</span></code></pre></div><p>In practice imports are usually at the start of the file, but that&rsquo;s only for more convenience.</p>
+<p><strong>Please note that import/export statements don&rsquo;t work if inside <code>{...}</code>.</strong></p>
+<p>A conditional import, like this, won&rsquo;t work:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">something</span>) {
+  <span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">sayHi</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./say.js&#34;</span>; <span style="color:#75715e">// Error: import must be at top level
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>&hellip;But what if we really need to import something conditionally? Or at the right time? Like, load a module upon request, when it&rsquo;s really needed?</p>
+<p>We&rsquo;ll see dynamic imports in the next article.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

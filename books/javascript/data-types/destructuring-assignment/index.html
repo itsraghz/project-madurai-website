@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/data-types/keys-values-entries">Object.keys, values, entries</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/data-types">Datatypes</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/data-types/date">Date and time</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="destructuring-assignment">Destructuring assignment</h1>
+<p>The two most used data structures in JavaScript are <code>Object</code> and <code>Array</code>.</p>
+<ul>
+<li>Objects allow us to create a single entity that stores data items by key.</li>
+<li>Arrays allow us to gather data items into an ordered list.</li>
+</ul>
+<p>Although, when we pass those to a function, it may need not an object/array as a whole. It may need individual pieces.</p>
+<p><em>Destructuring assignment</em> is a special syntax that allows us to &ldquo;unpack&rdquo; arrays or objects into a bunch of variables, as sometimes that&rsquo;s more convenient.</p>
+<p>Destructuring also works great with complex functions that have a lot of parameters, default values, and so on. Soon we&rsquo;ll see that.</p>
+<h2 id="array-destructuring">Array destructuring</h2>
+<p>Here&rsquo;s an example of how an array is destructured into variables:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// we have an array with the name and surname
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;Smith&#34;</span>]
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// destructuring assignment
+</span><span style="color:#75715e">// sets firstName = arr[0]
+</span><span style="color:#75715e">// and surname = arr[1]
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">firstName</span>, <span style="color:#a6e22e">surname</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">firstName</span>); <span style="color:#75715e">// John
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">surname</span>);  <span style="color:#75715e">// Smith
+</span></code></pre></div><p>Now we can work with variables instead of array members.</p>
+<p>It looks great when combined with <code>split</code> or other array-returning methods:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">firstName</span>, <span style="color:#a6e22e">surname</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John Smith&#34;</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39; &#39;</span>);
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">firstName</span>); <span style="color:#75715e">// John
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">surname</span>);  <span style="color:#75715e">// Smith
+</span></code></pre></div><p>As you can see, the syntax is simple. There are several peculiar details though. Let&rsquo;s see more examples, to better understand it.</p>
+<pre><code class="language-smart" data-lang="smart">It's called &quot;destructuring assignment,&quot; because it &quot;destructurizes&quot; by copying items into variables. But the array itself is not modified.
+
+It's just a shorter way to write:
+```js
+// let [firstName, surname] = arr;
+let firstName = arr[0];
+let surname = arr[1];
+```
+</code></pre><pre><code class="language-smart" data-lang="smart">Unwanted elements of the array can also be thrown away via an extra comma:
+
+```js run
+*!*
+// second element is not needed
+let [firstName, , title] = [&quot;Julius&quot;, &quot;Caesar&quot;, &quot;Consul&quot;, &quot;of the Roman Republic&quot;];
+*/!*
+
+alert( title ); // Consul
+```
+
+In the code above, the second element of the array is skipped, the third one is assigned to `title`, and the rest of the array items is also skipped (as there are no variables for them).
+</code></pre><pre><code class="language-smart" data-lang="smart">
+...Actually, we can use it with any iterable, not only arrays:
+
+```js
+let [a, b, c] = &quot;abc&quot;; // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+let [one, two, three] = new Set([1, 2, 3]);
+```
+That works, because internally a destructuring assignment works by iterating over the right value. It's kind of syntax sugar for calling `for..of` over the value to the right of `=` and assigning the values.
+</code></pre><pre><code class="language-smart" data-lang="smart">We can use any &quot;assignables&quot; at the left side.
+
+For instance, an object property:
+```js run
+let user = {};
+[user.name, user.surname] = &quot;John Smith&quot;.split(' ');
+
+alert(user.name); // John
+alert(user.surname); // Smith
+```
+
+</code></pre><pre><code class="language-smart" data-lang="smart">In the previous chapter we saw the [Object.entries(obj)](mdn:js/Object/entries) method.
+
+We can use it with destructuring to loop over keys-and-values of an object:
+
+```js run
+let user = {
+  name: &quot;John&quot;,
+  age: 30
+};
+
+// loop over keys-and-values
+*!*
+for (let [key, value] of Object.entries(user)) {
+*/!*
+  alert(`${key}:${value}`); // name:John, then age:30
+}
+```
+
+The similar code for a `Map` is simpler, as it's iterable:
+
+```js run
+let user = new Map();
+user.set(&quot;name&quot;, &quot;John&quot;);
+user.set(&quot;age&quot;, &quot;30&quot;);
+
+*!*
+// Map iterates as [key, value] pairs, very convenient for destructuring
+for (let [key, value] of user) {
+*/!*
+  alert(`${key}:${value}`); // name:John, then age:30
+}
+```
+</code></pre><pre><code class="language-smart" data-lang="smart">There's a well-known trick for swapping values of two variables using a destructuring assignment:
+
+```js run
+let guest = &quot;Jane&quot;;
+let admin = &quot;Pete&quot;;
+
+// Let's swap the values: make guest=Pete, admin=Jane
+*!*
+[guest, admin] = [admin, guest];
+*/!*
+
+alert(`${guest} ${admin}`); // Pete Jane (successfully swapped!)
+```
+
+Here we create a temporary array of two variables and immediately destructure it in swapped order.
+
+We can swap more than two variables this way.
+</code></pre><h3 id="the-rest-">The rest &lsquo;&hellip;&rsquo;</h3>
+<p>Usually, if the array is longer than the list at the left, the &ldquo;extra&rdquo; items are omitted.</p>
+<p>For example, here only two items are taken, and the rest is just ignored:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">name1</span>, <span style="color:#a6e22e">name2</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Julius&#34;</span>, <span style="color:#e6db74">&#34;Caesar&#34;</span>, <span style="color:#e6db74">&#34;Consul&#34;</span>, <span style="color:#e6db74">&#34;of the Roman Republic&#34;</span>];
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">name1</span>); <span style="color:#75715e">// Julius
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">name2</span>); <span style="color:#75715e">// Caesar
+</span><span style="color:#75715e">// Further items aren&#39;t assigned anywhere
+</span></code></pre></div><p>If we&rsquo;d like also to gather all that follows &ndash; we can add one more parameter that gets &ldquo;the rest&rdquo; using three dots <code>&quot;...&quot;</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">name1</span>, <span style="color:#a6e22e">name2</span>, <span style="color:#f92672">*!*</span>...<span style="color:#a6e22e">rest</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*] = [&#34;Julius&#34;, &#34;Caesar&#34;, *!*&#34;Consul&#34;, &#34;of the Roman Republic&#34;*/!*];</span>
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// rest is array of items, starting from the 3rd one
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">rest</span>[<span style="color:#ae81ff">0</span>]); <span style="color:#75715e">// Consul
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">rest</span>[<span style="color:#ae81ff">1</span>]); <span style="color:#75715e">// of the Roman Republic
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>The value of <code>rest</code> is the array of the remaining array elements.</p>
+<p>We can use any other variable name in place of <code>rest</code>, just make sure it has three dots before it and goes last in the destructuring assignment.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">name1</span>, <span style="color:#a6e22e">name2</span>, <span style="color:#f92672">*!*</span>...<span style="color:#a6e22e">titles</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*] = [&#34;Julius&#34;, &#34;Caesar&#34;, &#34;Consul&#34;, &#34;of the Roman Republic&#34;];</span>
+<span style="color:#75715e">// now titles = [&#34;Consul&#34;, &#34;of the Roman Republic&#34;]
+</span></code></pre></div><h3 id="default-values">Default values</h3>
+<p>If the array is shorter than the list of variables at the left, there&rsquo;ll be no errors. Absent values are considered undefined:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">firstName</span>, <span style="color:#a6e22e">surname</span>] <span style="color:#f92672">=</span> [];
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">firstName</span>); <span style="color:#75715e">// undefined
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">surname</span>); <span style="color:#75715e">// undefined
+</span></code></pre></div><p>If we want a &ldquo;default&rdquo; value to replace the missing one, we can provide it using <code>=</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// default values
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Guest&#34;</span>, <span style="color:#a6e22e">surname</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Anonymous&#34;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Julius&#34;</span>];
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">name</span>);    <span style="color:#75715e">// Julius (from array)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">surname</span>); <span style="color:#75715e">// Anonymous (default used)
+</span></code></pre></div><p>Default values can be more complex expressions or even function calls. They are evaluated only if the value is not provided.</p>
+<p>For instance, here we use the <code>prompt</code> function for two defaults:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// runs only prompt for surname
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#39;name?&#39;</span>), <span style="color:#a6e22e">surname</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#39;surname?&#39;</span>)] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Julius&#34;</span>];
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">name</span>);    <span style="color:#75715e">// Julius (from array)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">surname</span>); <span style="color:#75715e">// whatever prompt gets
+</span></code></pre></div><p>Please note: the <code>prompt</code> will run only for the missing value (<code>surname</code>).</p>
+<h2 id="object-destructuring">Object destructuring</h2>
+<p>The destructuring assignment also works with objects.</p>
+<p>The basic syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> {<span style="color:#a6e22e">var1</span>, <span style="color:#a6e22e">var2</span>} <span style="color:#f92672">=</span> {<span style="color:#a6e22e">var1</span><span style="color:#f92672">:</span><span style="color:#960050;background-color:#1e0010">…</span>, <span style="color:#a6e22e">var2</span><span style="color:#f92672">:</span><span style="color:#960050;background-color:#1e0010">…</span>}
+</code></pre></div><p>We should have an existing object at the right side, that we want to split into variables. The left side contains an object-like &ldquo;pattern&rdquo; for corresponding properties. In the simplest case, that&rsquo;s a list of variable names in <code>{...}</code>.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Menu&#34;</span>,
+  <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span>,
+  <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> {<span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">title</span>);  <span style="color:#75715e">// Menu
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">width</span>);  <span style="color:#75715e">// 100
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">height</span>); <span style="color:#75715e">// 200
+</span></code></pre></div><p>Properties <code>options.title</code>, <code>options.width</code> and <code>options.height</code> are assigned to the corresponding variables.</p>
+<p>The order does not matter. This works too:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// changed the order in let {...}
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> {<span style="color:#a6e22e">height</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">title</span>} <span style="color:#f92672">=</span> { <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Menu&#34;</span>, <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span> }
+</code></pre></div><p>The pattern on the left side may be more complex and specify the mapping between properties and variables.</p>
+<p>If we want to assign a property to a variable with another name, for instance, make <code>options.width</code> go into the variable named <code>w</code>, then we can set the variable name using a colon:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Menu&#34;</span>,
+  <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span>,
+  <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// { sourceProperty: targetVariable }
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> {<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">h</span>, <span style="color:#a6e22e">title</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#75715e">// width -&gt; w
+</span><span style="color:#75715e">// height -&gt; h
+</span><span style="color:#75715e">// title -&gt; title
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">title</span>);  <span style="color:#75715e">// Menu
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">w</span>);      <span style="color:#75715e">// 100
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">h</span>);      <span style="color:#75715e">// 200
+</span></code></pre></div><p>The colon shows &ldquo;what : goes where&rdquo;. In the example above the property <code>width</code> goes to <code>w</code>, property <code>height</code> goes to <code>h</code>, and <code>title</code> is assigned to the same name.</p>
+<p>For potentially missing properties we can set default values using <code>&quot;=&quot;</code>, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Menu&#34;</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> {<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">title</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">title</span>);  <span style="color:#75715e">// Menu
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">width</span>);  <span style="color:#75715e">// 100
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">height</span>); <span style="color:#75715e">// 200
+</span></code></pre></div><p>Just like with arrays or function parameters, default values can be any expressions or even function calls. They will be evaluated if the value is not provided.</p>
+<p>In the code below <code>prompt</code> asks for <code>width</code>, but not for <code>title</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Menu&#34;</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> {<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;width?&#34;</span>), <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;title?&#34;</span>)} <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">title</span>);  <span style="color:#75715e">// Menu
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">width</span>);  <span style="color:#75715e">// (whatever the result of prompt is)
+</span></code></pre></div><p>We also can combine both the colon and equality:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Menu&#34;</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> {<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">w</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">title</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">title</span>);  <span style="color:#75715e">// Menu
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">w</span>);      <span style="color:#75715e">// 100
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">h</span>);      <span style="color:#75715e">// 200
+</span></code></pre></div><p>If we have a complex object with many properties, we can extract only what we need:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Menu&#34;</span>,
+  <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span>,
+  <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>
+};
+
+<span style="color:#75715e">// only extract title as a variable
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> { <span style="color:#a6e22e">title</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>;
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">title</span>); <span style="color:#75715e">// Menu
+</span></code></pre></div><h3 id="the-rest-pattern-">The rest pattern &ldquo;&hellip;&rdquo;</h3>
+<p>What if the object has more properties than we have variables? Can we take some and then assign the &ldquo;rest&rdquo; somewhere?</p>
+<p>We can use the rest pattern, just like we did with arrays. It&rsquo;s not supported by some older browsers (IE, use Babel to polyfill it), but works in modern ones.</p>
+<p>It looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Menu&#34;</span>,
+  <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>,
+  <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// title = property named title
+</span><span style="color:#75715e">// rest = object with the rest of properties
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> {<span style="color:#a6e22e">title</span>, ...<span style="color:#a6e22e">rest</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#75715e">// now title=&#34;Menu&#34;, rest={height: 200, width: 100}
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">height</span>);  <span style="color:#75715e">// 200
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">width</span>);   <span style="color:#75715e">// 100
+</span></code></pre></div><p>````smart header=&ldquo;Gotcha if there&rsquo;s no <code>let</code>&rdquo;
+In the examples above variables were declared right in the assignment: <code>let {…} = {…}</code>. Of course, we could use existing variables too, without <code>let</code>. But there&rsquo;s a catch.</p>
+<p>This won&rsquo;t work:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>;
+
+<span style="color:#75715e">// error in this line
+</span><span style="color:#75715e"></span>{<span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>} <span style="color:#f92672">=</span> {<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Menu&#34;</span>, <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span>};
+</code></pre></div><p>The problem is that JavaScript treats <code>{...}</code> in the main code flow (not inside another expression) as a code block. Such code blocks can be used to group statements, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
+  <span style="color:#75715e">// a code block
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">message</span> );
+}
+</code></pre></div><p>So here JavaScript assumes that we have a code block, that&rsquo;s why there&rsquo;s an error. We want destructuring instead.</p>
+<p>To show JavaScript that it&rsquo;s not a code block, we can wrap the expression in parentheses <code>(...)</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>;
+
+<span style="color:#75715e">// okay now
+</span><span style="color:#75715e"></span><span style="color:#f92672">*!*</span>(<span style="color:#f92672">*</span><span style="color:#e6db74">/!*{title, width, height} = {title: &#34;Menu&#34;, width: 200, height: 100}*!*)*/</span><span style="color:#f92672">!*</span>;
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">title</span> ); <span style="color:#75715e">// Menu
+</span></code></pre></div><pre><code>
+## Nested destructuring
+
+If an object or an array contain other nested objects and arrays, we can use more complex left-side patterns to extract deeper portions.
+
+In the code below `options` has another object in the property `size` and an array in the property `items`. The pattern at the left side of the assignment has the same structure to extract values from them:
+
+```js run
+let options = {
+  size: {
+    width: 100,
+    height: 200
+  },
+  items: [&quot;Cake&quot;, &quot;Donut&quot;],
+  extra: true   
+};
+
+// destructuring assignment split in multiple lines for clarity
+let {
+  size: { // put size here
+    width,
+    height
+  },
+  items: [item1, item2], // assign items here
+  title = &quot;Menu&quot; // not present in the object (default value is used)
+} = options;
+
+alert(title);  // Menu
+alert(width);  // 100
+alert(height); // 200
+alert(item1);  // Cake
+alert(item2);  // Donut
+```
+
+All properties of `options` object except `extra` that is absent in the left part, are assigned to corresponding variables:
+
+![](https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/05-data-types/10-destructuring-assignment/destructuring-complex.svg)
+
+Finally, we have `width`, `height`, `item1`, `item2` and `title` from the default value.
+
+Note that there are no variables for `size` and `items`, as we take their content instead.
+
+## Smart function parameters
+
+There are times when a function has many parameters, most of which are optional. That's especially true for user interfaces. Imagine a function that creates a menu. It may have a width, a height, a title, items list and so on.
+
+Here's a bad way to write such function:
+
+```js
+function showMenu(title = &quot;Untitled&quot;, width = 200, height = 100, items = []) {
+  // ...
+}
+```
+
+In real-life, the problem is how to remember the order of arguments. Usually IDEs try to help us, especially if the code is well-documented, but still... Another problem is how to call a function when most parameters are ok by default.
+
+Like this?
+
+```js
+// undefined where default values are fine
+showMenu(&quot;My Menu&quot;, undefined, undefined, [&quot;Item1&quot;, &quot;Item2&quot;])
+```
+
+That's ugly. And becomes unreadable when we deal with more parameters.
+
+Destructuring comes to the rescue!
+
+We can pass parameters as an object, and the function immediately destructurizes them into variables:
+
+```js run
+// we pass object to function
+let options = {
+  title: &quot;My menu&quot;,
+  items: [&quot;Item1&quot;, &quot;Item2&quot;]
+};
+
+// ...and it immediately expands it to variables
+function showMenu(*!*{title = &quot;Untitled&quot;, width = 200, height = 100, items = []}*/!*) {
+  // title, items – taken from options,
+  // width, height – defaults used
+  alert( `${title} ${width} ${height}` ); // My Menu 200 100
+  alert( items ); // Item1, Item2
+}
+
+showMenu(options);
+```
+
+We can also use more complex destructuring with nested objects and colon mappings:
+
+```js run
+let options = {
+  title: &quot;My menu&quot;,
+  items: [&quot;Item1&quot;, &quot;Item2&quot;]
+};
+
+*!*
+function showMenu({
+  title = &quot;Untitled&quot;,
+  width: w = 100,  // width goes to w
+  height: h = 200, // height goes to h
+  items: [item1, item2] // items first element goes to item1, second to item2
+}) {
+*/!*
+  alert( `${title} ${w} ${h}` ); // My Menu 100 200
+  alert( item1 ); // Item1
+  alert( item2 ); // Item2
+}
+
+showMenu(options);
+```
+
+The full syntax is the same as for a destructuring assignment:
+```js
+function({
+  incomingProperty: varName = defaultValue
+  ...
+})
+```
+
+Then, for an object of parameters, there will be a variable `varName` for property `incomingProperty`, with `defaultValue` by default.
+
+Please note that such destructuring assumes that `showMenu()` does have an argument. If we want all values by default, then we should specify an empty object:
+
+```js
+showMenu({}); // ok, all values are default
+
+showMenu(); // this would give an error
+```
+
+We can fix this by making `{}` the default value for the whole object of parameters:
+
+```js run
+function showMenu({ title = &quot;Menu&quot;, width = 100, height = 200 }*!* = {}*/!*) {
+  alert( `${title} ${width} ${height}` );
+}
+
+showMenu(); // Menu 100 200
+```
+
+In the code above, the whole arguments object is `{}` by default, so there's always something to destructurize.
+
+## Summary
+
+- Destructuring assignment allows for instantly mapping an object or array onto many variables.
+- The full object syntax:
+    ```js
+    let {prop : varName = default, ...rest} = object
+    ```
+
+    This means that property `prop` should go into the variable `varName` and, if no such property exists, then the `default` value should be used.
+
+    Object properties that have no mapping are copied to the `rest` object.
+
+- The full array syntax:
+
+    ```js
+    let [item1 = default, item2, ...rest] = array
+    ```
+
+    The first item goes to `item1`; the second goes into `item2`, all the rest makes the array `rest`.
+
+- It's possible to extract data from nested arrays/objects, for that the left side must have the same structure as the right one.
+</code></pre></main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

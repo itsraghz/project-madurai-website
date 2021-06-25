@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/advanced-working-with-functions/rest-parameters-spread">Rest parameters and spread syntax</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/advanced-working-with-functions">Advanced Working with Functions</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/advanced-working-with-functions/variables">Variables</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="variable-scope-closure">Variable scope, closure</h1>
+<p>JavaScript is a very function-oriented language. It gives us a lot of freedom. A function can be created at any moment, passed as an argument to another function, and then called from a totally different place of code later.</p>
+<p>We already know that a function can access variables outside of it (&ldquo;outer&rdquo; variables).</p>
+<p>But what happens if outer variables change since a function is created? Will the function get newer values or the old ones?</p>
+<p>And what if a function is passed along as a parameter and called from another place of code, will it get access to outer variables at the new place?</p>
+<p>Let&rsquo;s expand our knowledge to understand these scenarios and more complex ones.</p>
+<p>```smart header=&ldquo;We&rsquo;ll talk about <code>let/const</code> variables here&rdquo;
+In JavaScript, there are 3 ways to declare a variable: <code>let</code>, <code>const</code> (the modern ones), and <code>var</code> (the remnant of the past).</p>
+<ul>
+<li>In this article we&rsquo;ll use <code>let</code> variables in examples.</li>
+<li>Variables, declared with <code>const</code>, behave the same, so this article is about <code>const</code> too.</li>
+<li>The old <code>var</code> has some notable differences, they will be covered in the article <a href="info:var">info:var</a>.</li>
+</ul>
+<pre><code>
+## Code blocks
+
+If a variable is declared inside a code block `{...}`, it's only visible inside that block.
+
+For example:
+
+```js run
+{
+  // do some job with local variables that should not be seen outside
+
+  let message = &quot;Hello&quot;; // only visible in this block
+
+  alert(message); // Hello
+}
+
+alert(message); // Error: message is not defined
+</code></pre><p>We can use this to isolate a piece of code that does its own task, with variables that only belong to it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
+  <span style="color:#75715e">// show message
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">message</span>);
+}
+
+{
+  <span style="color:#75715e">// show another message
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Goodbye&#34;</span>;
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">message</span>);
+}
+</code></pre></div><pre><code class="language-smart" data-lang="smart">Please note, without separate blocks there would be an error, if we use `let` with the existing variable name:
+
+```js run
+// show message
+let message = &quot;Hello&quot;;
+alert(message);
+
+// show another message
+*!*
+let message = &quot;Goodbye&quot;; // Error: variable already declared
+*/!*
+alert(message);
+```
+</code></pre><p>For <code>if</code>, <code>for</code>, <code>while</code> and so on, variables declared in <code>{...}</code> are also only visible inside:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">phrase</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello!&#34;</span>;
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">phrase</span>); <span style="color:#75715e">// Hello!
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">phrase</span>); <span style="color:#75715e">// Error, no such variable!
+</span></code></pre></div><p>Here, after <code>if</code> finishes, the <code>alert</code> below won&rsquo;t see the <code>phrase</code>, hence the error.</p>
+<p>That&rsquo;s great, as it allows us to create block-local variables, specific to an <code>if</code> branch.</p>
+<p>The similar thing holds true for <code>for</code> and <code>while</code> loops:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#75715e">// the variable i is only visible inside this for
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">i</span>); <span style="color:#75715e">// 0, then 1, then 2
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">i</span>); <span style="color:#75715e">// Error, no such variable
+</span></code></pre></div><p>Visually, <code>let i</code> is outside of <code>{...}</code>. But the <code>for</code> construct is special here: the variable, declared inside it, is considered a part of the block.</p>
+<h2 id="nested-functions">Nested functions</h2>
+<p>A function is called &ldquo;nested&rdquo; when it is created inside another function.</p>
+<p>It is easily possible to do this with JavaScript.</p>
+<p>We can use it to organize our code, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHiBye</span>(<span style="color:#a6e22e">firstName</span>, <span style="color:#a6e22e">lastName</span>) {
+
+  <span style="color:#75715e">// helper nested function to use below
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getFullName</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">lastName</span>;
+  }
+
+  <span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">&#34;Hello, &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">getFullName</span>() );
+  <span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">&#34;Bye, &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">getFullName</span>() );
+
+}
+</code></pre></div><p>Here the <em>nested</em> function <code>getFullName()</code> is made for convenience. It can access the outer variables and so can return the full name. Nested functions are quite common in JavaScript.</p>
+<p>What&rsquo;s much more interesting, a nested function can be returned: either as a property of a new object or as a result by itself. It can then be used somewhere else. No matter where, it still has access to the same outer variables.</p>
+<p>Below, <code>makeCounter</code> creates the &ldquo;counter&rdquo; function that returns the next number on each invocation:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">makeCounter</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>;
+  };
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">counter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">makeCounter</span>();
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">counter</span>() ); <span style="color:#75715e">// 0
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">counter</span>() ); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">counter</span>() ); <span style="color:#75715e">// 2
+</span></code></pre></div><p>Despite being simple, slightly modified variants of that code have practical uses, for instance, as a <a href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator">random number generator</a> to generate random values for automated tests.</p>
+<p>How does this work? If we create multiple counters, will they be independent? What&rsquo;s going on with the variables here?</p>
+<p>Understanding such things is great for the overall knowledge of JavaScript and beneficial for more complex scenarios. So let&rsquo;s go a bit in-depth.</p>
+<h2 id="lexical-environment">Lexical Environment</h2>
+<pre><code class="language-warn" data-lang="warn">The in-depth technical explanation lies ahead.
+
+As far as I'd like to avoid low-level language details, any understanding without them would be lacking and incomplete, so get ready.
+</code></pre><p>For clarity, the explanation is split into multiple steps.</p>
+<h3 id="step-1-variables">Step 1. Variables</h3>
+<p>In JavaScript, every running function, code block <code>{...}</code>, and the script as a whole have an internal (hidden) associated object known as the <em>Lexical Environment</em>.</p>
+<p>The Lexical Environment object consists of two parts:</p>
+<ol>
+<li><em>Environment Record</em> &ndash; an object that stores all local variables as its properties (and some other information like the value of <code>this</code>).</li>
+<li>A reference to the <em>outer lexical environment</em>, the one associated with the outer code.</li>
+</ol>
+<p><strong>A &ldquo;variable&rdquo; is just a property of the special internal object, <code>Environment Record</code>. &ldquo;To get or change a variable&rdquo; means &ldquo;to get or change a property of that object&rdquo;.</strong></p>
+<p>In this simple code without functions, there is only one Lexical Environment:</p>
+<p><img src="https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/06-advanced-functions/03-closure/lexical-environment-global.svg" alt="lexical environment"></p>
+<p>This is the so-called <em>global</em> Lexical Environment, associated with the whole script.</p>
+<p>On the picture above, the rectangle means Environment Record (variable store) and the arrow means the outer reference. The global Lexical Environment has no outer reference, that&rsquo;s why the arrow points to <code>null</code>.</p>
+<p>As the code starts executing and goes on, the Lexical Environment changes.</p>
+<p>Here&rsquo;s a little bit longer code:</p>
+<p><img src="https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/06-advanced-functions/03-closure/closure-variable-phrase.svg" alt="lexical environment"></p>
+<p>Rectangles on the right-hand side demonstrate how the global Lexical Environment changes during the execution:</p>
+<ol>
+<li>When the script starts, the Lexical Environment is pre-populated with all declared variables.
+<ul>
+<li>Initially, they are in the &ldquo;Uninitialized&rdquo; state. That&rsquo;s a special internal state, it means that the engine knows about the variable, but it cannot be referenced until it has been declared with <code>let</code>. It&rsquo;s almost the same as if the variable didn&rsquo;t exist.</li>
+</ul>
+</li>
+<li>Then <code>let phrase</code> definition appears. There&rsquo;s no assignment yet, so its value is <code>undefined</code>. We can use the variable from this point forward.</li>
+<li><code>phrase</code> is assigned a value.</li>
+<li><code>phrase</code> changes the value.</li>
+</ol>
+<p>Everything looks simple for now, right?</p>
+<ul>
+<li>A variable is a property of a special internal object, associated with the currently executing block/function/script.</li>
+<li>Working with variables is actually working with the properties of that object.</li>
+</ul>
+<pre><code class="language-smart" data-lang="smart">&quot;Lexical Environment&quot; is a specification object: it only exists &quot;theoretically&quot; in the [language specification](https://tc39.es/ecma262/#sec-lexical-environments) to describe how things work. We can't get this object in our code and manipulate it directly.
+
+JavaScript engines also may optimize it, discard variables that are unused to save memory and perform other internal tricks, as long as the visible behavior remains as described.
+</code></pre><h3 id="step-2-function-declarations">Step 2. Function Declarations</h3>
+<p>A function is also a value, like a variable.</p>
+<p><strong>The difference is that a Function Declaration is instantly fully initialized.</strong></p>
+<p>When a Lexical Environment is created, a Function Declaration immediately becomes a ready-to-use function (unlike <code>let</code>, that is unusable till the declaration).</p>
+<p>That&rsquo;s why we can use a function, declared as Function Declaration, even before the declaration itself.</p>
+<p>For example, here&rsquo;s the initial state of the global Lexical Environment when we add a function:</p>
+<p><img src="https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/06-advanced-functions/03-closure/closure-function-declaration.svg" alt=""></p>
+<p>Naturally, this behavior only applies to Function Declarations, not Function Expressions where we assign a function to a variable, such as <code>let say = function(name)...</code>.</p>
+<h3 id="step-3-inner-and-outer-lexical-environment">Step 3. Inner and outer Lexical Environment</h3>
+<p>When a function runs, at the beginning of the call, a new Lexical Environment is created automatically to store local variables and parameters of the call.</p>
+<p>For instance, for <code>say(&quot;John&quot;)</code>, it looks like this (the execution is at the line, labelled with an arrow):</p>
+<!--
+    ```js
+    let phrase = "Hello";
+
+    function say(name) {
+     alert( `${phrase}, ${name}` );
+    }
+
+    say("John"); // Hello, John
+    ```-->
+<p><img src="https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/06-advanced-functions/03-closure/lexical-environment-simple.svg" alt=""></p>
+<p>During the function call we have two Lexical Environments: the inner one (for the function call) and the outer one (global):</p>
+<ul>
+<li>The inner Lexical Environment corresponds to the current execution of <code>say</code>. It has a single property: <code>name</code>, the function argument. We called <code>say(&quot;John&quot;)</code>, so the value of the <code>name</code> is <code>&quot;John&quot;</code>.</li>
+<li>The outer Lexical Environment is the global Lexical Environment. It has the <code>phrase</code> variable and the function itself.</li>
+</ul>
+<p>The inner Lexical Environment has a reference to the <code>outer</code> one.</p>
+<p><strong>When the code wants to access a variable &ndash; the inner Lexical Environment is searched first, then the outer one, then the more outer one and so on until the global one.</strong></p>
+<p>If a variable is not found anywhere, that&rsquo;s an error in strict mode (without <code>use strict</code>, an assignment to a non-existing variable creates a new global variable, for compatibility with old code).</p>
+<p>In this example the search proceeds as follows:</p>
+<ul>
+<li>For the <code>name</code> variable, the <code>alert</code> inside <code>say</code> finds it immediately in the inner Lexical Environment.</li>
+<li>When it wants to access <code>phrase</code>, then there is no <code>phrase</code> locally, so it follows the reference to the outer Lexical Environment and finds it there.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/06-advanced-functions/03-closure/lexical-environment-simple-lookup.svg" alt="lexical environment lookup"></p>
+<h3 id="step-4-returning-a-function">Step 4. Returning a function</h3>
+<p>Let&rsquo;s return to the <code>makeCounter</code> example.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">makeCounter</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>;
+  };
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">counter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">makeCounter</span>();
+</code></pre></div><p>At the beginning of each <code>makeCounter()</code> call, a new Lexical Environment object is created, to store variables for this <code>makeCounter</code> run.</p>
+<p>So we have two nested Lexical Environments, just like in the example above:</p>
+<p><img src="https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/06-advanced-functions/03-closure/closure-makecounter.svg" alt=""></p>
+<p>What&rsquo;s different is that, during the execution of <code>makeCounter()</code>, a tiny nested function is created of only one line: <code>return count++</code>. We don&rsquo;t run it yet, only create.</p>
+<p>All functions remember the Lexical Environment in which they were made. Technically, there&rsquo;s no magic here: all functions have the hidden property named <code>[[Environment]]</code>, that keeps the reference to the Lexical Environment where the function was created:</p>
+<p><img src="https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/06-advanced-functions/03-closure/closure-makecounter-environment.svg" alt=""></p>
+<p>So, <code>counter.[[Environment]]</code> has the reference to <code>{count: 0}</code> Lexical Environment. That&rsquo;s how the function remembers where it was created, no matter where it&rsquo;s called. The <code>[[Environment]]</code> reference is set once and forever at function creation time.</p>
+<p>Later, when <code>counter()</code> is called, a new Lexical Environment is created for the call, and its outer Lexical Environment reference is taken from <code>counter.[[Environment]]</code>:</p>
+<p><img src="https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/06-advanced-functions/03-closure/closure-makecounter-nested-call.svg" alt=""></p>
+<p>Now when the code inside <code>counter()</code> looks for <code>count</code> variable, it first searches its own Lexical Environment (empty, as there are no local variables there), then the Lexical Environment of the outer <code>makeCounter()</code> call, where it finds and changes it.</p>
+<p><strong>A variable is updated in the Lexical Environment where it lives.</strong></p>
+<p>Here&rsquo;s the state after the execution:</p>
+<p><img src="https://raw.githubusercontent.com/javascript-tutorial/en.javascript.info/cf33b67042d72df14e41f6688695ef833467f7f7/1-js/06-advanced-functions/03-closure/closure-makecounter-nested-call-2.svg" alt=""></p>
+<p>If we call <code>counter()</code> multiple times, the <code>count</code> variable will be increased to <code>2</code>, <code>3</code> and so on, at the same place.</p>
+<pre><code class="language-smart" data-lang="smart">There is a general programming term &quot;closure&quot;, that developers generally should know.
+
+A [closure](https://en.wikipedia.org/wiki/Closure_(computer_programming)) is a function that remembers its outer variables and can access them. In some languages, that's not possible, or a function should be written in a special way to make it happen. But as explained above, in JavaScript, all functions are naturally closures (there is only one exception, to be covered in &lt;info:new-function&gt;).
+
+That is: they automatically remember where they were created using a hidden `[[Environment]]` property, and then their code can access outer variables.
+
+When on an interview, a frontend developer gets a question about &quot;what's a closure?&quot;, a valid answer would be a definition of the closure and an explanation that all functions in JavaScript are closures, and maybe a few more words about technical details: the `[[Environment]]` property and how Lexical Environments work.
+</code></pre><h2 id="garbage-collection">Garbage collection</h2>
+<p>Usually, a Lexical Environment is removed from memory with all the variables after the function call finishes. That&rsquo;s because there are no references to it. As any JavaScript object, it&rsquo;s only kept in memory while it&rsquo;s reachable.</p>
+<p>However, if there&rsquo;s a nested function that is still reachable after the end of a function, then it has <code>[[Environment]]</code> property that references the lexical environment.</p>
+<p>In that case the Lexical Environment is still reachable even after the completion of the function, so it stays alive.</p>
+<p>For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>;
+
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">value</span>);
+  }
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">g</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>(); <span style="color:#75715e">// g.[[Environment]] stores a reference to the Lexical Environment
+</span><span style="color:#75715e">// of the corresponding f() call
+</span></code></pre></div><p>Please note that if <code>f()</code> is called many times, and resulting functions are saved, then all corresponding Lexical Environment objects will also be retained in memory. In the code below, all 3 of them:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">random</span>();
+
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>() { <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">value</span>); };
+}
+
+<span style="color:#75715e">// 3 functions in array, every one of them links to Lexical Environment
+</span><span style="color:#75715e">// from the corresponding f() run
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">f</span>(), <span style="color:#a6e22e">f</span>(), <span style="color:#a6e22e">f</span>()];
+</code></pre></div><p>A Lexical Environment object dies when it becomes unreachable (just like any other object). In other words, it exists only while there&rsquo;s at least one nested function referencing it.</p>
+<p>In the code below, after the nested function is removed, its enclosing Lexical Environment (and hence the <code>value</code>) is cleaned from memory:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>;
+
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">value</span>);
+  }
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">g</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>(); <span style="color:#75715e">// while g function exists, the value stays in memory
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">g</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>; <span style="color:#75715e">// ...and now the memory is cleaned up
+</span></code></pre></div><h3 id="real-life-optimizations">Real-life optimizations</h3>
+<p>As we&rsquo;ve seen, in theory while a function is alive, all outer variables are also retained.</p>
+<p>But in practice, JavaScript engines try to optimize that. They analyze variable usage and if it&rsquo;s obvious from the code that an outer variable is not used &ndash; it is removed.</p>
+<p><strong>An important side effect in V8 (Chrome, Edge, Opera) is that such variable will become unavailable in debugging.</strong></p>
+<p>Try running the example below in Chrome with the Developer Tools open.</p>
+<p>When it pauses, in the console type <code>alert(value)</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">random</span>();
+
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">g</span>() {
+    <span style="color:#66d9ef">debugger</span>; <span style="color:#75715e">// in console: type alert(value); No such variable!
+</span><span style="color:#75715e"></span>  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">g</span>;
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">g</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>();
+<span style="color:#a6e22e">g</span>();
+</code></pre></div><p>As you could see &ndash; there is no such variable! In theory, it should be accessible, but the engine optimized it out.</p>
+<p>That may lead to funny (if not such time-consuming) debugging issues. One of them &ndash; we can see a same-named outer variable instead of the expected one:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Surprise!&#34;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;the closest value&#34;</span>;
+
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">g</span>() {
+    <span style="color:#66d9ef">debugger</span>; <span style="color:#75715e">// in console: type alert(value); Surprise!
+</span><span style="color:#75715e"></span>  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">g</span>;
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">g</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>();
+<span style="color:#a6e22e">g</span>();
+</code></pre></div><p>This feature of V8 is good to know. If you are debugging with Chrome/Edge/Opera, sooner or later you will meet it.</p>
+<p>That is not a bug in the debugger, but rather a special feature of V8. Perhaps it will be changed sometime. You can always check for it by running the examples on this page.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

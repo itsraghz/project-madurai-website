@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/advanced-working-with-functions/variables">Variables</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/advanced-working-with-functions">Advanced Working with Functions</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/advanced-working-with-functions/function-object">Function object, NFE</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="global-object">Global object</h1>
+<p>The global object provides variables and functions that are available anywhere. By default, those that are built into the language or the environment.</p>
+<p>In a browser it is named <code>window</code>, for Node.js it is <code>global</code>, for other environments it may have another name.</p>
+<p>Recently, <code>globalThis</code> was added to the language, as a standardized name for a global object, that should be supported across all environments. It&rsquo;s supported in all major browsers.</p>
+<p>We&rsquo;ll use <code>window</code> here, assuming that our environment is a browser. If your script may run in other environments, it&rsquo;s better to use <code>globalThis</code> instead.</p>
+<p>All properties of the global object can be accessed directly:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>);
+<span style="color:#75715e">// is the same as
+</span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>);
+</code></pre></div><p>In a browser, global functions and variables declared with <code>var</code> (not <code>let/const</code>!) become the property of the global object:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gVar</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+
+<span style="color:#a6e22e">alert</span>(window.<span style="color:#a6e22e">gVar</span>); <span style="color:#75715e">// 5 (became a property of the global object)
+</span></code></pre></div><p>The same effect have function declarations (statements with <code>function</code> keyword in the main code flow, not function expressions).</p>
+<p>Please don&rsquo;t rely on that! This behavior exists for compatibility reasons. Modern scripts use <a href="info:modules">JavaScript modules</a> where such a thing doesn&rsquo;t happen.</p>
+<p>If we used <code>let</code> instead, such thing wouldn&rsquo;t happen:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">gLet</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+
+<span style="color:#a6e22e">alert</span>(window.<span style="color:#a6e22e">gLet</span>); <span style="color:#75715e">// undefined (doesn&#39;t become a property of the global object)
+</span></code></pre></div><p>If a value is so important that you&rsquo;d like to make it available globally, write it directly as a property:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// make current user information global, to let all scripts access it
+</span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">currentUser</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+};
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#75715e">// somewhere else in code
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">currentUser</span>.<span style="color:#a6e22e">name</span>);  <span style="color:#75715e">// John
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// or, if we have a local variable with the name &#34;currentUser&#34;
+</span><span style="color:#75715e">// get it from window explicitly (safe!)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(window.<span style="color:#a6e22e">currentUser</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// John
+</span></code></pre></div><p>That said, using global variables is generally discouraged. There should be as few global variables as possible. The code design where a function gets &ldquo;input&rdquo; variables and produces certain &ldquo;outcome&rdquo; is clearer, less prone to errors and easier to test than if it uses outer or global variables.</p>
+<h2 id="using-for-polyfills">Using for polyfills</h2>
+<p>We use the global object to test for support of modern language features.</p>
+<p>For instance, test if a built-in <code>Promise</code> object exists (it doesn&rsquo;t in really old browsers):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>window.Promise) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Your browser is really old!&#34;</span>);
+}
+</code></pre></div><p>If there&rsquo;s none (say, we&rsquo;re in an old browser), we can create &ldquo;polyfills&rdquo;: add functions that are not supported by the environment, but exist in the modern standard.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>window.Promise) {
+  window.Promise <span style="color:#f92672">=</span> ... <span style="color:#75715e">// custom implementation of the modern language feature
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h2 id="summary">Summary</h2>
+<ul>
+<li>
+<p>The global object holds variables that should be available everywhere.</p>
+<p>That includes JavaScript built-ins, such as <code>Array</code> and environment-specific values, such as <code>window.innerHeight</code> &ndash; the window height in the browser.</p>
+</li>
+<li>
+<p>The global object has a universal name <code>globalThis</code>.</p>
+<p>&hellip;But more often is referred by &ldquo;old-school&rdquo; environment-specific names, such as <code>window</code> (browser) and <code>global</code> (Node.js).</p>
+</li>
+<li>
+<p>We should store values in the global object only if they&rsquo;re truly global for our project. And keep their number at minimum.</p>
+</li>
+<li>
+<p>In-browser, unless we&rsquo;re using <a href="info:modules">modules</a>, global functions and variables declared with <code>var</code> become a property of the global object.</p>
+</li>
+<li>
+<p>To make our code future-proof and easier to understand, we should access properties of the global object directly, as <code>window.x</code>.</p>
+</li>
+</ul>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

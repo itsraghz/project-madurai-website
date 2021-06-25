@@ -1,0 +1,2636 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Madurai School</title>
+    <link>/</link>
+    <description>Recent content on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> Prototypal inheritance</title>
+      <link>/books/javascript/prototypes-inheritance/prototypeinheritance/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/prototypes-inheritance/prototypeinheritance/</guid>
+      <description>Prototypal inheritance In programming, we often want to take something and extend it.
+For instance, we have a user object with its properties and methods, and want to make admin and guest as slightly modified variants of it. We&amp;rsquo;d like to reuse what we have in user, not copy/reimplement its methods, just build a new object on top of it.
+Prototypal inheritance is a language feature that helps in that.</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to JavaScript</title>
+      <link>/books/javascript/introduction/javascript-intro/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/introduction/javascript-intro/</guid>
+      <description>An Introduction to JavaScript Let&amp;rsquo;s see what&amp;rsquo;s so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
+What is JavaScript? JavaScript was initially created to &amp;ldquo;make web pages alive&amp;rdquo;.
+The programs in this language are called scripts. They can be written right in a web page&amp;rsquo;s HTML and run automatically as the page loads.
+Scripts are provided and executed as plain text. They don&amp;rsquo;t need special preparation or compilation to run.</description>
+    </item>
+    
+    <item>
+      <title>Appendix A-Compiltion and Execution</title>
+      <link>/books/c/interview-faqs/appendix-a-compiltion-and-execution/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/appendix-a-compiltion-and-execution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bit Numbering and Conversion</title>
+      <link>/books/c/logicaloperators/bit-numbering-and-conversion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/bit-numbering-and-conversion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Class basic syntax</title>
+      <link>/books/javascript/classes/class-basic-syntax/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/classes/class-basic-syntax/</guid>
+      <description>Class basic syntax  In object-oriented programming, a class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or
+ In practice, we often need to create many objects of the same kind, like users, or goods or whatever.
+As we already know from the chapter Constructor, operator &amp;ldquo;new&amp;rdquo;, new function can help with that.
+But in the modern JavaScript, there’s a more advanced “class” construct, that introduces great new features which are useful for object-oriented programming.</description>
+    </item>
+    
+    <item>
+      <title>Debugging in Chrome</title>
+      <link>/books/javascript/code-quality/debugging-in-chrome/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/code-quality/debugging-in-chrome/</guid>
+      <description>Debugging in Chrome Before writing more complex code, let&amp;rsquo;s talk about debugging.
+Debugging is the process of finding and fixing errors within a script. All modern browsers and most other environments support debugging tools &amp;ndash; a special UI in developer tools that makes debugging much easier. It also allows to trace the code step by step to see what exactly is going on.
+We&amp;rsquo;ll be using Chrome here, because it has enough features, most other browsers have a similar process.</description>
+    </item>
+    
+    <item>
+      <title>Decisions! Decisions!</title>
+      <link>/books/c/decisioncontrol/decisions-decisions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/decisioncontrol/decisions-decisions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Decisions! Decisions!</title>
+      <link>/books/c/function/decision-control-instruction/decisions-decisions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/decision-control-instruction/decisions-decisions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Desions using switch</title>
+      <link>/books/c/casecontrol/decisions-using-switch/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/decisions-using-switch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Enumerate Data Type</title>
+      <link>/books/c/miscelaneous-features/enumerated-data-type/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/enumerated-data-type/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Error handling, &#34;try...catch&#34;</title>
+      <link>/books/javascript/error-handling/try-catch/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/error-handling/try-catch/</guid>
+      <description>Error handling, &amp;ldquo;try&amp;hellip;catch&amp;rdquo; No matter how great we are at programming, sometimes our scripts have errors. They may occur because of our mistakes, an unexpected user input, an erroneous server response, and for a thousand other reasons.
+Usually, a script &amp;ldquo;dies&amp;rdquo; (immediately stops) in case of an error, printing it to console.
+But there&amp;rsquo;s a syntax construct try...catch that allows us to &amp;ldquo;catch&amp;rdquo; errors so the script can, instead of dying, do something more reasonable.</description>
+    </item>
+    
+    <item>
+      <title>Feature of c Preprocessor</title>
+      <link>/books/c/the-c-preprocessor/feature-of-c-preprocessor/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/feature-of-c-preprocessor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>File Operations</title>
+      <link>/books/c/fileio/file-operations/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/fileio/file-operations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generators</title>
+      <link>/books/javascript/generators-advanced-iteration/generators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/generators-advanced-iteration/generators/</guid>
+      <description>Generators Regular functions return only one, single value (or nothing).
+Generators can return (&amp;ldquo;yield&amp;rdquo;) multiple values, one after another, on-demand. They work great with iterables, allowing to create data streams with ease.
+Generator functions To create a generator, we need a special syntax construct: function*, so-called &amp;ldquo;generator function&amp;rdquo;.
+It looks like this:
+function* generateSequence() { yield 1; yield 2; return 3; } Generator functions behave differently from regular ones. When such function is called, it doesn&amp;rsquo;t run its code.</description>
+    </item>
+    
+    <item>
+      <title>Hello, world!</title>
+      <link>/books/javascript/javascript-fundamentals/hello-world/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/hello-world/</guid>
+      <description>Hello, world! This part of the tutorial is about core JavaScript, the language itself.
+But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We&amp;rsquo;ll keep the amount of browser-specific commands (like alert) to a minimum so that you don&amp;rsquo;t spend time on them if you plan to concentrate on another environment (like Node.js). We&amp;rsquo;ll focus on JavaScript in the browser in the next part of the tutorial.</description>
+    </item>
+    
+    <item>
+      <title>integer-long,short,signed,unsigned</title>
+      <link>/books/c/data_types_revisited/integer-long-short-signed-unsigned/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/integer-long-short-signed-unsigned/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction: callbacks</title>
+      <link>/books/javascript/promises-async-await/callbacks/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/callbacks/</guid>
+      <description>Introduction: callbacks  ⚠️ We use browser methods in examples here
+To demonstrate the use of callbacks, promises and other abstract concepts, we’ll be using some browser methods: specifically, loading scripts and performing simple document manipulations.
+If you’re not familiar with these methods, and their usage in the examples is confusing, you may want to read a few chapters from the next part of the tutorial.
+Although, we’ll try to make things clear anyway.</description>
+    </item>
+    
+    <item>
+      <title>Loops</title>
+      <link>/books/c/loopcontrol/loops/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/loopcontrol/loops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methods of primitives</title>
+      <link>/books/javascript/data-types/primitives-methods/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/primitives-methods/</guid>
+      <description>Methods of primitives JavaScript allows us to work with primitives (strings, numbers, etc.) as if they were objects. They also provide methods to call as such. We will study those soon, but first we&amp;rsquo;ll see how it works because, of course, primitives are not objects (and here we will make it even clearer).
+Let&amp;rsquo;s look at the key distinctions between primitives and objects.
+A primitive
+ Is a value of a primitive type.</description>
+    </item>
+    
+    <item>
+      <title>Modules, introduction</title>
+      <link>/books/javascript/modules/modules-intro/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/modules/modules-intro/</guid>
+      <description>Modules, introduction As our application grows bigger, we want to split it into multiple files, so called &amp;ldquo;modules&amp;rdquo;. A module may contain a class or a library of functions for a specific purpose.
+For a long time, JavaScript existed without a language-level module syntax. That wasn&amp;rsquo;t a problem, because initially scripts were small and simple, so there was no need.
+But eventually scripts became more and more complex, so the community invented a variety of ways to organize code into modules, special libraries to load modules on demand.</description>
+    </item>
+    
+    <item>
+      <title>Objects</title>
+      <link>/books/javascript/objects/objects/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/objects/</guid>
+      <description>Objects As we know from the chapter info:types, there are eight data types in JavaScript. Seven of them are called &amp;ldquo;primitive&amp;rdquo;, because their values contain only a single thing (be it a string or a number or whatever).
+In contrast, objects are used to store keyed collections of various data and more complex entities. In JavaScript, objects penetrate almost every aspect of the language. So we must understand them first before going in-depth anywhere else.</description>
+    </item>
+    
+    <item>
+      <title>Proxy and Reflect</title>
+      <link>/books/javascript/miscellaneous/proxy-and-reflect/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/miscellaneous/proxy-and-reflect/</guid>
+      <description>Proxy and Reflect A Proxy object wraps another object and intercepts operations, like reading/writing properties and others, optionally handling them on its own, or transparently allowing the object to handle them.
+Proxies are used in many libraries and some browser frameworks. We&amp;rsquo;ll see many practical applications in this article.
+Proxy The syntax:
+let proxy = new Proxy(target, handler)  target &amp;ndash; is an object to wrap, can be anything, including functions.</description>
+    </item>
+    
+    <item>
+      <title>Recursion</title>
+      <link>/books/c/recursion/recursion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/recursion/recursion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recursion and stack</title>
+      <link>/books/javascript/advanced-working-with-functions/recursion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/recursion/</guid>
+      <description>Recursion and stack Let&amp;rsquo;s return to functions and study them more in-depth.
+Our first topic will be recursion.
+If you are not new to programming, then it is probably familiar and you could skip this chapter.
+Recursion is a programming pattern that is useful in situations when a task can be naturally split into several tasks of the same kind, but simpler. Or when a task can be simplified into an easy action plus a simpler variant of the same task.</description>
+    </item>
+    
+    <item>
+      <title>The for Loop</title>
+      <link>/books/c/morecomplexrepetitions/the-for-loop/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/morecomplexrepetitions/the-for-loop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Two Dimensional Array of Characters</title>
+      <link>/books/c/multistrings/two-dimensional-array-of-characters/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multistrings/two-dimensional-array-of-characters/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Two Dimensional Arrays</title>
+      <link>/books/c/multidimensionalarray/two-dimensional-arrays/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multidimensionalarray/two-dimensional-arrays/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Types of I/O</title>
+      <link>/books/c/consoleio/types-of-io/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/consoleio/types-of-io/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Types of Instruction</title>
+      <link>/books/c/c-instructions/types-of-instruction/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/c-instructions/types-of-instruction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Types of Instruction</title>
+      <link>/books/c/casecontrol/c-instructions/types-of-instruction/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/c-instructions/types-of-instruction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Use of Logical Operators</title>
+      <link>/books/c/more_complex_decision_making/use-of-logical-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/more_complex_decision_making/use-of-logical-operators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using argc and argv</title>
+      <link>/books/c/more-issues-in-input-output/using-argc-and-argv/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/more-issues-in-input-output/using-argc-and-argv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What are Arrays</title>
+      <link>/books/c/array/what-are-array/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/array/what-are-array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What are Strings</title>
+      <link>/books/c/strings/what-are-strings/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/strings/what-are-strings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What are Strings</title>
+      <link>/books/c/structures/why-use-structures/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/why-use-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What is a function</title>
+      <link>/books/c/function/what-is-function/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/what-is-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What Is C ?</title>
+      <link>/books/c/introduction/what-is-c/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/what-is-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An Introduction to pointers</title>
+      <link>/books/c/pointers/an-introduction-to-pointer/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/pointers/an-introduction-to-pointer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Appendix B-Precedence-table</title>
+      <link>/books/c/interview-faqs/appendix-b-precedence-table/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/appendix-b-precedence-table/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Array of pointers</title>
+      <link>/books/c/multidimensionalarray/array-of-pointers/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multidimensionalarray/array-of-pointers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Array of Pointers to Strings</title>
+      <link>/books/c/multistrings/array-of-pointers-to-strings/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multistrings/array-of-pointers-to-strings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Array of Structures</title>
+      <link>/books/c/structures/array-of-structures/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/array-of-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Async iteration and generators</title>
+      <link>/books/javascript/generators-advanced-iteration/async-iterators-generators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/generators-advanced-iteration/async-iterators-generators/</guid>
+      <description>Async iteration and generators Asynchronous iteration allow us to iterate over data that comes asynchronously, on-demand. Like, for instance, when we download something chunk-by-chunk over a network. And asynchronous generators make it even more convenient.
+Let&amp;rsquo;s see a simple example first, to grasp the syntax, and then review a real-life use case.
+Recall iterables Let&amp;rsquo;s recall the topic about iterables.
+The idea is that we have an object, such as range here:</description>
+    </item>
+    
+    <item>
+      <title>Bit Operations</title>
+      <link>/books/c/logicaloperators/bit-operations/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/bit-operations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Char-signed,unsigned</title>
+      <link>/books/c/data_types_revisited/char-signed-unsigned/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/char-signed-unsigned/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Class inheritance</title>
+      <link>/books/javascript/classes/class-inheritance/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/classes/class-inheritance/</guid>
+      <description>Class inheritance Class inheritance is a way for one class to extend another class.
+So we can create new functionality on top of the existing.
+The “extends” keyword Let’s say we have class Animal: 1 class Animal { 2 constructor(name) { 3 this.speed = 0; 4 this.name = name; 5 } 6 run(speed) { 7 this.speed = speed; 8 alert(`${this.name}runs with speed ${this.speed}.`); 9 } 10 stop() { 11 this.speed = 0; 12 alert(`${this.</description>
+    </item>
+    
+    <item>
+      <title>Code structure</title>
+      <link>/books/javascript/javascript-fundamentals/code-structure/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/code-structure/</guid>
+      <description>Code structure The first thing we&amp;rsquo;ll study is the building blocks of code.
+Statements Statements are syntax constructs and commands that perform actions.
+We&amp;rsquo;ve already seen a statement, alert(&#39;Hello, world!&#39;), which shows the message &amp;ldquo;Hello, world!&amp;rdquo;.
+We can have as many statements in our code as we want. Statements can be separated with a semicolon.
+For example, here we split &amp;ldquo;Hello World&amp;rdquo; into two alerts:
+alert(&amp;#39;Hello&amp;#39;); alert(&amp;#39;World&amp;#39;); Usually, statements are written on separate lines to make the code more readable:</description>
+    </item>
+    
+    <item>
+      <title>Coding Style</title>
+      <link>/books/javascript/code-quality/coding-style/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/code-quality/coding-style/</guid>
+      <description>Coding Style Our code must be as clean and easy to read as possible.
+That is actually the art of programming &amp;ndash; to take a complex task and code it in a way that is both correct and human-readable. A good code style greatly assists in that.
+Syntax Here is a cheat sheet with some suggested rules (see below for more details):
+Now let&amp;rsquo;s discuss the rules and reasons for them in detail.</description>
+    </item>
+    
+    <item>
+      <title>Console I/O Functions</title>
+      <link>/books/c/consoleio/console-io-functions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/consoleio/console-io-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Counting Character, Tabs,Spaces,..</title>
+      <link>/books/c/fileio/counting-characters-tabs-spaces/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/fileio/counting-characters-tabs-spaces/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Custom errors, extending Error</title>
+      <link>/books/javascript/error-handling/custom-errors/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/error-handling/custom-errors/</guid>
+      <description>Custom errors, extending Error When we develop something, we often need our own error classes to reflect specific things that may go wrong in our tasks. For errors in network operations we may need HttpError, for database operations DbError, for searching operations NotFoundError and so on.
+Our errors should support basic error properties like message, name and, preferably, stack. But they also may have other properties of their own, e.g. HttpError objects may have a statusCode property with a value like404or 403 or 500.</description>
+    </item>
+    
+    <item>
+      <title>Detecting Errors in Reading/Writing</title>
+      <link>/books/c/more-issues-in-input-output/detecting-errors-in-reading-writing/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/more-issues-in-input-output/detecting-errors-in-reading-writing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eval: run a code string</title>
+      <link>/books/javascript/miscellaneous/eval-run-code-string/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/miscellaneous/eval-run-code-string/</guid>
+      <description>Eval: run a code string The built-in eval function allows to execute a string of code.
+The syntax is:
+let result = eval(code); For example:
+let code = &amp;#39;alert(&amp;#34;Hello&amp;#34;)&amp;#39;; eval(code); // Hello A string of code may be long, contain line breaks, function declarations, variables and so on.
+The result of eval is the result of the last statement.
+For example:
+let value = eval(&amp;#39;1+1&amp;#39;); alert(value); // 2 let value = eval(&amp;#39;let i = 0; ++i&amp;#39;); alert(value); // 1 The eval&amp;rsquo;ed code is executed in the current lexical environment, so it can see outer variables:</description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/loopcontrol/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/loopcontrol/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/recursion/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/recursion/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Export and Import</title>
+      <link>/books/javascript/modules/export-import/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/modules/export-import/</guid>
+      <description>Export and Import Export and import directives have several syntax variants.
+In the previous article we saw a simple use, now let&amp;rsquo;s explore more examples.
+Export before declarations We can label any declaration as exported by placing export before it, be it a variable, function or a class.
+For instance, here all exports are valid:
+// export an array *!*export*/!* let months = [&amp;#39;Jan&amp;#39;, &amp;#39;Feb&amp;#39;, &amp;#39;Mar&amp;#39;,&amp;#39;Apr&amp;#39;, &amp;#39;Aug&amp;#39;, &amp;#39;Sep&amp;#39;, &amp;#39;Oct&amp;#39;, &amp;#39;Nov&amp;#39;, &amp;#39;Dec&amp;#39;]; // export a constant *!</description>
+    </item>
+    
+    <item>
+      <title>F.prototype</title>
+      <link>/books/javascript/prototypes-inheritance/function-prototype/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/prototypes-inheritance/function-prototype/</guid>
+      <description>F.prototype Remember, new objects can be created with a constructor function, like new F().
+If F.prototype is an object, then the new operator uses it to set [[Prototype]] for the new object.
+JavaScript had prototypal inheritance from the beginning. It was one of the core features of the language. But in the old times, there was no direct access to it. The only thing that worked reliably was a `&amp;quot;prototype&amp;quot;` property of the constructor function, described in this chapter.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started Width C</title>
+      <link>/books/c/introduction/getting-started-width-c/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/getting-started-width-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Macro Expansion</title>
+      <link>/books/c/the-c-preprocessor/macro-expansion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/macro-expansion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Manuals and specifications</title>
+      <link>/books/javascript/introduction/manuals-and-specifications/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/introduction/manuals-and-specifications/</guid>
+      <description>Manuals and specifications This book is a tutorial. It aims to help you gradually learn the language. But once you&amp;rsquo;re familiar with the basics, you&amp;rsquo;ll need other sources.
+Specification The ECMA-262 specification contains the most in-depth, detailed and formalized information about JavaScript. It defines the language.
+But being that formalized, it&amp;rsquo;s difficult to understand at first. So if you need the most trustworthy source of information about the language details, the specification is the right place.</description>
+    </item>
+    
+    <item>
+      <title>More about Strings</title>
+      <link>/books/c/strings/more-about-strings/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/strings/more-about-strings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>More on Arrays</title>
+      <link>/books/c/array/more-on-array/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/array/more-on-array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Numbers</title>
+      <link>/books/javascript/data-types/number/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/number/</guid>
+      <description>Numbers In modern JavaScript, there are two types of numbers:
+  Regular numbers in JavaScript are stored in 64-bit format IEEE-754, also known as &amp;ldquo;double precision floating point numbers&amp;rdquo;. These are numbers that we&amp;rsquo;re using most of the time, and we&amp;rsquo;ll talk about them in this chapter.
+  BigInt numbers, to represent integers of arbitrary length. They are sometimes needed, because a regular number can&amp;rsquo;t exceed 253 or be less than -253.</description>
+    </item>
+    
+    <item>
+      <title>Object references and copying</title>
+      <link>/books/javascript/objects/object-references-and-copying/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/object-references-and-copying/</guid>
+      <description>Object references and copying One of the fundamental differences of objects versus primitives is that objects are stored and copied &amp;ldquo;by reference&amp;rdquo;, whereas primitive values: strings, numbers, booleans, etc &amp;ndash; are always copied &amp;ldquo;as a whole value&amp;rdquo;.
+That&amp;rsquo;s easy to understand if we look a bit under the hood of what happens when we copy a value.
+Let&amp;rsquo;s start with a primitive, such as a string.
+Here we put a copy of message into phrase:</description>
+    </item>
+    
+    <item>
+      <title>Passing Values between Functions</title>
+      <link>/books/c/function/passing-values-between-functions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/passing-values-between-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Promise</title>
+      <link>/books/javascript/promises-async-await/promise-basics/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/promise-basics/</guid>
+      <description>Promise Imagine that you&amp;rsquo;re a top singer, and fans ask day and night for your upcoming song.
+To get some relief, you promise to send it to them when it&amp;rsquo;s published. You give your fans a list. They can fill in their email addresses, so that when the song becomes available, all subscribed parties instantly receive it. And even if something goes very wrong, say, a fire in the studio, so that you can&amp;rsquo;t publish the song, they will still be notified.</description>
+    </item>
+    
+    <item>
+      <title>Renaming Data Types with typedef</title>
+      <link>/books/c/miscelaneous-features/reanaming-data-types-with-typedef/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/reanaming-data-types-with-typedef/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rest parameters and spread syntax</title>
+      <link>/books/javascript/advanced-working-with-functions/rest-parameters-spread/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/rest-parameters-spread/</guid>
+      <description>Rest parameters and spread syntax Many JavaScript built-in functions support an arbitrary number of arguments.
+For instance:
+ Math.max(arg1, arg2, ..., argN) &amp;ndash; returns the greatest of the arguments. Object.assign(dest, src1, ..., srcN) &amp;ndash; copies properties from src1..N into dest. &amp;hellip;and so on.  In this chapter we&amp;rsquo;ll learn how to do the same. And also, how to pass arrays to such functions as parameters.
+Rest parameters ... A function can be called with any number of arguments, no matter how it is defined.</description>
+    </item>
+    
+    <item>
+      <title>switc versus if-else Ladder</title>
+      <link>/books/c/casecontrol/switch-verses-if-else-ladder/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/switch-verses-if-else-ladder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The break statement</title>
+      <link>/books/c/morecomplexrepetitions/the-break-statement/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/morecomplexrepetitions/the-break-statement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Conditional Operators</title>
+      <link>/books/c/more_complex_decision_making/the-conditional-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/more_complex_decision_making/the-conditional-operators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The First C Program</title>
+      <link>/books/c/c-instructions/type-declaration-instruction/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/c-instructions/type-declaration-instruction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The First C Program</title>
+      <link>/books/c/casecontrol/c-instructions/type-declaration-instruction/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/c-instructions/type-declaration-instruction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The if-else statement</title>
+      <link>/books/c/decisioncontrol/the-if-else-statement/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/decisioncontrol/the-if-else-statement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The if-else statement</title>
+      <link>/books/c/function/decision-control-instruction/the-if-else-statement/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/decision-control-instruction/the-if-else-statement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The while Loop</title>
+      <link>/books/c/loopcontrol/the-while-loop/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/loopcontrol/the-while-loop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3-D Array</title>
+      <link>/books/c/multidimensionalarray/3-d-array/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multidimensionalarray/3-d-array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A File-Copy Program</title>
+      <link>/books/c/fileio/a-file-copy-program/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/fileio/a-file-copy-program/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Appendix C-Chasing the Bugs</title>
+      <link>/books/c/interview-faqs/appendix-c-chasing-the-bugs/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/appendix-c-chasing-the-bugs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arithmetic Instruction</title>
+      <link>/books/c/c-instructions/arithmetic-instruction/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/c-instructions/arithmetic-instruction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arithmetic Instruction</title>
+      <link>/books/c/casecontrol/c-instructions/arithmetic-instruction/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/c-instructions/arithmetic-instruction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code editors</title>
+      <link>/books/javascript/introduction/code-editors/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/introduction/code-editors/</guid>
+      <description>Code editors A code editor is the place where programmers spend most of their time.
+There are two main types of code editors: IDEs and lightweight editors. Many people use one tool of each type.
+IDE The term IDE (Integrated Development Environment) refers to a powerful editor with many features that usually operates on a &amp;ldquo;whole project.&amp;rdquo; As the name suggests, it&amp;rsquo;s not just an editor, but a full-scale &amp;ldquo;development environment.</description>
+    </item>
+    
+    <item>
+      <title>Comments</title>
+      <link>/books/javascript/code-quality/comments/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/code-quality/comments/</guid>
+      <description>Comments As we know from the chapter info:structure, comments can be single-line: starting with // and multiline: /* ... */.
+We normally use them to describe how and why the code works.
+At first sight, commenting might be obvious, but novices in programming often use them wrongly.
+Bad comments Novices tend to use comments to explain &amp;ldquo;what is going on in the code&amp;rdquo;. Like this:
+// This code will do this thing (.</description>
+    </item>
+    
+    <item>
+      <title>Currying</title>
+      <link>/books/javascript/miscellaneous/currying/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/miscellaneous/currying/</guid>
+      <description>Currying Currying is an advanced technique of working with functions. It&amp;rsquo;s used not only in JavaScript, but in other languages as well.
+Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
+Currying doesn&amp;rsquo;t call a function. It just transforms it.
+Let&amp;rsquo;s see an example first, to better understand what we&amp;rsquo;re talking about, and then practical applications.
+We&amp;rsquo;ll create a helper function curry(f) that performs currying for a two-argument f.</description>
+    </item>
+    
+    <item>
+      <title>Dynamic imports</title>
+      <link>/books/javascript/modules/modules-dynamic-import/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/modules/modules-dynamic-import/</guid>
+      <description>Dynamic imports Export and import statements that we covered in previous chapters are called &amp;ldquo;static&amp;rdquo;. The syntax is very simple and strict.
+First, we can&amp;rsquo;t dynamically generate any parameters of import.
+The module path must be a primitive string, can&amp;rsquo;t be a function call. This won&amp;rsquo;t work:
+import ... from *!*getModuleName()*/!*; // Error, only from &amp;#34;string&amp;#34; is allowed Second, we can&amp;rsquo;t import conditionally or at run-time:
+if(...) { import ...; // Error, not allowed!</description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/consoleio/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/consoleio/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/more_complex_decision_making/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/more_complex_decision_making/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>File Inclusion</title>
+      <link>/books/c/the-c-preprocessor/file-inclusion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/file-inclusion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Garbage collection</title>
+      <link>/books/javascript/objects/garbage-collection/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/garbage-collection/</guid>
+      <description>Garbage collection Memory management in JavaScript is performed automatically and invisibly to us. We create primitives, objects, functions&amp;hellip; All that takes memory.
+What happens when something is not needed any more? How does the JavaScript engine discover it and clean it up?
+Reachability The main concept of memory management in JavaScript is reachability.
+Simply put, &amp;ldquo;reachable&amp;rdquo; values are those that are accessible or usable somehow. They are guaranteed to be stored in memory.</description>
+    </item>
+    
+    <item>
+      <title>Intricacies of Structures</title>
+      <link>/books/c/structures/intricacies-of-structures/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/intricacies-of-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/loopcontrol/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/loopcontrol/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/recursion/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/recursion/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Limitation of Array of Pointers to Strings</title>
+      <link>/books/c/multistrings/limitation-of-array-of-pointers-to-strings/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multistrings/limitation-of-array-of-pointers-to-strings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multiple Staetments Within if-else</title>
+      <link>/books/c/decisioncontrol/multiple-statemets-within-if-else/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/decisioncontrol/multiple-statemets-within-if-else/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multiple Staetments Within if-else</title>
+      <link>/books/c/function/decision-control-instruction/multiple-statemets-within-if-else/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/decision-control-instruction/multiple-statemets-within-if-else/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Native prototypes</title>
+      <link>/books/javascript/prototypes-inheritance/nativeprototypes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/prototypes-inheritance/nativeprototypes/</guid>
+      <description>Native prototypes The &amp;quot;prototype&amp;quot; property is widely used by the core of JavaScript itself. All built-in constructor functions use it.
+First we&amp;rsquo;ll see at the details, and then how to use it for adding new capabilities to built-in objects.
+Object.prototype Let&amp;rsquo;s say we output an empty object:
+let obj = {}; alert( obj ); // &amp;#34;[object Object]&amp;#34; ? Where&amp;rsquo;s the code that generates the string &amp;quot;[object Object]&amp;quot;? That&amp;rsquo;s a built-in toString method, but where is it?</description>
+    </item>
+    
+    <item>
+      <title>Ones Complement Operator</title>
+      <link>/books/c/logicaloperators/ones-complement-operator/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/ones-complement-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Order of Passing Arguments</title>
+      <link>/books/c/function/order-of-passing-arguments/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/order-of-passing-arguments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pointer notation</title>
+      <link>/books/c/pointers/pointer-notation/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/pointers/pointer-notation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pointers and Arrays</title>
+      <link>/books/c/array/pointers-and-arrays/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/array/pointers-and-arrays/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pointers and String</title>
+      <link>/books/c/strings/pointers-and-string/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/strings/pointers-and-string/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Promises chaining</title>
+      <link>/books/javascript/promises-async-await/promises-chaining/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/promises-chaining/</guid>
+      <description>Promises chaining Let&amp;rsquo;s return to the problem mentioned in the chapter info:callbacks: we have a sequence of asynchronous tasks to be performed one after another — for instance, loading scripts. How can we code it well?
+Promises provide a couple of recipes to do that.
+In this chapter we cover promise chaining.
+It looks like this:
+new Promise(function(resolve, reject) { setTimeout(() =&amp;gt; resolve(1), 1000); // (*)  }).then(function(result) { // (**)  alert(result); // 1  return result * 2; }).</description>
+    </item>
+    
+    <item>
+      <title>Reals-float,double,long double</title>
+      <link>/books/c/data_types_revisited/reals-float-double-long-double/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/reals-float-double-long-double/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Standard File Pointers</title>
+      <link>/books/c/more-issues-in-input-output/standard-file-pointers/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/more-issues-in-input-output/standard-file-pointers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Static properties and methods</title>
+      <link>/books/javascript/classes/static-properties-methods/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/classes/static-properties-methods/</guid>
+      <description>Static properties and methods We can also assign a method to the class function itself, not to its &amp;quot;prototype&amp;quot;. Such methods are called static.
+In a class, they are prepended by static keyword, like this:
+class User { static staticMethod() { alert(this === User); } } User.staticMethod(); // true  That actually does the same as assigning it as a property directly:
+class User { } User.staticMethod = function() { alert(this === User); }; User.</description>
+    </item>
+    
+    <item>
+      <title>Strings</title>
+      <link>/books/javascript/data-types/string/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/string/</guid>
+      <description>Strings In JavaScript, the textual data is stored as strings. There is no separate type for a single character.
+The internal format for strings is always UTF-16, it is not tied to the page encoding.
+Quotes Let&amp;rsquo;s recall the kinds of quotes.
+Strings can be enclosed within either single quotes, double quotes or backticks:
+let single = &amp;#39;single-quoted&amp;#39;; let double = &amp;#34;double-quoted&amp;#34;; let backticks = `backticks`; Single and double quotes are essentially the same.</description>
+    </item>
+    
+    <item>
+      <title>The continue Statement</title>
+      <link>/books/c/morecomplexrepetitions/the-continuestatement/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/morecomplexrepetitions/the-continuestatement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The First C Program</title>
+      <link>/books/c/introduction/the-first-c-program/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/the-first-c-program/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The gota Keyword</title>
+      <link>/books/c/casecontrol/the-gota-keyword/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/the-gota-keyword/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The modern mode, &#34;use strict&#34;</title>
+      <link>/books/javascript/javascript-fundamentals/the-modern-mode/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/the-modern-mode/</guid>
+      <description>The modern mode, &amp;ldquo;use strict&amp;rdquo; For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn&amp;rsquo;t change.
+That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript&amp;rsquo;s creators got stuck in the language forever.
+This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones.</description>
+    </item>
+    
+    <item>
+      <title>Typecasting</title>
+      <link>/books/c/miscelaneous-features/typecasting/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/typecasting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Variable scope, closure</title>
+      <link>/books/javascript/advanced-working-with-functions/closure/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/closure/</guid>
+      <description>Variable scope, closure JavaScript is a very function-oriented language. It gives us a lot of freedom. A function can be created at any moment, passed as an argument to another function, and then called from a totally different place of code later.
+We already know that a function can access variables outside of it (&amp;ldquo;outer&amp;rdquo; variables).
+But what happens if outer variables change since a function is created? Will the function get newer values or the old ones?</description>
+    </item>
+    
+    <item>
+      <title>Variables</title>
+      <link>/books/javascript/advanced-working-with-functions/variables/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/variables/</guid>
+      <description>Variables Most of the time, a JavaScript application needs to work with information. Here are two examples:
+ An online shop &amp;ndash; the information might include goods being sold and a shopping cart. A chat application &amp;ndash; the information might include users, messages, and much more.  Variables are used to store this information.
+A variable A variable is a &amp;ldquo;named storage&amp;rdquo; for data. We can use variables to store goodies, visitors, and other data.</description>
+    </item>
+    
+    <item>
+      <title>A Few More Issue</title>
+      <link>/books/c/data_types_revisited/a-few-more-issue/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/a-few-more-issue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Appendix D-ASCII Chart</title>
+      <link>/books/c/interview-faqs/appendix-d-ascii-chart/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/appendix-d-ascii-chart/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arrays</title>
+      <link>/books/javascript/data-types/array/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/array/</guid>
+      <description>Arrays Objects allow you to store keyed collections of values. That&amp;rsquo;s fine.
+But quite often we find that we need an ordered collection, where we have a 1st, a 2nd, a 3rd element and so on. For example, we need that to store a list of something: users, goods, HTML elements etc.
+It is not convenient to use an object here, because it provides no methods to manage the order of elements.</description>
+    </item>
+    
+    <item>
+      <title>Bcak to Function Calls</title>
+      <link>/books/c/pointers/back-to-function-call/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/pointers/back-to-function-call/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bit Fields</title>
+      <link>/books/c/miscelaneous-features/bit-fields/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/bit-fields/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conditioal Compilation</title>
+      <link>/books/c/the-c-preprocessor/conditional-compilation/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/conditional-compilation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Developer console</title>
+      <link>/books/javascript/introduction/devtools/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/introduction/devtools/</guid>
+      <description>Developer console Code is prone to errors. You will quite likely make errors&amp;hellip; Oh, what am I talking about? You are absolutely going to make errors, at least if you&amp;rsquo;re a human, not a robot.
+But in the browser, users don&amp;rsquo;t see errors by default. So, if something goes wrong in the script, we won&amp;rsquo;t see what&amp;rsquo;s broken and can&amp;rsquo;t fix it.
+To see errors and get a lot of other useful information about scripts, &amp;ldquo;developer tools&amp;rdquo; have been embedded in browsers.</description>
+    </item>
+    
+    <item>
+      <title>Error handling with promises</title>
+      <link>/books/javascript/promises-async-await/promise-error-handling/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/promise-error-handling/</guid>
+      <description>Error handling with promises Promise chains are great at error handling. When a promise rejects, the control jumps to the closest rejection handler. That&amp;rsquo;s very convenient in practice.
+For instance, in the code below the URL to fetch is wrong (no such site) and .catch handles the error:
+*!* fetch(&amp;#39;https://no-such-server.blabla&amp;#39;) // rejects */!* .then(response =&amp;gt; response.json()) .catch(err =&amp;gt; alert(err)) // TypeError: failed to fetch (the text may vary) As you can see, the .</description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/casecontrol/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/multidimensionalarray/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multidimensionalarray/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/multistrings/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multistrings/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>File Opening Modes</title>
+      <link>/books/c/fileio/file-opening-modes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/fileio/file-opening-modes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flexible Arrays</title>
+      <link>/books/c/array/flexible-arrays/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/array/flexible-arrays/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I/O Redirection</title>
+      <link>/books/c/more-issues-in-input-output/io-redirection/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/more-issues-in-input-output/io-redirection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Integer and Float Conversion</title>
+      <link>/books/c/c-instructions/integer-and-float-conversions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/c-instructions/integer-and-float-conversions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Integer and Float Conversion</title>
+      <link>/books/c/casecontrol/c-instructions/integer-and-float-conversions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/c-instructions/integer-and-float-conversions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/consoleio/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/consoleio/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/more_complex_decision_making/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/more_complex_decision_making/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nested if-elses</title>
+      <link>/books/c/decisioncontrol/nested-if-else/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/decisioncontrol/nested-if-else/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nested if-elses</title>
+      <link>/books/c/function/decision-control-instruction/nested-if-else/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/decision-control-instruction/nested-if-else/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ninja code</title>
+      <link>/books/javascript/code-quality/ninja-code/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/code-quality/ninja-code/</guid>
+      <description>Ninja code Learning without thought is labor lost; thought without learning is perilous. Programmer ninjas of the past used these tricks to sharpen the mind of code maintainers.
+Code review gurus look for them in test tasks.
+Novice developers sometimes use them even better than programmer ninjas.
+Read them carefully and find out who you are &amp;ndash; a ninja, a novice, or maybe a code reviewer?
+Many try to follow ninja paths.</description>
+    </item>
+    
+    <item>
+      <title>Object methods, &#34;this&#34;</title>
+      <link>/books/javascript/objects/object-methods/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/object-methods/</guid>
+      <description>Object methods, &amp;ldquo;this&amp;rdquo; Objects are usually created to represent entities of the real world, like users, orders and so on:
+let user = { name: &amp;#34;John&amp;#34;, age: 30 }; And, in the real world, a user can act: select something from the shopping cart, login, logout etc.
+Actions are represented in JavaScript by functions in properties.
+Method examples For a start, let&amp;rsquo;s teach the user to say hello:
+let user = { name: &amp;#34;John&amp;#34;, age: 30 }; *!</description>
+    </item>
+    
+    <item>
+      <title>Private and protected properties and methods</title>
+      <link>/books/javascript/classes/private-protected-properties-methods/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/classes/private-protected-properties-methods/</guid>
+      <description>Private and protected properties and methods One of the most important principles of object oriented programming – delimiting internal interface from the external one.
+That is “a must” practice in developing anything more complex than a “hello world” app.
+To understand this, let’s break away from development and turn our eyes into the real world.
+Usually, devices that we’re using are quite complex. But delimiting the internal interface from the external one allows to use them without problems.</description>
+    </item>
+    
+    <item>
+      <title>Prototype methods, objects without __proto__</title>
+      <link>/books/javascript/prototypes-inheritance/prototypemethods/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/prototypes-inheritance/prototypemethods/</guid>
+      <description>Prototype methods, objects without proto In the first chapter of this section, we mentioned that there are modern methods to setup a prototype.
+The __proto__ is considered outdated and somewhat deprecated (in browser-only part of the JavaScript standard).
+The modern methods are:
+ Object.create(proto, [descriptors]) &amp;ndash; creates an empty object with given proto as [[Prototype]] and optional property descriptors. Object.getPrototypeOf(obj) &amp;ndash; returns the [[Prototype]] of obj. Object.setPrototypeOf(obj, proto) &amp;ndash; sets the [[Prototype]] of obj to proto.</description>
+    </item>
+    
+    <item>
+      <title>Receving Input</title>
+      <link>/books/c/introduction/receiving-input/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/receiving-input/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reference Type</title>
+      <link>/books/javascript/miscellaneous/reference-type/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/miscellaneous/reference-type/</guid>
+      <description>Reference Type This article covers an advanced topic, to understand certain edge-cases better. It&#39;s not important. Many experienced developers live fine without knowing it. Read on if you want to know how things work under the hood. A dynamically evaluated method call can lose this.
+For instance:
+let user = { name: &amp;#34;John&amp;#34;, hi() { alert(this.name); }, bye() { alert(&amp;#34;Bye&amp;#34;); } }; user.hi(); // works  // now let&amp;#39;s call user.</description>
+    </item>
+    
+    <item>
+      <title>Right Shift and Left Shift Operators</title>
+      <link>/books/c/logicaloperators/right-shift-and-left-shift-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/right-shift-and-left-shift-operators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Standard Library Strin Functions</title>
+      <link>/books/c/strings/standard-library-string-functions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/strings/standard-library-string-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The do-while Loop</title>
+      <link>/books/c/morecomplexrepetitions/the-do-while-loop/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/morecomplexrepetitions/the-do-while-loop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The old &#34;var&#34;</title>
+      <link>/books/javascript/javascript-fundamentals/var/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/var/</guid>
+      <description>The old &amp;ldquo;var&amp;rdquo; The information in this article is useful for understanding old scripts. That&#39;s not how we write a new code. In the very first chapter about variables, we mentioned three ways of variable declaration:
+ let const var  The var declaration is similar to let. Most of the time we can replace let by var or vice-versa and expect things to work:
+var message = &amp;#34;Hi&amp;#34;; alert(message); // Hi But internally var is a very different beast, that originates from very old times.</description>
+    </item>
+    
+    <item>
+      <title>Using Library Functions</title>
+      <link>/books/c/function/using-library-functions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/using-library-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Word of Caution</title>
+      <link>/books/c/decisioncontrol/a-word-of-causion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/decisioncontrol/a-word-of-causion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Word of Caution</title>
+      <link>/books/c/function/decision-control-instruction/a-word-of-causion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/decision-control-instruction/a-word-of-causion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Array methods</title>
+      <link>/books/javascript/data-types/array-methods/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/array-methods/</guid>
+      <description>Array methods Arrays provide a lot of methods. To make things easier, in this chapter they are split into groups.
+Add/remove items We already know methods that add and remove items from the beginning or the end:
+ arr.push(...items) &amp;ndash; adds items to the end, arr.pop() &amp;ndash; extracts an item from the end, arr.shift() &amp;ndash; extracts an item from the beginning, arr.unshift(...items) &amp;ndash; adds items to the beginning.  Here are a few others.</description>
+    </item>
+    
+    <item>
+      <title>Automated testing with Mocha</title>
+      <link>/books/javascript/code-quality/automatted-testing-with-mocha/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/code-quality/automatted-testing-with-mocha/</guid>
+      <description>Automated testing with Mocha Automated testing will be used in further tasks, and it&amp;rsquo;s also widely used in real projects.
+Why do we need tests? When we write a function, we can usually imagine what it should do: which parameters give which results.
+During development, we can check the function by running it and comparing the outcome with the expected one. For instance, we can do it in the console.</description>
+    </item>
+    
+    <item>
+      <title>BigInt</title>
+      <link>/books/javascript/miscellaneous/bigint/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/miscellaneous/bigint/</guid>
+      <description>BigInt [recent caniuse=&amp;ldquo;bigint&amp;rdquo;]
+BigInt is a special numeric type that provides support for integers of arbitrary length.
+A bigint is created by appending n to the end of an integer literal or by calling the function BigInt that creates bigints from strings, numbers etc.
+const bigint = 1234567890123456789012345678901234567890n; const sameBigint = BigInt(&amp;#34;1234567890123456789012345678901234567890&amp;#34;); const bigintFromNumber = BigInt(10); // same as 10n Math operators BigInt can mostly be used like a regular number, for example:</description>
+    </item>
+    
+    <item>
+      <title>Bitwise AND, OR and XOR Operators</title>
+      <link>/books/c/logicaloperators/bitwise-and-or-and-xor-operator/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/bitwise-and-or-and-xor-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conclusions</title>
+      <link>/books/c/pointers/coclusions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/pointers/coclusions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Constructor, operator &#34;new&#34;</title>
+      <link>/books/javascript/objects/constructor-operator-new/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/constructor-operator-new/</guid>
+      <description>Constructor, operator &amp;ldquo;new&amp;rdquo; The regular {...} syntax allows to create one object. But often we need to create many similar objects, like multiple users or menu items and so on.
+That can be done using constructor functions and the &amp;quot;new&amp;quot; operator.
+Constructor function Constructor functions technically are regular functions. There are two conventions though:
+ They are named with capital letter first. They should be executed only with &amp;quot;new&amp;quot; operator.  For instance:</description>
+    </item>
+    
+    <item>
+      <title>Data types</title>
+      <link>/books/javascript/javascript-fundamentals/datatypes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/datatypes/</guid>
+      <description>Data types A value in JavaScript is always of a certain type. For example, a string or a number.
+There are eight basic data types in JavaScript. Here, we&amp;rsquo;ll cover them in general and in the next chapters we&amp;rsquo;ll talk about each of them in detail.
+We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:</description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/array/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/array/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/introduction/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/more-issues-in-input-output/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/more-issues-in-input-output/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/strings/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/strings/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/structures/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Extending built-in classes</title>
+      <link>/books/javascript/classes/extend-natives/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/classes/extend-natives/</guid>
+      <description>Extending built-in classes Built-in classes like Array, Map and others are extendable also.
+For instance, here PowerArray inherits from the native Array:
+// add one more method to it (can do more)  class PowerArray extends Array { isEmpty() { return this.length === 0; } } let arr = new PowerArray(1, 2, 5, 10, 50); alert(arr.isEmpty()); // false  let filteredArr = arr.filter(item =&amp;gt; item &amp;gt;= 10); alert(filteredArr); // 10, 50  alert(filteredArr.</description>
+    </item>
+    
+    <item>
+      <title>Global object</title>
+      <link>/books/javascript/advanced-working-with-functions/global-object/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/global-object/</guid>
+      <description>Global object The global object provides variables and functions that are available anywhere. By default, those that are built into the language or the environment.
+In a browser it is named window, for Node.js it is global, for other environments it may have another name.
+Recently, globalThis was added to the language, as a standardized name for a global object, that should be supported across all environments. It&amp;rsquo;s supported in all major browsers.</description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/casecontrol/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/multidimensionalarray/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multidimensionalarray/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/multistrings/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/multistrings/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>One Dicey Issue</title>
+      <link>/books/c/function/one-dicey-issue/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/one-dicey-issue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Periodic Tests 1 to 4</title>
+      <link>/books/c/interview-faqs/periodic-tests-1-to-4/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/periodic-tests-1-to-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pointers to Functions</title>
+      <link>/books/c/miscelaneous-features/pointers-to-functions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/pointers-to-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Promise API</title>
+      <link>/books/javascript/promises-async-await/promise-api/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/promise-api/</guid>
+      <description>Promise API There are 6 static methods in the Promise class. We&amp;rsquo;ll quickly cover their use cases here.
+Promise.all Let&amp;rsquo;s say we want many promises to execute in parallel and wait until all of them are ready.
+For instance, download several URLs in parallel and process the content once they are all done.
+That&amp;rsquo;s what Promise.all is for.
+The syntax is:
+let promise = Promise.all([...promises...]); Promise.all takes an array of promises (it technically can be any iterable, but is usually an array) and returns a new promise.</description>
+    </item>
+    
+    <item>
+      <title>Storage Classes in C</title>
+      <link>/books/c/data_types_revisited/storage-classes-in-c/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/storage-classes-in-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>String (Line) I/O in Files</title>
+      <link>/books/c/fileio/string-line-io-in-files/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/fileio/string-line-io-in-files/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Odd Loop</title>
+      <link>/books/c/morecomplexrepetitions/the-odd-loop/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/morecomplexrepetitions/the-odd-loop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Type Conversion in Assignments</title>
+      <link>/books/c/c-instructions/type-conversion-in-assignments/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/c-instructions/type-conversion-in-assignments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Type Conversion in Assignments</title>
+      <link>/books/c/casecontrol/c-instructions/type-conversion-in-assignments/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/c-instructions/type-conversion-in-assignments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uses of Structure</title>
+      <link>/books/c/structures/uses-of-structure/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/uses-of-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Class checking: &#34;instanceof</title>
+      <link>/books/javascript/classes/instanceof/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/classes/instanceof/</guid>
+      <description>Class checking: &amp;ldquo;instanceof&amp;rdquo; The instanceof operator allows to check whether an object belongs to a certain class. It also takes inheritance into account.
+Such a check may be necessary in many cases. For example, it can be used for building a polymorphic function, the one that treats arguments differently depending on their type.
+The instanceof operator The syntax is:
+obj instanceof Class It returns true if obj belongs to the Class or a class inheriting from it.</description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/data_types_revisited/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/decisioncontrol/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/decisioncontrol/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/function/decision-control-instruction/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/decision-control-instruction/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/morecomplexrepetitions/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/morecomplexrepetitions/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/pointers/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/pointers/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Function object, NFE</title>
+      <link>/books/javascript/advanced-working-with-functions/function-object/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/function-object/</guid>
+      <description>Function object, NFE As we already know, a function in JavaScript is a value.
+Every value in JavaScript has a type. What type is a function?
+In JavaScript, functions are objects.
+A good way to imagine functions is as callable &amp;ldquo;action objects&amp;rdquo;. We can not only call them, but also treat them as objects: add/remove properties, pass by reference etc.
+The &amp;ldquo;name&amp;rdquo; property Function objects contain some useable properties.
+For instance, a function&amp;rsquo;s name is accessible as the &amp;ldquo;name&amp;rdquo; property:</description>
+    </item>
+    
+    <item>
+      <title>Functions Returning Pointers</title>
+      <link>/books/c/miscelaneous-features/functions-returning-pointers/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/functions-returning-pointers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hierarchy of Operations</title>
+      <link>/books/c/c-instructions/heirarchy-of-operations/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/c-instructions/heirarchy-of-operations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hierarchy of Operations</title>
+      <link>/books/c/casecontrol/c-instructions/heirarchy-of-operations/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/c-instructions/heirarchy-of-operations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Index</title>
+      <link>/books/c/interview-faqs/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Interaction: alert, prompt, confirm</title>
+      <link>/books/javascript/javascript-fundamentals/interaction-alert-prompt-confirm/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/interaction-alert-prompt-confirm/</guid>
+      <description>Interaction: alert, prompt, confirm As we&amp;rsquo;ll be using the browser as our demo environment, let&amp;rsquo;s see a couple of functions to interact with the user: alert, prompt and confirm.
+alert This one we&amp;rsquo;ve seen already. It shows a message and waits for the user to press &amp;ldquo;OK&amp;rdquo;.
+For example:
+alert(&amp;#34;Hello&amp;#34;); The mini-window with the message is called a modal window. The word &amp;ldquo;modal&amp;rdquo; means that the visitor can&amp;rsquo;t interact with the rest of the page, press other buttons, etc, until they have dealt with the window.</description>
+    </item>
+    
+    <item>
+      <title>Iterables</title>
+      <link>/books/javascript/data-types/iterable/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/iterable/</guid>
+      <description>Iterables Iterable objects are a generalization of arrays. That&amp;rsquo;s a concept that allows us to make any object useable in a for..of loop.
+Of course, Arrays are iterable. But there are many other built-in objects, that are iterable as well. For instance, strings are also iterable.
+If an object isn&amp;rsquo;t technically an array, but represents a collection (list, set) of something, then for..of is a great syntax to loop over it, so let&amp;rsquo;s see how to make it work.</description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/array/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/array/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/introduction/kan-notes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/introduction/kan-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/more-issues-in-input-output/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/more-issues-in-input-output/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/strings/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/strings/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/structures/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/structures/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Miscellaneous Directives</title>
+      <link>/books/c/the-c-preprocessor/miscellaneous-directives/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/miscellaneous-directives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optional chaining</title>
+      <link>/books/javascript/objects/optional-chaining/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/optional-chaining/</guid>
+      <description>Optional chaining &amp;lsquo;?.&amp;rsquo; [recent browser=&amp;ldquo;new&amp;rdquo;]
+The optional chaining ?. is a safe way to access nested object properties, even if an intermediate property doesn&amp;rsquo;t exist.
+The &amp;ldquo;non-existing property&amp;rdquo; problem If you&amp;rsquo;ve just started to read the tutorial and learn JavaScript, maybe the problem hasn&amp;rsquo;t touched you yet, but it&amp;rsquo;s quite common.
+As an example, let&amp;rsquo;s say we have user objects that hold the information about our users.
+Most of our users have addresses in user.</description>
+    </item>
+    
+    <item>
+      <title>Polyfills and transpilers</title>
+      <link>/books/javascript/code-quality/polyfills/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/code-quality/polyfills/</guid>
+      <description>Polyfills and transpilers The JavaScript language steadily evolves. New proposals to the language appear regularly, they are analyzed and, if considered worthy, are appended to the list at https://tc39.github.io/ecma262/ and then progress to the specification.
+Teams behind JavaScript engines have their own ideas about what to implement first. They may decide to implement proposals that are in draft and postpone things that are already in the spec, because they are less interesting or just harder to do.</description>
+    </item>
+    
+    <item>
+      <title>Promisification</title>
+      <link>/books/javascript/promises-async-await/promisify/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/promisify/</guid>
+      <description>Promisification &amp;ldquo;Promisification&amp;rdquo; is a long word for a simple transformation. It&amp;rsquo;s the conversion of a function that accepts a callback into a function that returns a promise.
+Such transformations are often required in real-life, as many functions and libraries are callback-based. But promises are more convenient, so it makes sense to promisify them.
+For better understanding, let&amp;rsquo;s see an example.
+For instance, we have loadScript(src, callback) from the chapter info:callbacks.</description>
+    </item>
+    
+    <item>
+      <title>Return Type of Function</title>
+      <link>/books/c/function/return-type-of-function/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/return-type-of-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Files and Binary Files</title>
+      <link>/books/c/fileio/text-files-and-binary-files/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/fileio/text-files-and-binary-files/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The showbits() Function</title>
+      <link>/books/c/logicaloperators/the-showbits-function/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/the-showbits-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Associativity of Operators</title>
+      <link>/books/c/c-instructions/associativity-of-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/c-instructions/associativity-of-operators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Associativity of Operators</title>
+      <link>/books/c/casecontrol/c-instructions/associativity-of-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/c-instructions/associativity-of-operators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bitwise Compound Assignment Operators</title>
+      <link>/books/c/logicaloperators/bitwise-compound-assignment-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/bitwise-compound-assignment-operators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Call by Value and Call by Reference</title>
+      <link>/books/c/pointers/call-by-value-and-call-by-reference/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/pointers/call-by-value-and-call-by-reference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/function/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Functions with Variable Number of Arguments</title>
+      <link>/books/c/miscelaneous-features/functions-with-variable-number-of-arguments/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/functions-with-variable-number-of-arguments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/data_types_revisited/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/data_types_revisited/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/decisioncontrol/kan-notes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/decisioncontrol/kan-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/function/decision-control-instruction/kan-notes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/decision-control-instruction/kan-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/morecomplexrepetitions/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/morecomplexrepetitions/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/pointers/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/pointers/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Map and Set</title>
+      <link>/books/javascript/data-types/map-set/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/map-set/</guid>
+      <description>Map and Set Till now, we&amp;rsquo;ve learned about the following complex data structures:
+ Objects are used for storing keyed collections. Arrays are used for storing ordered collections.  But that&amp;rsquo;s not enough for real life. That&amp;rsquo;s why Map and Set also exist.
+Map Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
+Methods and properties are:</description>
+    </item>
+    
+    <item>
+      <title>Microtasks</title>
+      <link>/books/javascript/promises-async-await/micro-task-queue/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/micro-task-queue/</guid>
+      <description>Microtasks Promise handlers .then/.catch/.finally are always asynchronous.
+Even when a Promise is immediately resolved, the code on the lines below .then/.catch/.finally will still execute before these handlers.
+Here&amp;rsquo;s a demo:
+let promise = Promise.resolve(); promise.then(() =&amp;gt; alert(&amp;#34;promise done!&amp;#34;)); alert(&amp;#34;code finished&amp;#34;); // this alert shows first  If you run it, you see code finished first, and then promise done!.
+That&amp;rsquo;s strange, because the promise is definitely done from the beginning.</description>
+    </item>
+    
+    <item>
+      <title>Mixins</title>
+      <link>/books/javascript/classes/mixins/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/classes/mixins/</guid>
+      <description>Mixins In JavaScript we can only inherit from a single object. There can be only one [[Prototype]] for an object. And a class may extend only one other class.
+But sometimes that feels limiting. For instance, we have a class StreetSweeper and a class Bicycle, and want to make their mix: a StreetSweepingBicycle.
+Or we have a class User and a class EventEmitter that implements event generation, and we’d like to add the functionality of EventEmitter to User, so that our users can emit events.</description>
+    </item>
+    
+    <item>
+      <title>Property flags and descriptors</title>
+      <link>/books/javascript/object-properties-configuration/property-descriptors/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/object-properties-configuration/property-descriptors/</guid>
+      <description>Property flags and descriptors As we know, objects can store properties.
+Until now, a property was a simple &amp;ldquo;key-value&amp;rdquo; pair to us. But an object property is actually a more flexible and powerful thing.
+In this chapter we&amp;rsquo;ll study additional configuration options, and in the next we&amp;rsquo;ll see how to invisibly turn them into getter/setter functions.
+Property flags Object properties, besides a value, have three special attributes (so-called &amp;ldquo;flags&amp;rdquo;):
+ writable &amp;ndash; if true, the value can be changed, otherwise it&amp;rsquo;s read-only.</description>
+    </item>
+    
+    <item>
+      <title>Property getters and setters</title>
+      <link>/books/javascript/object-properties-configuration/property-accessors/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/object-properties-configuration/property-accessors/</guid>
+      <description>Property getters and setters There are two kinds of object properties.
+The first kind is data properties. We already know how to work with them. All properties that we&amp;rsquo;ve been using until now were data properties.
+The second type of properties is something new. It&amp;rsquo;s accessor properties. They are essentially functions that execute on getting and setting a value, but look like regular properties to an external code.
+Getters and setters Accessor properties are represented by &amp;ldquo;getter&amp;rdquo; and &amp;ldquo;setter&amp;rdquo; methods.</description>
+    </item>
+    
+    <item>
+      <title>Record I/O in Files</title>
+      <link>/books/c/fileio/record-io-in-files/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/fileio/record-io-in-files/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symbol type</title>
+      <link>/books/javascript/objects/symbol-type/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/symbol-type/</guid>
+      <description>Symbol type By specification, object property keys may be either of string type, or of symbol type. Not numbers, not booleans, only strings or symbols, these two types.
+Till now we&amp;rsquo;ve been using only strings. Now let&amp;rsquo;s see the benefits that symbols can give us.
+Symbols A &amp;ldquo;symbol&amp;rdquo; represents a unique identifier.
+A value of this type can be created using Symbol():
+// id is a new symbol let id = Symbol(); Upon creation, we can give symbol a description (also called a symbol name), mostly useful for debugging purposes:</description>
+    </item>
+    
+    <item>
+      <title>The &#34;new Function&#34; syntax</title>
+      <link>/books/javascript/advanced-working-with-functions/new-function/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/new-function/</guid>
+      <description>The &amp;ldquo;new Function&amp;rdquo; syntax There&amp;rsquo;s one more way to create a function. It&amp;rsquo;s rarely used, but sometimes there&amp;rsquo;s no alternative.
+Syntax The syntax for creating a function:
+let func = new Function ([arg1, arg2, ...argN], functionBody); The function is created with the arguments arg1...argN and the given functionBody.
+It&amp;rsquo;s easier to understand by looking at an example. Here&amp;rsquo;s a function with two arguments:
+let sum = new Function(&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;return a + b&amp;#39;); alert( sum(1, 2) ); // 3 And here there&amp;rsquo;s a function without arguments, with only the function body:</description>
+    </item>
+    
+    <item>
+      <title>The Build Process</title>
+      <link>/books/c/the-c-preprocessor/the-build-process/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/the-build-process/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Type Conversions</title>
+      <link>/books/javascript/javascript-fundamentals/type-conversions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/type-conversions/</guid>
+      <description>Type Conversions Most of the time, operators and functions automatically convert the values given to them to the right type.
+For example, alert automatically converts any value to a string to show it. Mathematical operations convert values to numbers.
+There are also cases when we need to explicitly convert a value to the expected type.
+In this chapter, we won&#39;t cover objects. For now we&#39;ll just be talking about primitives. Later, after we learn about objects, in the chapter &amp;lt;info:object-toprimitive&amp;gt; we&#39;ll see how objects fit in.</description>
+    </item>
+    
+    <item>
+      <title>Async/await</title>
+      <link>/books/javascript/promises-async-await/async-await/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/promises-async-await/async-await/</guid>
+      <description>Async/await There&amp;rsquo;s a special syntax to work with promises in a more comfortable fashion, called &amp;ldquo;async/await&amp;rdquo;. It&amp;rsquo;s surprisingly easy to understand and use.
+Async functions Let&amp;rsquo;s start with the async keyword. It can be placed before a function, like this:
+async function f() { return 1; } The word &amp;ldquo;async&amp;rdquo; before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically.</description>
+    </item>
+    
+    <item>
+      <title>Basic operators, maths</title>
+      <link>/books/javascript/javascript-fundamentals/basic-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/basic-operators/</guid>
+      <description>Basic operators, maths We know many operators from school. They are things like addition +, multiplication *, subtraction -, and so on.
+In this chapter, we’ll start with simple operators, then concentrate on JavaScript-specific aspects, not covered by school arithmetic.
+Terms: &amp;ldquo;unary&amp;rdquo;, &amp;ldquo;binary&amp;rdquo;, &amp;ldquo;operand&amp;rdquo; Before we move on, let&amp;rsquo;s grasp some common terminology.
+  An operand &amp;ndash; is what operators are applied to. For instance, in the multiplication of 5 * 2 there are two operands: the left operand is 5 and the right operand is 2.</description>
+    </item>
+    
+    <item>
+      <title>Control Instructions</title>
+      <link>/books/c/c-instructions/control-instructions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/c-instructions/control-instructions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Control Instructions</title>
+      <link>/books/c/casecontrol/c-instructions/control-instructions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/c-instructions/control-instructions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/logicaloperators/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/the-c-preprocessor/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/function/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/function/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Low-Level File-Copy Program</title>
+      <link>/books/c/fileio/low-level-file-io/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/fileio/low-level-file-io/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Object to primitive conversion</title>
+      <link>/books/javascript/objects/object-to-primitive-conversion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/object-to-primitive-conversion/</guid>
+      <description>Object to primitive conversion What happens when objects are added obj1 + obj2, subtracted obj1 - obj2 or printed using alert(obj)?
+In that case, objects are auto-converted to primitives, and then the operation is carried out.
+In the chapter info:type-conversions we&amp;rsquo;ve seen the rules for numeric, string and boolean conversions of primitives. But we left a gap for objects. Now, as we know about methods and symbols it becomes possible to fill it.</description>
+    </item>
+    
+    <item>
+      <title>Scheduling: setTimeout and setInterval</title>
+      <link>/books/javascript/advanced-working-with-functions/settimeout-setinterval/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/settimeout-setinterval/</guid>
+      <description>Scheduling: setTimeout and setInterval We may decide to execute a function not right now, but at a certain time later. That&amp;rsquo;s called &amp;ldquo;scheduling a call&amp;rdquo;.
+There are two methods for it:
+ setTimeout allows us to run a function once after the interval of time. setInterval allows us to run a function repeatedly, starting after the interval of time, then repeating continuously at that interval.  These methods are not a part of JavaScript specification.</description>
+    </item>
+    
+    <item>
+      <title>Unions</title>
+      <link>/books/c/miscelaneous-features/unions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/unions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WeakMap and WeakSet</title>
+      <link>/books/javascript/data-types/weakmap-weakset/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/weakmap-weakset/</guid>
+      <description>WeakMap and WeakSet As we know from the chapter info:garbage-collection, JavaScript engine keeps a value in memory while it is &amp;ldquo;reachable&amp;rdquo; and can potentially be used.
+For instance:
+let john = { name: &amp;#34;John&amp;#34; }; // the object can be accessed, john is the reference to it  // overwrite the reference john = null; *!* // the object will be removed from memory */!* Usually, properties of an object or elements of an array or another data structure are considered reachable and kept in memory while that data structure is in memory.</description>
+    </item>
+    
+    <item>
+      <title>Comparisons</title>
+      <link>/books/javascript/javascript-fundamentals/comparison/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/comparison/</guid>
+      <description>Comparisons We know many comparison operators from maths.
+In JavaScript they are written like this:
+ Greater/less than: a &amp;gt; b, a &amp;lt; b. Greater/less than or equals: a &amp;gt;= b, a &amp;lt;= b. Equals: a == b, please note the double equality sign == means the equality test, while a single one a = b means an assignment. Not equals. In maths the notation is ≠, but in JavaScript it&amp;rsquo;s written as a !</description>
+    </item>
+    
+    <item>
+      <title>Decorators and forwarding, call/apply</title>
+      <link>/books/javascript/advanced-working-with-functions/call-apply-decorators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/call-apply-decorators/</guid>
+      <description>Decorators and forwarding, call/apply JavaScript gives exceptional flexibility when dealing with functions. They can be passed around, used as objects, and now we&amp;rsquo;ll see how to forward calls between them and decorate them.
+Transparent caching Let&amp;rsquo;s say we have a function slow(x) which is CPU-heavy, but its results are stable. In other words, for the same x it always returns the same result.
+If the function is called often, we may want to cache (remember) the results to avoid spending extra-time on recalculations.</description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/c-instructions/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/c-instructions/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/casecontrol/c-instructions/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/c-instructions/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/fileio/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/fileio/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/logicaloperators/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/logicaloperators/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/the-c-preprocessor/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/the-c-preprocessor/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Object.keys, values, entries</title>
+      <link>/books/javascript/data-types/keys-values-entries/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/keys-values-entries/</guid>
+      <description>Object.keys, values, entries Let&amp;rsquo;s step away from the individual data structures and talk about the iterations over them.
+In the previous chapter we saw methods map.keys(), map.values(), map.entries().
+These methods are generic, there is a common agreement to use them for data structures. If we ever create a data structure of our own, we should implement them too.
+They are supported for:
+ Map Set Array  Plain objects also support similar methods, but the syntax is a bit different.</description>
+    </item>
+    
+    <item>
+      <title>The Volatile Qualifier</title>
+      <link>/books/c/miscelaneous-features/the-volatile-qualifier/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/the-volatile-qualifier/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conditional branching</title>
+      <link>/books/javascript/javascript-fundamentals/conditional-branching/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/conditional-branching/</guid>
+      <description>Conditional branching: if, &amp;lsquo;?&amp;rsquo; Sometimes, we need to perform different actions based on different conditions.
+To do that, we can use the if statement and the conditional operator ?, that&amp;rsquo;s also called a &amp;ldquo;question mark&amp;rdquo; operator.
+The &amp;ldquo;if&amp;rdquo; statement The if(...) statement evaluates a condition in parentheses and, if the result is true, executes a block of code.
+For example:
+let year = prompt(&amp;#39;In which year was ECMAScript-2015 specification published?&amp;#39;, &amp;#39;&amp;#39;); *!</description>
+    </item>
+    
+    <item>
+      <title>Destructuring assignment</title>
+      <link>/books/javascript/data-types/destructuring-assignment/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/destructuring-assignment/</guid>
+      <description>Destructuring assignment The two most used data structures in JavaScript are Object and Array.
+ Objects allow us to create a single entity that stores data items by key. Arrays allow us to gather data items into an ordered list.  Although, when we pass those to a function, it may need not an object/array as a whole. It may need individual pieces.
+Destructuring assignment is a special syntax that allows us to &amp;ldquo;unpack&amp;rdquo; arrays or objects into a bunch of variables, as sometimes that&amp;rsquo;s more convenient.</description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/miscelaneous-features/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Function binding</title>
+      <link>/books/javascript/advanced-working-with-functions/bind/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/bind/</guid>
+      <description>Function binding When passing object methods as callbacks, for instance to setTimeout, there&amp;rsquo;s a known problem: &amp;ldquo;losing this&amp;rdquo;.
+In this chapter we&amp;rsquo;ll see the ways to fix it.
+Losing &amp;ldquo;this&amp;rdquo; We&amp;rsquo;ve already seen examples of losing this. Once a method is passed somewhere separately from the object &amp;ndash; this is lost.
+Here&amp;rsquo;s how it may happen with setTimeout:
+let user = { firstName: &amp;#34;John&amp;#34;, sayHi() { alert(`Hello, ${this.firstName}!`); } }; *!</description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/c-instructions/kan-notes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/c-instructions/kan-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/casecontrol/c-instructions/kan-notes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/casecontrol/c-instructions/kan-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/fileio/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/fileio/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arrow functions revisited</title>
+      <link>/books/javascript/advanced-working-with-functions/arrow-functions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/advanced-working-with-functions/arrow-functions/</guid>
+      <description>Arrow functions revisited Let&amp;rsquo;s revisit arrow functions.
+Arrow functions are not just a &amp;ldquo;shorthand&amp;rdquo; for writing small stuff. They have some very specific and useful features.
+JavaScript is full of situations where we need to write a small function that&amp;rsquo;s executed somewhere else.
+For instance:
+ arr.forEach(func) &amp;ndash; func is executed by forEach for every array item. setTimeout(func) &amp;ndash; func is executed by the built-in scheduler. &amp;hellip;there are more.  It&amp;rsquo;s in the very spirit of JavaScript to create a function and pass it somewhere.</description>
+    </item>
+    
+    <item>
+      <title>Date and time</title>
+      <link>/books/javascript/data-types/date/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/date/</guid>
+      <description>Date and time Let&amp;rsquo;s meet a new built-in object: Date. It stores the date, time and provides methods for date/time management.
+For instance, we can use it to store creation/modification times, to measure time, or just to print out the current date.
+Creation To create a new Date object call new Date() with one of the following arguments:
+ new Date() Without arguments &amp;ndash; create a Date object for the current date and time: let now = new Date(); alert( now ); // shows current date/time  new Date(milliseconds) Create a Date object with the time equal to number of milliseconds (1/1000 of a second) passed after the Jan 1st of 1970 UTC+0.</description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/miscelaneous-features/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/kannotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logical operators</title>
+      <link>/books/javascript/javascript-fundamentals/logical-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/logical-operators/</guid>
+      <description>Logical operators There are four logical operators in JavaScript: || (OR), &amp;amp;&amp;amp; (AND), ! (NOT), ?? (Nullish Coalescing). Here we cover the first three, the ?? operator is in the next article.
+Although they are called &amp;ldquo;logical&amp;rdquo;, they can be applied to values of any type, not only boolean. Their result can also be of any type.
+Let&amp;rsquo;s see the details.
+|| (OR) The &amp;ldquo;OR&amp;rdquo; operator is represented with two vertical line symbols:</description>
+    </item>
+    
+    <item>
+      <title>JSON methods, toJSON</title>
+      <link>/books/javascript/data-types/json/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/data-types/json/</guid>
+      <description>JSON methods, toJSON Let&amp;rsquo;s say we have a complex object, and we&amp;rsquo;d like to convert it into a string, to send it over a network, or just to output it for logging purposes.
+Naturally, such a string should include all important properties.
+We could implement the conversion like this:
+let user = { name: &amp;#34;John&amp;#34;, age: 30, *!* toString() { return `{name: &amp;#34;${this.name}&amp;#34;, age: ${this.age}}`; } */!* }; alert(user); // {name: &amp;#34;John&amp;#34;, age: 30} &amp;hellip;But in the process of development, new properties are added, old properties are renamed and removed.</description>
+    </item>
+    
+    <item>
+      <title>Nullish coalescing operator</title>
+      <link>/books/javascript/javascript-fundamentals/null-operator/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/null-operator/</guid>
+      <description>Nullish coalescing operator &amp;lsquo;??&amp;rsquo; [recent browser=&amp;ldquo;new&amp;rdquo;]
+The nullish coalescing operator is written as two question marks ??.
+As it treats null and undefined similarly, we&amp;rsquo;ll use a special term here, in this article. We&amp;rsquo;ll say that an expression is &amp;ldquo;defined&amp;rdquo; when it&amp;rsquo;s neither null nor undefined.
+The result of a ?? b is:
+ if a is defined, then a, if a isn&amp;rsquo;t defined, then b.  In other words, ?</description>
+    </item>
+    
+    <item>
+      <title>Loops: while and for</title>
+      <link>/books/javascript/javascript-fundamentals/loops/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/loops/</guid>
+      <description>Loops: while and for We often need to repeat actions.
+For example, outputting goods from a list one after another or just running the same code for each number from 1 to 10.
+Loops are a way to repeat the same code multiple times.
+The &amp;ldquo;while&amp;rdquo; loop The while loop has the following syntax:
+while (condition) { // code  // so-called &amp;#34;loop body&amp;#34; } While the condition is truthy, the code from the loop body is executed.</description>
+    </item>
+    
+    <item>
+      <title>The &#34;switch&#34; statement</title>
+      <link>/books/javascript/javascript-fundamentals/switch/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/switch/</guid>
+      <description>The &amp;ldquo;switch&amp;rdquo; statement A switch statement can replace multiple if checks.
+It gives a more descriptive way to compare a value with multiple variants.
+The syntax The switch has one or more case blocks and an optional default.
+It looks like this:
+switch(x) { case &amp;#39;value1&amp;#39;: // if (x === &amp;#39;value1&amp;#39;)  ... [break] case &amp;#39;value2&amp;#39;: // if (x === &amp;#39;value2&amp;#39;)  ... [break] default: ... [break] }  The value of x is checked for a strict equality to the value from the first case (that is, value1) then to the second (value2) and so on.</description>
+    </item>
+    
+    <item>
+      <title>Functions</title>
+      <link>/books/javascript/javascript-fundamentals/function-basics/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/function-basics/</guid>
+      <description>Functions Quite often we need to perform a similar action in many places of the script.
+For example, we need to show a nice-looking message when a visitor logs in, logs out and maybe somewhere else.
+Functions are the main &amp;ldquo;building blocks&amp;rdquo; of the program. They allow the code to be called many times without repetition.
+We&amp;rsquo;ve already seen examples of built-in functions, like alert(message), prompt(message, default) and confirm(question). But we can create functions of our own as well.</description>
+    </item>
+    
+    <item>
+      <title>Function expressions</title>
+      <link>/books/javascript/javascript-fundamentals/function-expressions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/function-expressions/</guid>
+      <description>Function expressions In JavaScript, a function is not a &amp;ldquo;magical language structure&amp;rdquo;, but a special kind of value.
+The syntax that we used before is called a Function Declaration:
+function sayHi() { alert( &amp;#34;Hello&amp;#34; ); } There is another syntax for creating a function that is called a Function Expression.
+It looks like this:
+let sayHi = function() { alert( &amp;#34;Hello&amp;#34; ); }; Here, the function is created and assigned to the variable explicitly, like any other value.</description>
+    </item>
+    
+    <item>
+      <title>Arrow functions, the basics</title>
+      <link>/books/javascript/javascript-fundamentals/arrow-functions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/arrow-functions/</guid>
+      <description>Arrow functions, the basics There&amp;rsquo;s another very simple and concise syntax for creating functions, that&amp;rsquo;s often better than Function Expressions.
+It&amp;rsquo;s called &amp;ldquo;arrow functions&amp;rdquo;, because it looks like this:
+let func = (arg1, arg2, ..., argN) =&amp;gt; expression &amp;hellip;This creates a function func that accepts arguments arg1..argN, then evaluates the expression on the right side with their use and returns its result.
+In other words, it&amp;rsquo;s the shorter version of:</description>
+    </item>
+    
+    <item>
+      <title>JavaScript specials</title>
+      <link>/books/javascript/javascript-fundamentals/javascript-specials/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/javascript-specials/</guid>
+      <description>JavaScript specials This chapter briefly recaps the features of JavaScript that we&amp;rsquo;ve learned by now, paying special attention to subtle moments.
+Code structure Statements are delimited with a semicolon:
+alert(&amp;#39;Hello&amp;#39;); alert(&amp;#39;World&amp;#39;); Usually, a line-break is also treated as a delimiter, so that would also work:
+alert(&amp;#39;Hello&amp;#39;) alert(&amp;#39;World&amp;#39;) That&amp;rsquo;s called &amp;ldquo;automatic semicolon insertion&amp;rdquo;. Sometimes it doesn&amp;rsquo;t work, for instance:
+alert(&amp;#34;There will be an error after this message&amp;#34;) [1, 2].forEach(alert) Most codestyle guides agree that we should put a semicolon after each statement.</description>
+    </item>
+    
+    <item>
+      <title>A1</title>
+      <link>/posts/articles/a1/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/posts/articles/a1/</guid>
+      <description>I am a1</description>
+    </item>
+    
+    <item>
+      <title>A2</title>
+      <link>/posts/articles/a2/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/posts/articles/a2/</guid>
+      <description>I am a2</description>
+    </item>
+    
+    <item>
+      <title>A3</title>
+      <link>/posts/articles/a3/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/posts/articles/a3/</guid>
+      <description>I am a3</description>
+    </item>
+    
+  </channel>
+</rss>

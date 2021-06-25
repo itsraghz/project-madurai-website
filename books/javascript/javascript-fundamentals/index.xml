@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript Fundamentals on Project Madurai School</title>
+    <link>/books/javascript/javascript-fundamentals/</link>
+    <description>Recent content in JavaScript Fundamentals on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/javascript/javascript-fundamentals/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, world!</title>
+      <link>/books/javascript/javascript-fundamentals/hello-world/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/hello-world/</guid>
+      <description>Hello, world! This part of the tutorial is about core JavaScript, the language itself.
+But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We&amp;rsquo;ll keep the amount of browser-specific commands (like alert) to a minimum so that you don&amp;rsquo;t spend time on them if you plan to concentrate on another environment (like Node.js). We&amp;rsquo;ll focus on JavaScript in the browser in the next part of the tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Code structure</title>
+      <link>/books/javascript/javascript-fundamentals/code-structure/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/code-structure/</guid>
+      <description>Code structure The first thing we&amp;rsquo;ll study is the building blocks of code.
+Statements Statements are syntax constructs and commands that perform actions.
+We&amp;rsquo;ve already seen a statement, alert(&#39;Hello, world!&#39;), which shows the message &amp;ldquo;Hello, world!&amp;rdquo;.
+We can have as many statements in our code as we want. Statements can be separated with a semicolon.
+For example, here we split &amp;ldquo;Hello World&amp;rdquo; into two alerts:
+alert(&amp;#39;Hello&amp;#39;); alert(&amp;#39;World&amp;#39;); Usually, statements are written on separate lines to make the code more readable:</description>
+    </item>
+    
+    <item>
+      <title>The modern mode, &#34;use strict&#34;</title>
+      <link>/books/javascript/javascript-fundamentals/the-modern-mode/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/the-modern-mode/</guid>
+      <description>The modern mode, &amp;ldquo;use strict&amp;rdquo; For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn&amp;rsquo;t change.
+That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript&amp;rsquo;s creators got stuck in the language forever.
+This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones.</description>
+    </item>
+    
+    <item>
+      <title>The old &#34;var&#34;</title>
+      <link>/books/javascript/javascript-fundamentals/var/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/var/</guid>
+      <description>The old &amp;ldquo;var&amp;rdquo; The information in this article is useful for understanding old scripts. That&#39;s not how we write a new code. In the very first chapter about variables, we mentioned three ways of variable declaration:
+ let const var  The var declaration is similar to let. Most of the time we can replace let by var or vice-versa and expect things to work:
+var message = &amp;#34;Hi&amp;#34;; alert(message); // Hi But internally var is a very different beast, that originates from very old times.</description>
+    </item>
+    
+    <item>
+      <title>Data types</title>
+      <link>/books/javascript/javascript-fundamentals/datatypes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/datatypes/</guid>
+      <description>Data types A value in JavaScript is always of a certain type. For example, a string or a number.
+There are eight basic data types in JavaScript. Here, we&amp;rsquo;ll cover them in general and in the next chapters we&amp;rsquo;ll talk about each of them in detail.
+We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:</description>
+    </item>
+    
+    <item>
+      <title>Interaction: alert, prompt, confirm</title>
+      <link>/books/javascript/javascript-fundamentals/interaction-alert-prompt-confirm/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/interaction-alert-prompt-confirm/</guid>
+      <description>Interaction: alert, prompt, confirm As we&amp;rsquo;ll be using the browser as our demo environment, let&amp;rsquo;s see a couple of functions to interact with the user: alert, prompt and confirm.
+alert This one we&amp;rsquo;ve seen already. It shows a message and waits for the user to press &amp;ldquo;OK&amp;rdquo;.
+For example:
+alert(&amp;#34;Hello&amp;#34;); The mini-window with the message is called a modal window. The word &amp;ldquo;modal&amp;rdquo; means that the visitor can&amp;rsquo;t interact with the rest of the page, press other buttons, etc, until they have dealt with the window.</description>
+    </item>
+    
+    <item>
+      <title>Type Conversions</title>
+      <link>/books/javascript/javascript-fundamentals/type-conversions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/type-conversions/</guid>
+      <description>Type Conversions Most of the time, operators and functions automatically convert the values given to them to the right type.
+For example, alert automatically converts any value to a string to show it. Mathematical operations convert values to numbers.
+There are also cases when we need to explicitly convert a value to the expected type.
+In this chapter, we won&#39;t cover objects. For now we&#39;ll just be talking about primitives. Later, after we learn about objects, in the chapter &amp;lt;info:object-toprimitive&amp;gt; we&#39;ll see how objects fit in.</description>
+    </item>
+    
+    <item>
+      <title>Basic operators, maths</title>
+      <link>/books/javascript/javascript-fundamentals/basic-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/basic-operators/</guid>
+      <description>Basic operators, maths We know many operators from school. They are things like addition +, multiplication *, subtraction -, and so on.
+In this chapter, we’ll start with simple operators, then concentrate on JavaScript-specific aspects, not covered by school arithmetic.
+Terms: &amp;ldquo;unary&amp;rdquo;, &amp;ldquo;binary&amp;rdquo;, &amp;ldquo;operand&amp;rdquo; Before we move on, let&amp;rsquo;s grasp some common terminology.
+  An operand &amp;ndash; is what operators are applied to. For instance, in the multiplication of 5 * 2 there are two operands: the left operand is 5 and the right operand is 2.</description>
+    </item>
+    
+    <item>
+      <title>Comparisons</title>
+      <link>/books/javascript/javascript-fundamentals/comparison/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/comparison/</guid>
+      <description>Comparisons We know many comparison operators from maths.
+In JavaScript they are written like this:
+ Greater/less than: a &amp;gt; b, a &amp;lt; b. Greater/less than or equals: a &amp;gt;= b, a &amp;lt;= b. Equals: a == b, please note the double equality sign == means the equality test, while a single one a = b means an assignment. Not equals. In maths the notation is ≠, but in JavaScript it&amp;rsquo;s written as a !</description>
+    </item>
+    
+    <item>
+      <title>Conditional branching</title>
+      <link>/books/javascript/javascript-fundamentals/conditional-branching/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/conditional-branching/</guid>
+      <description>Conditional branching: if, &amp;lsquo;?&amp;rsquo; Sometimes, we need to perform different actions based on different conditions.
+To do that, we can use the if statement and the conditional operator ?, that&amp;rsquo;s also called a &amp;ldquo;question mark&amp;rdquo; operator.
+The &amp;ldquo;if&amp;rdquo; statement The if(...) statement evaluates a condition in parentheses and, if the result is true, executes a block of code.
+For example:
+let year = prompt(&amp;#39;In which year was ECMAScript-2015 specification published?&amp;#39;, &amp;#39;&amp;#39;); *!</description>
+    </item>
+    
+    <item>
+      <title>Logical operators</title>
+      <link>/books/javascript/javascript-fundamentals/logical-operators/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/logical-operators/</guid>
+      <description>Logical operators There are four logical operators in JavaScript: || (OR), &amp;amp;&amp;amp; (AND), ! (NOT), ?? (Nullish Coalescing). Here we cover the first three, the ?? operator is in the next article.
+Although they are called &amp;ldquo;logical&amp;rdquo;, they can be applied to values of any type, not only boolean. Their result can also be of any type.
+Let&amp;rsquo;s see the details.
+|| (OR) The &amp;ldquo;OR&amp;rdquo; operator is represented with two vertical line symbols:</description>
+    </item>
+    
+    <item>
+      <title>Nullish coalescing operator</title>
+      <link>/books/javascript/javascript-fundamentals/null-operator/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/null-operator/</guid>
+      <description>Nullish coalescing operator &amp;lsquo;??&amp;rsquo; [recent browser=&amp;ldquo;new&amp;rdquo;]
+The nullish coalescing operator is written as two question marks ??.
+As it treats null and undefined similarly, we&amp;rsquo;ll use a special term here, in this article. We&amp;rsquo;ll say that an expression is &amp;ldquo;defined&amp;rdquo; when it&amp;rsquo;s neither null nor undefined.
+The result of a ?? b is:
+ if a is defined, then a, if a isn&amp;rsquo;t defined, then b.  In other words, ?</description>
+    </item>
+    
+    <item>
+      <title>Loops: while and for</title>
+      <link>/books/javascript/javascript-fundamentals/loops/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/loops/</guid>
+      <description>Loops: while and for We often need to repeat actions.
+For example, outputting goods from a list one after another or just running the same code for each number from 1 to 10.
+Loops are a way to repeat the same code multiple times.
+The &amp;ldquo;while&amp;rdquo; loop The while loop has the following syntax:
+while (condition) { // code  // so-called &amp;#34;loop body&amp;#34; } While the condition is truthy, the code from the loop body is executed.</description>
+    </item>
+    
+    <item>
+      <title>The &#34;switch&#34; statement</title>
+      <link>/books/javascript/javascript-fundamentals/switch/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/switch/</guid>
+      <description>The &amp;ldquo;switch&amp;rdquo; statement A switch statement can replace multiple if checks.
+It gives a more descriptive way to compare a value with multiple variants.
+The syntax The switch has one or more case blocks and an optional default.
+It looks like this:
+switch(x) { case &amp;#39;value1&amp;#39;: // if (x === &amp;#39;value1&amp;#39;)  ... [break] case &amp;#39;value2&amp;#39;: // if (x === &amp;#39;value2&amp;#39;)  ... [break] default: ... [break] }  The value of x is checked for a strict equality to the value from the first case (that is, value1) then to the second (value2) and so on.</description>
+    </item>
+    
+    <item>
+      <title>Functions</title>
+      <link>/books/javascript/javascript-fundamentals/function-basics/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/function-basics/</guid>
+      <description>Functions Quite often we need to perform a similar action in many places of the script.
+For example, we need to show a nice-looking message when a visitor logs in, logs out and maybe somewhere else.
+Functions are the main &amp;ldquo;building blocks&amp;rdquo; of the program. They allow the code to be called many times without repetition.
+We&amp;rsquo;ve already seen examples of built-in functions, like alert(message), prompt(message, default) and confirm(question). But we can create functions of our own as well.</description>
+    </item>
+    
+    <item>
+      <title>Function expressions</title>
+      <link>/books/javascript/javascript-fundamentals/function-expressions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/function-expressions/</guid>
+      <description>Function expressions In JavaScript, a function is not a &amp;ldquo;magical language structure&amp;rdquo;, but a special kind of value.
+The syntax that we used before is called a Function Declaration:
+function sayHi() { alert( &amp;#34;Hello&amp;#34; ); } There is another syntax for creating a function that is called a Function Expression.
+It looks like this:
+let sayHi = function() { alert( &amp;#34;Hello&amp;#34; ); }; Here, the function is created and assigned to the variable explicitly, like any other value.</description>
+    </item>
+    
+    <item>
+      <title>Arrow functions, the basics</title>
+      <link>/books/javascript/javascript-fundamentals/arrow-functions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/arrow-functions/</guid>
+      <description>Arrow functions, the basics There&amp;rsquo;s another very simple and concise syntax for creating functions, that&amp;rsquo;s often better than Function Expressions.
+It&amp;rsquo;s called &amp;ldquo;arrow functions&amp;rdquo;, because it looks like this:
+let func = (arg1, arg2, ..., argN) =&amp;gt; expression &amp;hellip;This creates a function func that accepts arguments arg1..argN, then evaluates the expression on the right side with their use and returns its result.
+In other words, it&amp;rsquo;s the shorter version of:</description>
+    </item>
+    
+    <item>
+      <title>JavaScript specials</title>
+      <link>/books/javascript/javascript-fundamentals/javascript-specials/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/javascript-fundamentals/javascript-specials/</guid>
+      <description>JavaScript specials This chapter briefly recaps the features of JavaScript that we&amp;rsquo;ve learned by now, paying special attention to subtle moments.
+Code structure Statements are delimited with a semicolon:
+alert(&amp;#39;Hello&amp;#39;); alert(&amp;#39;World&amp;#39;); Usually, a line-break is also treated as a delimiter, so that would also work:
+alert(&amp;#39;Hello&amp;#39;) alert(&amp;#39;World&amp;#39;) That&amp;rsquo;s called &amp;ldquo;automatic semicolon insertion&amp;rdquo;. Sometimes it doesn&amp;rsquo;t work, for instance:
+alert(&amp;#34;There will be an error after this message&amp;#34;) [1, 2].forEach(alert) Most codestyle guides agree that we should put a semicolon after each statement.</description>
+    </item>
+    
+  </channel>
+</rss>

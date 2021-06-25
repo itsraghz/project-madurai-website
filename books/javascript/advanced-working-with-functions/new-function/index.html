@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/advanced-working-with-functions/function-object">Function object, NFE</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/advanced-working-with-functions">Advanced Working with Functions</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/advanced-working-with-functions/settimeout-setinterval">Scheduling: setTimeout and setInterval</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="the-new-function-syntax">The &ldquo;new Function&rdquo; syntax</h1>
+<p>There&rsquo;s one more way to create a function. It&rsquo;s rarely used, but sometimes there&rsquo;s no alternative.</p>
+<h2 id="syntax">Syntax</h2>
+<p>The syntax for creating a function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">func</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Function ([<span style="color:#a6e22e">arg1</span>, <span style="color:#a6e22e">arg2</span>, ...<span style="color:#a6e22e">argN</span>], <span style="color:#a6e22e">functionBody</span>);
+</code></pre></div><p>The function is created with the arguments <code>arg1...argN</code> and the given <code>functionBody</code>.</p>
+<p>It&rsquo;s easier to understand by looking at an example. Here&rsquo;s a function with two arguments:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Function(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;return a + b&#39;</span>);
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">sum</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>) ); <span style="color:#75715e">// 3
+</span></code></pre></div><p>And here there&rsquo;s a function without arguments, with only the function body:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sayHi</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Function(<span style="color:#e6db74">&#39;alert(&#34;Hello&#34;)&#39;</span>);
+
+<span style="color:#a6e22e">sayHi</span>(); <span style="color:#75715e">// Hello
+</span></code></pre></div><p>The major difference from other ways we&rsquo;ve seen is that the function is created literally from a string, that is passed at run time.</p>
+<p>All previous declarations required us, programmers, to write the function code in the script.</p>
+<p>But <code>new Function</code> allows to turn any string into a function. For example, we can receive a new function from a server and then execute it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> ... <span style="color:#a6e22e">receive</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">code</span> <span style="color:#a6e22e">from</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">server</span> <span style="color:#a6e22e">dynamically</span> ...
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">func</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Function(<span style="color:#a6e22e">str</span>);
+<span style="color:#a6e22e">func</span>();
+</code></pre></div><p>It is used in very specific cases, like when we receive code from a server, or to dynamically compile a function from a template, in complex web-applications.</p>
+<h2 id="closure">Closure</h2>
+<p>Usually, a function remembers where it was born in the special property <code>[[Environment]]</code>. It references the Lexical Environment from where it&rsquo;s created  (we covered that in the chapter <a href="info:closure">info:closure</a>).</p>
+<p>But when a function is created using <code>new Function</code>, its <code>[[Environment]]</code> is set to reference not the current Lexical Environment, but the global one.</p>
+<p>So, such function doesn&rsquo;t have access to outer variables, only to the global ones.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getFunc</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>;
+
+<span style="color:#f92672">*!*</span>
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">func</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Function(<span style="color:#e6db74">&#39;alert(value)&#39;</span>);
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">func</span>;
+}
+
+<span style="color:#a6e22e">getFunc</span>()(); <span style="color:#75715e">// error: value is not defined
+</span></code></pre></div><p>Compare it with the regular behavior:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getFunc</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>;
+
+<span style="color:#f92672">*!*</span>
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">func</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() { <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">value</span>); };
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">func</span>;
+}
+
+<span style="color:#a6e22e">getFunc</span>()(); <span style="color:#75715e">// *!*&#34;test&#34;*/!*, from the Lexical Environment of getFunc
+</span></code></pre></div><p>This special feature of <code>new Function</code> looks strange, but appears very useful in practice.</p>
+<p>Imagine that we must create a function from a string. The code of that function is not known at the time of writing the script (that&rsquo;s why we don&rsquo;t use regular functions), but will be known in the process of execution. We may receive it from the server or from another source.</p>
+<p>Our new function needs to interact with the main script.</p>
+<p>What if it could access the outer variables?</p>
+<p>The problem is that before JavaScript is published to production, it&rsquo;s compressed using a <em>minifier</em> &ndash; a special program that shrinks code by removing extra comments, spaces and &ndash; what&rsquo;s important, renames local variables into shorter ones.</p>
+<p>For instance, if a function has <code>let userName</code>, minifier replaces it with <code>let a</code> (or another letter if this one is occupied), and does it everywhere. That&rsquo;s usually a safe thing to do, because the variable is local, nothing outside the function can access it. And inside the function, minifier replaces every mention of it. Minifiers are smart, they analyze the code structure, so they don&rsquo;t break anything. They&rsquo;re not just a dumb find-and-replace.</p>
+<p>So if <code>new Function</code> had access to outer variables, it would be unable to find renamed  <code>userName</code>.</p>
+<p><strong>If <code>new Function</code> had access to outer variables, it would have problems with minifiers.</strong></p>
+<p>Besides, such code would be architecturally bad and prone to errors.</p>
+<p>To pass something to a function, created as <code>new Function</code>, we should use its arguments.</p>
+<h2 id="summary">Summary</h2>
+<p>The syntax:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">func</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Function ([<span style="color:#a6e22e">arg1</span>, <span style="color:#a6e22e">arg2</span>, ...<span style="color:#a6e22e">argN</span>], <span style="color:#a6e22e">functionBody</span>);
+</code></pre></div><p>For historical reasons, arguments can also be given as a comma-separated list.</p>
+<p>These three declarations mean the same:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">new</span> Function(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;return a + b&#39;</span>); <span style="color:#75715e">// basic syntax
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">new</span> Function(<span style="color:#e6db74">&#39;a,b&#39;</span>, <span style="color:#e6db74">&#39;return a + b&#39;</span>); <span style="color:#75715e">// comma-separated
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">new</span> Function(<span style="color:#e6db74">&#39;a , b&#39;</span>, <span style="color:#e6db74">&#39;return a + b&#39;</span>); <span style="color:#75715e">// comma-separated with spaces
+</span></code></pre></div><p>Functions created with <code>new Function</code>, have <code>[[Environment]]</code> referencing the global Lexical Environment, not the outer one. Hence, they cannot use outer variables. But that&rsquo;s actually good, because it insures us from errors. Passing parameters explicitly is a much better method architecturally and causes no problems with minifiers.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interview FAQs on Project Madurai School</title>
+    <link>/books/c/interview-faqs/</link>
+    <description>Recent content in Interview FAQs on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/c/interview-faqs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Appendix A-Compiltion and Execution</title>
+      <link>/books/c/interview-faqs/appendix-a-compiltion-and-execution/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/appendix-a-compiltion-and-execution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Appendix B-Precedence-table</title>
+      <link>/books/c/interview-faqs/appendix-b-precedence-table/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/appendix-b-precedence-table/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Appendix C-Chasing the Bugs</title>
+      <link>/books/c/interview-faqs/appendix-c-chasing-the-bugs/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/appendix-c-chasing-the-bugs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Appendix D-ASCII Chart</title>
+      <link>/books/c/interview-faqs/appendix-d-ascii-chart/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/appendix-d-ascii-chart/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Periodic Tests 1 to 4</title>
+      <link>/books/c/interview-faqs/periodic-tests-1-to-4/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/periodic-tests-1-to-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Index</title>
+      <link>/books/c/interview-faqs/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/interview-faqs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

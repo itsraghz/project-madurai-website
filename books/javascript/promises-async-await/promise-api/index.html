@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/promises-async-await/promise-error-handling">Error handling with promises</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/promises-async-await">Promises, async/await</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/promises-async-await/promisify">Promisification</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="promise-api">Promise API</h1>
+<p>There are 6 static methods in the <code>Promise</code> class. We&rsquo;ll quickly cover their use cases here.</p>
+<h2 id="promiseall">Promise.all</h2>
+<p>Let&rsquo;s say we want many promises to execute in parallel and wait until all of them are ready.</p>
+<p>For instance, download several URLs in parallel and process the content once they are all done.</p>
+<p>That&rsquo;s what <code>Promise.all</code> is for.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> Promise.<span style="color:#a6e22e">all</span>([...<span style="color:#a6e22e">promises</span>...]);
+
+</code></pre></div><p><code>Promise.all</code> takes an array of promises (it technically can be any iterable, but is usually an array) and returns a new promise.</p>
+<p>The new promise resolves when all listed promises are settled, and the array of their results becomes its result.</p>
+<p>For instance, the <code>Promise.all</code> below settles after 3 seconds, and then its result is an array <code>[1, 2, 3]</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  Promise.<span style="color:#a6e22e">all</span>([
+    <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">3000</span>)), <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">2000</span>)), <span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">3</span>), <span style="color:#ae81ff">1000</span>))  <span style="color:#75715e">// 3
+</span><span style="color:#75715e"></span>  ]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">alert</span>); <span style="color:#75715e">// 1,2,3 when promises are ready: each promise contributes an array member
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>Please note that the order of the resulting array members is the same as in its source promises. Even though the first promise takes the longest time to resolve, it&rsquo;s still first in the array of results.</p>
+<p>A common trick is to map an array of job data into an array of promises, and then wrap that into <code>Promise.all</code>.</p>
+<p>For instance, if we have an array of URLs, we can fetch them all like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">urls</span> <span style="color:#f92672">=</span> [
+      <span style="color:#e6db74">&#39;https://api.github.com/users/iliakan&#39;</span>,
+      <span style="color:#e6db74">&#39;https://api.github.com/users/remy&#39;</span>,
+      <span style="color:#e6db74">&#39;https://api.github.com/users/jeresig&#39;</span>
+      
+    ];
+
+  <span style="color:#75715e">// map every url to the promise of the fetch
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">requests</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">urls</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">url</span> =&gt; <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>));
+
+  <span style="color:#75715e">// Promise.all waits until all jobs are resolved
+</span><span style="color:#75715e"></span>  Promise.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">requests</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">responses</span> =&gt; <span style="color:#a6e22e">responses</span>.<span style="color:#a6e22e">forEach</span>(
+      <span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">url</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">status</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+    ));
+
+</code></pre></div><p>A bigger example with fetching user information for an array of GitHub users by their names (we could fetch an array of goods by their ids, the logic is identical):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">names</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;iliakan&#39;</span>, <span style="color:#e6db74">&#39;remy&#39;</span>, <span style="color:#e6db74">&#39;jeresig&#39;</span>];
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">requests</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">names</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">name</span> =&gt; <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">`https://api.github.com/users/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>));
+
+  Promise.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">requests</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">responses</span> =&gt; {
+      <span style="color:#75715e">// all responses are resolved successfully
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">response</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">responses</span>) {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">url</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">status</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">// shows 200 for every url
+</span><span style="color:#75715e"></span>      }
+
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">responses</span>;
+    })
+    <span style="color:#75715e">// map array of responses into an array of response.json() to read their content
+</span><span style="color:#75715e"></span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">responses</span> =&gt; Promise.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">responses</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">r</span> =&gt; <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">json</span>())))
+    <span style="color:#75715e">// all JSON answers are parsed: &#34;users&#34; is the array of them
+</span><span style="color:#75715e"></span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">users</span> =&gt; <span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>)));
+
+</code></pre></div><p><strong>If any of the promises is rejected, the promise returned by <code>Promise.all</code> immediately rejects with that error.</strong></p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  Promise.<span style="color:#a6e22e">all</span>([
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">1000</span>)),
+  <span style="color:#f92672">*!*</span>
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">reject</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;Whoops!&#34;</span>)), <span style="color:#ae81ff">2000</span>)),
+  <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">3</span>), <span style="color:#ae81ff">3000</span>))
+  ]).<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">alert</span>); <span style="color:#75715e">// Error: Whoops!
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>Here the second promise rejects in two seconds. That leads to an immediate rejection of <code>Promise.all</code>, so <code>.catch</code> executes: the rejection error becomes the outcome of the entire <code>Promise.all</code>.</p>
+<blockquote>
+<h3 id="-in-case-of-an-error-other-promises-are-ignored">⚠️ <strong>In case of an error, other promises are ignored</strong></h3>
+<p>If one promise rejects, <code>Promise.all</code> immediately rejects, completely forgetting about the other ones in the list. Their results are ignored.</p>
+<p>For example, if there are multiple <code>fetch</code> calls, like in the example above, and one fails, the others will still continue to execute, but <code>Promise.all</code> won&rsquo;t watch them anymore. They will probably settle, but their results will be ignored.</p>
+<p><code>Promise.all</code> does nothing to cancel them, as there&rsquo;s no concept of &ldquo;cancellation&rdquo; in promises. In <a href="info:fetch-abort">another chapter</a> we&rsquo;ll cover <code>AbortController</code> that can help with that, but it&rsquo;s not a part of the Promise API.</p>
+</blockquote>
+<blockquote>
+<p>###ℹ️ <strong><code>Promise.all(iterable)</code> allows non-promise &quot;regular&quot; values in <code>iterable</code></strong></p>
+<p>Normally, <code>Promise.all(...)</code> accepts an iterable (in most cases an array) of promises. But if any of those objects is not a promise, it&rsquo;s passed to the resulting array &ldquo;as is&rdquo;.</p>
+<p>For instance, here the results are <code>[1, 2, 3]</code>:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  Promise.<span style="color:#a6e22e">all</span>([
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+      <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">1000</span>)
+    }),
+    <span style="color:#ae81ff">2</span>,
+    <span style="color:#ae81ff">3</span>
+  ]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">alert</span>); <span style="color:#75715e">// 1, 2, 3
+</span><span style="color:#75715e"></span>
+</code></pre></div><blockquote>
+<p>So we are able to pass ready values to <code>Promise.all</code> where convenient.</p>
+</blockquote>
+<h2 id="promiseallsettled">Promise.allSettled</h2>
+<blockquote>
+<h3 id="-a-recent-addition">⚠️ <strong>A recent addition</strong></h3>
+<p>This is a recent addition to the language. Old browsers may need polyfills.</p>
+</blockquote>
+<p><code>Promise.all</code> rejects as a whole if any promise rejects. That&rsquo;s good for &ldquo;all or nothing&rdquo; cases, when we need <em>all</em> results successful to proceed:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  Promise.<span style="color:#a6e22e">all</span>([
+    <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/template.html&#39;</span>),
+    <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/style.css&#39;</span>),
+    <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/data.json&#39;</span>)
+  ]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">render</span>); <span style="color:#75715e">// render method needs results of all fetches
+</span><span style="color:#75715e"></span>
+</code></pre></div><p><code>Promise.allSettled</code> just waits for all promises to settle, regardless of the result. The resulting array has:</p>
+<ul>
+<li><code>{status:&quot;fulfilled&quot;, value:result}</code> for successful responses,</li>
+<li><code>{status:&quot;rejected&quot;, reason:error}</code> for errors.</li>
+</ul>
+<p>For example, we&rsquo;d like to fetch the information about multiple users. Even if one request fails, we&rsquo;re still interested in the others.</p>
+<p>Let&rsquo;s use <code>Promise.allSettled</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">urls</span> <span style="color:#f92672">=</span> [
+      <span style="color:#e6db74">&#39;https://api.github.com/users/iliakan&#39;</span>,
+      <span style="color:#e6db74">&#39;https://api.github.com/users/remy&#39;</span>,
+      <span style="color:#e6db74">&#39;https://no-such-url&#39;</span>
+  ];
+
+  Promise.<span style="color:#a6e22e">allSettled</span>(<span style="color:#a6e22e">urls</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">url</span> =&gt; <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)))
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">results</span> =&gt; { <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">results</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">num</span>) =&gt; {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;fulfilled&#34;</span>) {
+          <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">urls</span>[<span style="color:#a6e22e">num</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">status</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+        }
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;rejected&#34;</span>) {
+          <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">urls</span>[<span style="color:#a6e22e">num</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">reason</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+        }
+      });
+    });
+
+</code></pre></div><p>The <code>results</code> in the line <code>(*)</code> above will be:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  [
+    {<span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;fulfilled&#39;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> ...<span style="color:#a6e22e">response</span>...},
+    {<span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;fulfilled&#39;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> ...<span style="color:#a6e22e">response</span>...},
+    {<span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;rejected&#39;</span>, <span style="color:#a6e22e">reason</span><span style="color:#f92672">:</span> ...<span style="color:#a6e22e">error</span> <span style="color:#a6e22e">object</span>...}
+  ]
+
+</code></pre></div><p>So for each promise we get its status and <code>value/error</code>.</p>
+<h3 id="polyfill">Polyfill</h3>
+<p>If the browser doesn&rsquo;t support <code>Promise.allSettled</code>, it&rsquo;s easy to polyfill:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>Promise.<span style="color:#a6e22e">allSettled</span>) {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rejectHandler</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reason</span> =&gt; ({ <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;rejected&#39;</span>, <span style="color:#a6e22e">reason</span> });
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolveHandler</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span> =&gt; ({ <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;fulfilled&#39;</span>, <span style="color:#a6e22e">value</span> });
+
+    Promise.<span style="color:#a6e22e">allSettled</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">promises</span>) {
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">convertedPromises</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">promises</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">p</span> =&gt; Promise.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">p</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">resolveHandler</span>, <span style="color:#a6e22e">rejectHandler</span>));
+      <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">convertedPromises</span>);
+    };
+  }
+
+</code></pre></div><p>In this code, <code>promises.map</code> takes input values, turns them into promises (just in case a non-promise was passed) with <code>p =&gt; Promise.resolve(p)</code>, and then adds <code>.then</code> handler to every one.</p>
+<p>That handler turns a successful result <code>value</code> into <code>{status:'fulfilled', value}</code>, and an error <code>reason</code> into <code>{status:'rejected', reason}</code>. That&rsquo;s exactly the format of <code>Promise.allSettled</code>.</p>
+<p>Now we can use <code>Promise.allSettled</code> to get the results of <em>all</em> given promises, even if some of them reject.</p>
+<h2 id="promiserace">Promise.race</h2>
+<p>Similar to <code>Promise.all</code>, but waits only for the first settled promise and gets its result (or error).</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> Promise.<span style="color:#a6e22e">race</span>(<span style="color:#a6e22e">iterable</span>);
+
+</code></pre></div><p>For instance, here the result will be <code>1</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  Promise.<span style="color:#a6e22e">race</span>([
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">1000</span>)),
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">reject</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;Whoops!&#34;</span>)), <span style="color:#ae81ff">2000</span>)),
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">3</span>), <span style="color:#ae81ff">3000</span>))
+  ]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">alert</span>); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>The first promise here was fastest, so it became the result. After the first settled promise &ldquo;wins the race&rdquo;, all further results/errors are ignored.</p>
+<h2 id="promiseany">Promise.any</h2>
+<p>Similar to <code>Promise.race</code>, but waits only for the first fulfilled promise and gets its result. If all of the given promises are rejected, then the returned promise is rejected with <a href="mdn:js/AggregateError"><code>AggregateError</code></a> - a special error object that stores all promise errors in its <code>errors</code> property.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> Promise.<span style="color:#a6e22e">any</span>(<span style="color:#a6e22e">iterable</span>);
+</code></pre></div><p>For instance, here the result will be <code>1</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  Promise.<span style="color:#a6e22e">any</span>([
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">reject</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;Whoops!&#34;</span>)), <span style="color:#ae81ff">1000</span>)),
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">2000</span>)),
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">3</span>), <span style="color:#ae81ff">3000</span>))
+  ]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">alert</span>); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>The first promise here was fastest, but it was rejected, so the second promise became the result. After the first fulfilled promise &ldquo;wins the race&rdquo;, all further results are ignored.</p>
+<p>Here&rsquo;s an example when all promises fail:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  Promise.<span style="color:#a6e22e">any</span>([
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">reject</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;Ouch!&#34;</span>)), <span style="color:#ae81ff">1000</span>)),
+    <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">reject</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;Error!&#34;</span>)), <span style="color:#ae81ff">2000</span>))
+  ]).<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">constructor</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// AggregateError
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">errors</span>[<span style="color:#ae81ff">0</span>]); <span style="color:#75715e">// Error: Ouch!
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">errors</span>[<span style="color:#ae81ff">1</span>]); <span style="color:#75715e">// Error: Error
+</span><span style="color:#75715e"></span>  });
+
+</code></pre></div><p>As you can see, error objects for failed promises are available in the <code>errors</code> property of the <code>AggregateError</code> object.</p>
+<h2 id="promiseresolvereject">Promise.resolve/reject</h2>
+<p>Methods <code>Promise.resolve</code> and <code>Promise.reject</code> are rarely needed in modern code, because <code>async/await</code> syntax (we&rsquo;ll cover it <a href="info:async-await">a bit later</a>) makes them somewhat obsolete.</p>
+<p>We cover them here for completeness and for those who can&rsquo;t use <code>async/await</code> for some reason.</p>
+<h3 id="promiseresolve">Promise.resolve</h3>
+<p><code>Promise.resolve(value)</code> creates a resolved promise with the result <code>value</code>.</p>
+<p>Same as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">value</span>));
+
+</code></pre></div><p>The method is used for compatibility, when a function is expected to return a promise.</p>
+<p>For example, the <code>loadCached</code> function below fetches a URL and remembers (caches) its content. For future calls with the same URL it immediately gets the previous content from cache, but uses <code>Promise.resolve</code> to make a promise of it, so the returned value is always a promise:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cache</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Map</span>();
+
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadCached</span>(<span style="color:#a6e22e">url</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">has</span>(<span style="color:#a6e22e">url</span>)) {
+  <span style="color:#f92672">*!*</span>
+      <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">url</span>)); <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    }
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+      .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">text</span>())
+      .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">text</span> =&gt; {
+        <span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">url</span>,<span style="color:#a6e22e">text</span>);
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">text</span>;
+      });
+  }
+</code></pre></div><p>We can write <code>loadCached(url).then(…)</code>, because the function is guaranteed to return a promise. We can always use <code>.then</code> after <code>loadCached</code>. That&rsquo;s the purpose of <code>Promise.resolve</code> in the line <code>(*)</code>.</p>
+<h3 id="promisereject">Promise.reject</h3>
+<p><code>Promise.reject(error)</code> creates a rejected promise with <code>error</code>.</p>
+<p>Same as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">error</span>));
+</code></pre></div><p>In practice, this method is almost never used.</p>
+<h2 id="summary">Summary</h2>
+<p>There are 6 static methods of <code>Promise</code> class:</p>
+<ol>
+<li><code>Promise.all(promises)</code> &ndash; waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, it becomes the error of <code>Promise.all</code>, and all other results are ignored.</li>
+<li><code>Promise.allSettled(promises)</code> (recently added method) &ndash; waits for all promises to settle and returns their results as an array of objects with:
+<ul>
+<li><code>status</code>: <code>&quot;fulfilled&quot;</code> or <code>&quot;rejected&quot;</code></li>
+<li><code>value</code> (if fulfilled) or <code>reason</code> (if rejected).</li>
+</ul>
+</li>
+<li><code>Promise.race(promises)</code> &ndash; waits for the first promise to settle, and its result/error becomes the outcome.</li>
+<li><code>Promise.any(promises)</code> (recently added method) &ndash; waits for the first promise to fulfill, and its result becomes the outcome. If all of the given promises are rejected, <a href="mdn:js/AggregateError"><code>AggregateError</code></a> becomes the error of <code>Promise.any</code>.</li>
+<li><code>Promise.resolve(value)</code> &ndash; makes a resolved promise with the given value.</li>
+<li><code>Promise.reject(error)</code> &ndash; makes a rejected promise with the given error.</li>
+</ol>
+<p>Of all these, <code>Promise.all</code> is probably the most common in practice.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/objects/objects">Objects</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/objects">Objects: the basics</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/objects/garbage-collection">Garbage collection</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="object-references-and-copying">Object references and copying</h1>
+<p>One of the fundamental differences of objects versus primitives is that objects are stored and copied &ldquo;by reference&rdquo;, whereas primitive values: strings, numbers, booleans, etc &ndash; are always copied &ldquo;as a whole value&rdquo;.</p>
+<p>That&rsquo;s easy to understand if we look a bit under the hood of what happens when we copy a value.</p>
+<p>Let&rsquo;s start with a primitive, such as a string.</p>
+<p>Here we put a copy of <code>message</code> into <code>phrase</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello!&#34;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">phrase</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">message</span>;
+</code></pre></div><p>As a result we have two independent variables, each one storing the string <code>&quot;Hello!&quot;</code>.</p>
+<p><img src="variable-copy-value.svg" alt=""></p>
+<p>Quite an obvious result, right?</p>
+<p>Objects are not like that.</p>
+<p><strong>A variable assigned to an object stores not the object itself, but its &ldquo;address in memory&rdquo; &ndash; in other words &ldquo;a reference&rdquo; to it.</strong></p>
+<p>Let&rsquo;s look at an example of such a variable:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+};
+</code></pre></div><p>And here&rsquo;s how it&rsquo;s actually stored in memory:</p>
+<p><img src="variable-contains-reference.svg" alt=""></p>
+<p>The object is stored somewhere in memory (at the right of the picture), while the <code>user</code> variable (at the left) has a &ldquo;reference&rdquo; to it.</p>
+<p>We may think of an object variable, such as <code>user</code>, as like a sheet of paper with the address of the object on it.</p>
+<p>When we perform actions with the object, e.g. take a property <code>user.name</code>, the JavaScript engine looks at what&rsquo;s at that address and performs the operation on the actual object.</p>
+<p>Now here&rsquo;s why it&rsquo;s important.</p>
+<p><strong>When an object variable is copied, the reference is copied, but the object itself is not duplicated.</strong></p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span> };
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">admin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>; <span style="color:#75715e">// copy the reference
+</span></code></pre></div><p>Now we have two variables, each storing a reference to the same object:</p>
+<p><img src="variable-copy-reference.svg" alt=""></p>
+<p>As you can see, there&rsquo;s still one object, but now with two variables that reference it.</p>
+<p>We can use either variable to access the object and modify its contents:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;John&#39;</span> };
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">admin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>;
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Pete&#39;</span>; <span style="color:#75715e">// changed by the &#34;admin&#34; reference
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#f92672">*!*</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span><span style="color:#f92672">*</span><span style="color:#e6db74">/!*); /</span><span style="color:#f92672">/</span> <span style="color:#e6db74">&#39;Pete&#39;</span>, <span style="color:#a6e22e">changes</span> <span style="color:#a6e22e">are</span> <span style="color:#a6e22e">seen</span> <span style="color:#a6e22e">from</span> <span style="color:#a6e22e">the</span> <span style="color:#e6db74">&#34;user&#34;</span> <span style="color:#a6e22e">reference</span>
+</code></pre></div><p>It&rsquo;s as if we had a cabinet with two keys and used one of them (<code>admin</code>) to get into it and make changes. Then, if we later use another key (<code>user</code>), we are still opening the same cabinet and can access the changed contents.</p>
+<h2 id="comparison-by-reference">Comparison by reference</h2>
+<p>Two objects are equal only if they are the same object.</p>
+<p>For instance, here <code>a</code> and <code>b</code> reference the same object, thus they are equal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> {};
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>; <span style="color:#75715e">// copy the reference
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">b</span> ); <span style="color:#75715e">// true, both variables reference the same object
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">a</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">b</span> ); <span style="color:#75715e">// true
+</span></code></pre></div><p>And here two independent objects are not equal, even though they look alike (both are empty):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> {};
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> {}; <span style="color:#75715e">// two independent objects
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">b</span> ); <span style="color:#75715e">// false
+</span></code></pre></div><p>For comparisons like <code>obj1 &gt; obj2</code> or for a comparison against a primitive <code>obj == 5</code>, objects are converted to primitives. We&rsquo;ll study how object conversions work very soon, but to tell the truth, such comparisons are needed very rarely &ndash; usually they appear as a result of a programming mistake.</p>
+<h2 id="cloning-and-merging-objectassign-cloning-and-merging-object-assign">Cloning and merging, Object.assign [#cloning-and-merging-object-assign]</h2>
+<p>So, copying an object variable creates one more reference to the same object.</p>
+<p>But what if we need to duplicate an object? Create an independent copy, a clone?</p>
+<p>That&rsquo;s also doable, but a little bit more difficult, because there&rsquo;s no built-in method for that in JavaScript. But there is rarely a need &ndash; copying by reference is good most of the time.</p>
+<p>But if we really want that, then we need to create a new object and replicate the structure of the existing one by iterating over its properties and copying them on the primitive level.</p>
+<p>Like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">clone</span> <span style="color:#f92672">=</span> {}; <span style="color:#75715e">// the new empty object
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// let&#39;s copy all user properties into it
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">clone</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>[<span style="color:#a6e22e">key</span>];
+}
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#75715e">// now clone is a fully independent object with the same content
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">clone</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Pete&#34;</span>; <span style="color:#75715e">// changed the data in it
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span> ); <span style="color:#75715e">// still John in the original object
+</span></code></pre></div><p>Also we can use the method <a href="mdn:js/Object/assign">Object.assign</a> for that.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Object.<span style="color:#a6e22e">assign</span>(<span style="color:#a6e22e">dest</span>, [<span style="color:#a6e22e">src1</span>, <span style="color:#a6e22e">src2</span>, <span style="color:#a6e22e">src3</span>...])
+</code></pre></div><ul>
+<li>The first argument <code>dest</code> is a target object.</li>
+<li>Further arguments <code>src1, ..., srcN</code> (can be as many as needed) are source objects.</li>
+<li>It copies the properties of all source objects <code>src1, ..., srcN</code> into the target <code>dest</code>. In other words, properties of all arguments starting from the second are copied into the first object.</li>
+<li>The call returns <code>dest</code>.</li>
+</ul>
+<p>For instance, we can use it to merge several objects into one:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span> };
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">permissions1</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">canView</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">permissions2</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">canEdit</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// copies all properties from permissions1 and permissions2 into user
+</span><span style="color:#75715e"></span>Object.<span style="color:#a6e22e">assign</span>(<span style="color:#a6e22e">user</span>, <span style="color:#a6e22e">permissions1</span>, <span style="color:#a6e22e">permissions2</span>);
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#75715e">// now user = { name: &#34;John&#34;, canView: true, canEdit: true }
+</span></code></pre></div><p>If the copied property name already exists, it gets overwritten:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span> };
+
+Object.<span style="color:#a6e22e">assign</span>(<span style="color:#a6e22e">user</span>, { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Pete&#34;</span> });
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// now user = { name: &#34;Pete&#34; }
+</span></code></pre></div><p>We also can use <code>Object.assign</code> to replace <code>for..in</code> loop for simple cloning:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">clone</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">assign</span>({}, <span style="color:#a6e22e">user</span>);
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>It copies all properties of <code>user</code> into the empty object and returns it.</p>
+<p>There are also other methods of cloning an object, e.g. using the <a href="info:rest-parameters-spread">spread syntax</a> <code>clone = {...user}</code>, covered later in the tutorial.</p>
+<h2 id="nested-cloning">Nested cloning</h2>
+<p>Until now we assumed that all properties of <code>user</code> are primitive. But properties can be references to other objects. What to do with them?</p>
+<p>Like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#a6e22e">sizes</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">182</span>,
+    <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">50</span>
+  }
+};
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">sizes</span>.<span style="color:#a6e22e">height</span> ); <span style="color:#75715e">// 182
+</span></code></pre></div><p>Now it&rsquo;s not enough to copy <code>clone.sizes = user.sizes</code>, because the <code>user.sizes</code> is an object, it will be copied by reference. So <code>clone</code> and <code>user</code> will share the same sizes:</p>
+<p>Like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#a6e22e">sizes</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">182</span>,
+    <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">50</span>
+  }
+};
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">clone</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">assign</span>({}, <span style="color:#a6e22e">user</span>);
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">sizes</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">clone</span>.<span style="color:#a6e22e">sizes</span> ); <span style="color:#75715e">// true, same object
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// user and clone share sizes
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">sizes</span>.<span style="color:#a6e22e">width</span><span style="color:#f92672">++</span>;       <span style="color:#75715e">// change a property from one place
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">clone</span>.<span style="color:#a6e22e">sizes</span>.<span style="color:#a6e22e">width</span>); <span style="color:#75715e">// 51, see the result from the other one
+</span></code></pre></div><p>To fix that, we should use a cloning loop that examines each value of <code>user[key]</code> and, if it&rsquo;s an object, then replicate its structure as well. That is called a &ldquo;deep cloning&rdquo;.</p>
+<p>We can use recursion to implement it. Or, to not reinvent the wheel, take an existing implementation, for instance <a href="https://lodash.com/docs#cloneDeep">_.cloneDeep(obj)</a> from the JavaScript library <a href="https://lodash.com">lodash</a>.</p>
+<pre><code class="language-smart" data-lang="smart">An important side effect of storing objects as references is that an object declared as `const` *can* be modified.
+
+For instance:
+
+```js run
+const user = {
+  name: &quot;John&quot;
+};
+
+*!*
+user.name = &quot;Pete&quot;; // (*)
+*/!*
+
+alert(user.name); // Pete
+```
+
+It might seem that the line `(*)` would cause an error, but it does not. The value of `user` is constant, it must always reference the same object, but properties of that object are free to change.
+
+In other words, the `const user` gives an error only if we try to set `user=...` as a whole.
+
+That said, if we really need to make constant object properties, it's also possible, but using totally different methods. We'll mention that in the chapter &lt;info:property-descriptors&gt;.
+</code></pre><h2 id="summary">Summary</h2>
+<p>Objects are assigned and copied by reference. In other words, a variable stores not the &ldquo;object value&rdquo;, but a &ldquo;reference&rdquo; (address in memory) for the value. So copying such a variable or passing it as a function argument copies that reference, not the object itself.</p>
+<p>All operations via copied references (like adding/removing properties) are performed on the same single object.</p>
+<p>To make a &ldquo;real copy&rdquo; (a clone) we can use <code>Object.assign</code> for the so-called &ldquo;shallow copy&rdquo; (nested objects are copied by reference) or a &ldquo;deep cloning&rdquo; function, such as <a href="https://lodash.com/docs#cloneDeep">_.cloneDeep(obj)</a>.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

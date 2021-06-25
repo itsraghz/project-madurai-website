@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/modules">Modules</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/modules/export-import">Export and Import</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="modules-introduction">Modules, introduction</h1>
+<p>As our application grows bigger, we want to split it into multiple files, so called &ldquo;modules&rdquo;. A module may contain a class or a library of functions for a specific purpose.</p>
+<p>For a long time, JavaScript existed without a language-level module syntax. That wasn&rsquo;t a problem, because initially scripts were small and simple, so there was no need.</p>
+<p>But eventually scripts became more and more complex, so the community invented a variety of ways to organize code into modules, special libraries to load modules on demand.</p>
+<p>To name some (for historical reasons):</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Asynchronous_module_definition">AMD</a> &ndash; one of the most ancient module systems, initially implemented by the library <a href="http://requirejs.org/">require.js</a>.</li>
+<li><a href="http://wiki.commonjs.org/wiki/Modules/1.1">CommonJS</a> &ndash; the module system created for Node.js server.</li>
+<li><a href="https://github.com/umdjs/umd">UMD</a> &ndash; one more module system, suggested as a universal one, compatible with AMD and CommonJS.</li>
+</ul>
+<p>Now all these slowly become a part of history, but we still can find them in old scripts.</p>
+<p>The language-level module system appeared in the standard in 2015, gradually evolved since then, and is now supported by all major browsers and in Node.js. So we&rsquo;ll study the modern JavaScript modules from now on.</p>
+<h2 id="what-is-a-module">What is a module?</h2>
+<p>A module is just a file. One script is one module. As simple as that.</p>
+<p>Modules can load each other and use special directives <code>export</code> and <code>import</code> to interchange functionality, call functions of one module from another one:</p>
+<ul>
+<li><code>export</code> keyword labels variables and functions that should be accessible from outside the current module.</li>
+<li><code>import</code> allows the import of functionality from other modules.</li>
+</ul>
+<p>For instance, if we have a file <code>sayHi.js</code> exporting a function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 sayHi.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+}
+</code></pre></div><p>&hellip;Then another file may import and use it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 main.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">sayHi</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./sayHi.js&#39;</span>;
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">sayHi</span>); <span style="color:#75715e">// function...
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sayHi</span>(<span style="color:#e6db74">&#39;John&#39;</span>); <span style="color:#75715e">// Hello, John!
+</span></code></pre></div><p>The <code>import</code> directive loads the module by path <code>./sayHi.js</code> relative to the current file, and assigns exported function <code>sayHi</code> to the corresponding variable.</p>
+<p>Let&rsquo;s run the example in-browser.</p>
+<p>As modules support special keywords and features, we must tell the browser that a script should be treated as a module, by using the attribute <code>&lt;script type=&quot;module&quot;&gt;</code>.</p>
+<p>Like this:</p>
+<p>[codetabs src=&ldquo;say&rdquo; height=&ldquo;140&rdquo; current=&ldquo;index.html&rdquo;]</p>
+<p>The browser automatically fetches and evaluates the imported module (and its imports if needed), and then runs the script.</p>
+<pre><code class="language-warn" data-lang="warn">If you try to open a web-page locally, via `file://` protocol, you'll find that `import/export` directives don't work. Use a local web-server, such as [static-server](https://www.npmjs.com/package/static-server#getting-started) or use the &quot;live server&quot; capability of your editor, such as VS Code [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to test modules.
+</code></pre><h2 id="core-module-features">Core module features</h2>
+<p>What&rsquo;s different in modules, compared to &ldquo;regular&rdquo; scripts?</p>
+<p>There are core features, valid both for browser and server-side JavaScript.</p>
+<h3 id="always-use-strict">Always &ldquo;use strict&rdquo;</h3>
+<p>Modules always work in strict mode. E.g. assigning to an undeclared variable will give an error.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+  <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>; <span style="color:#75715e">// error
+</span><span style="color:#75715e"></span>&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="module-level-scope">Module-level scope</h3>
+<p>Each module has its own top-level scope. In other words, top-level variables and functions from a module are not seen in other scripts.</p>
+<p>In the example below, two scripts are imported, and <code>hello.js</code> tries to use <code>user</code> variable declared in <code>user.js</code>. It fails, because it&rsquo;s a separate module (you&rsquo;ll see the error in the console):</p>
+<p>[codetabs src=&ldquo;scopes&rdquo; height=&ldquo;140&rdquo; current=&ldquo;index.html&rdquo;]</p>
+<p>Modules should <code>export</code> what they want to be accessible from outside and <code>import</code> what they need.</p>
+<ul>
+<li><code>user.js</code> should export the <code>user</code> variable.</li>
+<li><code>hello.js</code> should import it from <code>user.js</code> module.</li>
+</ul>
+<p>In other words, with modules we use import/export instead of relying on global variables.</p>
+<p>This is the correct variant:</p>
+<p>[codetabs src=&ldquo;scopes-working&rdquo; height=&ldquo;140&rdquo; current=&ldquo;hello.js&rdquo;]</p>
+<p>In the browser, if we talk about HTML pages, independent top-level scope also exists for each <code>&lt;script type=&quot;module&quot;&gt;</code>.</p>
+<p>Here are two scripts on the same page, both <code>type=&quot;module&quot;</code>. They don&rsquo;t see each other&rsquo;s top-level variables:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+  <span style="color:#75715e">// The variable is only visible in this module script
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+  <span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>); <span style="color:#75715e">// Error: user is not defined
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><pre><code class="language-smart" data-lang="smart">In the browser, we can make a variable window-level global by explicitly assigning it to a `window` property, e.g. `window.user = &quot;John&quot;`. 
+
+Then all scripts will see it, both with `type=&quot;module&quot;` and without it. 
+
+That said, making such global variables is frowned upon. Please try to avoid them.
+</code></pre><h3 id="a-module-code-is-evaluated-only-the-first-time-when-imported">A module code is evaluated only the first time when imported</h3>
+<p>If the same module is imported into multiple other modules, its code is executed only once, upon the first import. Then its exports are given to all further importers.</p>
+<p>The one-time evaluation has important consequences, that we should be aware of.</p>
+<p>Let&rsquo;s see a couple of examples.</p>
+<p>First, if executing a module code brings side-effects, like showing a message, then importing it multiple times will trigger it only once &ndash; the first time:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 alert.js
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Module is evaluated!&#34;</span>);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Import the same module from different files
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 📁 1.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">`./alert.js`</span>; <span style="color:#75715e">// Module is evaluated!
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 📁 2.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">`./alert.js`</span>; <span style="color:#75715e">// (shows nothing)
+</span></code></pre></div><p>The second import shows nothing, because the module has already been evaluated.</p>
+<p>There&rsquo;s a rule: top-level module code should be used for initialization, creation of module-specific internal data structures. If we need to make something callable multiple times - we should export it as a function, like we did with <code>sayHi</code> above.</p>
+<p>Now, let&rsquo;s consider a deeper example.</p>
+<p>Let&rsquo;s say, a module exports an object:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 admin.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">admin</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>
+};
+</code></pre></div><p>If this module is imported from multiple files, the module is only evaluated the first time, <code>admin</code> object is created, and then passed to all further importers.</p>
+<p>All importers get exactly the one and only <code>admin</code> object:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 1.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">admin</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./admin.js&#39;</span>;
+<span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Pete&#34;</span>;
+
+<span style="color:#75715e">// 📁 2.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">admin</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./admin.js&#39;</span>;
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// Pete
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">*!*</span>
+<span style="color:#75715e">// Both 1.js and 2.js reference the same admin object
+</span><span style="color:#75715e">// Changes made in 1.js are visible in 2.js
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>As you can see, when <code>1.js</code> changes the <code>name</code> property in the imported <code>admin</code>, then <code>2.js</code> can see the new <code>admin.name</code>.</p>
+<p>That&rsquo;s exactly because the module is executed only once. Exports are generated, and then they are shared between importers, so if something changes the <code>admin</code> object, other modules will see that.</p>
+<p><strong>Such behavior is actually very convenient, because it allows us to <em>configure</em> modules.</strong></p>
+<p>In other words, a module can provide a generic functionality that needs a setup. E.g. authentication needs credentials. Then it can export a configuration object expecting the outer code to assign to it.</p>
+<p>Here&rsquo;s the classical pattern:</p>
+<ol>
+<li>A module exports some means of configuration, e.g. a configuration object.</li>
+<li>On the first import we initialize it, write to its properties. The top-level application script may do that.</li>
+<li>Further imports use the module.</li>
+</ol>
+<p>For instance, the <code>admin.js</code> module may provide certain functionality (e.g. authentication), but expect the credentials to come into the <code>config</code> object from outside:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 admin.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> { };
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>() {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Ready to serve, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+}
+</code></pre></div><p>Here, <code>admin.js</code> exports the <code>config</code> object (initially empty, but may have default properties too).</p>
+<p>Then in <code>init.js</code>, the first script of our app, we import <code>config</code> from it and set <code>config.user</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 init.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">config</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./admin.js&#39;</span>;
+<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Pete&#34;</span>;
+</code></pre></div><p>&hellip;Now the module <code>admin.js</code> is configured.</p>
+<p>Further importers can call it, and it correctly shows the current user:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 📁 another.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">sayHi</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./admin.js&#39;</span>;
+
+<span style="color:#a6e22e">sayHi</span>(); <span style="color:#75715e">// Ready to serve, *!*Pete*/!*!
+</span></code></pre></div><h3 id="importmeta">import.meta</h3>
+<p>The object <code>import.meta</code> contains the information about the current module.</p>
+<p>Its content depends on the environment. In the browser, it contains the URL of the script, or a current webpage URL if inside HTML:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+  <span style="color:#a6e22e">alert</span>(<span style="color:#66d9ef">import</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">url</span>); <span style="color:#75715e">// script URL
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for an inline script - the URL of the current HTML-page
+</span><span style="color:#75715e"></span>&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="in-a-module-this-is-undefined">In a module, &ldquo;this&rdquo; is undefined</h3>
+<p>That&rsquo;s kind of a minor feature, but for completeness we should mention it.</p>
+<p>In a module, top-level <code>this</code> is undefined.</p>
+<p>Compare it to non-module scripts, where <code>this</code> is a global object:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+  <span style="color:#a6e22e">alert</span>(<span style="color:#66d9ef">this</span>); <span style="color:#75715e">// window
+</span><span style="color:#75715e"></span>&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+  <span style="color:#a6e22e">alert</span>(<span style="color:#66d9ef">this</span>); <span style="color:#75715e">// undefined
+</span><span style="color:#75715e"></span>&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="browser-specific-features">Browser-specific features</h2>
+<p>There are also several browser-specific differences of scripts with <code>type=&quot;module&quot;</code> compared to regular ones.</p>
+<p>You may want skip this section for now if you&rsquo;re reading for the first time, or if you don&rsquo;t use JavaScript in a browser.</p>
+<h3 id="module-scripts-are-deferred">Module scripts are deferred</h3>
+<p>Module scripts are <em>always</em> deferred, same effect as <code>defer</code> attribute (described in the chapter <a href="info:script-async-defer"></a>), for both external and inline scripts.</p>
+<p>In other words:</p>
+<ul>
+<li>downloading external module scripts <code>&lt;script type=&quot;module&quot; src=&quot;...&quot;&gt;</code> doesn&rsquo;t block HTML processing, they load in parallel with other resources.</li>
+<li>module scripts wait until the HTML document is fully ready (even if they are tiny and load faster than HTML), and then run.</li>
+<li>relative order of scripts is maintained: scripts that go first in the document, execute first.</li>
+</ul>
+<p>As a side-effect, module scripts always &ldquo;see&rdquo; the fully loaded HTML-page, including HTML elements below them.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">alert</span>(<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">button</span>); <span style="color:#75715e">// object: the script can &#39;see&#39; the button below
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+  <span style="color:#75715e">// as modules are deferred, the script runs after the whole page is loaded
+</span><span style="color:#75715e"></span>&lt;/<span style="color:#f92672">script</span>&gt;
+
+Compare to regular script below:
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">alert</span>(<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">button</span>); <span style="color:#75715e">// button is undefined, the script can&#39;t see elements below
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+  <span style="color:#75715e">// regular scripts run immediately, before the rest of the page is processed
+</span><span style="color:#75715e"></span>&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span>&gt;Button&lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><p>Please note: the second script actually runs before the first! So we&rsquo;ll see <code>undefined</code> first, and then <code>object</code>.</p>
+<p>That&rsquo;s because modules are deferred, so we wait for the document to be processed. The regular script runs immediately, so we see its output first.</p>
+<p>When using modules, we should be aware that the HTML page shows up as it loads, and JavaScript modules run after that, so the user may see the page before the JavaScript application is ready. Some functionality may not work yet. We should put &ldquo;loading indicators&rdquo;, or otherwise ensure that the visitor won&rsquo;t be confused by that.</p>
+<h3 id="async-works-on-inline-scripts">Async works on inline scripts</h3>
+<p>For non-module scripts, the <code>async</code> attribute only works on external scripts. Async scripts run immediately when ready, independently of other scripts or the HTML document.</p>
+<p>For module scripts, it works on inline scripts as well.</p>
+<p>For example, the inline script below has <code>async</code>, so it doesn&rsquo;t wait for anything.</p>
+<p>It performs the import (fetches <code>./analytics.js</code>) and runs when ready, even if the HTML document is not finished yet, or if other scripts are still pending.</p>
+<p>That&rsquo;s good for functionality that doesn&rsquo;t depend on anything, like counters, ads, document-level event listeners.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- all dependencies are fetched (analytics.js), and the script runs --&gt;</span>
+<span style="color:#75715e">&lt;!-- doesn&#39;t wait for the document or other &lt;script&gt; tags --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#960050;background-color:#1e0010">*!*</span><span style="color:#a6e22e">async</span><span style="color:#960050;background-color:#1e0010">*/!*</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+  <span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">counter</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./analytics.js&#39;</span>;
+
+  <span style="color:#a6e22e">counter</span>.<span style="color:#a6e22e">count</span>();
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="external-scripts">External scripts</h3>
+<p>External scripts that have <code>type=&quot;module&quot;</code> are different in two aspects:</p>
+<ol>
+<li>
+<p>External scripts with the same <code>src</code> run only once:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- the script my.js is fetched and executed only once --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;my.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;my.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div></li>
+<li>
+<p>External scripts that are fetched from another origin (e.g. another site) require <a href="mdn:Web/HTTP/CORS">CORS</a> headers, as described in the chapter <a href="info:fetch-crossorigin">info:fetch-crossorigin</a>. In other words, if a module script is fetched from another origin, the remote server must supply a header <code>Access-Control-Allow-Origin</code> allowing the fetch.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- another-site.com must supply Access-Control-Allow-Origin --&gt;</span>
+<span style="color:#75715e">&lt;!-- otherwise, the script won&#39;t execute --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*!*http://another-site.com/their.js*/!*&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>That ensures better security by default.</p>
+</li>
+</ol>
+<h3 id="no-bare-modules-allowed">No &ldquo;bare&rdquo; modules allowed</h3>
+<p>In the browser, <code>import</code> must get either a relative or absolute URL. Modules without any path are called &ldquo;bare&rdquo; modules. Such modules are not allowed in <code>import</code>.</p>
+<p>For instance, this <code>import</code> is invalid:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">sayHi</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;sayHi&#39;</span>; <span style="color:#75715e">// Error, &#34;bare&#34; module
+</span><span style="color:#75715e">// the module must have a path, e.g. &#39;./sayHi.js&#39; or wherever the module is
+</span></code></pre></div><p>Certain environments, like Node.js or bundle tools allow bare modules, without any path, as they have their own ways for finding modules and hooks to fine-tune them. But browsers do not support bare modules yet.</p>
+<h3 id="compatibility-nomodule">Compatibility, &ldquo;nomodule&rdquo;</h3>
+<p>Old browsers do not understand <code>type=&quot;module&quot;</code>. Scripts of an unknown type are just ignored. For them, it&rsquo;s possible to provide a fallback using the <code>nomodule</code> attribute:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Runs in modern browsers&#34;</span>);
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">nomodule</span>&gt;
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Modern browsers know both type=module and nomodule, so skip this&#34;</span>)
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Old browsers ignore script with unknown type=module, but execute this.&#34;</span>);
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="build-tools">Build tools</h2>
+<p>In real-life, browser modules are rarely used in their &ldquo;raw&rdquo; form. Usually, we bundle them together with a special tool such as <a href="https://webpack.js.org/">Webpack</a> and deploy to the production server.</p>
+<p>One of the benefits of using bundlers &ndash; they give more control over how modules are resolved, allowing bare modules and much more, like CSS/HTML modules.</p>
+<p>Build tools do the following:</p>
+<ol>
+<li>Take a &ldquo;main&rdquo; module, the one intended to be put in <code>&lt;script type=&quot;module&quot;&gt;</code> in HTML.</li>
+<li>Analyze its dependencies: imports and then imports of imports etc.</li>
+<li>Build a single file with all modules (or multiple files, that&rsquo;s tunable), replacing native <code>import</code> calls with bundler functions, so that it works. &ldquo;Special&rdquo; module types like HTML/CSS modules are also supported.</li>
+<li>In the process, other transformations and optimizations may be applied:
+<ul>
+<li>Unreachable code removed.</li>
+<li>Unused exports removed (&ldquo;tree-shaking&rdquo;).</li>
+<li>Development-specific statements like <code>console</code> and <code>debugger</code> removed.</li>
+<li>Modern, bleeding-edge JavaScript syntax may be transformed to older one with similar functionality using <a href="https://babeljs.io/">Babel</a>.</li>
+<li>The resulting file is minified (spaces removed, variables replaced with shorter names, etc).</li>
+</ul>
+</li>
+</ol>
+<p>If we use bundle tools, then as scripts are bundled together into a single file (or few files), <code>import/export</code> statements inside those scripts are replaced by special bundler functions. So the resulting &ldquo;bundled&rdquo; script does not contain any <code>import/export</code>, it doesn&rsquo;t require <code>type=&quot;module&quot;</code>, and we can put it into a regular script:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- Assuming we got bundle.js from a tool like Webpack --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bundle.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>That said, native modules are also usable. So we won&rsquo;t be using Webpack here: you can configure it later.</p>
+<h2 id="summary">Summary</h2>
+<p>To summarize, the core concepts are:</p>
+<ol>
+<li>A module is a file. To make <code>import/export</code> work, browsers need <code>&lt;script type=&quot;module&quot;&gt;</code>. Modules have several differences:
+<ul>
+<li>Deferred by default.</li>
+<li>Async works on inline scripts.</li>
+<li>To load external scripts from another origin (domain/protocol/port), CORS headers are needed.</li>
+<li>Duplicate external scripts are ignored.</li>
+</ul>
+</li>
+<li>Modules have their own, local top-level scope and interchange functionality via <code>import/export</code>.</li>
+<li>Modules always <code>use strict</code>.</li>
+<li>Module code is executed only once. Exports are created once and shared between importers.</li>
+</ol>
+<p>When we use modules, each module implements the functionality and exports it. Then we use <code>import</code> to directly import it where it&rsquo;s needed. The browser loads and evaluates the scripts automatically.</p>
+<p>In production, people often use bundlers such as <a href="https://webpack.js.org">Webpack</a> to bundle modules together for performance and other reasons.</p>
+<p>In the next chapter we&rsquo;ll see more examples of modules, and how things can be exported/imported.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

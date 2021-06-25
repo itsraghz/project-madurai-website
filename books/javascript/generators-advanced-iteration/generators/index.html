@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/generators-advanced-iteration">Generators, advanced iteration</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/generators-advanced-iteration/async-iterators-generators">Async iteration and generators</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="generators">Generators</h1>
+<p>Regular functions return only one, single value (or nothing).</p>
+<p>Generators can return (&ldquo;yield&rdquo;) multiple values, one after another, on-demand. They work great with <a href="info:iterable">iterables</a>, allowing to create data streams with ease.</p>
+<h2 id="generator-functions">Generator functions</h2>
+<p>To create a generator, we need a special syntax construct: <code>function*</code>, so-called &ldquo;generator function&rdquo;.</p>
+<p>It looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>() {
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span>;
+  }
+
+</code></pre></div><p>Generator functions behave differently from regular ones. When such function is called, it doesn&rsquo;t run its code. Instead it returns a special object, called &ldquo;generator object&rdquo;, to manage the execution.</p>
+<p>Here, take a look:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>() {
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span>;
+    
+  }
+
+  <span style="color:#75715e">// &#34;generator function&#34; creates &#34;generator object&#34;
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">generator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generateSequence</span>();
+  <span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">generator</span>); <span style="color:#75715e">// [object Generator]
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+</code></pre></div><p>The function code execution hasn&rsquo;t started yet:</p>
+<hr>
+<p>flowchart</p>
+<hr>
+<p>The main method of a generator is <code>next()</code>. When called, it runs the execution until the nearest <code>yield &lt;value&gt;</code> statement (<code>value</code> can be omitted, then it&rsquo;s <code>undefined</code>). Then the function execution pauses, and the yielded <code>value</code> is returned to the outer code.</p>
+<p>The result of <code>next()</code> is always an object with two properties:</p>
+<ul>
+<li><code>value</code>: the yielded value.</li>
+<li><code>done</code>: <code>true</code> if the function code has finished, otherwise <code>false</code>.</li>
+</ul>
+<p>For instance, here we create the generator and get its first yielded value:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>() {
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span>;
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">generator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generateSequence</span>();
+
+  <span style="color:#f92672">*!*</span>
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">one</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>();
+  <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">one</span>)); <span style="color:#75715e">// {value: 1, done: false}
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>As of now, we got the first value only, and the function execution is on the second line:</p>
+<hr>
+<p>flowchart</p>
+<hr>
+<p>Let&rsquo;s call <code>generator.next()</code> again. It resumes the code execution and returns the next <code>yield</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">two</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>();
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">two</span>)); <span style="color:#75715e">// {value: 2, done: false}
+</span><span style="color:#75715e"></span>
+</code></pre></div><hr>
+<p>flowchart</p>
+<hr>
+<p>And, if we call it a third time, the execution reaches the <code>return</code> statement that finishes the function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">three</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>();
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">three</span>)); <span style="color:#75715e">// {value: 3, *!*done: true*/!*}
+</span><span style="color:#75715e"></span>
+</code></pre></div><hr>
+<p>flowchart</p>
+<hr>
+<p>Now the generator is done. We should see it from <code>done:true</code> and process <code>value:3</code> as the final result.</p>
+<p>New calls to <code>generator.next()</code> don&rsquo;t make sense any more. If we do them, they return the same object: <code>{done: true}</code>.</p>
+<blockquote>
+<h3 id="ℹ-function-f-or-function-f">ℹ️ <strong><code>function* f(…)</code> or <code>function *f(…)</code>?</strong></h3>
+<p>Both syntaxes are correct.</p>
+<p>But usually the first syntax is preferred, as the star <code>*</code> denotes that it&rsquo;s a generator function, it describes the kind, not the name, so it should stick with the <code>function</code> keyword.</p>
+</blockquote>
+<h2 id="generators-are-iterable">Generators are iterable</h2>
+<p>As you probably already guessed looking at the <code>next()</code> method, generators are <a href="info:iterable">iterable</a>.</p>
+<p>We can loop over their values using <code>for..of</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>() {
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span>;
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">generator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generateSequence</span>();
+
+  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">generator</span>) {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">value</span>); <span style="color:#75715e">// 1, then 2
+</span><span style="color:#75715e"></span>  }
+
+</code></pre></div><p>Looks a lot nicer than calling <code>.next().value</code>, right?</p>
+<p>&hellip;But please note: the example above shows <code>1</code>, then <code>2</code>, and that&rsquo;s all. It doesn&rsquo;t show <code>3</code>!</p>
+<p>It&rsquo;s because <code>for..of</code> iteration ignores the last <code>value</code>, when <code>done: true</code>. So, if we want all results to be shown by <code>for..of</code>, we must return them with <code>yield</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+    <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>() {
+      <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">1</span>;
+      <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#f92672">*!*</span>
+      <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">3</span>;
+    <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    }
+
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">generator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generateSequence</span>();
+
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">generator</span>) {
+      <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">value</span>); <span style="color:#75715e">// 1, then 2, then 3
+</span><span style="color:#75715e"></span>    }
+
+</code></pre></div><p>As generators are iterable, we can call all related functionality, e.g. the spread syntax <code>...</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>() {
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">3</span>;
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sequence</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, ...<span style="color:#a6e22e">generateSequence</span>()];
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">sequence</span>); <span style="color:#75715e">// 0, 1, 2, 3
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>In the code above, <code>...generateSequence()</code> turns the iterable generator object into an array of items (read more about the spread syntax in the chapter <a href="info:rest-parameters-spread#spread-syntax"></a>)</p>
+<h2 id="using-generators-for-iterables">Using generators for iterables</h2>
+<p>Some time ago, in the chapter <a href="info:iterable"></a> we created an iterable <code>range</code> object that returns values <code>from..to</code>.</p>
+<p>Here, let&rsquo;s remember the code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">range</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+
+    <span style="color:#75715e">// for..of range calls this method once in the very beginning
+</span><span style="color:#75715e"></span>    [<span style="color:#a6e22e">Symbol</span>.<span style="color:#a6e22e">iterator</span>]() {
+      <span style="color:#75715e">// ...it returns the iterator object:
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">// onward, for..of works only with that object, asking it for next values
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">return</span> {
+        <span style="color:#a6e22e">current</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">from</span>,
+        <span style="color:#a6e22e">last</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">to</span>,
+
+        <span style="color:#75715e">// next() is called on each iteration by the for..of loop
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">next</span>() {
+          <span style="color:#75715e">// it should return the value as an object {done:.., value :...}
+</span><span style="color:#75715e"></span>          <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">current</span> <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">last</span>) {
+            <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">done</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">current</span><span style="color:#f92672">++</span> };
+          } <span style="color:#66d9ef">else</span> {
+            <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">done</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+          }
+        }
+      };
+    }
+  };
+
+  <span style="color:#75715e">// iteration over range returns numbers from range.from to range.to
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">alert</span>([...<span style="color:#a6e22e">range</span>]); <span style="color:#75715e">// 1,2,3,4,5
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>We can use a generator function for iteration by providing it as <code>Symbol.iterator</code>.</p>
+<p>Here&rsquo;s the same <code>range</code>, but much more compact:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">range</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+
+    <span style="color:#f92672">*</span>[<span style="color:#a6e22e">Symbol</span>.<span style="color:#a6e22e">iterator</span>]() { <span style="color:#75715e">// a shorthand for [Symbol.iterator]: function*()
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">from</span>; <span style="color:#a6e22e">value</span> <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">to</span>; <span style="color:#a6e22e">value</span><span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">value</span>;
+      }
+    }
+  };
+
+  <span style="color:#a6e22e">alert</span>( [...<span style="color:#a6e22e">range</span>] ); <span style="color:#75715e">// 1,2,3,4,5
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>That works, because <code>range[Symbol.iterator]()</code> now returns a generator, and generator methods are exactly what <code>for..of</code> expects:</p>
+<ul>
+<li>it has a <code>.next()</code> method</li>
+<li>that returns values in the form <code>{value: ..., done: true/false}</code></li>
+</ul>
+<p>That&rsquo;s not a coincidence, of course. Generators were added to JavaScript language with iterators in mind, to implement them easily.</p>
+<p>The variant with a generator is much more concise than the original iterable code of <code>range</code>, and keeps the same functionality.</p>
+<blockquote>
+<h3 id="ℹ-generators-may-generate-values-forever">ℹ️ <strong>Generators may generate values forever</strong></h3>
+<p>In the examples above we generated finite sequences, but we can also make a generator that yields values forever. For instance, an unending sequence of pseudo-random numbers.</p>
+<p>That surely would require a <code>break</code> (or <code>return</code>) in <code>for..of</code> over such generator. Otherwise, the loop would repeat forever and hang.</p>
+</blockquote>
+<h2 id="generator-composition">Generator composition</h2>
+<p>Generator composition is a special feature of generators that allows to transparently &ldquo;embed&rdquo; generators in each other.</p>
+<p>For instance, we have a function that generates a sequence of numbers:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>(<span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span>) {
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">start</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">end</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">i</span>;
+  }
+
+</code></pre></div><p>Now we&rsquo;d like to reuse it to generate a more complex sequence:</p>
+<ul>
+<li>first, digits <code>0..9</code> (with character codes 48..57),</li>
+<li>followed by uppercase alphabet letters <code>A..Z</code> (character codes 65..90)</li>
+<li>followed by lowercase alphabet letters <code>a..z</code> (character codes 97..122)</li>
+</ul>
+<p>We can use this sequence e.g. to create passwords by selecting characters from it (could add syntax characters as well), but let&rsquo;s generate it first.</p>
+<p>In a regular function, to combine results from multiple other functions, we call them, store the results, and then join at the end.</p>
+<p>For generators, there&rsquo;s a special <code>yield*</code> syntax to &ldquo;embed&rdquo; (compose) one generator into another.</p>
+<p>The composed generator:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>(<span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">start</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">end</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">i</span>;
+  }
+
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generatePasswordCodes</span>() {
+
+  <span style="color:#f92672">*!*</span>
+    <span style="color:#75715e">// 0..9
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">yield</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>(<span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">57</span>);
+
+    <span style="color:#75715e">// A..Z
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">yield</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>(<span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">90</span>);
+
+    <span style="color:#75715e">// a..z
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">yield</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>(<span style="color:#ae81ff">97</span>, <span style="color:#ae81ff">122</span>);
+  <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+
+  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">code</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">generatePasswordCodes</span>()) {
+    <span style="color:#a6e22e">str</span> <span style="color:#f92672">+=</span> String.<span style="color:#a6e22e">fromCharCode</span>(<span style="color:#a6e22e">code</span>);
+  }
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">str</span>); <span style="color:#75715e">// 0..9A..Za..z
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>The <code>yield*</code> directive <em>delegates</em> the execution to another generator. This term means that <code>yield* gen</code> iterates over the generator <code>gen</code> and transparently forwards its yields outside. As if the values were yielded by the outer generator.</p>
+<p>The result is the same as if we inlined the code from nested generators:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateSequence</span>(<span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">start</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">end</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">i</span>;
+  }
+
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generateAlphaNum</span>() {
+
+  <span style="color:#f92672">*!*</span>
+    <span style="color:#75715e">// yield* generateSequence(48, 57);
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">48</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">57</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">i</span>;
+
+    <span style="color:#75715e">// yield* generateSequence(65, 90);
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">65</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">90</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">i</span>;
+
+    <span style="color:#75715e">// yield* generateSequence(97, 122);
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">97</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">122</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">i</span>;
+  <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+
+  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">code</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">generateAlphaNum</span>()) {
+    <span style="color:#a6e22e">str</span> <span style="color:#f92672">+=</span> String.<span style="color:#a6e22e">fromCharCode</span>(<span style="color:#a6e22e">code</span>);
+  }
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">str</span>); <span style="color:#75715e">// 0..9A..Za..z
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>A generator composition is a natural way to insert a flow of one generator into another. It doesn&rsquo;t use extra memory to store intermediate results.</p>
+<h2 id="yield-is-a-two-way-street">&ldquo;yield&rdquo; is a two-way street</h2>
+<p>Until this moment, generators were similar to iterable objects, with a special syntax to generate values. But in fact they are much more powerful and flexible.</p>
+<p>That&rsquo;s because <code>yield</code> is a two-way street: it not only returns the result to the outside, but also can pass the value inside the generator.</p>
+<p>To do so, we should call <code>generator.next(arg)</code>, with an argument. That argument becomes the result of <code>yield</code>.</p>
+<p>Let&rsquo;s see an example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">gen</span>() {
+  <span style="color:#f92672">*!*</span>
+    <span style="color:#75715e">// Pass a question to the outer code and wait for an answer
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;2 + 2 = ?&#34;</span>; <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">result</span>);
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">generator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gen</span>();
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">question</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>().<span style="color:#a6e22e">value</span>; <span style="color:#75715e">// &lt;-- yield returns the value
+</span><span style="color:#75715e"></span>
+  <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>(<span style="color:#ae81ff">4</span>); <span style="color:#75715e">// --&gt; pass the result into the generator  
+</span><span style="color:#75715e"></span>
+</code></pre></div><hr>
+<p>flowchart</p>
+<hr>
+<ol>
+<li>The first call <code>generator.next()</code> should be always made without an argument (the argument is ignored if passed). It starts the execution and returns the result of the first <code>yield &quot;2+2=?&quot;</code>. At this point the generator pauses the execution, while staying on the line <code>(*)</code>.</li>
+<li>Then, as shown at the picture above, the result of <code>yield</code> gets into the <code>question</code> variable in the calling code.</li>
+<li>On <code>generator.next(4)</code>, the generator resumes, and <code>4</code> gets in as the result: <code>let result = 4</code>.</li>
+</ol>
+<p>Please note, the outer code does not have to immediately call <code>next(4)</code>. It may take time. That&rsquo;s not a problem: the generator will wait.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#75715e">// resume the generator after some time
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>(<span style="color:#ae81ff">4</span>), <span style="color:#ae81ff">1000</span>);
+
+</code></pre></div><p>As we can see, unlike regular functions, a generator and the calling code can exchange results by passing values in <code>next/yield</code>.</p>
+<p>To make things more obvious, here&rsquo;s another example, with more calls:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">gen</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ask1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;2 + 2 = ?&#34;</span>;
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">ask1</span>); <span style="color:#75715e">// 4
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ask2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;3 * 3 = ?&#34;</span>
+
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">ask2</span>); <span style="color:#75715e">// 9
+</span><span style="color:#75715e"></span>  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">generator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gen</span>();
+
+  <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>().<span style="color:#a6e22e">value</span> ); <span style="color:#75715e">// &#34;2 + 2 = ?&#34;
+</span><span style="color:#75715e"></span>
+  <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>(<span style="color:#ae81ff">4</span>).<span style="color:#a6e22e">value</span> ); <span style="color:#75715e">// &#34;3 * 3 = ?&#34;
+</span><span style="color:#75715e"></span>
+  <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>(<span style="color:#ae81ff">9</span>).<span style="color:#a6e22e">done</span> ); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>The execution picture:</p>
+<hr>
+<p>flowchart</p>
+<hr>
+<ol>
+<li>The first <code>.next()</code> starts the execution&hellip; It reaches the first <code>yield</code>.</li>
+<li>The result is returned to the outer code.</li>
+<li>The second <code>.next(4)</code> passes <code>4</code> back to the generator as the result of the first <code>yield</code>, and resumes the execution.</li>
+<li>&hellip;It reaches the second <code>yield</code>, that becomes the result of the generator call.</li>
+<li>The third <code>next(9)</code> passes <code>9</code> into the generator as the result of the second <code>yield</code> and resumes the execution that reaches the end of the function, so <code>done: true</code>.</li>
+</ol>
+<p>It&rsquo;s like a &ldquo;ping-pong&rdquo; game. Each <code>next(value)</code> (excluding the first one) passes a value into the generator, that becomes the result of the current <code>yield</code>, and then gets back the result of the next <code>yield</code>.</p>
+<h2 id="generatorthrow">generator.throw</h2>
+<p>As we observed in the examples above, the outer code may pass a value into the generator, as the result of <code>yield</code>.</p>
+<p>&hellip;But it can also initiate (throw) an error there. That&rsquo;s natural, as an error is a kind of result.</p>
+<p>To pass an error into a <code>yield</code>, we should call <code>generator.throw(err)</code>. In that case, the <code>err</code> is thrown in the line with that <code>yield</code>.</p>
+<p>For instance, here the yield of <code>&quot;2 + 2 = ?&quot;</code> leads to an error:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">gen</span>() {
+    <span style="color:#66d9ef">try</span> {
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;2 + 2 = ?&#34;</span>; <span style="color:#75715e">// (1)
+</span><span style="color:#75715e"></span>
+      <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;The execution does not reach here, because the exception is thrown above&#34;</span>);
+    } <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">e</span>) {
+      <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">e</span>); <span style="color:#75715e">// shows the error
+</span><span style="color:#75715e"></span>    }
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">generator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gen</span>();
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">question</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>().<span style="color:#a6e22e">value</span>;
+
+  <span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">generator</span>.<span style="color:#66d9ef">throw</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;The answer is not found in my database&#34;</span>)); <span style="color:#75715e">// (2)
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+</code></pre></div><p>The error, thrown into the generator at line <code>(2)</code> leads to an exception in line <code>(1)</code> with <code>yield</code>. In the example above, <code>try..catch</code> catches it and shows it.</p>
+<p>If we don&rsquo;t catch it, then just like any exception, it &ldquo;falls out&rdquo; the generator into the calling code.</p>
+<p>The current line of the calling code is the line with <code>generator.throw</code>, labelled as <code>(2)</code>. So we can catch it here, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+  <span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">generate</span>() {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;2 + 2 = ?&#34;</span>; <span style="color:#75715e">// Error in this line
+</span><span style="color:#75715e"></span>  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">generator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generate</span>();
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">question</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generator</span>.<span style="color:#a6e22e">next</span>().<span style="color:#a6e22e">value</span>;
+
+  <span style="color:#f92672">*!*</span>
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#a6e22e">generator</span>.<span style="color:#66d9ef">throw</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;The answer is not found in my database&#34;</span>));
+  } <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">e</span>) {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">e</span>); <span style="color:#75715e">// shows the error
+</span><span style="color:#75715e"></span>  }
+  <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+  
+</code></pre></div><p>If we don&rsquo;t catch the error there, then, as usual, it falls through to the outer calling code (if any) and, if uncaught, kills the script.</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Generators are created by generator functions <code>function* f(…) {…}</code>.</li>
+<li>Inside generators (only) there exists a <code>yield</code> operator.</li>
+<li>The outer code and the generator may exchange results via <code>next/yield</code> calls.</li>
+</ul>
+<p>In modern JavaScript, generators are rarely used. But sometimes they come in handy, because the ability of a function to exchange data with the calling code during the execution is quite unique. And, surely, they are great for making iterable objects.</p>
+<p>Also, in the next chapter we&rsquo;ll learn async generators, which are used to read streams of asynchronously generated data (e.g paginated fetches over a network) in <code>for await ... of</code> loops.</p>
+<p>In web-programming we often work with streamed data, so that&rsquo;s another very important use case.</p>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/miscellaneous">Miscellaneous</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/miscellaneous/eval-run-code-string">Eval: run a code string</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h1 id="proxy-and-reflect">Proxy and Reflect</h1>
+<p>A <code>Proxy</code> object wraps another object and intercepts operations, like reading/writing properties and others, optionally handling them on its own, or transparently allowing the object to handle them.</p>
+<p>Proxies are used in many libraries and some browser frameworks. We&rsquo;ll see many practical applications in this article.</p>
+<h2 id="proxy">Proxy</h2>
+<p>The syntax:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">proxy</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">handler</span>)
+</code></pre></div><ul>
+<li><code>target</code> &ndash; is an object to wrap, can be anything, including functions.</li>
+<li><code>handler</code> &ndash; proxy configuration: an object with &ldquo;traps&rdquo;, methods that intercept operations. - e.g. <code>get</code> trap for reading a property of <code>target</code>, <code>set</code> trap for writing a property into <code>target</code>, and so on.</li>
+</ul>
+<p>For operations on <code>proxy</code>, if there&rsquo;s a corresponding trap in <code>handler</code>, then it runs, and the proxy has a chance to handle it, otherwise the operation is performed on <code>target</code>.</p>
+<p>As a starting example, let&rsquo;s create a proxy without any traps:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> {};
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">proxy</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">target</span>, {}); <span style="color:#75715e">// empty handler
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">proxy</span>.<span style="color:#a6e22e">test</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>; <span style="color:#75715e">// writing to proxy (1)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">test</span>); <span style="color:#75715e">// 5, the property appeared in target!
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">proxy</span>.<span style="color:#a6e22e">test</span>); <span style="color:#75715e">// 5, we can read it from proxy too (2)
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">proxy</span>) <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">key</span>); <span style="color:#75715e">// test, iteration works (3)
+</span></code></pre></div><p>As there are no traps, all operations on <code>proxy</code> are forwarded to <code>target</code>.</p>
+<ol>
+<li>A writing operation <code>proxy.test=</code> sets the value on <code>target</code>.</li>
+<li>A reading operation <code>proxy.test</code> returns the value from <code>target</code>.</li>
+<li>Iteration over <code>proxy</code> returns values from <code>target</code>.</li>
+</ol>
+<p>As we can see, without any traps, <code>proxy</code> is a transparent wrapper around <code>target</code>.</p>
+<p><img src="proxy.svg" alt=""></p>
+<p><code>Proxy</code> is a special &ldquo;exotic object&rdquo;. It doesn&rsquo;t have own properties. With an empty <code>handler</code> it transparently forwards operations to <code>target</code>.</p>
+<p>To activate more capabilities, let&rsquo;s add traps.</p>
+<p>What can we intercept with them?</p>
+<p>For most operations on objects, there&rsquo;s a so-called &ldquo;internal method&rdquo; in the JavaScript specification that describes how it works at the lowest level. For instance <code>[[Get]]</code>, the internal method to read a property, <code>[[Set]]</code>, the internal method to write a property, and so on. These methods are only used in the specification, we can&rsquo;t call them directly by name.</p>
+<p>Proxy traps intercept invocations of these methods. They are listed in the <a href="https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-internal-slots">Proxy specification</a> and in the table below.</p>
+<p>For every internal method, there&rsquo;s a trap in this table: the name of the method that we can add to the <code>handler</code> parameter of <code>new Proxy</code> to intercept the operation:</p>
+<table>
+<thead>
+<tr>
+<th>Internal Method</th>
+<th>Handler Method</th>
+<th>Triggers when&hellip;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[[Get]]</code></td>
+<td><code>get</code></td>
+<td>reading a property</td>
+</tr>
+<tr>
+<td><code>[[Set]]</code></td>
+<td><code>set</code></td>
+<td>writing to a property</td>
+</tr>
+<tr>
+<td><code>[[HasProperty]]</code></td>
+<td><code>has</code></td>
+<td><code>in</code> operator</td>
+</tr>
+<tr>
+<td><code>[[Delete]]</code></td>
+<td><code>deleteProperty</code></td>
+<td><code>delete</code> operator</td>
+</tr>
+<tr>
+<td><code>[[Call]]</code></td>
+<td><code>apply</code></td>
+<td>function call</td>
+</tr>
+<tr>
+<td><code>[[Construct]]</code></td>
+<td><code>construct</code></td>
+<td><code>new</code> operator</td>
+</tr>
+<tr>
+<td><code>[[GetPrototypeOf]]</code></td>
+<td><code>getPrototypeOf</code></td>
+<td><a href="mdn:/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf</a></td>
+</tr>
+<tr>
+<td><code>[[SetPrototypeOf]]</code></td>
+<td><code>setPrototypeOf</code></td>
+<td><a href="mdn:/JavaScript/Reference/Global_Objects/Object/setPrototypeOf">Object.setPrototypeOf</a></td>
+</tr>
+<tr>
+<td><code>[[IsExtensible]]</code></td>
+<td><code>isExtensible</code></td>
+<td><a href="mdn:/JavaScript/Reference/Global_Objects/Object/isExtensible">Object.isExtensible</a></td>
+</tr>
+<tr>
+<td><code>[[PreventExtensions]]</code></td>
+<td><code>preventExtensions</code></td>
+<td><a href="mdn:/JavaScript/Reference/Global_Objects/Object/preventExtensions">Object.preventExtensions</a></td>
+</tr>
+<tr>
+<td><code>[[DefineOwnProperty]]</code></td>
+<td><code>defineProperty</code></td>
+<td><a href="mdn:/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>, <a href="mdn:/JavaScript/Reference/Global_Objects/Object/defineProperties">Object.defineProperties</a></td>
+</tr>
+<tr>
+<td><code>[[GetOwnProperty]]</code></td>
+<td><code>getOwnPropertyDescriptor</code></td>
+<td><a href="mdn:/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor">Object.getOwnPropertyDescriptor</a>, <code>for..in</code>, <code>Object.keys/values/entries</code></td>
+</tr>
+<tr>
+<td><code>[[OwnPropertyKeys]]</code></td>
+<td><code>ownKeys</code></td>
+<td><a href="mdn:/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">Object.getOwnPropertyNames</a>, <a href="mdn:/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols">Object.getOwnPropertySymbols</a>, <code>for..in</code>, <code>Object.keys/values/entries</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-warn" data-lang="warn">JavaScript enforces some invariants -- conditions that must be fulfilled by internal methods and traps.
+
+Most of them are for return values:
+- `[[Set]]` must return `true` if the value was written successfully, otherwise `false`.
+- `[[Delete]]` must return `true` if the value was deleted successfully, otherwise `false`.
+- ...and so on, we'll see more in examples below.
+
+There are some other invariants, like:
+- `[[GetPrototypeOf]]`, applied to the proxy object must return the same value as `[[GetPrototypeOf]]` applied to the proxy object's target object. In other words, reading prototype of a proxy must always return the prototype of the target object.
+
+Traps can intercept these operations, but they must follow these rules.
+
+Invariants ensure correct and consistent behavior of language features. The full invariants list is in [the specification](https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-internal-slots). You probably won't violate them if you're not doing something weird.
+</code></pre><p>Let&rsquo;s see how that works in practical examples.</p>
+<h2 id="default-value-with-get-trap">Default value with &ldquo;get&rdquo; trap</h2>
+<p>The most common traps are for reading/writing properties.</p>
+<p>To intercept reading, the <code>handler</code> should have a method <code>get(target, property, receiver)</code>.</p>
+<p>It triggers when a property is read, with following arguments:</p>
+<ul>
+<li><code>target</code> &ndash; is the target object, the one passed as the first argument to <code>new Proxy</code>,</li>
+<li><code>property</code> &ndash; property name,</li>
+<li><code>receiver</code> &ndash; if the target property is a getter, then <code>receiver</code> is the object that&rsquo;s going to be used as <code>this</code> in its call. Usually that&rsquo;s the <code>proxy</code> object itself (or an object that inherits from it, if we inherit from proxy). Right now we don&rsquo;t need this argument, so it will be explained in more detail later.</li>
+</ul>
+<p>Let&rsquo;s use <code>get</code> to implement default values for an object.</p>
+<p>We&rsquo;ll make a numeric array that returns <code>0</code> for nonexistent values.</p>
+<p>Usually when one tries to get a non-existing array item, they get <code>undefined</code>, but we&rsquo;ll wrap a regular array into the proxy that traps reading and returns <code>0</code> if there&rsquo;s no such property:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
+
+<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">numbers</span>, {
+  <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">prop</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">target</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">prop</span>];
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// default value
+</span><span style="color:#75715e"></span>    }
+  }
+});
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">1</span>] ); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">123</span>] ); <span style="color:#75715e">// 0 (no such item)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>As we can see, it&rsquo;s quite easy to do with a <code>get</code> trap.</p>
+<p>We can use <code>Proxy</code> to implement any logic for &ldquo;default&rdquo; values.</p>
+<p>Imagine we have a dictionary, with phrases and their translations:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">dictionary</span> <span style="color:#f92672">=</span> {
+  <span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hola&#39;</span>,
+  <span style="color:#e6db74">&#39;Bye&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Adiós&#39;</span>
+};
+
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">dictionary</span>[<span style="color:#e6db74">&#39;Hello&#39;</span>] ); <span style="color:#75715e">// Hola
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">dictionary</span>[<span style="color:#e6db74">&#39;Welcome&#39;</span>] ); <span style="color:#75715e">// undefined
+</span></code></pre></div><p>Right now, if there&rsquo;s no phrase, reading from <code>dictionary</code> returns <code>undefined</code>. But in practice, leaving a phrase untranslated is usually better than <code>undefined</code>. So let&rsquo;s make it return an untranslated phrase in that case instead of <code>undefined</code>.</p>
+<p>To achieve that, we&rsquo;ll wrap <code>dictionary</code> in a proxy that intercepts reading operations:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">dictionary</span> <span style="color:#f92672">=</span> {
+  <span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hola&#39;</span>,
+  <span style="color:#e6db74">&#39;Bye&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Adiós&#39;</span>
+};
+
+<span style="color:#a6e22e">dictionary</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">dictionary</span>, {
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">phrase</span>) { <span style="color:#75715e">// intercept reading a property from dictionary
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">phrase</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">target</span>) { <span style="color:#75715e">// if we have it in the dictionary
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">phrase</span>]; <span style="color:#75715e">// return the translation
+</span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#75715e">// otherwise, return the non-translated phrase
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">phrase</span>;
+    }
+  }
+});
+
+<span style="color:#75715e">// Look up arbitrary phrases in the dictionary!
+</span><span style="color:#75715e">// At worst, they&#39;re not translated.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">dictionary</span>[<span style="color:#e6db74">&#39;Hello&#39;</span>] ); <span style="color:#75715e">// Hola
+</span><span style="color:#75715e"></span><span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">dictionary</span>[<span style="color:#e6db74">&#39;Welcome to Proxy&#39;</span>]); <span style="color:#75715e">// Welcome to Proxy (no translation)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><pre><code class="language-smart" data-lang="smart">Please note how the proxy overwrites the variable:
+
+```js
+dictionary = new Proxy(dictionary, ...);
+```
+
+The proxy should totally replace the target object everywhere. No one should ever reference the target object after it got proxied. Otherwise it's easy to mess up.
+</code></pre><h2 id="validation-with-set-trap">Validation with &ldquo;set&rdquo; trap</h2>
+<p>Let&rsquo;s say we want an array exclusively for numbers. If a value of another type is added, there should be an error.</p>
+<p>The <code>set</code> trap triggers when a property is written.</p>
+<p><code>set(target, property, value, receiver)</code>:</p>
+<ul>
+<li><code>target</code> &ndash; is the target object, the one passed as the first argument to <code>new Proxy</code>,</li>
+<li><code>property</code> &ndash; property name,</li>
+<li><code>value</code> &ndash; property value,</li>
+<li><code>receiver</code> &ndash; similar to <code>get</code> trap, matters only for setter properties.</li>
+</ul>
+<p>The <code>set</code> trap should return <code>true</code> if setting is successful, and <code>false</code> otherwise (triggers <code>TypeError</code>).</p>
+<p>Let&rsquo;s use it to validate new values:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [];
+
+<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">numbers</span>, { <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">val</span>) { <span style="color:#75715e">// to intercept property writing
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">val</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;number&#39;</span>) {
+      <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">prop</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">val</span>;
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+    }
+  }
+});
+
+<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">1</span>); <span style="color:#75715e">// added successfully
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">2</span>); <span style="color:#75715e">// added successfully
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Length is: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">&#34;test&#34;</span>); <span style="color:#75715e">// TypeError (&#39;set&#39; on proxy returned false)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;This line is never reached (error in the line above)&#34;</span>);
+</code></pre></div><p>Please note: the built-in functionality of arrays is still working! Values are added by <code>push</code>. The <code>length</code> property auto-increases when values are added. Our proxy doesn&rsquo;t break anything.</p>
+<p>We don&rsquo;t have to override value-adding array methods like <code>push</code> and <code>unshift</code>, and so on, to add checks in there, because internally they use the <code>[[Set]]</code> operation that&rsquo;s intercepted by the proxy.</p>
+<p>So the code is clean and concise.</p>
+<p>```warn header=&ldquo;Don&rsquo;t forget to return <code>true</code>&rdquo;
+As said above, there are invariants to be held.</p>
+<p>For <code>set</code>, it must return <code>true</code> for a successful write.</p>
+<p>If we forget to do it or return any falsy value, the operation triggers <code>TypeError</code>.</p>
+<pre><code>
+## Iteration with &quot;ownKeys&quot; and &quot;getOwnPropertyDescriptor&quot;
+
+`Object.keys`, `for..in` loop and most other methods that iterate over object properties use `[[OwnPropertyKeys]]` internal method (intercepted by `ownKeys` trap) to get a list of properties.
+
+Such methods differ in details:
+- `Object.getOwnPropertyNames(obj)` returns non-symbol keys.
+- `Object.getOwnPropertySymbols(obj)` returns symbol keys.
+- `Object.keys/values()` returns non-symbol keys/values with `enumerable` flag (property flags were explained in the article &lt;info:property-descriptors&gt;).
+- `for..in` loops over non-symbol keys with `enumerable` flag, and also prototype keys.
+
+...But all of them start with that list.
+
+In the example below we use `ownKeys` trap to make `for..in` loop over `user`, and also `Object.keys` and `Object.values`, to skip properties starting with an underscore `_`:
+
+```js run
+let user = {
+  name: &quot;John&quot;,
+  age: 30,
+  _password: &quot;***&quot;
+};
+
+user = new Proxy(user, {
+*!*
+  ownKeys(target) {
+*/!*
+    return Object.keys(target).filter(key =&gt; !key.startsWith('_'));
+  }
+});
+
+// &quot;ownKeys&quot; filters out _password
+for(let key in user) alert(key); // name, then: age
+
+// same effect on these methods:
+alert( Object.keys(user) ); // name,age
+alert( Object.values(user) ); // John,30
+</code></pre><p>So far, it works.</p>
+<p>Although, if we return a key that doesn&rsquo;t exist in the object, <code>Object.keys</code> won&rsquo;t list it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { };
+
+<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">user</span>, {
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">ownKeys</span>(<span style="color:#a6e22e">target</span>) {
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    <span style="color:#66d9ef">return</span> [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>];
+  }
+});
+
+<span style="color:#a6e22e">alert</span>( Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">user</span>) ); <span style="color:#75715e">// &lt;empty&gt;
+</span></code></pre></div><p>Why? The reason is simple: <code>Object.keys</code> returns only properties with the <code>enumerable</code> flag. To check for it, it calls the internal method <code>[[GetOwnProperty]]</code> for every property to get <a href="info:property-descriptors">its descriptor</a>. And here, as there&rsquo;s no property, its descriptor is empty, no <code>enumerable</code> flag, so it&rsquo;s skipped.</p>
+<p>For <code>Object.keys</code> to return a property, we need it to either exist in the object, with the <code>enumerable</code> flag, or we can intercept calls to <code>[[GetOwnProperty]]</code> (the trap <code>getOwnPropertyDescriptor</code> does it), and return a descriptor with <code>enumerable: true</code>.</p>
+<p>Here&rsquo;s an example of that:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { };
+
+<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">user</span>, {
+  <span style="color:#a6e22e">ownKeys</span>(<span style="color:#a6e22e">target</span>) { <span style="color:#75715e">// called once to get a list of properties
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>];
+  },
+
+  <span style="color:#a6e22e">getOwnPropertyDescriptor</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>) { <span style="color:#75715e">// called for every property
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> {
+      <span style="color:#a6e22e">enumerable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+      <span style="color:#a6e22e">configurable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+      <span style="color:#75715e">/* ...other flags, probable &#34;value:...&#34; */</span>
+    };
+  }
+
+});
+
+<span style="color:#a6e22e">alert</span>( Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">user</span>) ); <span style="color:#75715e">// a, b, c
+</span></code></pre></div><p>Let&rsquo;s note once again: we only need to intercept <code>[[GetOwnProperty]]</code> if the property is absent in the object.</p>
+<h2 id="protected-properties-with-deleteproperty-and-other-traps">Protected properties with &ldquo;deleteProperty&rdquo; and other traps</h2>
+<p>There&rsquo;s a widespread convention that properties and methods prefixed by an underscore <code>_</code> are internal. They shouldn&rsquo;t be accessed from outside the object.</p>
+<p>Technically that&rsquo;s possible though:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#ae81ff">_</span><span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;secret&#34;</span>
+};
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">password</span>); <span style="color:#75715e">// secret
+</span></code></pre></div><p>Let&rsquo;s use proxies to prevent any access to properties starting with <code>_</code>.</p>
+<p>We&rsquo;ll need the traps:</p>
+<ul>
+<li><code>get</code> to throw an error when reading such property,</li>
+<li><code>set</code> to throw an error when writing,</li>
+<li><code>deleteProperty</code> to throw an error when deleting,</li>
+<li><code>ownKeys</code> to exclude properties starting with <code>_</code> from <code>for..in</code> and methods like <code>Object.keys</code>.</li>
+</ul>
+<p>Here&rsquo;s the code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+  <span style="color:#ae81ff">_</span><span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;***&#34;</span>
+};
+
+<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">user</span>, {
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>) {
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">prop</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#39;_&#39;</span>)) {
+      <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;Access denied&#34;</span>);
+    }
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">prop</span>];
+    <span style="color:#66d9ef">return</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;function&#39;</span>) <span style="color:#f92672">?</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">target</span>) <span style="color:#f92672">:</span> <span style="color:#a6e22e">value</span>; <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span>  },
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">val</span>) { <span style="color:#75715e">// to intercept property writing
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">prop</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#39;_&#39;</span>)) {
+      <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;Access denied&#34;</span>);
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">prop</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">val</span>;
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    }
+  },
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">deleteProperty</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>) { <span style="color:#75715e">// to intercept property deletion
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">prop</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#39;_&#39;</span>)) {
+      <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;Access denied&#34;</span>);
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">prop</span>];
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    }
+  },
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">ownKeys</span>(<span style="color:#a6e22e">target</span>) { <span style="color:#75715e">// to intercept property list
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    <span style="color:#66d9ef">return</span> Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">target</span>).<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">key</span> =&gt; <span style="color:#f92672">!</span><span style="color:#a6e22e">key</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#39;_&#39;</span>));
+  }
+});
+
+<span style="color:#75715e">// &#34;get&#34; doesn&#39;t allow to read _password
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">try</span> {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">password</span>); <span style="color:#75715e">// Error: Access denied
+</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">e</span>) { <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">message</span>); }
+
+<span style="color:#75715e">// &#34;set&#34; doesn&#39;t allow to write _password
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">try</span> {
+  <span style="color:#a6e22e">user</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>; <span style="color:#75715e">// Error: Access denied
+</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">e</span>) { <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">message</span>); }
+
+<span style="color:#75715e">// &#34;deleteProperty&#34; doesn&#39;t allow to delete _password
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">try</span> {
+  <span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">user</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">password</span>; <span style="color:#75715e">// Error: Access denied
+</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">e</span>) { <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">message</span>); }
+
+<span style="color:#75715e">// &#34;ownKeys&#34; filters out _password
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">user</span>) <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">key</span>); <span style="color:#75715e">// name
+</span></code></pre></div><p>Please note the important detail in the <code>get</code> trap, in the line <code>(*)</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>) {
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">prop</span>];
+<span style="color:#f92672">*!*</span>
+  <span style="color:#66d9ef">return</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;function&#39;</span>) <span style="color:#f92672">?</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">target</span>) <span style="color:#f92672">:</span> <span style="color:#a6e22e">value</span>; <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+}
+</code></pre></div><p>Why do we need a function to call <code>value.bind(target)</code>?</p>
+<p>The reason is that object methods, such as <code>user.checkPassword()</code>, must be able to access <code>_password</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">checkPassword</span>(<span style="color:#a6e22e">value</span>) {
+    <span style="color:#75715e">// object method must be able to read _password
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">password</span>;
+  }
+}
+</code></pre></div><p>A call to <code>user.checkPassword()</code> gets proxied <code>user</code> as <code>this</code> (the object before dot becomes <code>this</code>), so when it tries to access <code>this._password</code>, the <code>get</code> trap activates (it triggers on any property read) and throws an error.</p>
+<p>So we bind the context of object methods to the original object, <code>target</code>, in the line <code>(*)</code>. Then their future calls will use <code>target</code> as <code>this</code>, without any traps.</p>
+<p>That solution usually works, but isn&rsquo;t ideal, as a method may pass the unproxied object somewhere else, and then we&rsquo;ll get messed up: where&rsquo;s the original object, and where&rsquo;s the proxied one?</p>
+<p>Besides, an object may be proxied multiple times (multiple proxies may add different &ldquo;tweaks&rdquo; to the object), and if we pass an unwrapped object to a method, there may be unexpected consequences.</p>
+<p>So, such a proxy shouldn&rsquo;t be used everywhere.</p>
+<pre><code class="language-smart" data-lang="smart">Modern JavaScript engines natively support private properties in classes, prefixed with `#`. They are described in the article &lt;info:private-protected-properties-methods&gt;. No proxies required.
+
+Such properties have their own issues though. In particular, they are not inherited.
+</code></pre><h2 id="in-range-with-has-trap">&ldquo;In range&rdquo; with &ldquo;has&rdquo; trap</h2>
+<p>Let&rsquo;s see more examples.</p>
+<p>We have a range object:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">range</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">start</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+  <span style="color:#a6e22e">end</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>
+};
+</code></pre></div><p>We&rsquo;d like to use the <code>in</code> operator to check that a number is in <code>range</code>.</p>
+<p>The <code>has</code> trap intercepts <code>in</code> calls.</p>
+<p><code>has(target, property)</code></p>
+<ul>
+<li><code>target</code> &ndash; is the target object, passed as the first argument to <code>new Proxy</code>,</li>
+<li><code>property</code> &ndash; property name</li>
+</ul>
+<p>Here&rsquo;s the demo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">range</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">start</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+  <span style="color:#a6e22e">end</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>
+};
+
+<span style="color:#a6e22e">range</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">range</span>, {
+<span style="color:#f92672">*!*</span>
+  <span style="color:#a6e22e">has</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>) {
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">prop</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">start</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">prop</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">end</span>;
+  }
+});
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#ae81ff">5</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">range</span>); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#ae81ff">50</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">range</span>); <span style="color:#75715e">// false
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>Nice syntactic sugar, isn&rsquo;t it? And very simple to implement.</p>
+<h2 id="wrapping-functions-apply-proxy-apply">Wrapping functions: &ldquo;apply&rdquo; [#proxy-apply]</h2>
+<p>We can wrap a proxy around a function as well.</p>
+<p>The <code>apply(target, thisArg, args)</code> trap handles calling a proxy as function:</p>
+<ul>
+<li><code>target</code> is the target object (function is an object in JavaScript),</li>
+<li><code>thisArg</code> is the value of <code>this</code>.</li>
+<li><code>args</code> is a list of arguments.</li>
+</ul>
+<p>For example, let&rsquo;s recall <code>delay(f, ms)</code> decorator, that we did in the article <a href="info:call-apply-decorators">info:call-apply-decorators</a>.</p>
+<p>In that article we did it without proxies. A call to <code>delay(f, ms)</code> returned a function that forwards all calls to <code>f</code> after <code>ms</code> milliseconds.</p>
+<p>Here&rsquo;s the previous, function-based implementation:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">delay</span>(<span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">ms</span>) {
+  <span style="color:#75715e">// return a wrapper that passes the call to f after the timeout
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>() { <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">arguments</span>), <span style="color:#a6e22e">ms</span>);
+  };
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+}
+
+<span style="color:#75715e">// after this wrapping, calls to sayHi will be delayed for 3 seconds
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sayHi</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">delay</span>(<span style="color:#a6e22e">sayHi</span>, <span style="color:#ae81ff">3000</span>);
+
+<span style="color:#a6e22e">sayHi</span>(<span style="color:#e6db74">&#34;John&#34;</span>); <span style="color:#75715e">// Hello, John! (after 3 seconds)
+</span></code></pre></div><p>As we&rsquo;ve seen already, that mostly works. The wrapper function <code>(*)</code> performs the call after the timeout.</p>
+<p>But a wrapper function does not forward property read/write operations or anything else. After the wrapping, the access is lost to properties of the original functions, such as <code>name</code>, <code>length</code> and others:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">delay</span>(<span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">ms</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">arguments</span>), <span style="color:#a6e22e">ms</span>);
+  };
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+}
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">sayHi</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 1 (function length is the arguments count in its declaration)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">sayHi</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">delay</span>(<span style="color:#a6e22e">sayHi</span>, <span style="color:#ae81ff">3000</span>);
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">sayHi</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 0 (in the wrapper declaration, there are zero arguments)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p><code>Proxy</code> is much more powerful, as it forwards everything to the target object.</p>
+<p>Let&rsquo;s use <code>Proxy</code> instead of a wrapping function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">delay</span>(<span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">ms</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">f</span>, {
+    <span style="color:#a6e22e">apply</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">thisArg</span>, <span style="color:#a6e22e">args</span>) {
+      <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#a6e22e">thisArg</span>, <span style="color:#a6e22e">args</span>), <span style="color:#a6e22e">ms</span>);
+    }
+  });
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+}
+
+<span style="color:#a6e22e">sayHi</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">delay</span>(<span style="color:#a6e22e">sayHi</span>, <span style="color:#ae81ff">3000</span>);
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">sayHi</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 1 (*) proxy forwards &#34;get length&#34; operation to the target
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">sayHi</span>(<span style="color:#e6db74">&#34;John&#34;</span>); <span style="color:#75715e">// Hello, John! (after 3 seconds)
+</span></code></pre></div><p>The result is the same, but now not only calls, but all operations on the proxy are forwarded to the original function. So <code>sayHi.length</code> is returned correctly after the wrapping in the line <code>(*)</code>.</p>
+<p>We&rsquo;ve got a &ldquo;richer&rdquo; wrapper.</p>
+<p>Other traps exist: the full list is in the beginning of this article. Their usage pattern is similar to the above.</p>
+<h2 id="reflect">Reflect</h2>
+<p><code>Reflect</code> is a built-in object that simplifies creation of <code>Proxy</code>.</p>
+<p>It was said previously that internal methods, such as <code>[[Get]]</code>, <code>[[Set]]</code> and others are specification-only, they can&rsquo;t be called directly.</p>
+<p>The <code>Reflect</code> object makes that somewhat possible. Its methods are minimal wrappers around the internal methods.</p>
+<p>Here are examples of operations and <code>Reflect</code> calls that do the same:</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th><code>Reflect</code> call</th>
+<th>Internal method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>obj[prop]</code></td>
+<td><code>Reflect.get(obj, prop)</code></td>
+<td><code>[[Get]]</code></td>
+</tr>
+<tr>
+<td><code>obj[prop] = value</code></td>
+<td><code>Reflect.set(obj, prop, value)</code></td>
+<td><code>[[Set]]</code></td>
+</tr>
+<tr>
+<td><code>delete obj[prop]</code></td>
+<td><code>Reflect.deleteProperty(obj, prop)</code></td>
+<td><code>[[Delete]]</code></td>
+</tr>
+<tr>
+<td><code>new F(value)</code></td>
+<td><code>Reflect.construct(F, value)</code></td>
+<td><code>[[Construct]]</code></td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {};
+
+<span style="color:#a6e22e">Reflect</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;John&#39;</span>);
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// John
+</span></code></pre></div><p>In particular, <code>Reflect</code> allows us to call operators (<code>new</code>, <code>delete</code>&hellip;) as functions (<code>Reflect.construct</code>, <code>Reflect.deleteProperty</code>, &hellip;). That&rsquo;s an interesting capability, but here another thing is important.</p>
+<p><strong>For every internal method, trappable by <code>Proxy</code>, there&rsquo;s a corresponding method in <code>Reflect</code>, with the same name and arguments as the <code>Proxy</code> trap.</strong></p>
+<p>So we can use <code>Reflect</code> to forward an operation to the original object.</p>
+<p>In this example, both traps <code>get</code> and <code>set</code> transparently (as if they didn&rsquo;t exist) forward reading/writing operations to the object, showing a message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+};
+
+<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">user</span>, {
+  <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">receiver</span>) {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`GET </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">prop</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+<span style="color:#f92672">*!*</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Reflect</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">receiver</span>); <span style="color:#75715e">// (1)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+  },
+  <span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">receiver</span>) {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`SET </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">prop</span><span style="color:#e6db74">}</span><span style="color:#e6db74">=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">val</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+<span style="color:#f92672">*!*</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Reflect</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">receiver</span>); <span style="color:#75715e">// (2)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+  }
+});
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>; <span style="color:#75715e">// shows &#34;GET name&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Pete&#34;</span>; <span style="color:#75715e">// shows &#34;SET name=Pete&#34;
+</span></code></pre></div><p>Here:</p>
+<ul>
+<li><code>Reflect.get</code> reads an object property.</li>
+<li><code>Reflect.set</code> writes an object property and returns <code>true</code> if successful, <code>false</code> otherwise.</li>
+</ul>
+<p>That is, everything&rsquo;s simple: if a trap wants to forward the call to the object, it&rsquo;s enough to call <code>Reflect.&lt;method&gt;</code> with the same arguments.</p>
+<p>In most cases we can do the same without <code>Reflect</code>, for instance, reading a property <code>Reflect.get(target, prop, receiver)</code> can be replaced by <code>target[prop]</code>. There are important nuances though.</p>
+<h3 id="proxying-a-getter">Proxying a getter</h3>
+<p>Let&rsquo;s see an example that demonstrates why <code>Reflect.get</code> is better. And we&rsquo;ll also see why <code>get/set</code> have the third argument <code>receiver</code>, that we didn&rsquo;t use before.</p>
+<p>We have an object <code>user</code> with <code>_name</code> property and a getter for it.</p>
+<p>Here&rsquo;s a proxy around it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Guest&#34;</span>,
+  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">name</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span>;
+  }
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">userProxy</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">user</span>, {
+  <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">receiver</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">prop</span>];
+  }
+});
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">userProxy</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// Guest
+</span></code></pre></div><p>The <code>get</code> trap is &ldquo;transparent&rdquo; here, it returns the original property, and doesn&rsquo;t do anything else. That&rsquo;s enough for our example.</p>
+<p>Everything seems to be all right. But let&rsquo;s make the example a little bit more complex.</p>
+<p>After inheriting another object <code>admin</code> from <code>user</code>, we can observe the incorrect behavior:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Guest&#34;</span>,
+  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">name</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span>;
+  }
+};
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">userProxy</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">user</span>, {
+  <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">receiver</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">prop</span>]; <span style="color:#75715e">// (*) target = user
+</span><span style="color:#75715e"></span>  }
+});
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">admin</span> <span style="color:#f92672">=</span> {
+  <span style="color:#ae81ff">__</span><span style="color:#a6e22e">proto__</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">userProxy</span>,
+  <span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Admin&#34;</span>
+};
+
+<span style="color:#75715e">// Expected: Admin
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// outputs: Guest (?!?)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>Reading <code>admin.name</code> should return <code>&quot;Admin&quot;</code>, not <code>&quot;Guest&quot;</code>!</p>
+<p>What&rsquo;s the matter? Maybe we did something wrong with the inheritance?</p>
+<p>But if we remove the proxy, then everything will work as expected.</p>
+<p>The problem is actually in the proxy, in the line <code>(*)</code>.</p>
+<ol>
+<li>
+<p>When we read <code>admin.name</code>, as <code>admin</code> object doesn&rsquo;t have such own property, the search goes to its prototype.</p>
+</li>
+<li>
+<p>The prototype is <code>userProxy</code>.</p>
+</li>
+<li>
+<p>When reading <code>name</code> property from the proxy, its <code>get</code> trap triggers and returns it from the original object as <code>target[prop]</code> in the line <code>(*)</code>.</p>
+<p>A call to <code>target[prop]</code>, when <code>prop</code> is a getter, runs its code in the context <code>this=target</code>. So the result is <code>this._name</code> from the original object <code>target</code>, that is: from <code>user</code>.</p>
+</li>
+</ol>
+<p>To fix such situations, we need <code>receiver</code>, the third argument of <code>get</code> trap. It keeps the correct <code>this</code> to be passed to a getter. In our case that&rsquo;s <code>admin</code>.</p>
+<p>How to pass the context for a getter? For a regular function we could use <code>call/apply</code>, but that&rsquo;s a getter, it&rsquo;s not &ldquo;called&rdquo;, just accessed.</p>
+<p><code>Reflect.get</code> can do that. Everything will work right if we use it.</p>
+<p>Here&rsquo;s the corrected variant:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+  <span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Guest&#34;</span>,
+  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">name</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span>;
+  }
+};
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">userProxy</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">user</span>, {
+  <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">receiver</span>) { <span style="color:#75715e">// receiver = admin
+</span><span style="color:#75715e"></span><span style="color:#f92672">*!*</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Reflect</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">receiver</span>); <span style="color:#75715e">// (*)
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+  }
+});
+
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">admin</span> <span style="color:#f92672">=</span> {
+  <span style="color:#ae81ff">__</span><span style="color:#a6e22e">proto__</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">userProxy</span>,
+  <span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Admin&#34;</span>
+};
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// Admin
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>Now <code>receiver</code> that keeps a reference to the correct <code>this</code> (that is <code>admin</code>), is passed to the getter using <code>Reflect.get</code> in the line <code>(*)</code>.</p>
+<p>We can rewrite the trap even shorter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">receiver</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Reflect</span>.<span style="color:#a6e22e">get</span>(<span style="color:#f92672">*!*</span>...<span style="color:#a6e22e">arguments</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*);</span>
+}
+</code></pre></div><p><code>Reflect</code> calls are named exactly the same way as traps and accept the same arguments. They were specifically designed this way.</p>
+<p>So, <code>return Reflect...</code> provides a safe no-brainer to forward the operation and make sure we don&rsquo;t forget anything related to that.</p>
+<h2 id="proxy-limitations">Proxy limitations</h2>
+<p>Proxies provide a unique way to alter or tweak the behavior of the existing objects at the lowest level. Still, it&rsquo;s not perfect. There are limitations.</p>
+<h3 id="built-in-objects-internal-slots">Built-in objects: Internal slots</h3>
+<p>Many built-in objects, for example <code>Map</code>, <code>Set</code>, <code>Date</code>, <code>Promise</code> and others make use of so-called &ldquo;internal slots&rdquo;.</p>
+<p>These are like properties, but reserved for internal, specification-only purposes. For instance, <code>Map</code> stores items in the internal slot <code>[[MapData]]</code>. Built-in methods access them directly, not via <code>[[Get]]/[[Set]]</code> internal methods. So <code>Proxy</code> can&rsquo;t intercept that.</p>
+<p>Why care? They&rsquo;re internal anyway!</p>
+<p>Well, here&rsquo;s the issue. After a built-in object like that gets proxied, the proxy doesn&rsquo;t have these internal slots, so built-in methods will fail.</p>
+<p>For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">map</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Map</span>();
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">proxy</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">map</span>, {});
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">proxy</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;test&#39;</span>, <span style="color:#ae81ff">1</span>); <span style="color:#75715e">// Error
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>Internally, a <code>Map</code> stores all data in its <code>[[MapData]]</code> internal slot. The proxy doesn&rsquo;t have such a slot. The <a href="https://tc39.es/ecma262/#sec-map.prototype.set">built-in method <code>Map.prototype.set</code></a> method tries to access the internal property <code>this.[[MapData]]</code>, but because <code>this=proxy</code>, can&rsquo;t find it in <code>proxy</code> and just fails.</p>
+<p>Fortunately, there&rsquo;s a way to fix it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">map</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Map</span>();
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">proxy</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">map</span>, {
+  <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">receiver</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Reflect</span>.<span style="color:#a6e22e">get</span>(...<span style="color:#a6e22e">arguments</span>);
+<span style="color:#f92672">*!*</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;function&#39;</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">target</span>) <span style="color:#f92672">:</span> <span style="color:#a6e22e">value</span>;
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+  }
+});
+
+<span style="color:#a6e22e">proxy</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;test&#39;</span>, <span style="color:#ae81ff">1</span>);
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">proxy</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;test&#39;</span>)); <span style="color:#75715e">// 1 (works!)
+</span></code></pre></div><p>Now it works fine, because <code>get</code> trap binds function properties, such as <code>map.set</code>, to the target object (<code>map</code>) itself.</p>
+<p>Unlike the previous example, the value of <code>this</code> inside <code>proxy.set(...)</code> will be not <code>proxy</code>, but the original <code>map</code>. So when the internal implementation of <code>set</code> tries to access <code>this.[[MapData]]</code> internal slot, it succeeds.</p>
+<p>```smart header=&quot;<code>Array</code> has no internal slots&quot;
+A notable exception: built-in <code>Array</code> doesn&rsquo;t use internal slots. That&rsquo;s for historical reasons, as it appeared so long ago.</p>
+<p>So there&rsquo;s no such problem when proxying an array.</p>
+<pre><code>
+### Private fields
+
+A similar thing happens with private class fields.
+
+For example, `getName()` method accesses the private `#name` property and breaks after proxying:
+
+```js run
+class User {
+  #name = &quot;Guest&quot;;
+
+  getName() {
+    return this.#name;
+  }
+}
+
+let user = new User();
+
+user = new Proxy(user, {});
+
+*!*
+alert(user.getName()); // Error
+*/!*
+</code></pre><p>The reason is that private fields are implemented using internal slots. JavaScript does not use <code>[[Get]]/[[Set]]</code> when accessing them.</p>
+<p>In the call <code>getName()</code> the value of <code>this</code> is the proxied <code>user</code>, and it doesn&rsquo;t have the slot with private fields.</p>
+<p>Once again, the solution with binding the method makes it work:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> {
+  <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Guest&#34;</span>;
+
+  <span style="color:#a6e22e">getName</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">name</span>;
+  }
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span>();
+
+<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">user</span>, {
+  <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">prop</span>, <span style="color:#a6e22e">receiver</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Reflect</span>.<span style="color:#a6e22e">get</span>(...<span style="color:#a6e22e">arguments</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;function&#39;</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">target</span>) <span style="color:#f92672">:</span> <span style="color:#a6e22e">value</span>;
+  }
+});
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">getName</span>()); <span style="color:#75715e">// Guest
+</span></code></pre></div><p>That said, the solution has drawbacks, as explained previously: it exposes the original object to the method, potentially allowing it to be passed further and breaking other proxied functionality.</p>
+<h3 id="proxy--target">Proxy != target</h3>
+<p>The proxy and the original object are different objects. That&rsquo;s natural, right?</p>
+<p>So if we use the original object as a key, and then proxy it, then the proxy can&rsquo;t be found:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">allUsers</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>();
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+    <span style="color:#a6e22e">allUsers</span>.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">this</span>);
+  }
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span>(<span style="color:#e6db74">&#34;John&#34;</span>);
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">allUsers</span>.<span style="color:#a6e22e">has</span>(<span style="color:#a6e22e">user</span>)); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">user</span>, {});
+
+<span style="color:#f92672">*!*</span>
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">allUsers</span>.<span style="color:#a6e22e">has</span>(<span style="color:#a6e22e">user</span>)); <span style="color:#75715e">// false
+</span><span style="color:#75715e"></span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+</code></pre></div><p>As we can see, after proxying we can&rsquo;t find <code>user</code> in the set <code>allUsers</code>, because the proxy is a different object.</p>
+<p>```warn header=&ldquo;Proxies can&rsquo;t intercept a strict equality test <code>===</code>&rdquo;
+Proxies can intercept many operators, such as <code>new</code> (with <code>construct</code>), <code>in</code> (with <code>has</code>), <code>delete</code> (with <code>deleteProperty</code>) and so on.</p>
+<p>But there&rsquo;s no way to intercept a strict equality test for objects. An object is strictly equal to itself only, and no other value.</p>
+<p>So all operations and built-in classes that compare objects for equality will differentiate between the object and the proxy. No transparent replacement here.</p>
+<pre><code>
+## Revocable proxies
+
+A *revocable* proxy is a proxy that can be disabled.
+
+Let's say we have a resource, and would like to close access to it any moment.
+
+What we can do is to wrap it into a revocable proxy, without any traps. Such a proxy will forward operations to object, and we can disable it at any moment.
+
+The syntax is:
+
+```js
+let {proxy, revoke} = Proxy.revocable(target, handler)
+</code></pre><p>The call returns an object with the <code>proxy</code> and <code>revoke</code> function to disable it.</p>
+<p>Here&rsquo;s an example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Valuable data&#34;</span>
+};
+
+<span style="color:#66d9ef">let</span> {<span style="color:#a6e22e">proxy</span>, <span style="color:#a6e22e">revoke</span>} <span style="color:#f92672">=</span> Proxy.<span style="color:#a6e22e">revocable</span>(<span style="color:#a6e22e">object</span>, {});
+
+<span style="color:#75715e">// pass the proxy somewhere instead of object...
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">proxy</span>.<span style="color:#a6e22e">data</span>); <span style="color:#75715e">// Valuable data
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// later in our code
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">revoke</span>();
+
+<span style="color:#75715e">// the proxy isn&#39;t working any more (revoked)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">proxy</span>.<span style="color:#a6e22e">data</span>); <span style="color:#75715e">// Error
+</span></code></pre></div><p>A call to <code>revoke()</code> removes all internal references to the target object from the proxy, so they are no longer connected.</p>
+<p>Initially, <code>revoke</code> is separate from <code>proxy</code>, so that we can pass <code>proxy</code> around while leaving <code>revoke</code> in the current scope.</p>
+<p>We can also bind <code>revoke</code> method to proxy by setting <code>proxy.revoke = revoke</code>.</p>
+<p>Another option is to create a <code>WeakMap</code> that has <code>proxy</code> as the key and the corresponding <code>revoke</code> as the value, that allows to easily find <code>revoke</code> for a proxy:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f92672">*!*</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">revokes</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WeakMap</span>();
+<span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/!*</span>
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Valuable data&#34;</span>
+};
+
+<span style="color:#66d9ef">let</span> {<span style="color:#a6e22e">proxy</span>, <span style="color:#a6e22e">revoke</span>} <span style="color:#f92672">=</span> Proxy.<span style="color:#a6e22e">revocable</span>(<span style="color:#a6e22e">object</span>, {});
+
+<span style="color:#a6e22e">revokes</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">proxy</span>, <span style="color:#a6e22e">revoke</span>);
+
+<span style="color:#75715e">// ..somewhere else in our code..
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">revoke</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">revokes</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">proxy</span>);
+<span style="color:#a6e22e">revoke</span>();
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">proxy</span>.<span style="color:#a6e22e">data</span>); <span style="color:#75715e">// Error (revoked)
+</span></code></pre></div><p>We use <code>WeakMap</code> instead of <code>Map</code> here because it won&rsquo;t block garbage collection. If a proxy object becomes &ldquo;unreachable&rdquo; (e.g. no variable references it any more), <code>WeakMap</code> allows it to be wiped from memory together with its <code>revoke</code> that we won&rsquo;t need any more.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Specification: <a href="https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-internal-slots">Proxy</a>.</li>
+<li>MDN: <a href="mdn:/JavaScript/Reference/Global_Objects/Proxy">Proxy</a>.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p><code>Proxy</code> is a wrapper around an object, that forwards operations on it to the object, optionally trapping some of them.</p>
+<p>It can wrap any kind of object, including classes and functions.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">proxy</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">target</span>, {
+  <span style="color:#75715e">/* traps */</span>
+});
+</code></pre></div><p>&hellip;Then we should use <code>proxy</code> everywhere instead of <code>target</code>. A proxy doesn&rsquo;t have its own properties or methods. It traps an operation if the trap is provided, otherwise forwards it to <code>target</code> object.</p>
+<p>We can trap:</p>
+<ul>
+<li>Reading (<code>get</code>), writing (<code>set</code>), deleting (<code>deleteProperty</code>) a property (even a non-existing one).</li>
+<li>Calling a function (<code>apply</code> trap).</li>
+<li>The <code>new</code> operator (<code>construct</code> trap).</li>
+<li>Many other operations (the full list is at the beginning of the article and in the <a href="mdn:/JavaScript/Reference/Global_Objects/Proxy">docs</a>).</li>
+</ul>
+<p>That allows us to create &ldquo;virtual&rdquo; properties and methods, implement default values, observable objects, function decorators and so much more.</p>
+<p>We can also wrap an object multiple times in different proxies, decorating it with various aspects of functionality.</p>
+<p>The <a href="mdn:/JavaScript/Reference/Global_Objects/Reflect">Reflect</a> API is designed to complement <a href="mdn:/JavaScript/Reference/Global_Objects/Proxy">Proxy</a>. For any <code>Proxy</code> trap, there&rsquo;s a <code>Reflect</code> call with same arguments. We should use those to forward calls to target objects.</p>
+<p>Proxies have some limitations:</p>
+<ul>
+<li>Built-in objects have &ldquo;internal slots&rdquo;, access to those can&rsquo;t be proxied. See the workaround above.</li>
+<li>The same holds true for private class fields, as they are internally implemented using slots. So proxied method calls must have the target object as <code>this</code> to access them.</li>
+<li>Object equality tests <code>===</code> can&rsquo;t be intercepted.</li>
+<li>Performance: benchmarks depend on an engine, but generally accessing a property using a simplest proxy takes a few times longer. In practice that only matters for some &ldquo;bottleneck&rdquo; objects though.</li>
+</ul>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>

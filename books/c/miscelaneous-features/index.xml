@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miscellaneous Features on Project Madurai School</title>
+    <link>/books/c/miscelaneous-features/</link>
+    <description>Recent content in Miscellaneous Features on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/c/miscelaneous-features/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enumerate Data Type</title>
+      <link>/books/c/miscelaneous-features/enumerated-data-type/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/enumerated-data-type/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Renaming Data Types with typedef</title>
+      <link>/books/c/miscelaneous-features/reanaming-data-types-with-typedef/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/reanaming-data-types-with-typedef/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Typecasting</title>
+      <link>/books/c/miscelaneous-features/typecasting/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/typecasting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bit Fields</title>
+      <link>/books/c/miscelaneous-features/bit-fields/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/bit-fields/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pointers to Functions</title>
+      <link>/books/c/miscelaneous-features/pointers-to-functions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/pointers-to-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Functions Returning Pointers</title>
+      <link>/books/c/miscelaneous-features/functions-returning-pointers/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/functions-returning-pointers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Functions with Variable Number of Arguments</title>
+      <link>/books/c/miscelaneous-features/functions-with-variable-number-of-arguments/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/functions-with-variable-number-of-arguments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unions</title>
+      <link>/books/c/miscelaneous-features/unions/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/unions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Volatile Qualifier</title>
+      <link>/books/c/miscelaneous-features/the-volatile-qualifier/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/the-volatile-qualifier/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>/books/c/miscelaneous-features/exercise/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KanNotes</title>
+      <link>/books/c/miscelaneous-features/kannotes/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/c/miscelaneous-features/kannotes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

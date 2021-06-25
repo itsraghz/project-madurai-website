@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Objects: the basics on Project Madurai School</title>
+    <link>/books/javascript/objects/</link>
+    <description>Recent content in Objects: the basics on Project Madurai School</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Nov 2018 19:02:50 -0700</lastBuildDate><atom:link href="/books/javascript/objects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Objects</title>
+      <link>/books/javascript/objects/objects/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/objects/</guid>
+      <description>Objects As we know from the chapter info:types, there are eight data types in JavaScript. Seven of them are called &amp;ldquo;primitive&amp;rdquo;, because their values contain only a single thing (be it a string or a number or whatever).
+In contrast, objects are used to store keyed collections of various data and more complex entities. In JavaScript, objects penetrate almost every aspect of the language. So we must understand them first before going in-depth anywhere else.</description>
+    </item>
+    
+    <item>
+      <title>Object references and copying</title>
+      <link>/books/javascript/objects/object-references-and-copying/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/object-references-and-copying/</guid>
+      <description>Object references and copying One of the fundamental differences of objects versus primitives is that objects are stored and copied &amp;ldquo;by reference&amp;rdquo;, whereas primitive values: strings, numbers, booleans, etc &amp;ndash; are always copied &amp;ldquo;as a whole value&amp;rdquo;.
+That&amp;rsquo;s easy to understand if we look a bit under the hood of what happens when we copy a value.
+Let&amp;rsquo;s start with a primitive, such as a string.
+Here we put a copy of message into phrase:</description>
+    </item>
+    
+    <item>
+      <title>Garbage collection</title>
+      <link>/books/javascript/objects/garbage-collection/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/garbage-collection/</guid>
+      <description>Garbage collection Memory management in JavaScript is performed automatically and invisibly to us. We create primitives, objects, functions&amp;hellip; All that takes memory.
+What happens when something is not needed any more? How does the JavaScript engine discover it and clean it up?
+Reachability The main concept of memory management in JavaScript is reachability.
+Simply put, &amp;ldquo;reachable&amp;rdquo; values are those that are accessible or usable somehow. They are guaranteed to be stored in memory.</description>
+    </item>
+    
+    <item>
+      <title>Object methods, &#34;this&#34;</title>
+      <link>/books/javascript/objects/object-methods/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/object-methods/</guid>
+      <description>Object methods, &amp;ldquo;this&amp;rdquo; Objects are usually created to represent entities of the real world, like users, orders and so on:
+let user = { name: &amp;#34;John&amp;#34;, age: 30 }; And, in the real world, a user can act: select something from the shopping cart, login, logout etc.
+Actions are represented in JavaScript by functions in properties.
+Method examples For a start, let&amp;rsquo;s teach the user to say hello:
+let user = { name: &amp;#34;John&amp;#34;, age: 30 }; *!</description>
+    </item>
+    
+    <item>
+      <title>Constructor, operator &#34;new&#34;</title>
+      <link>/books/javascript/objects/constructor-operator-new/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/constructor-operator-new/</guid>
+      <description>Constructor, operator &amp;ldquo;new&amp;rdquo; The regular {...} syntax allows to create one object. But often we need to create many similar objects, like multiple users or menu items and so on.
+That can be done using constructor functions and the &amp;quot;new&amp;quot; operator.
+Constructor function Constructor functions technically are regular functions. There are two conventions though:
+ They are named with capital letter first. They should be executed only with &amp;quot;new&amp;quot; operator.  For instance:</description>
+    </item>
+    
+    <item>
+      <title>Optional chaining</title>
+      <link>/books/javascript/objects/optional-chaining/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/optional-chaining/</guid>
+      <description>Optional chaining &amp;lsquo;?.&amp;rsquo; [recent browser=&amp;ldquo;new&amp;rdquo;]
+The optional chaining ?. is a safe way to access nested object properties, even if an intermediate property doesn&amp;rsquo;t exist.
+The &amp;ldquo;non-existing property&amp;rdquo; problem If you&amp;rsquo;ve just started to read the tutorial and learn JavaScript, maybe the problem hasn&amp;rsquo;t touched you yet, but it&amp;rsquo;s quite common.
+As an example, let&amp;rsquo;s say we have user objects that hold the information about our users.
+Most of our users have addresses in user.</description>
+    </item>
+    
+    <item>
+      <title>Symbol type</title>
+      <link>/books/javascript/objects/symbol-type/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/symbol-type/</guid>
+      <description>Symbol type By specification, object property keys may be either of string type, or of symbol type. Not numbers, not booleans, only strings or symbols, these two types.
+Till now we&amp;rsquo;ve been using only strings. Now let&amp;rsquo;s see the benefits that symbols can give us.
+Symbols A &amp;ldquo;symbol&amp;rdquo; represents a unique identifier.
+A value of this type can be created using Symbol():
+// id is a new symbol let id = Symbol(); Upon creation, we can give symbol a description (also called a symbol name), mostly useful for debugging purposes:</description>
+    </item>
+    
+    <item>
+      <title>Object to primitive conversion</title>
+      <link>/books/javascript/objects/object-to-primitive-conversion/</link>
+      <pubDate>Wed, 14 Nov 2018 19:02:50 -0700</pubDate>
+      
+      <guid>/books/javascript/objects/object-to-primitive-conversion/</guid>
+      <description>Object to primitive conversion What happens when objects are added obj1 + obj2, subtracted obj1 - obj2 or printed using alert(obj)?
+In that case, objects are auto-converted to primitives, and then the operation is carried out.
+In the chapter info:type-conversions we&amp;rsquo;ve seen the rules for numeric, string and boolean conversions of primitives. But we left a gap for objects. Now, as we know about methods and symbols it becomes possible to fill it.</description>
+    </item>
+    
+  </channel>
+</rss>

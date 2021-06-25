@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <base href="/">
+    <title>Project Madurai School</title>
+
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+
+
+  
+
+
+</head>
+
+<body>
+  <main class="container mt-5 w-100 h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top">
+  <div class="container-fluid border-bottom border-top-1 shadow-sm bg-body">
+    <a class="navbar-brand lh-1" href="/">
+      
+      
+        <span class="text-primary"><strong>Project Madurai</strong></span><br>
+        <p class="text-muted text-end w-100 p-0 mb-0"><small class="dropdown-toggle">தமிழ்</small></p>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/javascript">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/books/c">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/practices/java">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="navbar-nav secured">
+        <li class="nav-item btn pe-0">
+          <a class="nav-link" href="/chat"><i class="far fa-comment-dots fa-2x"></i></a>
+        </li>
+        <li class="nav-item pe-0 dropdown">
+          
+          <div class="btn-group bg-light">
+            <a class="btn btn-toggle pe-0" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex bd-highlight">
+                <div class="w-100 bd-highlight text-end">
+                  <h6 class="text-muted fw-bold">தமிழ்ச் சங்கம்</h6>
+                  <small class="text-muted">திருவள்ளுவர் கழகம்</small>
+               </div>
+                <div class="flex-shrink-1 bd-highlight">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle img-thumbnail avatar"
+                style="vertical-align: middle;border-radius: 50%; width: 3rem; margin-right: 10px;" alt="avatar">
+                </div>
+                
+                
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="javascript://">Profile</a></li>
+              <li><a class="dropdown-item" href="/campuses/tamil-sangam">Campus</a></li>
+              <li><a class="dropdown-item logout" href="javascript://">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="row py-5 w-100 h-100">
+       
+
+  <nav class="navbar border-1 border-bottom">
+  <div class="row w-100">
+    <div class="col-4">
+      <a href="/books/javascript/classes/class-inheritance">Class inheritance</a>
+    </div>
+    <div class="col-4 mb-2 text-center">
+      <a class="text-dark"
+        href="/books/javascript/classes">Classes</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a href="/books/javascript/classes/private-protected-properties-methods">Private and protected properties and methods</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content" class="pt-3"><h3 id="static-properties-and-methods"><strong>Static properties and methods</strong></h3>
+<p>We can also assign a method to the class function itself, not to its<code> &quot;prototype&quot;</code>. Such methods are called static.</p>
+<p>In a class, they are prepended by <code>static</code> keyword, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> {
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">staticMethod</span>() {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#66d9ef">this</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">User</span>);
+    }
+    }
+
+    <span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">staticMethod</span>(); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>That actually does the same as assigning it as a property directly:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> { }
+
+    <span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">staticMethod</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#66d9ef">this</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">User</span>);
+    };
+
+    <span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">staticMethod</span>(); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>The value of <code>this</code> in <code>User.staticMethod()</code> call is the class constructor <code>User</code> itself (the “object before dot” rule).</p>
+<p>Usually, static methods are used to implement functions that belong to the class, but not to any particular object of it.</p>
+<p>For instance, we have <code>Article</code> objects and need a function to compare them. A natural solution would be to add <code>Article.compare</code> method, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Article</span> {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">date</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">title</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">date</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>;
+    }
+
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">compare</span>(<span style="color:#a6e22e">articleA</span>, <span style="color:#a6e22e">articleB</span>) {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">articleA</span>.<span style="color:#a6e22e">date</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">articleB</span>.<span style="color:#a6e22e">date</span>;
+    }
+    }
+
+    <span style="color:#75715e">// usage
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">articles</span> <span style="color:#f92672">=</span> [
+    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Article</span>(<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#66d9ef">new</span> Date(<span style="color:#ae81ff">2019</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)),
+    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Article</span>(<span style="color:#e6db74">&#34;CSS&#34;</span>, <span style="color:#66d9ef">new</span> Date(<span style="color:#ae81ff">2019</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)),
+    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Article</span>(<span style="color:#e6db74">&#34;JavaScript&#34;</span>, <span style="color:#66d9ef">new</span> Date(<span style="color:#ae81ff">2019</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">1</span>))
+    ];
+
+    <span style="color:#a6e22e">articles</span>.<span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">Article</span>.<span style="color:#a6e22e">compare</span>);
+
+    <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">articles</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">title</span> ); <span style="color:#75715e">// CSS
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>Here <code>Article.compare</code> stands “above” articles, as a means to compare them. It’s not a method of an article, but rather of the whole class.</p>
+<p>Another example would be a so-called “factory” method. Imagine, we need few ways to create an article:</p>
+<ol>
+<li>Create by given parameters (<code>title, date</code> etc).</li>
+<li>Create an empty article with today’s date.</li>
+<li>…or else somehow.</li>
+</ol>
+<p>The first way can be implemented by the constructor. And for the second one we can make a static method of the class.</p>
+<p>Like<code> Article.createTodays()</code> here:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Article</span> {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">date</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">title</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">date</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>;
+    }
+
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">createTodays</span>() {
+        <span style="color:#75715e">// remember, this = Article
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">this</span>(<span style="color:#e6db74">&#34;Today&#39;s digest&#34;</span>, <span style="color:#66d9ef">new</span> Date());
+    }
+    }
+
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">article</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Article</span>.<span style="color:#a6e22e">createTodays</span>();
+
+    <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">article</span>.<span style="color:#a6e22e">title</span> ); <span style="color:#75715e">// Today&#39;s digest
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>Now every time we need to create a today’s digest, we can call <code>Article.createTodays().</code> Once again, that’s not a method of an article, but a method of the whole class.</p>
+<p>Static methods are also used in database-related classes to search/save/remove entries from the database, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#75715e">// assuming Article is a special class for managing articles
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// static method to remove the article:
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Article</span>.<span style="color:#a6e22e">remove</span>({<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">12345</span>});
+
+</code></pre></div><h3 id="static-properties"><strong><a href="">Static properties</a></strong></h3>
+<blockquote>
+<p><strong>⚠️   A recent addition</strong></p>
+</blockquote>
+<pre><code>    This is a recent addition to the language. Examples work in the recent Chrome.
+
+</code></pre><p>Static properties are also possible, they look like regular class properties, but prepended by static:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Article</span> {
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">publisher</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Ilya Kantor&#34;</span>;
+    }
+
+    <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">Article</span>.<span style="color:#a6e22e">publisher</span> ); <span style="color:#75715e">// Ilya Kantor
+</span><span style="color:#75715e"></span>    <span style="color:#e6db74">```
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    hat is the same as a direct assignment to `</span><span style="color:#a6e22e">Article</span><span style="color:#e6db74">`:
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    ```</span><span style="color:#a6e22e">javascript</span>
+
+    <span style="color:#a6e22e">Article</span>.<span style="color:#a6e22e">publisher</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Ilya Kantor&#34;</span>;
+
+</code></pre></div><h3 id="inheritance-of-static-properties-and-methods"><strong><a href="">Inheritance of static properties and methods</a></strong></h3>
+<p>Static properties and methods are inherited.</p>
+<p>For instance,<code> Animal.compare</code> and<code>Animal.planet</code>in the code below are inherited and accessible as <code>Rabbit.compare</code> and <code>Rabbit.planet</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">planet</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Earth&#34;</span>;
+
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">speed</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">speed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">speed</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+    }
+
+    <span style="color:#a6e22e">run</span>(<span style="color:#a6e22e">speed</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">speed</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">speed</span>;
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> runs with speed </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">speed</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>);
+    }
+
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">compare</span>(<span style="color:#a6e22e">animalA</span>, <span style="color:#a6e22e">animalB</span>) {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">animalA</span>.<span style="color:#a6e22e">speed</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">animalB</span>.<span style="color:#a6e22e">speed</span>;
+    }
+
+    }
+
+    <span style="color:#75715e">// Inherit from Animal
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rabbit</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span> {
+    <span style="color:#a6e22e">hide</span>() {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> hides!`</span>);
+    }
+    }
+
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rabbits</span> <span style="color:#f92672">=</span> [
+    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Rabbit</span>(<span style="color:#e6db74">&#34;White Rabbit&#34;</span>, <span style="color:#ae81ff">10</span>),
+    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Rabbit</span>(<span style="color:#e6db74">&#34;Black Rabbit&#34;</span>, <span style="color:#ae81ff">5</span>)
+    ];
+
+    <span style="color:#a6e22e">rabbits</span>.<span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">Rabbit</span>.<span style="color:#a6e22e">compare</span>);
+
+    <span style="color:#a6e22e">rabbits</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">run</span>(); <span style="color:#75715e">// Black Rabbit runs with speed 5.
+</span><span style="color:#75715e"></span>
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">Rabbit</span>.<span style="color:#a6e22e">planet</span>); <span style="color:#75715e">// Earth
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>Now when we call <code>Rabbit.compare</code>, the inherited <code>Animal.compare</code> will be called.</p>
+<p>How does it work? Again, using prototypes. As you might have already guessed, <code>extends</code> gives <code>Rabbit</code> the <code>[[Prototype]] </code>reference to <code>Animal</code>.</p>
+<hr>
+<p>flow chart</p>
+<hr>
+<p>So, <code>Rabbit extends Animal </code>creates two<code> [[Prototype]]</code> references:</p>
+<ol>
+<li><code>Rabbit</code> function prototypally inherits from Animal function.</li>
+<li><code>Rabbit.prototype</code> prototypally inherits from <code>Animal.prototype</code>.
+As a result, inheritance works both for regular and static methods.</li>
+</ol>
+<p>Here, let’s check that by code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {}
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rabbit</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span> {}
+
+    <span style="color:#75715e">// for statics
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">Rabbit</span>.<span style="color:#ae81ff">__</span><span style="color:#a6e22e">proto__</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">Animal</span>); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">// for regular methods
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">Rabbit</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#ae81ff">__</span><span style="color:#a6e22e">proto__</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">Animal</span>.<span style="color:#a6e22e">prototype</span>); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>
+</code></pre></div><h3 id="summary"><strong><a href="">Summary</a></strong></h3>
+<p>Static methods are used for the functionality that belongs to the class “as a whole”. It doesn’t relate to a concrete class instance.</p>
+<p>For example, a method for comparison <code>Article.compare(article1, article2)</code> or a factory method <code>Article.createTodays()</code>.</p>
+<p>They are labeled by the word <code>static</code> in class declaration.</p>
+<p>Static properties are used when we’d like to store class-level data, also not bound to an instance.</p>
+<p>The syntax is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span> {
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">property</span> <span style="color:#f92672">=</span> ...;
+
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">method</span>() {
+        ...
+    }
+    }
+
+</code></pre></div><p>Technically, static declaration is the same as assigning to the class itself:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#a6e22e">MyClass</span>.<span style="color:#a6e22e">property</span> <span style="color:#f92672">=</span> ...
+    <span style="color:#a6e22e">MyClass</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">=</span> ...
+
+</code></pre></div><p>Static properties and methods are inherited.</p>
+<p>For <code>class B extends</code> A the prototype of the class <code>B</code> itself points to <code>A</code>: <code>B.[[Prototype]] = A</code>. So if a field is not found in <code>B</code>, the search continues in <code>A</code>.</p>
+<h3 id="-tasks"><strong>✅ <a href="">Tasks</a></strong></h3>
+<hr>
+<h3 id="class-extends-object--"><strong><a href="">Class extends Object?</a>  <a href="">↗️</a></strong></h3>
+<p>importance: 3
+As we know, all objects normally inherit from Object.prototype and get access to “generic” object methods like hasOwnProperty etc.</p>
+<p>For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rabbit</span> {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+    }
+    }
+
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rabbit</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Rabbit</span>(<span style="color:#e6db74">&#34;Rab&#34;</span>);
+
+    <span style="color:#75715e">// hasOwnProperty method is from Object.prototype
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">rabbit</span>.<span style="color:#a6e22e">hasOwnProperty</span>(<span style="color:#e6db74">&#39;name&#39;</span>) ); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>But if we spell it out explicitly like<code> &quot;class Rabbit extends Object&quot;</code>, then the result would be different from a simple <code>&quot;class Rabbit&quot;</code>?</p>
+<p>What’s the difference?</p>
+<p>Here’s an example of such code (it doesn’t work – why? fix it?):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rabbit</span> <span style="color:#66d9ef">extends</span> Object {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+    }
+    }
+
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rabbit</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Rabbit</span>(<span style="color:#e6db74">&#34;Rab&#34;</span>);
+
+    <span style="color:#a6e22e">alert</span>( <span style="color:#a6e22e">rabbit</span>.<span style="color:#a6e22e">hasOwnProperty</span>(<span style="color:#e6db74">&#39;name&#39;</span>) ); <span style="color:#75715e">// Error
+</span><span style="color:#75715e"></span>
+
+</code></pre></div><h2 id="solution"><strong><a href="">solution</a></strong></h2>
+</main>
+
+
+<div class="modal fade" id="noteModel" tabindex="-1" aria-labelledby="noteModelLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModelLabel">Note</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <textarea class="form-control" id="noteText" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    
+  </main>
+  
+  
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confimation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div aria-live="polite" aria-atomic="true">
+  <div class="toast-container position-absolute top-0 start-0 p-5 mt-5" id="toast-container">
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+
+
+
+  
+  
+  
+
+<script type="text/javascript" src="/js/chapter.js"></script>
+
+
+  
+</body>
+
+</html>
